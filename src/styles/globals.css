@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font family */
+  --font-onest: var(--font-onest), sans-serif;
+
+  /* ===== Base Text Colors ===== */
+  --color-text-primary: #070707;
+
+  /* Gradients */
+  --background-image-gradient-01: linear-gradient(
+    90deg,
+    #ffd900 35.01%,
+    #ee7621 67.72%
+  );
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: var(--font-onest), sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hamburger Menu */
+
+.hamburger-menu {
+  background: linear-gradient(
+    301.75deg,
+    rgba(29, 29, 29, 0.9) 1.41%,
+    rgba(29, 29, 29, 0.9) 95.05%
+  );
+  backdrop-filter: blur(10px);
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+  position: relative;
+  border-radius: 2rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(29, 29, 29, 0.9) 1.41%,
+    rgba(29, 29, 29, 0.9) 95.05%
+  );
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(124.23deg, #ffffff 3.32%, #070707 97.31%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.dropdown-tab {
+  position: relative;
+  border-radius: 2rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(255, 255, 255, 0.05) 1.41%,
+    rgba(29, 29, 29, 0.05) 95.05%
+  );
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.dropdown-tab:hover {
+  background: #ffe500;
+}
+
+.dropdown-tab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.23deg,
+    rgba(255, 255, 255, 0.3) 3.32%,
+    rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Gradient Border Button */
+
+.gradient-border-mask {
+  background: linear-gradient(90deg, #ffe400 0%, #ff37b3 100%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px; /* border thickness */
+}
+
+/* Service Card  */
+
+.service-card {
+  position: relative;
+  border-radius: 2rem;
+  padding: 5rem 3rem 5rem 3rem;
+  background: linear-gradient(
+    301.83deg,
+    rgba(255, 255, 255, 0.05) 1.23%,
+    rgba(29, 29, 29, 0.05) 95.04%
+  );
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.service-card:hover {
+  background: #ffe500;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.3deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(7, 7, 7, 0.3) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.service-card-gradient {
+  background:
+    linear-gradient(0deg, #070707, #070707),
+    linear-gradient(119.9deg, #070707 1.18%, #212121 49.71%, #070707 100%);
+  border-radius: 2rem;
+}
