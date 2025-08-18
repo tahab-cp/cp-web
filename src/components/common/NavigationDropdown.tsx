@@ -81,8 +81,8 @@ const NavigationDropdown = () => {
                   </h5>
 
                   <ul className="flex flex-col gap-[1.4rem]">
-                    {col.links.map((link) => (
-                      <li key={link.href}>
+                    {col.links.map((link, idx) => (
+                      <li key={idx}>
                         <Link
                           href={link.href}
                           className="flex items-center gap-[1.2rem] text-[1.8rem] leading-[2.6rem] font-normal text-white"
