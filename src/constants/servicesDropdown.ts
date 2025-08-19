@@ -1,4 +1,4 @@
-import designTabImg from "../assets/images/design-tab-img.png";
+import designTabImg from "../assets/images/offer-web-img.png";
 import type { StaticImageData } from "next/image";
 import clickArrowBlack from "../assets/images/icons/click-arrow-black.svg";
 import clickArrowPink from "../assets/images/icons/click-arrow-pink.svg";

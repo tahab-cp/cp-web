@@ -3,22 +3,27 @@ import offerSectionBg from "../../assets/images/offer-section-bg.png";
 import SectionLabel from "../common/SectionLabel";
 import clickArrowYellow from "../../assets/images/icons/click-arrow-yellow.svg";
 import clickArrowPink from "../../assets/images/icons/click-arrow-pink.svg";
+import clickArrowGreen from "../../assets/images/icons/click-arrow-green.svg";
 import offerWebImg from "../../assets/images/offer-web-img.png";
 import {
   offerSectionDesignData,
+  offerSectionMaintenanceData,
   offerSectionWebData,
 } from "@/constants/offerSection";
 import Link from "next/link";
 import subtractBlue from "../../assets/images/icons/subtract-blue.svg";
 import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import subtractGreen from "../../assets/images/icons/subtract-green.svg";
+import subtractOrange from "../../assets/images/icons/subtract-orange.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import offerDesignImg01 from "../../assets/images/offer-design-img-01.png";
 import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
+import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
+import bgLine from "../../assets/images/line-stroke-02.svg";
 
 const OfferSection = () => {
   return (
-    <section className="relative z-[1] mt-[-22rem] h-[210.7rem] pt-[8rem] pb-[10.1rem]">
+    <section className="relative z-[1] mt-[-22rem] pt-[8rem] pb-[10.1rem]">
       <Image
         src={offerSectionBg}
         alt="Offer Section Background"
@@ -59,10 +64,7 @@ const OfferSection = () => {
           <div className="ml-[-10rem] flex flex-col gap-[4.5rem]">
             <div className="flex gap-[10rem]">
               {offerSectionWebData.columns.map((col, idx) => (
-                <div
-                  key={idx}
-                  className={`flex flex-col gap-[3.1rem] pt-[3.5rem]`}
-                >
+                <div key={idx} className={`flex flex-col gap-[3.1rem]`}>
                   <h5 className="text-[2.2rem] leading-[3.2rem] font-medium text-[#FFE400]">
                     {col.title}
                   </h5>
@@ -134,8 +136,8 @@ const OfferSection = () => {
       </div>
 
       <div className="mt-[-6rem] h-[58.3rem] bg-white">
-        <div className="relative z-[1] mx-auto flex w-full max-w-[130rem] gap-[12.9rem] overflow-hidden pt-[8.9rem]">
-          <div className="flex flex-col gap-[4.5rem]">
+        <div className="relative z-[1] mx-auto flex w-full max-w-[130rem] gap-[12.9rem]">
+          <div className="flex flex-col gap-[4.5rem] pt-[10rem]">
             <div className="flex gap-[10rem]">
               {offerSectionDesignData.columns.map((col, idx) => (
                 <div
@@ -210,7 +212,7 @@ const OfferSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[3.3rem]">
+          <div className="relative top-[10.8rem] flex flex-col">
             <h3 className="text-text-primary relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
               <span>Design and Branding</span>
 
@@ -224,7 +226,7 @@ const OfferSection = () => {
               </div>
             </h3>
 
-            <div className="relative h-[55.18rem] w-[44.248rem]">
+            <div className="pointer-events-none relative h-[55.18rem] w-[44.248rem] select-none">
               <Image
                 src={offerDesignImg01}
                 alt="offer design image"
@@ -244,6 +246,146 @@ const OfferSection = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="relative z-[1] mx-auto flex w-full max-w-[133rem] pt-[10rem]">
+        <div className="flex flex-col">
+          <h3 className="relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+            <span>Maintenance and Growth</span>
+
+            <div className="absolute right-[-1.8rem] bottom-[1.6rem] inline-flex size-[4rem] items-center justify-center">
+              <Image
+                src={clickArrowGreen}
+                alt="Click Arrow"
+                width={40}
+                height={40}
+              />
+            </div>
+          </h3>
+
+          <div className="pointer-events-none relative top-[-5rem] h-[49.819rem] w-[57.12rem] select-none">
+            <Image
+              src={offerMaintenanceImg}
+              alt="offer maintenance image"
+              height={498.19}
+              width={571.2}
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-[4.5rem]">
+          <div className="flex gap-[10rem]">
+            {offerSectionMaintenanceData.columns.map((col, idx) => (
+              <div
+                key={idx}
+                className={`flex flex-col gap-[3.1rem] pt-[2.1rem]`}
+              >
+                <h5 className="text-[2.2rem] leading-[3.2rem] font-medium text-[#81F2B4]">
+                  {col.title}
+                </h5>
+
+                <ul className="flex flex-col gap-[1.4rem]">
+                  {col.links.map((link, idx) => (
+                    <li key={idx}>
+                      <Link
+                        href={link.href}
+                        className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white"
+                      >
+                        <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
+                        <span>{link.label}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex gap-[2.2rem]">
+            <Link href="" className="inline-flex items-center">
+              <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#EE8D00] bg-[#EE8D00] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
+                Book a Call
+              </span>
+              <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
+                <Image
+                  src={subtractOrange}
+                  alt="Subtract Light Icon"
+                  width={18}
+                  height={18}
+                />
+              </i>
+              <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#EE8D00] bg-[#EE8D00]">
+                <Image
+                  src={arrowRight}
+                  alt="Arrow Right Icon"
+                  width={14}
+                  height={14}
+                />
+              </i>
+            </Link>
+
+            <Link href="" className="inline-flex items-center">
+              <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
+                View Case Studies
+              </span>
+              <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
+                <Image
+                  src={subtractPink}
+                  alt="Subtract Light Icon"
+                  width={18}
+                  height={18}
+                />
+              </i>
+              <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
+                <Image
+                  src={arrowRight}
+                  alt="Arrow Right Icon"
+                  width={14}
+                  height={14}
+                />
+              </i>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="offer-cta-card mx-auto mt-[-9rem] flex h-[12rem] max-w-[120.3rem] items-center justify-center gap-[2.2rem] rounded-[2rem]">
+        <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
+          Need bold design or reliable code or both? You’re in the right place.
+        </p>
+
+        <Link href="" className="inline-flex items-center">
+          <span className="inline-flex h-[4.6rem] min-w-[16.6rem] items-center justify-center rounded-[6rem] border border-[#EE8D00] bg-[#EE8D00] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
+            Book a Call
+          </span>
+          <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
+            <Image
+              src={subtractOrange}
+              alt="Subtract Light Icon"
+              width={18}
+              height={18}
+            />
+          </i>
+          <i className="inline-flex size-[4.6rem] items-center justify-center rounded-full border border-[#EE8D00] bg-[#EE8D00]">
+            <Image
+              src={arrowRight}
+              alt="Arrow Right Icon"
+              width={14}
+              height={14}
+            />
+          </i>
+        </Link>
+      </div>
+
+      <div className="absolute bottom-[-10rem] left-0 z-[-1] w-full">
+        <Image
+          src={bgLine}
+          alt="Decorative line"
+          width={1453}
+          height={372}
+          className="pointer-events-none h-auto w-full select-none"
+        />
       </div>
     </section>
   );

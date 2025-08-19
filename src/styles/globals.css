@@ -169,4 +169,165 @@ body {
   border-radius: 2rem;
 }
 
+/* Offer Cta Card  */
 
+.offer-cta-card {
+  position: relative;
+  border: 0.85px solid #ffffff;
+  border-radius: 2rem;
+  padding: 3.7rem 7.7rem 3.7rem 7.7rem;
+  background: linear-gradient(
+    301.83deg,
+    rgba(255, 255, 255, 0.05) 1.23%,
+    rgba(29, 29, 29, 0.05) 95.04%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+/* Case Studies Grid  */
+
+.case-studies-grid {
+  position: relative;
+  border-radius: 2rem;
+  padding: 2rem 4rem 2rem 2rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(255, 255, 255, 0.05) 1.41%,
+    rgba(157, 157, 157, 0.05) 95.05%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.case-studies-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.85px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.23deg,
+    rgba(255, 255, 255, 0.3) 3.32%,
+    rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.case-studies-grid-reverse > :first-child {
+  order: 2;
+}
+.case-studies-grid-reverse > :last-child {
+  order: 1;
+}
+
+/* Testimonials Section */
+
+.testimonials-bg {
+  background:
+    linear-gradient(0deg, rgba(7, 7, 7, 0.9), rgba(7, 7, 7, 0.9)),
+    linear-gradient(119.9deg, #070707 1.18%, #ffffff 49.71%, #070707 100%);
+}
+
+.testimonials-card {
+  position: relative;
+  border-radius: 2rem;
+  padding: 4.1rem 3rem 4.1rem 3rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(255, 255, 255, 0.05) 1.41%,
+    rgba(29, 29, 29, 0.05) 95.05%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.testimonials-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.85px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.23deg,
+    rgba(255, 255, 255, 0.3) 3.32%,
+    rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Contact Section  */
+
+.contact-details-bg {
+  position: relative;
+  border-radius: 2rem;
+  padding: 3.5rem 4rem 3.5rem 4rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(255, 255, 255, 0.05) 1.41%,
+    rgba(29, 29, 29, 0.05) 95.05%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.contact-details-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.85px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.23deg,
+    rgba(255, 255, 255, 0.3) 3.32%,
+    rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.contact-form-bg {
+  position: relative;
+  border-radius: 2rem;
+  padding: 4.3rem 5.3rem 5.2rem 4rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(255, 255, 255, 0.05) 1.41%,
+    rgba(29, 29, 29, 0.05) 95.05%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.contact-form-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.85px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.23deg,
+    rgba(255, 255, 255, 0.3) 3.32%,
+    rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}

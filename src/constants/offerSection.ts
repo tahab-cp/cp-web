@@ -47,3 +47,24 @@ export const offerSectionDesignData = {
     },
   ],
 };
+
+export const offerSectionMaintenanceData = {
+  columns: [
+    {
+      title: "Fast & Quick",
+      links: [
+        { label: "Hosting", href: "" },
+        { label: "Maintenance", href: "" },
+        { label: "Security Audits", href: "" },
+        { label: "Speed & Performance Reviews", href: "" },
+      ],
+    },
+    {
+      title: "Bugs Fixing",
+      links: [
+        { label: "Bug Fixing and Support", href: "" },
+        { label: "General Wordpress Support", href: "" },
+      ],
+    },
+  ],
+};
