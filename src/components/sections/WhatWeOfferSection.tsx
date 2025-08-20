@@ -21,7 +21,7 @@ import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
 import bgLine from "../../assets/images/line-stroke-02.svg";
 
-const OfferSection = () => {
+const WhatWeOfferSection = () => {
   return (
     <section className="relative z-[1] mt-[-22rem] pt-[8rem] pb-[10.1rem]">
       <Image
@@ -391,4 +391,4 @@ const OfferSection = () => {
   );
 };
 
-export default OfferSection;
+export default WhatWeOfferSection;

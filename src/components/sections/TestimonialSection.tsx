@@ -8,7 +8,7 @@ import { testimonialsData } from "@/constants/testimonialSection";
 
 const TestimonialSection = () => {
   return (
-    <section className="testimonials-bg relative z-[1] pt-[7.2rem] pb-[9.1rem]">
+    <section className="testimonials-sec relative z-[1] pt-[7.2rem] pb-[9.1rem]">
       <div className="mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-center gap-[2rem] text-center">
           <SectionLabel text="Testimonials" />

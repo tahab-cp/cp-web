@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import subtractDark from "../../assets/images/icons/subtract-dark.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
+import ContactFormInput from "./ContactFormInput";
 
 const ContactForm = () => {
   return (
@@ -23,7 +24,7 @@ const ContactForm = () => {
             My name is
           </Label>
 
-          <Input placeholder="Enter your name" />
+          <ContactFormInput placeholder="Enter your name" type="text" />
         </fieldset>
 
         <fieldset className="flex items-center gap-[1.6rem]">
@@ -48,7 +49,10 @@ const ContactForm = () => {
             Here is my email
           </Label>
 
-          <Input placeholder="Enter your email address" />
+          <ContactFormInput
+            placeholder="Enter your email address"
+            type="email"
+          />
         </fieldset>
 
         <fieldset className="flex items-center gap-[1.6rem]">

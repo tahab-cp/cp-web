@@ -35,6 +35,13 @@ body {
   height: 100%;
 }
 
+/* Header Gradient BG */
+
+.header-gradient-bg {
+  background: url("../assets/images/header-gradient-bg.png") no-repeat center
+    center / cover;
+}
+
 /* Hamburger Menu */
 
 .hamburger-menu {
@@ -228,10 +235,13 @@ body {
 
 /* Testimonials Section */
 
-.testimonials-bg {
-  background:
-    linear-gradient(0deg, rgba(7, 7, 7, 0.9), rgba(7, 7, 7, 0.9)),
-    linear-gradient(119.9deg, #070707 1.18%, #ffffff 49.71%, #070707 100%);
+.testimonials-sec {
+  background: linear-gradient(
+    119.59deg,
+    #070707 1.07%,
+    #212121 49.82%,
+    #070707 100.33%
+  );
 }
 
 .testimonials-card {
@@ -323,6 +333,90 @@ body {
     124.23deg,
     rgba(255, 255, 255, 0.3) 3.32%,
     rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Dark Gradient Bg  */
+
+.dark-gradient-bg {
+  background: linear-gradient(
+    119.59deg,
+    #070707 1.07%,
+    #212121 49.82%,
+    #070707 100.33%
+  );
+}
+
+/* Our Stats Section */
+
+.our-stats-card {
+  position: relative;
+  border-radius: 2rem;
+  padding: 4.7rem 5.8rem 5.8rem 3.5rem;
+  background: linear-gradient(
+    301.75deg,
+    rgba(255, 255, 255, 0.05) 1.41%,
+    rgba(29, 29, 29, 0.05) 95.05%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.our-stats-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.85px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    124.23deg,
+    rgba(255, 255, 255, 0.3) 3.32%,
+    rgba(7, 7, 7, 0.3) 97.31%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Our Team Section */
+
+.our-team-card {
+  background: linear-gradient(
+    119.9deg,
+    #070707 1.18%,
+    #212121 49.71%,
+    #070707 100%
+  );
+}
+
+/* About Case Studies Section */
+
+.case-studies-card {
+  position: relative;
+  border-radius: 3rem;
+  background: #ffffff;
+  z-index: 0;
+}
+
+.case-studies-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(
+    270deg,
+    rgba(147, 147, 148, 0.2) 0%,
+    rgba(147, 147, 148, 0.2) 100%
   );
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,

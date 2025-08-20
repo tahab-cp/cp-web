@@ -9,11 +9,16 @@ import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import subtractLight from "../../assets/images/icons/subtract-light.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import HamburgerMenu from "./HamburgerMenu";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
-    <header className="absolute top-[3rem] left-0 z-[100] w-full px-[2rem] transition-all duration-300 xl:px-[0rem]">
-      <div className="relative mx-auto flex h-[6.6rem] max-w-[120.329rem] items-center justify-between">
+    <header
+      className={`absolute top-0 left-0 z-[100] flex h-[12.6rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 xl:px-[0rem] ${pathname === "/" ? "" : "header-gradient-bg"}`}
+    >
+      <div className="relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between">
         <Link href="/" className="relative z-[999]">
           <Image
             src={logo}

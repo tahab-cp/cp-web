@@ -1,10 +1,10 @@
 import Link from "next/link";
 import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";
-import InfiniteMarquee from "../common/InfiniteMarquee";
 import CtaSection2 from "../common/CtaSection2";
 import bgLine from "../../assets/images/line-stroke-02.svg";
 import Image from "next/image";
+import TextMarquee from "../common/TextMarquee";
 
 const ContactSection = () => {
   return (
@@ -57,7 +57,7 @@ const ContactSection = () => {
       </div>
 
       <div className="relative z-[3] mt-[4rem] mb-[6.7rem]">
-        <InfiniteMarquee />
+        <TextMarquee />
       </div>
 
       <div className="relative z-[3] mx-auto max-w-[120.3rem]">

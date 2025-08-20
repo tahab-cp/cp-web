@@ -2,9 +2,9 @@ import AboutSection from "@/components/sections/AboutSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 import ContactSection from "@/components/sections/ContactSection";
 import HeroSection from "@/components/sections/HeroSection";
-import OfferSection from "@/components/sections/OfferSection";
 import ServiceSection from "@/components/sections/ServiceSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
+import WhatWeOfferSection from "@/components/sections/WhatWeOfferSection";
 
 const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
       <HeroSection />
       <AboutSection />
       <ServiceSection />
-      <OfferSection />
+      <WhatWeOfferSection />
       <CaseStudiesSection />
       <TestimonialSection />
       <ContactSection />

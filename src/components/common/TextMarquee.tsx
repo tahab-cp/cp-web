@@ -22,7 +22,7 @@ const texts = [
   "Let’s work together.",
 ];
 
-const InfiniteMarquee = () => {
+const TextMarquee = () => {
   return (
     <>
       <Marquee
@@ -56,4 +56,4 @@ const InfiniteMarquee = () => {
   );
 };
 
-export default InfiniteMarquee;
+export default TextMarquee;
