@@ -10,10 +10,35 @@ import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";
 import TextMarquee from "../common/TextMarquee";
 import CtaSection2 from "../common/CtaSection2";
+import bgLine from "../../assets/images/line-stroke-08.svg";
+import bgLine2 from "../../assets/images/line-stroke-05.svg";
 
 const ContactUsSection = () => {
   return (
     <section className="relative pt-[20.6rem] pb-[10rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1440}
+          height={531.42}
+          className="absolute top-[15.4rem] left-1/2 -translate-x-1/2 opacity-10"
+          priority
+        />
+      </div>
+
+      <div className="absolute inset-0 z-[1]">
+        <Image
+          src={bgLine2}
+          alt="Background line"
+          width={1488}
+          height={316}
+          className="absolute top-[211.2rem] left-1/2 -translate-x-1/2"
+          priority
+        />
+      </div>
+
       <div className="mx-auto flex max-w-[120.3rem] flex-col items-start">
         <SectionLabel
           text="Contact Us"
@@ -162,7 +187,7 @@ const ContactUsSection = () => {
         <TextMarquee />
       </div>
 
-      <div className="mx-auto max-w-[120.3rem]">
+      <div className="relative z-[1] mx-auto max-w-[120.3rem]">
         <CtaSection2 />
       </div>
     </section>

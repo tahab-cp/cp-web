@@ -21,21 +21,38 @@ import arrowRightDark from "../../assets/images/icons/arrow-right-dark.svg";
 import talkButtonImg from "../../assets/images/talk-button-img.svg";
 import websiteDevelopmentImg from "../../assets/images/website-development-img.png";
 import maintanenceGrowthImg from "../../assets/images/maintainance-growth-img.png";
+import bgLine from "../../assets/images/line-stroke-08.svg";
+import bgLine2 from "../../assets/images/line-stroke-02.svg";
+import bgLine3 from "../../assets/images/line-stroke-09.svg";
 
 const OurServicesSection = () => {
   return (
-    <section className="relative pt-[20.6rem]">
-      <div className="pointer-events-none absolute top-[16rem] right-[7rem] h-[21.837rem] w-[10.279rem] -rotate-[130deg] select-none">
+    <section className="relative overflow-hidden pt-[20.6rem]">
+      {/* Bg Element */}
+      <div className="absolute inset-0 z-[0] overflow-hidden">
         <Image
           src={cElement}
-          alt="C Element"
-          height={218.37}
-          width={102.79}
+          alt="Background Element"
+          width={218.37}
+          height={102.78}
+          className="absolute top-[21rem] right-[-1rem] rotate-[-30deg]"
           priority
         />
       </div>
 
-      <div className="mx-auto flex max-w-[120.3rem] flex-col items-start gap-[2rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1440}
+          height={531.42}
+          className="absolute top-[15.4rem] left-1/2 -translate-x-1/2 opacity-10"
+          priority
+        />
+      </div>
+
+      <div className="relative z-[1] mx-auto flex max-w-[120.3rem] flex-col items-start gap-[2rem]">
         <SectionLabel
           text="Our Services"
           textColor="text-text-primary"
@@ -54,15 +71,28 @@ const OurServicesSection = () => {
       </div>
 
       <div className="relative pt-[6.3rem] pb-[7.063rem]">
-        <Image
-          src={ourServicesBg}
-          alt="Our Services Section Background"
-          fill
-          className="relative z-[-1] object-cover object-center"
-          priority
-        />
+        <div className="absolute inset-0 z-[0]">
+          <Image
+            src={ourServicesBg}
+            alt="Our Services Section Background"
+            fill
+            className="pointer-events-none object-cover"
+            priority
+          />
+        </div>
 
-        <div className="mx-auto flex max-w-[121.6rem] flex-col gap-[4.9rem]">
+        <div className="absolute inset-0 z-[0]">
+          <Image
+            src={bgLine2}
+            alt="Background line"
+            width={1440}
+            height={531.42}
+            className="absolute top-[59rem] left-1/2 -translate-x-1/2"
+            priority
+          />
+        </div>
+
+        <div className="relative z-[1] mx-auto flex max-w-[121.6rem] flex-col gap-[4.9rem]">
           <div className="flex flex-col gap-[2rem]">
             <h3 className="relative max-w-[66.4rem] text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
               Design and Branding{" "}
@@ -251,15 +281,28 @@ const OurServicesSection = () => {
       </div>
 
       <div className="relative pt-[9rem] pb-[7.882rem]">
-        <Image
-          src={ourServicesBg}
-          alt="Our Services Section Background"
-          fill
-          className="relative z-[-1] object-cover object-center"
-          priority
-        />
+        <div className="absolute inset-0 z-[0]">
+          <Image
+            src={ourServicesBg}
+            alt="Our Services Section Background"
+            fill
+            className="pointer-events-none object-cover"
+            priority
+          />
+        </div>
 
-        <div className="mx-auto max-w-[120.3rem]">
+        <div className="absolute inset-0 z-[0]">
+          <Image
+            src={bgLine3}
+            alt="Background line"
+            width={1419.66}
+            height={371.16}
+            className="absolute -top-[23.7rem] right-[-89.294rem]"
+            priority
+          />
+        </div>
+
+        <div className="relative z-[1] mx-auto max-w-[120.3rem]">
           <div className="flex flex-col gap-[2rem]">
             <h3 className="relative max-w-[80.7rem] text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
               Maintenance and Growth

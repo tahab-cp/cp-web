@@ -5,10 +5,23 @@ import Image from "next/image";
 import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
+import bgLine from "../../assets/images/line-stroke-06.svg";
 
 const WhoWeAreSection = () => {
   return (
     <section className="relative pt-[20.6rem] pb-[9rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1440}
+          height={531.42}
+          className="absolute top-[14.8rem] left-1/2 -translate-x-1/2 opacity-10"
+          priority
+        />
+      </div>
+
       <div className="mx-auto max-w-[141.6rem]">
         <div className="flex flex-col items-center gap-[2.1rem] text-center">
           <SectionLabel

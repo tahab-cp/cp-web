@@ -49,10 +49,10 @@ const Footer = () => {
         <Image
           src={cElement}
           alt="C Element"
-          height={177.57}
-          width={83.58}
+          height={83.58}
+          width={177.57}
           priority
-          className="absolute bottom-[3rem] left-[-3rem] rotate-[45deg]"
+          className="absolute bottom-[3rem] left-[-7rem] rotate-[45deg]"
         />
       </div>
 

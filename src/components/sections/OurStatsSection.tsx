@@ -1,10 +1,22 @@
 import SectionLabel from "../common/SectionLabel";
 import Image from "next/image";
+import bgLine from "../../assets/images/line-stroke-03.svg";
 
 const OurStatsSection = () => {
   return (
-    <section className="relative z-[1] pt-[8.5rem] pb-[9.732rem]">
-      <div className="mx-auto flex max-w-[120.3rem] flex-col items-center gap-[4.4rem]">
+    <section className="relative pt-[8.5rem] pb-[9.732rem]">
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1453}
+          height={372}
+          className="absolute top-[14.2rem] left-1/2 -translate-x-1/2 opacity-50"
+          priority
+        />
+      </div>
+
+      <div className="relative z-[1] mx-auto flex max-w-[120.3rem] flex-col items-center gap-[4.4rem]">
         <SectionLabel text="Our Stats" />
 
         <div className="flex h-[31rem] items-start gap-[3rem]">

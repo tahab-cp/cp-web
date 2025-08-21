@@ -3,10 +3,22 @@ import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import Image from "next/image";
+import bgLine from "../../assets/images/line-stroke-07.svg";
 
 const AboutCaseStudiesSection = () => {
   return (
     <section className="relative overflow-hidden">
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1055.55}
+          height={389.83}
+          className="absolute top-[10.6rem] left-[-23.8rem]"
+          priority
+        />
+      </div>
+
       <div className="flex flex-col items-center gap-[2rem] text-center">
         <SectionLabel
           text="Case Studies"
