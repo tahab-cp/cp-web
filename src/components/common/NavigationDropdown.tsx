@@ -5,28 +5,36 @@ import arrowDown from "../../assets/images/icons/arrow-down.svg";
 import Link from "next/link";
 import { useState } from "react";
 import { serviceTabs } from "@/constants/servicesDropdown";
+import { usePathname } from "next/navigation";
 
 const NavigationDropdown = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeDropdown, setActiveDropdown] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div
       onMouseEnter={() => setActiveDropdown(true)}
       onMouseLeave={() => setActiveDropdown(false)}
     >
-      <button
-        onClick={() => setActiveDropdown(!activeDropdown)}
-        className={`inline-flex h-[4.6rem] min-w-[12.4rem] cursor-pointer items-center justify-center gap-[1rem] rounded-[6rem] px-[1.6rem] py-[1.1rem] text-[1.6rem] leading-[2.4rem] font-medium transition-all duration-300 ${activeDropdown ? "text-text-primary bg-white" : "bg-white/15 text-white"}`}
+      <Link
+        href="/services"
+        className={`inline-flex h-[4.6rem] min-w-[12.4rem] cursor-pointer items-center justify-center gap-[1rem] rounded-[6rem] px-[1.6rem] py-[1.1rem] text-[1.6rem] leading-[2.4rem] font-medium transition-all duration-300 ${activeDropdown || pathname === "/services" ? "text-text-primary bg-white" : "bg-white/15 text-white"}`}
       >
         <span>Services</span>
 
         <div
-          className={`inline-flex size-[2.2rem] items-center justify-center rounded-full transition-all duration-300 ${activeDropdown ? "bg-text-primary -rotate-180" : "-rotate-0 bg-white/15"}`}
+          className={`inline-flex size-[2.2rem] items-center justify-center rounded-full transition-all duration-300 ${
+            pathname === "/services"
+              ? "bg-text-primary -rotate-0" // active route → bg active, no rotation
+              : activeDropdown
+                ? "bg-text-primary -rotate-180" // dropdown open → bg + rotate
+                : "-rotate-0 bg-white/15" // default
+          }`}
         >
           <Image src={arrowDown} alt="Dropdown arrow" width={12} height={12} />
         </div>
-      </button>
+      </Link>
 
       {/* Dropdown Menu */}
       <div

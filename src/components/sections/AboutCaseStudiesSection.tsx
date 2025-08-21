@@ -2,10 +2,11 @@ import CaseStudiesSlider from "../common/CaseStudiesSlider";
 import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
+import Image from "next/image";
 
 const AboutCaseStudiesSection = () => {
   return (
-    <section>
+    <section className="relative overflow-hidden">
       <div className="flex flex-col items-center gap-[2rem] text-center">
         <SectionLabel
           text="Case Studies"

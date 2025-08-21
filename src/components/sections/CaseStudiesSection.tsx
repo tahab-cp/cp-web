@@ -4,12 +4,24 @@ import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import { caseStudiesData } from "@/constants/caseStudiesSection";
-import bgLine from "../../assets/images/line-stroke-03.svg";
 import Image from "next/image";
+import bgLine from "../../assets/images/line-stroke-04.svg";
 
 const CaseStudiesSection = () => {
   return (
     <section className="relative pt-[10rem] pb-[10.8rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1659.55}
+          height={612.9}
+          className="absolute bottom-0 left-1/2 -translate-x-1/2"
+          priority
+        />
+      </div>
+
       <div className="mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-center gap-[2rem] text-center">
           <SectionLabel
@@ -36,16 +48,6 @@ const CaseStudiesSection = () => {
         </div>
 
         <CtaSection1 />
-      </div>
-
-      <div className="absolute bottom-[0rem] left-0 z-[-1] w-full">
-        <Image
-          src={bgLine}
-          alt="Decorative line"
-          width={1659.55}
-          height={612.9}
-          className="pointer-events-none h-auto w-full select-none"
-        />
       </div>
     </section>
   );

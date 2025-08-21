@@ -1,5 +1,5 @@
 import Image from "next/image";
-import offerSectionBg from "../../assets/images/offer-section-bg.png";
+import offerSectionBg from "../../assets/images/artistic-gradient-bg.png";
 import SectionLabel from "../common/SectionLabel";
 import clickArrowYellow from "../../assets/images/icons/click-arrow-yellow.svg";
 import clickArrowPink from "../../assets/images/icons/click-arrow-pink.svg";
@@ -19,20 +19,35 @@ import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import offerDesignImg01 from "../../assets/images/offer-design-img-01.png";
 import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
-import bgLine from "../../assets/images/line-stroke-02.svg";
+import bgLine from "../../assets/images/line-stroke-03.svg";
 
 const WhatWeOfferSection = () => {
   return (
-    <section className="relative z-[1] mt-[-22rem] pt-[8rem] pb-[10.1rem]">
-      <Image
-        src={offerSectionBg}
-        alt="Offer Section Background"
-        fill
-        className="relative z-[-1] object-cover object-center"
-        priority
-      />
+    <section className="relative pt-[8rem] pb-[10.1rem]">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={offerSectionBg}
+          alt="Offer Section Background"
+          fill
+          className="pointer-events-none object-cover"
+          priority
+        />
+      </div>
 
-      <div className="flex flex-col items-center gap-[7.6rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[1]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1453}
+          height={372}
+          className="absolute top-[180.6rem] left-1/2 -translate-x-1/2"
+          priority
+        />
+      </div>
+
+      <div className="relative z-[2] flex flex-col items-center gap-[7.6rem]">
         <SectionLabel text="What We Offer" />
 
         <div className="mx-auto flex w-full max-w-[130rem]">
@@ -135,8 +150,8 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="mt-[-6rem] h-[58.3rem] bg-white">
-        <div className="relative z-[1] mx-auto flex w-full max-w-[130rem] gap-[12.9rem]">
+      <div className="relative z-[1] mt-[-6rem] h-[58.3rem] bg-white">
+        <div className="relative mx-auto flex w-full max-w-[130rem] gap-[12.9rem]">
           <div className="flex flex-col gap-[4.5rem] pt-[10rem]">
             <div className="flex gap-[10rem]">
               {offerSectionDesignData.columns.map((col, idx) => (
@@ -376,16 +391,6 @@ const WhatWeOfferSection = () => {
             />
           </i>
         </Link>
-      </div>
-
-      <div className="absolute bottom-[-10rem] left-0 z-[-1] w-full">
-        <Image
-          src={bgLine}
-          alt="Decorative line"
-          width={1453}
-          height={372}
-          className="pointer-events-none h-auto w-full select-none"
-        />
       </div>
     </section>
   );

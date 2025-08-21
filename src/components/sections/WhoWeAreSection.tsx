@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const WhoWeAreSection = () => {
   return (
-    <section className="pt-[20.6rem] pb-[9rem]">
+    <section className="relative pt-[20.6rem] pb-[9rem]">
       <div className="mx-auto max-w-[141.6rem]">
         <div className="flex flex-col items-center gap-[2.1rem] text-center">
           <SectionLabel
@@ -18,7 +18,7 @@ const WhoWeAreSection = () => {
           />
 
           <h1 className="text-text-primary max-w-[121.3rem] text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em]">
-            About Creative Pixels Creative Agency based in Manchester
+            About Creative Pixels <br /> Creative Agency based in Manchester
           </h1>
 
           <SectionDescription label="You end up hearing about agencies which do care, but don't. Let us change that for you today." />

@@ -16,7 +16,9 @@ import ContactFormInput from "./ContactFormInput";
 const ContactForm = () => {
   return (
     <div className="contact-form-bg w-full">
-      <h4 className="text-[4.8rem] font-semibold tracking-[-0.02em]">Hello</h4>
+      <h4 className="text-[4.8rem] font-semibold tracking-[-0.02em]">
+        Hello 👋
+      </h4>
 
       <form action="" className="flex flex-col gap-[1.8rem]">
         <fieldset className="flex items-center gap-[1.6rem]">

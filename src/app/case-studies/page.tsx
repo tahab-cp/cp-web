@@ -1,7 +1,11 @@
+import ContactSection from "@/components/sections/ContactSection";
+import OurWorkSection from "@/components/sections/OurWorkSection";
+
 const CaseStudiesPage = () => {
   return (
-    <main className="bg-text-primary flex h-screen items-center justify-center text-center text-[4rem] font-bold text-white">
-      CaseStudiesPage
+    <main>
+      <OurWorkSection />
+      <ContactSection />
     </main>
   );
 };

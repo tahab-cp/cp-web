@@ -1,24 +1,43 @@
 import Image from "next/image";
-import heroBg from "@/assets/images/hero-bg.png";
+import heroSecGradientBg from "@/assets/images/hero-sec-gradient-bg.png";
 import BookBadge from "../common/BookBadge";
 import LogoPopup from "../common/LogoPopup";
 import { logoPopupsData } from "@/constants/heroSection";
 import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import consultationAvatar from "../../assets/images/consultation-avatar.svg";
 import Link from "next/link";
+import bgLine from "../../assets/images/line-stroke-01.svg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] px-[2rem] md:h-[79rem] md:min-h-auto xl:px-[0rem]">
-      <Image
-        src={heroBg}
-        alt="Hero Background"
-        fill
-        className="object-cover object-center"
-        priority
-      />
+      {/* Gradient Background */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={heroSecGradientBg}
+          alt="Hero Gradient Background"
+          fill
+          className="pointer-events-none object-cover"
+          priority
+        />
+      </div>
 
-      <div className="relative z-10 flex h-full w-full flex-col items-center justify-end gap-[3rem] pt-[15rem] pb-[2rem] md:gap-[5.9rem] md:pt-[0rem] md:pb-[4rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[1]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1440}
+          height={531.42}
+          className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2"
+          priority
+        />
+      </div>
+
+      {/* Overlay */}
+      <div className="hero-sec-overlay absolute bottom-0 left-0 h-[28.9rem] w-full" />
+
+      <div className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[3rem] pt-[15rem] pb-[2rem] md:gap-[5.9rem] md:pt-[0rem] md:pb-[4rem]">
         <div className="flex max-w-[106.5rem] flex-col items-center gap-[1.8rem] text-center md:gap-[2.7rem]">
           <div>
             <BookBadge />

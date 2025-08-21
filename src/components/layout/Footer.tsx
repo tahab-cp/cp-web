@@ -34,32 +34,36 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative w-full overflow-hidden pt-[6.2rem] pb-[2.764rem]">
-      <Image
-        src={footerBg}
-        alt="Footer Background"
-        fill
-        className="object-cover object-center"
-        priority
-      />
+    <footer className="relative w-full pt-[6.2rem] pb-[2.764rem]">
+      <div className="absolute inset-0 z-[0]">
+        <Image
+          src={footerBg}
+          alt="Footer Background"
+          fill
+          className="pointer-events-none object-cover"
+          priority
+        />
+      </div>
 
-      <div className="pointer-events-none absolute bottom-[6.034rem] left-[-2.5rem] h-[17.757rem] w-[8.358rem] -rotate-45 select-none">
+      <div className="absolute inset-0 z-[0] overflow-hidden">
         <Image
           src={cElement}
           alt="C Element"
           height={177.57}
           width={83.58}
           priority
+          className="absolute bottom-[3rem] left-[-3rem] rotate-[45deg]"
         />
       </div>
 
-      <div className="pointer-events-none absolute right-[-2.5rem] bottom-[58.49rem] h-[17.821rem] w-[9.644rem] rotate-[-15deg] select-none">
+      <div className="absolute inset-0 z-[0] overflow-hidden">
         <Image
           src={pElement}
           alt="P Element"
           height={178.21}
           width={96.44}
           priority
+          className="absolute top-[43.5rem] right-[-3rem] rotate-[-15deg]"
         />
       </div>
 

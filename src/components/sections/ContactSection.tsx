@@ -2,13 +2,25 @@ import Link from "next/link";
 import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";
 import CtaSection2 from "../common/CtaSection2";
-import bgLine from "../../assets/images/line-stroke-02.svg";
 import Image from "next/image";
 import TextMarquee from "../common/TextMarquee";
+import bgLine from "../../assets/images/line-stroke-05.svg";
 
 const ContactSection = () => {
   return (
     <section className="relative py-[10rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[1]">
+        <Image
+          src={bgLine}
+          alt="Background line"
+          width={1488}
+          height={316}
+          className="absolute top-[162.9rem] left-1/2 -translate-x-1/2"
+          priority
+        />
+      </div>
+
       <div className="relative z-[3] mx-auto flex max-w-[112.3rem] flex-col items-center">
         <SectionTitle label="Ready to Start Working With Us?" />
 
@@ -62,16 +74,6 @@ const ContactSection = () => {
 
       <div className="relative z-[3] mx-auto max-w-[120.3rem]">
         <CtaSection2 />
-      </div>
-
-      <div className="absolute bottom-[-18rem] left-0 z-[2] w-full">
-        <Image
-          src={bgLine}
-          alt="Decorative line"
-          width={1488}
-          height={316}
-          className="pointer-events-none h-auto w-full select-none"
-        />
       </div>
     </section>
   );
