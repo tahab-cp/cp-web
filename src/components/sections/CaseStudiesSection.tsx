@@ -4,8 +4,6 @@ import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import { caseStudiesData } from "@/constants/caseStudiesSection";
-import Image from "next/image";
-import bgLine from "../../assets/images/line-stroke-04.svg";
 import LineStroke04 from "../decorativeElements/LineStroke04";
 
 const CaseStudiesSection = () => {

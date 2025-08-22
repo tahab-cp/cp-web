@@ -6,7 +6,6 @@ import { logoPopupsData } from "@/constants/heroSection";
 import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import consultationAvatar from "../../assets/images/consultation-avatar.svg";
 import Link from "next/link";
-import bgLine from "../../assets/images/line-stroke-01.svg";
 import LineStroke01 from "../decorativeElements/LineStroke01";
 
 const HeroSection = () => {

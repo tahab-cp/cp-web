@@ -1,10 +1,8 @@
-import Image from "next/image";
 import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import TestimonialsCard from "../common/TestimonialsCard";
 import { testimonialsData } from "@/constants/testimonialSection";
-import bgLine from "../../assets/images/line-stroke-02.svg";
 import LineStroke05 from "../decorativeElements/LineStroke05";
 
 const TestimonialSection = () => {

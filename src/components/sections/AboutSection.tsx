@@ -9,7 +9,6 @@ import cpStroke from "../../assets/images/cp-stroke.svg";
 import report from "../../assets/images/report.svg";
 import message from "../../assets/images/message.svg";
 import analyst from "../../assets/images/analyst.svg";
-import bgLine from "../../assets/images/line-stroke-02.svg";
 import LineStroke02 from "../decorativeElements/LineStroke02";
 
 const AboutSection = () => {

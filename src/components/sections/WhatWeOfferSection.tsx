@@ -19,7 +19,6 @@ import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import offerDesignImg01 from "../../assets/images/offer-design-img-01.png";
 import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
-import bgLine from "../../assets/images/line-stroke-03.svg";
 import LineStroke03 from "../decorativeElements/LineStroke03";
 
 const WhatWeOfferSection = () => {

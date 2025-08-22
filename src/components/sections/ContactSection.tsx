@@ -2,9 +2,7 @@ import Link from "next/link";
 import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";
 import CtaSection2 from "../common/CtaSection2";
-import Image from "next/image";
 import TextMarquee from "../common/TextMarquee";
-import bgLine from "../../assets/images/line-stroke-05.svg";
 import LineStroke06 from "../decorativeElements/LineStroke06";
 
 const ContactSection = () => {
