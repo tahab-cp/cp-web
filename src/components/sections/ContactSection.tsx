@@ -10,7 +10,7 @@ const ContactSection = () => {
     <section className="relative py-[10rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke06 className="absolute top-[162.9rem] left-1/2 w-[148rem] -translate-x-1/2" />
+        <LineStroke06 className="absolute top-[162.9rem] left-1/2 -translate-x-1/2" />
       </div>
 
       <div className="relative z-[3] mx-auto flex max-w-[112.3rem] flex-col items-center">

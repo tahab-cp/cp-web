@@ -28,6 +28,7 @@ body {
   background-color: #ffffff;
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .swiper {
