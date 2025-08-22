@@ -6,20 +6,14 @@ import SectionTitle from "../common/SectionTitle";
 import { caseStudiesData } from "@/constants/caseStudiesSection";
 import Image from "next/image";
 import bgLine from "../../assets/images/line-stroke-04.svg";
+import LineStroke04 from "../decorativeElements/LineStroke04";
 
 const CaseStudiesSection = () => {
   return (
     <section className="relative pt-[10rem] pb-[10.8rem]">
       {/* Decorative stroke line */}
-      <div className="absolute inset-0 z-[0]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1659.55}
-          height={612.9}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2"
-          priority
-        />
+      <div className="absolute inset-0 z-[0] overflow-hidden">
+        <LineStroke04 className="absolute bottom-0 left-1/2 -translate-x-1/2" />
       </div>
 
       <div className="mx-auto max-w-[120.3rem]">

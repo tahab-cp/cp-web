@@ -5,20 +5,14 @@ import SectionTitle from "../common/SectionTitle";
 import TestimonialsCard from "../common/TestimonialsCard";
 import { testimonialsData } from "@/constants/testimonialSection";
 import bgLine from "../../assets/images/line-stroke-02.svg";
+import LineStroke05 from "../decorativeElements/LineStroke05";
 
 const TestimonialSection = () => {
   return (
     <section className="testimonials-sec relative z-[1] pt-[7.2rem] pb-[9.1rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1453}
-          height={372}
-          className="absolute top-[118.4rem] left-1/2 -translate-x-1/2 opacity-90"
-          priority
-        />
+        <LineStroke05 className="absolute top-[118.4rem] left-1/2 -translate-x-1/2 opacity-90" />
       </div>
 
       <div className="mx-auto max-w-[120.3rem]">

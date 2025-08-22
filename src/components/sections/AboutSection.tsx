@@ -10,6 +10,7 @@ import report from "../../assets/images/report.svg";
 import message from "../../assets/images/message.svg";
 import analyst from "../../assets/images/analyst.svg";
 import bgLine from "../../assets/images/line-stroke-02.svg";
+import LineStroke02 from "../decorativeElements/LineStroke02";
 
 const AboutSection = () => {
   return (
@@ -28,14 +29,7 @@ const AboutSection = () => {
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1453}
-          height={372}
-          className="absolute top-[135.1rem] left-1/2 -translate-x-1/2"
-          priority
-        />
+        <LineStroke02 className="absolute top-[135.1rem] left-1/2 -translate-x-1/2" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col items-center text-center xl:block xl:text-left">

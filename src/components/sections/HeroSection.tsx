@@ -7,10 +7,11 @@ import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import consultationAvatar from "../../assets/images/consultation-avatar.svg";
 import Link from "next/link";
 import bgLine from "../../assets/images/line-stroke-01.svg";
+import LineStroke01 from "../decorativeElements/LineStroke01";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] px-[2rem] md:h-[79rem] md:min-h-auto xl:px-[0rem]">
+    <section className="relative h-[79rem] w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -24,26 +25,19 @@ const HeroSection = () => {
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1440}
-          height={531.42}
-          className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2"
-          priority
-        />
+        <LineStroke01 className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2" />
       </div>
 
       {/* Overlay */}
       <div className="hero-sec-overlay absolute bottom-0 left-0 h-[28.9rem] w-full" />
 
-      <div className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[3rem] pt-[15rem] pb-[2rem] md:gap-[5.9rem] md:pt-[0rem] md:pb-[4rem]">
-        <div className="flex max-w-[106.5rem] flex-col items-center gap-[1.8rem] text-center md:gap-[2.7rem]">
+      <div className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[5.9rem] pt-[15rem] pb-[4rem]">
+        <div className="flex max-w-[106.5rem] flex-col items-center gap-[2.7rem] text-center">
           <div>
             <BookBadge />
           </div>
 
-          <h1 className="w-full text-center text-[2.5rem] leading-[3.5rem] font-bold tracking-[-0.03em] text-white md:text-[4.5rem] md:leading-[5.5rem] lg:text-[6rem] lg:leading-[7rem] xl:text-[7rem] xl:leading-[8.4rem]">
+          <h1 className="text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
             Grow your digital presence today with real{" "}
             <span className="bg-gradient-01 bg-clip-text text-transparent">
               human-led
@@ -96,7 +90,7 @@ const HeroSection = () => {
             Trusted by enterprises all over the world:
           </h6>
 
-          <ul className="flex flex-wrap items-center justify-center gap-[3rem] md:gap-[4.423rem]">
+          <ul className="flex items-center justify-center gap-[4.423rem]">
             {logoPopupsData.map((item, idx) => (
               <li key={idx}>
                 <LogoPopup

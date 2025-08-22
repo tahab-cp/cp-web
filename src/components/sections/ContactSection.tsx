@@ -5,20 +5,14 @@ import CtaSection2 from "../common/CtaSection2";
 import Image from "next/image";
 import TextMarquee from "../common/TextMarquee";
 import bgLine from "../../assets/images/line-stroke-05.svg";
+import LineStroke06 from "../decorativeElements/LineStroke06";
 
 const ContactSection = () => {
   return (
     <section className="relative py-[10rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1488}
-          height={316}
-          className="absolute top-[162.9rem] left-1/2 -translate-x-1/2"
-          priority
-        />
+        <LineStroke06 className="absolute top-[162.9rem] left-1/2 w-[148rem] -translate-x-1/2" />
       </div>
 
       <div className="relative z-[3] mx-auto flex max-w-[112.3rem] flex-col items-center">

@@ -20,6 +20,7 @@ import offerDesignImg01 from "../../assets/images/offer-design-img-01.png";
 import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
 import bgLine from "../../assets/images/line-stroke-03.svg";
+import LineStroke03 from "../decorativeElements/LineStroke03";
 
 const WhatWeOfferSection = () => {
   return (
@@ -37,14 +38,7 @@ const WhatWeOfferSection = () => {
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1453}
-          height={372}
-          className="absolute top-[180.6rem] left-1/2 -translate-x-1/2"
-          priority
-        />
+        <LineStroke03 className="absolute top-[180.6rem] left-1/2 -translate-x-1/2" />
       </div>
 
       <div className="relative z-[2] flex flex-col items-center gap-[7.6rem]">
