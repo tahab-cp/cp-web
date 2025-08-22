@@ -18,13 +18,11 @@ import subtractYellow from "../../assets/images/icons/subtract-yellow.svg";
 import subtractSeaGreen from "../../assets/images/icons/subtract-seagreen.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import arrowRightDark from "../../assets/images/icons/arrow-right-dark.svg";
-import talkButtonImg from "../../assets/images/talk-button-img.svg";
 import websiteDevelopmentImg from "../../assets/images/website-development-img.png";
 import maintanenceGrowthImg from "../../assets/images/maintainance-growth-img.png";
 import bgLine from "../../assets/images/line-stroke-08.svg";
 import bgLine2 from "../../assets/images/line-stroke-02.svg";
 import bgLine3 from "../../assets/images/line-stroke-09.svg";
-import CtaButton01 from "../common/CtaButton1";
 
 const OurServicesSection = () => {
   return (
