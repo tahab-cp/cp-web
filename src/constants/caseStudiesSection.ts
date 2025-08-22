@@ -10,6 +10,7 @@ import photoshopLogo from "../assets/images/photoshop-logo.png";
 
 export const caseStudiesData = [
   {
+    slug: "game-art-brain-studio",
     image: brainStudioCaseStudy,
     title: "Game Art Brain Studio - Specialized in stylized 2D & 3D Game art.",
     description:
@@ -27,6 +28,7 @@ export const caseStudiesData = [
     ],
   },
   {
+    slug: "ndifo-safari",
     image: ndifoCaseStudy,
     title: "NDifo Safari - The Authentic Tanzanian Safari Experience",
     description:
@@ -44,6 +46,7 @@ export const caseStudiesData = [
     ],
   },
   {
+    slug: "alert-force",
     image: alertForceCaseStudy,
     title:
       "AlertForce - Specialises in compliance training for work health and safety",
@@ -62,6 +65,7 @@ export const caseStudiesData = [
     ],
   },
   {
+    slug: "ntw-it-logsdail",
     image: ntwCaseStudy,
     title:
       "Ntw & It Logsdail - Spectacular Forestry services and keeping your home warm",

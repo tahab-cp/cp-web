@@ -24,6 +24,7 @@ import maintanenceGrowthImg from "../../assets/images/maintainance-growth-img.pn
 import bgLine from "../../assets/images/line-stroke-08.svg";
 import bgLine2 from "../../assets/images/line-stroke-02.svg";
 import bgLine3 from "../../assets/images/line-stroke-09.svg";
+import CtaButton01 from "../common/CtaButton1";
 
 const OurServicesSection = () => {
   return (
@@ -178,18 +179,7 @@ const OurServicesSection = () => {
           </div>
         </div>
 
-        <Link
-          href="/contact"
-          className="absolute right-[4.672rem] bottom-0 size-[19.027rem] animate-[spin_8s_linear_infinite] hover:[animation-play-state:paused]"
-        >
-          <Image
-            src={talkButtonImg}
-            alt=""
-            width={190.27}
-            height={190.27}
-            priority
-          />
-        </Link>
+        {/* <CtaButton01 /> */}
       </div>
 
       <div className="relative pt-[18.8rem] pb-[8rem]">

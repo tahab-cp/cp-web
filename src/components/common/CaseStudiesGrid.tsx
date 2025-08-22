@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Tag = {
   label: string;
@@ -20,6 +21,7 @@ type CaseStudiesGridProps = {
   tags: Tag[];
   technologies: Technology[];
   className?: string; // 👈 new
+  slug: string; // Slug for the case study detail page
 };
 
 const CaseStudiesGrid = ({
@@ -29,13 +31,17 @@ const CaseStudiesGrid = ({
   tags,
   technologies,
   className = "",
+  slug,
 }: CaseStudiesGridProps) => {
   return (
     <div
       className={`case-studies-grid grid w-full grid-cols-2 items-center gap-[4.3rem] ${className}`}
     >
       {/* Left Image */}
-      <div className="pointer-events-none relative h-[44rem] w-full select-none">
+      <Link
+        href={`/case-studies/${slug}`}
+        className="relative h-[44rem] w-full"
+      >
         <Image
           src={image}
           alt="Case Study Image"
@@ -43,7 +49,7 @@ const CaseStudiesGrid = ({
           width={555}
           priority
         />
-      </div>
+      </Link>
 
       {/* Right Content */}
       <div className="flex flex-col">
