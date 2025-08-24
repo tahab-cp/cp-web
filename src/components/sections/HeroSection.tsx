@@ -6,8 +6,40 @@ import LogoPopup from "../common/LogoPopup";
 import { logoPopupsData } from "@/constants/heroSection";
 import LineStroke01 from "../decorativeElements/LineStroke01";
 import CommonBtn2 from "../common/CommonBtn2";
+import { useEffect, useRef } from "react";
+import { useLoaderStore } from "@/store/useLoader";
+import gsap from "gsap";
 
 const HeroSection = () => {
+  const isReady = useLoaderStore((state) => state.isReady);
+  const heroContentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isReady && heroContentRef.current) {
+      const badge = heroContentRef.current.querySelectorAll(
+        ".hero-badge-animate",
+      );
+
+      const tl = gsap.timeline();
+
+      // Step 1: fade in whole hero smoothly
+      tl.to(heroContentRef.current, { autoAlpha: 1, duration: 0.3 });
+
+      // Step 2: drop-like stagger animation
+      tl.fromTo(
+        badge,
+        { scale: 0, autoAlpha: 0 },
+        {
+          scale: 1,
+          autoAlpha: 1,
+          duration: 0.8,
+          ease: "back.out(1.7)", // nice bounce curve
+          clearProps: "all",
+        },
+      );
+    }
+  }, [isReady]);
+
   return (
     <section className="relative h-[79rem] w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem]">
       {/* Gradient Background */}
@@ -23,16 +55,19 @@ const HeroSection = () => {
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke01 className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2" />
+        <LineStroke01 className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2 opacity-0" />
       </div>
 
       {/* Overlay */}
       <div className="hero-sec-overlay absolute bottom-0 left-0 h-[28.9rem] w-full" />
 
-      <div className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[5.9rem] pt-[15rem] pb-[4rem]">
+      <div
+        ref={heroContentRef}
+        className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[5.9rem] pt-[15rem] pb-[4rem] opacity-0"
+      >
         {/* Main content */}
         <div className="flex max-w-[106.5rem] flex-col items-center gap-[2.7rem] text-center">
-          <div className="">
+          <div className="hero-badge-animate">
             <BookBadge />
           </div>
 

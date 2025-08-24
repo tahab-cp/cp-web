@@ -2,31 +2,49 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useLoaderStore } from "@/store/useLoader";
 
 const LineStroke01 = (props: React.SVGProps<SVGSVGElement>) => {
   const pathRef = useRef<SVGPathElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const isReady = useLoaderStore((state) => state.isReady);
 
   useEffect(() => {
-    if (pathRef.current) {
+    if (isReady && pathRef.current && svgRef.current) {
       const length = pathRef.current.getTotalLength();
 
-      // Set up initial stroke dash
+      // reset initial state
       gsap.set(pathRef.current, {
         strokeDasharray: length,
         strokeDashoffset: length,
       });
+      gsap.set(svgRef.current, { autoAlpha: 0 }); // 👈 start invisible
 
-      // Animate stroke drawing
-      gsap.to(pathRef.current, {
-        strokeDashoffset: 0,
-        duration: 3,
-        ease: "power2.inOut",
+      const tl = gsap.timeline();
+
+      // Step 1: fade in SVG
+      tl.to(svgRef.current, {
+        autoAlpha: 1,
+        duration: 0.8,
+        ease: "power2.out",
       });
+
+      // Step 2: draw stroke
+      tl.to(
+        pathRef.current,
+        {
+          strokeDashoffset: 0,
+          duration: 4,
+          ease: "power2.inOut",
+        },
+        "-=0.2",
+      ); // small overlap so fade + draw feel smooth
     }
-  }, []);
+  }, [isReady]);
 
   return (
     <svg
+      ref={svgRef}
       width="1476"
       height="568"
       viewBox="0 0 1476 568"

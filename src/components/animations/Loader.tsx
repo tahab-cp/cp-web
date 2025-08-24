@@ -36,6 +36,8 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
     // Step 3: Fade out loader
     tl.to(loaderRef.current, {
       opacity: 0,
+      pointerEvents: "none",
+      visibility: "none",
       duration: 1,
       delay: 0.3,
       ease: "power2.inOut",

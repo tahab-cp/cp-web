@@ -2,24 +2,25 @@
 
 import Header from "./Header";
 import Footer from "./Footer";
-import { useState } from "react";
 import Loader from "../animations/Loader";
 import useLenis from "@/hooks/useLenis";
+import { useLoaderStore } from "@/store/useLoader";
 
 export default function LayoutWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const setReady = useLoaderStore((state) => state.setReady);
+  const isReady = useLoaderStore((state) => state.isReady);
 
   useLenis();
 
   return (
     <>
-      <Loader onComplete={() => setIsLoading(false)} />
+      <Loader onComplete={() => setReady(true)} />
 
-      <div className={isLoading ? "h-screen overflow-hidden" : ""}>
+      <div className={!isReady ? "h-screen overflow-hidden" : ""}>
         <Header />
         {children}
         <Footer />
