@@ -1,29 +1,20 @@
 import Image from "next/image";
 import AboutBadge from "../common/AboutBadge";
-import Link from "next/link";
-import subtractDark from "../../assets/images/icons/subtract-dark.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
-import cElement from "../../assets/images/c-element.svg";
 import { aboutCardData } from "@/constants/aboutSection";
 import cpStroke from "../../assets/images/cp-stroke.svg";
 import report from "../../assets/images/report.svg";
 import message from "../../assets/images/message.svg";
 import analyst from "../../assets/images/analyst.svg";
 import LineStroke02 from "../decorativeElements/LineStroke02";
+import CommonBtn3 from "../common/CommonBtn3";
+import CLetter from "../decorativeElements/CLetter";
 
 const AboutSection = () => {
   return (
     <section className="relative py-[10rem]">
       {/* Bg Element */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        <Image
-          src={cElement}
-          alt="Background Element"
-          width={550.94}
-          height={275.78}
-          className="absolute top-[19rem] right-[-18.341rem] rotate-[51.36deg]"
-          priority
-        />
+        <CLetter className="absolute top-[3.1rem] right-[-18.341rem]" />
       </div>
 
       {/* Decorative stroke line */}
@@ -32,7 +23,7 @@ const AboutSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col items-center text-center xl:block xl:text-left">
-        <div>
+        <div className="">
           <AboutBadge />
         </div>
 
@@ -50,28 +41,8 @@ const AboutSection = () => {
           We work with clients in 🇬🇧 🇦🇺 🇺🇸
         </h5>
 
-        <div>
-          <Link href="" className="inline-flex items-center">
-            <span className="inline-flex h-[5rem] min-w-[25.8rem] items-center justify-center rounded-[6rem] border border-[#141414] bg-[#141414] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-              About CreativePixels
-            </span>
-            <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-              <Image
-                src={subtractDark}
-                alt="Subtract Light Icon"
-                width={18}
-                height={18}
-              />
-            </i>
-            <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#141414] bg-[#141414]">
-              <Image
-                src={arrowRight}
-                alt="Arrow Right Icon"
-                width={14}
-                height={14}
-              />
-            </i>
-          </Link>
+        <div className="">
+          <CommonBtn3 />
         </div>
       </div>
 
@@ -134,7 +105,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 gap-x-[1.5rem] gap-y-[3rem] md:grid-cols-2">
           {aboutCardData.map((item, idx) => (
-            <div key={idx}>
+            <div className="" key={idx}>
               <div className="about-card">
                 <Image
                   src={item.icon}

@@ -14,7 +14,7 @@ const CaseStudiesSection = () => {
         <LineStroke04 className="absolute bottom-0 left-1/2 -translate-x-1/2" />
       </div>
 
-      <div className="mx-auto max-w-[120.3rem]">
+      <div className="relative z-[1] mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-center gap-[2rem] text-center">
           <SectionLabel
             text="Case Studies"

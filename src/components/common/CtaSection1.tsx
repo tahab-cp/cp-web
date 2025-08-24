@@ -4,7 +4,7 @@ import userAvatar from "../../assets/images/user-avatar.svg";
 import handIcon from "../../assets/images/icons/hand-icon.svg";
 import flashIcon from "../../assets/images/icons/3d-flash-icon.svg";
 import SectionLabel from "./SectionLabel";
-import consultationAvatar from "../../assets/images/consultation-avatar.svg";
+import avatar from "../../assets/images/consultation-avatar.svg";
 import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
@@ -39,7 +39,7 @@ const CtaSection1 = () => {
               className="relative inline-flex h-[6.4rem] min-w-[29.769rem] items-center gap-[1rem] px-[3rem] py-[1.223rem] text-[2rem] font-semibold text-white"
             >
               {/* Border layer */}
-              <div className="gradient-border-mask absolute inset-0 rounded-[6rem]"></div>
+              <div className="contact-btn-gradient absolute inset-0 rounded-[6rem]"></div>
 
               {/* Text layer */}
               <span className="relative z-10 text-white">Get in Touch</span>
@@ -51,13 +51,8 @@ const CtaSection1 = () => {
               />
             </Link>
 
-            <i className="relative size-[6.4rem]">
-              <Image
-                src={handIcon}
-                alt="Hand Icon"
-                fill
-                className="object-contain"
-              />
+            <i className="relative flex size-[6.4rem] items-center justify-center">
+              <Image src={handIcon} alt="Hand Icon" width={64} height={64} />
             </i>
           </div>
         </div>
@@ -66,7 +61,7 @@ const CtaSection1 = () => {
           <div className="bg-text-primary/30 absolute bottom-[-1.5rem] left-1/2 z-[-1] h-[36.3rem] w-[25.8rem] -translate-x-1/2 rounded-[3.2rem] backdrop-blur-[10px]" />
 
           <div className="flex flex-col items-center gap-[2rem] text-center">
-            <i className="absolute top-[-3.9rem] left-[.7rem] inline-flex h-[9.827rem] w-[5.653rem] items-center justify-center">
+            <i className="absolute top-[-3rem] left-[2rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
               <Image
                 src={flashIcon}
                 alt="Flash Icon"
@@ -75,15 +70,14 @@ const CtaSection1 = () => {
               />
             </i>
 
-            <i className="relative inline-flex size-[9.9rem] items-center justify-center rounded-full">
+            <i className="relative flex size-[9.9rem] items-center justify-center">
               <Image
-                src={consultationAvatar}
-                alt="Consultation Avatar"
+                src={avatar}
+                alt="Avatar"
                 width={99}
                 height={99}
+                priority
               />
-
-              <div className="absolute top-[0.177rem] right-[0.177rem] size-[2rem] rounded-full bg-[#7EE972] outline-[5px] outline-[#25014A]" />
             </i>
 
             <h4 className="max-w-[24rem] text-[2.6rem] leading-[3.3rem] font-semibold tracking-[-0.02em]">

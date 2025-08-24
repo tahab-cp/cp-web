@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { Onest } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -28,9 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={onest.variable}>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

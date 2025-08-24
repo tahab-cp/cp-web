@@ -10,6 +10,7 @@ import subtractLight from "../../assets/images/icons/subtract-light.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import HamburgerMenu from "./HamburgerMenu";
 import { usePathname } from "next/navigation";
+import CommonBtn1 from "../common/CommonBtn1";
 
 const Header = () => {
   const pathname = usePathname();
@@ -49,7 +50,7 @@ const Header = () => {
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] rounded-full bg-[#7EE972] outline-[3.5px]" />
             </i>
 
-            <Link
+            {/* <Link
               href="/contact"
               className="inline-flex items-center justify-center"
             >
@@ -74,7 +75,9 @@ const Header = () => {
                   height={14}
                 />
               </i>
-            </Link>
+            </Link> */}
+
+            <CommonBtn1 />
           </div>
 
           {/* Hamburger Menu */}

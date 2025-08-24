@@ -41,7 +41,9 @@ const WhatWeOfferSection = () => {
       </div>
 
       <div className="relative z-[2] flex flex-col items-center gap-[7.6rem]">
-        <SectionLabel text="What We Offer" />
+        <div className="">
+          <SectionLabel text="What We Offer" />
+        </div>
 
         <div className="mx-auto flex w-full max-w-[130rem]">
           <div className="flex flex-col gap-[3.3rem]">
@@ -79,10 +81,10 @@ const WhatWeOfferSection = () => {
 
                   <ul className="flex flex-col gap-[1.4rem]">
                     {col.links.map((link, idx) => (
-                      <li key={idx}>
+                      <li className="" key={idx}>
                         <Link
                           href={link.href}
-                          className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white"
+                          className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200 hover:text-white/70"
                         >
                           <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
                           <span>{link.label}</span>
@@ -158,10 +160,10 @@ const WhatWeOfferSection = () => {
 
                   <ul className="flex flex-col gap-[1.4rem]">
                     {col.links.map((link, idx) => (
-                      <li key={idx}>
+                      <li className="" key={idx}>
                         <Link
                           href={link.href}
-                          className="text-text-primary flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium"
+                          className="text-text-primary hover:text-text-primary/70 flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium transition-all duration-200"
                         >
                           <div className="size-[1rem] rounded-full border-2 border-[#EE8D00]" />{" "}
                           <span>{link.label}</span>
@@ -295,10 +297,10 @@ const WhatWeOfferSection = () => {
 
                 <ul className="flex flex-col gap-[1.4rem]">
                   {col.links.map((link, idx) => (
-                    <li key={idx}>
+                    <li className="" key={idx}>
                       <Link
                         href={link.href}
-                        className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white"
+                        className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200 hover:text-white/70"
                       >
                         <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
                         <span>{link.label}</span>

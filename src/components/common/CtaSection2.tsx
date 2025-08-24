@@ -2,7 +2,7 @@ import Image from "next/image";
 import ctaSectionBg from "../../assets/images/cta-section-bg.png";
 import flashIcon from "../../assets/images/icons/3d-flash-icon.svg";
 import SectionLabel from "./SectionLabel";
-import consultationAvatar from "../../assets/images/consultation-avatar.svg";
+import avatar from "../../assets/images/consultation-avatar.svg";
 import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import contactArrow from "../../assets/images/icons/contact-arrow.svg";
@@ -36,7 +36,7 @@ const CtaSection2 = () => {
           <div className="bg-text-primary/30 absolute bottom-[-1.5rem] left-1/2 z-[-1] h-[26.4rem] w-[25.8rem] -translate-x-1/2 rounded-[3.2rem] backdrop-blur-[10px]" />
 
           <div className="flex flex-col items-center gap-[2rem] text-center">
-            <i className="absolute top-[-5.1rem] right-[1.794rem] inline-flex h-[9.827rem] w-[5.653rem] items-center justify-center">
+            <i className="absolute top-[-5.3rem] right-[1.794rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
               <Image
                 src={flashIcon}
                 alt="Flash Icon"
@@ -45,15 +45,14 @@ const CtaSection2 = () => {
               />
             </i>
 
-            <i className="absolute top-[-5.3rem] inline-flex size-[10.5rem] items-center justify-center rounded-full">
+            <i className="absolute top-[-5.3rem] flex size-[9.9rem] items-center justify-center">
               <Image
-                src={consultationAvatar}
-                alt="Consultation Avatar"
-                width={105}
-                height={105}
+                src={avatar}
+                alt="Avatar"
+                width={99}
+                height={99}
+                priority
               />
-
-              <div className="absolute top-[0.177rem] right-[0.177rem] size-[2rem] rounded-full bg-[#7EE972] outline-[4px] outline-[#25014A]" />
             </i>
 
             <h4 className="mt-[2.5rem] max-w-[24rem] text-[2.6rem] leading-[3.3rem] font-semibold tracking-[-0.02em]">
