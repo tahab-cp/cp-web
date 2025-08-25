@@ -74,12 +74,26 @@ const HeroSection = () => {
         });
 
         tl.from(split.words, {
-          yPercent: 100,
+          y: 40,
           opacity: 0,
-          stagger: 0.15,
-          duration: 0.4,
-          ease: "back.out(1.7)",
-        });
+          skewY: 10, // tilt for wave feel
+          rotate: 2, // subtle curve
+          stagger: {
+            each: 0.08, // delay between words
+            from: "start", // animate left ➝ right
+          },
+          duration: 0.8,
+          ease: "power3.out", // smooth flowing ease
+        }).to(
+          split.words,
+          {
+            skewY: 0, // reset skew to normal
+            rotate: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          },
+          "<",
+        ); // "<" syncs start with previous
       }
 
       // Step 5: fade in cta button
