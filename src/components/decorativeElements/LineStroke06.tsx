@@ -26,8 +26,8 @@ const LineStroke06 = (props: React.SVGProps<SVGSVGElement>) => {
         ease: "none", // makes it smooth with scroll
         scrollTrigger: {
           trigger: svgRef.current,
-          start: "top 90%  bottom", // when SVG enters bottom of viewport
-          end: "bottom 70% top", // until it leaves top of viewport
+          start: "top 50%  bottom", // when SVG enters bottom of viewport
+          end: "bottom 30% top", // until it leaves top of viewport
           scrub: true, // sync with scroll wheel
         },
       });

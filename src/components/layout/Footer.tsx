@@ -13,6 +13,7 @@ import wpFixedLogo from "../../assets/images/wp-fixed-logo.svg";
 import monthlyDesignsLogo from "../../assets/images/monthly-designs-logo.svg";
 import cElement from "../../assets/images/c-element.svg";
 import pElement from "../../assets/images/p-element.svg";
+import LineStroke06 from "../decorativeElements/LineStroke06";
 
 const socialLinks = [
   {
@@ -35,6 +36,11 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="relative w-full pt-[6.2rem] pb-[2.764rem]">
+      {/* Decorative stroke line */}
+      <div className="absolute inset-0 z-[1]">
+        <LineStroke06 className="absolute top-[-19.3rem] left-1/2 -translate-x-1/2" />
+      </div>
+
       <div className="absolute inset-0 z-[0]">
         <Image
           src={footerBg}

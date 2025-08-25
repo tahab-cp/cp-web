@@ -8,8 +8,63 @@ import analyst from "../../assets/images/analyst.svg";
 import LineStroke02 from "../decorativeElements/LineStroke02";
 import CommonBtn3 from "../common/CommonBtn3";
 import CLetter from "../decorativeElements/CLetter";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
+  const aboutContentRef = useRef<HTMLDivElement>(null);
+  const aboutCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!aboutContentRef.current) return;
+
+    const paras = aboutContentRef.current.querySelectorAll(".about-para");
+    const allWords: HTMLElement[] = [];
+
+    paras.forEach((p) => {
+      const split = new SplitType(p as HTMLElement, { types: "words" });
+      gsap.set(split.words, { opacity: 0.1 });
+      allWords.push(...(split.words as HTMLElement[]));
+    });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: aboutContentRef.current,
+          start: "top 80%", // start when section enters viewport
+          end: "bottom 50%", // animation length based on words
+          scrub: true, // follow scroll
+        },
+      })
+      .to(allWords, {
+        opacity: 1,
+        stagger: 0.1,
+        ease: "none",
+      });
+
+    if (aboutCardRef.current) {
+      const cards = aboutCardRef.current.querySelectorAll(".about-card-item");
+      gsap.set(cards, { opacity: 0, y: 50 });
+
+      gsap.to(cards, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: aboutCardRef.current,
+          start: "top 80%", // when cards section enters viewport
+          toggleActions: "play none none none", // play only once
+        },
+      });
+    }
+  }, []);
+
   return (
     <section className="relative py-[10rem]">
       {/* Bg Element */}
@@ -22,12 +77,15 @@ const AboutSection = () => {
         <LineStroke02 className="absolute top-[135.1rem] left-1/2 -translate-x-1/2" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col items-center text-center xl:block xl:text-left">
+      <div
+        ref={aboutContentRef}
+        className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col items-center text-center xl:block xl:text-left"
+      >
         <div className="">
           <AboutBadge />
         </div>
 
-        <h5 className="mt-[3rem] mb-[2rem] max-w-[99rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+        <h5 className="about-para mt-[3rem] mb-[2rem] max-w-[99rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
           <span className="text-[#EE8D00]">Creative Pixels</span> is an
           independent web design and development agency based in{" "}
           <span className="text-[#FF37B3]">Manchester</span> — crafting digital
@@ -37,7 +95,7 @@ const AboutSection = () => {
           pixel-perfect work.
         </h5>
 
-        <h5 className="mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+        <h5 className="about-para mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
           We work with clients in 🇬🇧 🇦🇺 🇺🇸
         </h5>
 
@@ -46,8 +104,11 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row">
-        <div className="about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
+      <div
+        ref={aboutCardRef}
+        className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row"
+      >
+        <div className="about-card-item about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
           {/* Gradient */}
           <div className="absolute top-[-11.9rem] left-[-10.5rem] z-[0] size-[30rem] bg-[#1534B699] blur-[100px]" />
           <div className="absolute right-0 bottom-[-26.656rem] z-[0] size-[30rem] bg-[#DFDFDF99] blur-[100px]" />
@@ -105,7 +166,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 gap-x-[1.5rem] gap-y-[3rem] md:grid-cols-2">
           {aboutCardData.map((item, idx) => (
-            <div className="" key={idx}>
+            <div className="about-card-item" key={idx}>
               <div className="about-card">
                 <Image
                   src={item.icon}

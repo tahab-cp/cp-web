@@ -2,25 +2,7 @@
 
 import Marquee from "react-fast-marquee";
 
-const texts = [
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-  "Let’s work together.",
-];
+const texts = Array(15).fill("Let’s work together.");
 
 const TextMarquee = () => {
   return (

@@ -20,8 +20,103 @@ import offerDesignImg01 from "../../assets/images/offer-design-img-01.png";
 import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
 import LineStroke03 from "../decorativeElements/LineStroke03";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const WhatWeOfferSection = () => {
+  const webContentRef = useRef<HTMLDivElement>(null);
+  const designContentRef = useRef<HTMLDivElement>(null);
+  const maintenanceContentRef = useRef<HTMLDivElement>(null);
+  const offerCtaRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (webContentRef.current) {
+      const webAnimateItem =
+        webContentRef.current.querySelectorAll(".web-animate-item");
+      gsap.set(webAnimateItem, { opacity: 0, y: 30 });
+
+      gsap.to(webAnimateItem, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: webContentRef.current,
+          start: "top 80%", // when cards section enters viewport
+          toggleActions: "play none none none", // play only once
+        },
+      });
+    }
+
+    if (designContentRef.current) {
+      const designAnimateItem = designContentRef.current.querySelectorAll(
+        ".design-animate-item",
+      );
+      gsap.set(designAnimateItem, { opacity: 0, y: 30 });
+
+      gsap.to(designAnimateItem, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        stagger: 0.15,
+        ease: "power3.out",
+
+        scrollTrigger: {
+          trigger: designContentRef.current,
+          start: "top 80%", // when cards section enters viewport
+          toggleActions: "play none none none", // play only once
+        },
+      });
+    }
+
+    if (maintenanceContentRef.current) {
+      const maintenanceAnimateItem =
+        maintenanceContentRef.current.querySelectorAll(
+          ".maintenance-animate-item",
+        );
+      gsap.set(maintenanceAnimateItem, { opacity: 0, y: 30 });
+
+      gsap.to(maintenanceAnimateItem, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        stagger: 0.15,
+        ease: "power3.out",
+
+        scrollTrigger: {
+          trigger: maintenanceContentRef.current,
+          start: "top 80%", // when cards section enters viewport
+          toggleActions: "play none none none", // play only once
+        },
+      });
+    }
+
+    if (offerCtaRef.current) {
+      const offerCtaAnimateItem = offerCtaRef.current.querySelectorAll(
+        ".offer-cta-animate-item",
+      );
+      gsap.set(offerCtaAnimateItem, { opacity: 0, y: 30 });
+
+      gsap.to(offerCtaAnimateItem, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        stagger: 0.15,
+        ease: "power3.out",
+
+        scrollTrigger: {
+          trigger: offerCtaRef.current,
+          start: "top 80%", // when cards section enters viewport
+          toggleActions: "play none none none", // play only once
+        },
+      });
+    }
+  }, []);
+
   return (
     <section className="relative pt-[8rem] pb-[10.1rem]">
       {/* Gradient Background */}
@@ -40,14 +135,17 @@ const WhatWeOfferSection = () => {
         <LineStroke03 className="absolute top-[180.6rem] left-1/2 -translate-x-1/2" />
       </div>
 
-      <div className="relative z-[2] flex flex-col items-center gap-[7.6rem]">
-        <div className="">
+      <div
+        ref={webContentRef}
+        className="relative z-[2] flex flex-col items-center gap-[7.6rem]"
+      >
+        <div className="web-animate-item">
           <SectionLabel text="What We Offer" />
         </div>
 
         <div className="mx-auto flex w-full max-w-[130rem]">
           <div className="flex flex-col gap-[3.3rem]">
-            <h3 className="relative max-w-[33.3rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+            <h3 className="web-animate-item relative max-w-[33.3rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
               <span>Website Development</span>
 
               <div className="absolute right-[-.8rem] bottom-[-.6rem] inline-flex size-[4rem] items-center justify-center">
@@ -60,7 +158,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="h-[39.5rem] w-[65.5rem]">
+            <div className="web-animate-item h-[39.5rem] w-[65.5rem]">
               <Image
                 src={offerWebImg}
                 alt="offer web image"
@@ -75,13 +173,13 @@ const WhatWeOfferSection = () => {
             <div className="flex gap-[10rem]">
               {offerSectionWebData.columns.map((col, idx) => (
                 <div key={idx} className={`flex flex-col gap-[3.1rem]`}>
-                  <h5 className="text-[2.2rem] leading-[3.2rem] font-medium text-[#FFE400]">
+                  <h5 className="web-animate-item text-[2.2rem] leading-[3.2rem] font-medium text-[#FFE400]">
                     {col.title}
                   </h5>
 
                   <ul className="flex flex-col gap-[1.4rem]">
                     {col.links.map((link, idx) => (
-                      <li className="" key={idx}>
+                      <li className="web-animate-item" key={idx}>
                         <Link
                           href={link.href}
                           className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200 hover:text-white/70"
@@ -97,7 +195,10 @@ const WhatWeOfferSection = () => {
             </div>
 
             <div className="flex gap-[2.2rem]">
-              <Link href="" className="inline-flex items-center">
+              <Link
+                href=""
+                className="web-animate-item inline-flex items-center"
+              >
                 <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#3078FF] bg-[#3078FF] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
                   Book a Call
                 </span>
@@ -119,7 +220,10 @@ const WhatWeOfferSection = () => {
                 </i>
               </Link>
 
-              <Link href="" className="inline-flex items-center">
+              <Link
+                href=""
+                className="web-animate-item inline-flex items-center"
+              >
                 <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
                   View Case Studies
                 </span>
@@ -145,7 +249,10 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[1] mt-[-6rem] h-[58.3rem] bg-white">
+      <div
+        ref={designContentRef}
+        className="relative z-[1] mt-[-6rem] h-[58.3rem] bg-white"
+      >
         <div className="relative mx-auto flex w-full max-w-[130rem] gap-[12.9rem]">
           <div className="flex flex-col gap-[4.5rem] pt-[10rem]">
             <div className="flex gap-[10rem]">
@@ -154,13 +261,13 @@ const WhatWeOfferSection = () => {
                   key={idx}
                   className={`flex flex-col gap-[3.1rem] pt-[3.5rem]`}
                 >
-                  <h5 className="text-[2.2rem] leading-[3.2rem] font-medium text-[#FF37B3]">
+                  <h5 className="design-animate-item text-[2.2rem] leading-[3.2rem] font-medium text-[#FF37B3]">
                     {col.title}
                   </h5>
 
                   <ul className="flex flex-col gap-[1.4rem]">
                     {col.links.map((link, idx) => (
-                      <li className="" key={idx}>
+                      <li className="design-animate-item" key={idx}>
                         <Link
                           href={link.href}
                           className="text-text-primary hover:text-text-primary/70 flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium transition-all duration-200"
@@ -176,7 +283,10 @@ const WhatWeOfferSection = () => {
             </div>
 
             <div className="flex gap-[2.2rem]">
-              <Link href="" className="inline-flex items-center">
+              <Link
+                href=""
+                className="design-animate-item inline-flex items-center"
+              >
                 <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#44B276] bg-[#44B276] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
                   Book a Call
                 </span>
@@ -198,7 +308,10 @@ const WhatWeOfferSection = () => {
                 </i>
               </Link>
 
-              <Link href="" className="inline-flex items-center">
+              <Link
+                href=""
+                className="design-animate-item inline-flex items-center"
+              >
                 <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
                   View Case Studies
                 </span>
@@ -223,7 +336,7 @@ const WhatWeOfferSection = () => {
           </div>
 
           <div className="relative top-[10.8rem] flex flex-col">
-            <h3 className="text-text-primary relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
+            <h3 className="design-animate-item text-text-primary relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
               <span>Design and Branding</span>
 
               <div className="absolute right-[5.3rem] bottom-[-.4rem] inline-flex size-[4rem] items-center justify-center">
@@ -236,7 +349,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="pointer-events-none relative h-[55.18rem] w-[44.248rem] select-none">
+            <div className="design-animate-item pointer-events-none relative h-[55.18rem] w-[44.248rem] select-none">
               <Image
                 src={offerDesignImg01}
                 alt="offer design image"
@@ -258,9 +371,12 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[1] mx-auto flex w-full max-w-[133rem] pt-[10rem]">
+      <div
+        ref={maintenanceContentRef}
+        className="relative z-[1] mx-auto flex w-full max-w-[133rem] pt-[10rem]"
+      >
         <div className="flex flex-col">
-          <h3 className="relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+          <h3 className="maintenance-animate-item relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
             <span>Maintenance and Growth</span>
 
             <div className="absolute right-[-1.8rem] bottom-[1.6rem] inline-flex size-[4rem] items-center justify-center">
@@ -273,7 +389,7 @@ const WhatWeOfferSection = () => {
             </div>
           </h3>
 
-          <div className="pointer-events-none relative top-[-5rem] h-[49.819rem] w-[57.12rem] select-none">
+          <div className="maintenance-animate-item pointer-events-none relative top-[-5rem] h-[49.819rem] w-[57.12rem] select-none">
             <Image
               src={offerMaintenanceImg}
               alt="offer maintenance image"
@@ -291,13 +407,13 @@ const WhatWeOfferSection = () => {
                 key={idx}
                 className={`flex flex-col gap-[3.1rem] pt-[2.1rem]`}
               >
-                <h5 className="text-[2.2rem] leading-[3.2rem] font-medium text-[#81F2B4]">
+                <h5 className="maintenance-animate-item text-[2.2rem] leading-[3.2rem] font-medium text-[#81F2B4]">
                   {col.title}
                 </h5>
 
                 <ul className="flex flex-col gap-[1.4rem]">
                   {col.links.map((link, idx) => (
-                    <li className="" key={idx}>
+                    <li className="maintenance-animate-item" key={idx}>
                       <Link
                         href={link.href}
                         className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200 hover:text-white/70"
@@ -313,7 +429,10 @@ const WhatWeOfferSection = () => {
           </div>
 
           <div className="flex gap-[2.2rem]">
-            <Link href="" className="inline-flex items-center">
+            <Link
+              href=""
+              className="maintenance-animate-item inline-flex items-center"
+            >
               <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#EE8D00] bg-[#EE8D00] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
                 Book a Call
               </span>
@@ -335,7 +454,10 @@ const WhatWeOfferSection = () => {
               </i>
             </Link>
 
-            <Link href="" className="inline-flex items-center">
+            <Link
+              href=""
+              className="maintenance-animate-item inline-flex items-center"
+            >
               <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
                 View Case Studies
               </span>
@@ -360,12 +482,18 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="offer-cta-card mx-auto mt-[-9rem] flex h-[12rem] max-w-[120.3rem] items-center justify-center gap-[2.2rem] rounded-[2rem]">
-        <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
+      <div
+        ref={offerCtaRef}
+        className="offer-cta-card mx-auto mt-[-9rem] flex h-[12rem] max-w-[120.3rem] items-center justify-center gap-[2.2rem] rounded-[2rem]"
+      >
+        <p className="offer-cta-animate-item text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
           Need bold design or reliable code or both? You’re in the right place.
         </p>
 
-        <Link href="" className="inline-flex items-center">
+        <Link
+          href=""
+          className="offer-cta-animate-item inline-flex items-center"
+        >
           <span className="inline-flex h-[4.6rem] min-w-[16.6rem] items-center justify-center rounded-[6rem] border border-[#EE8D00] bg-[#EE8D00] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
             Book a Call
           </span>

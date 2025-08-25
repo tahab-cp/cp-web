@@ -22,6 +22,13 @@ const HeroSection = () => {
       );
       const heading =
         heroContentRef.current.querySelector<HTMLElement>(".hero-heading");
+      const desc =
+        heroContentRef.current.querySelector<HTMLElement>(".hero-desc");
+      const ctaBtn = heroContentRef.current.querySelector(".hero-cta-btn");
+      const logosHeading = heroContentRef.current.querySelector(
+        ".hero-logos-heading",
+      );
+      const logos = heroContentRef.current.querySelectorAll(".hero-logos");
 
       const tl = gsap.timeline();
 
@@ -29,17 +36,19 @@ const HeroSection = () => {
       tl.to(heroContentRef.current, { autoAlpha: 1, duration: 0.3 });
 
       // Step 2: drop-like stagger animation
-      tl.fromTo(
-        badge,
-        { scale: 0, autoAlpha: 0 },
-        {
-          scale: 1,
-          autoAlpha: 1,
-          duration: 0.8,
-          ease: "back.out(1.7)", // nice bounce curve
-          clearProps: "all",
-        },
-      );
+      if (badge) {
+        tl.fromTo(
+          badge,
+          { scale: 0, autoAlpha: 0 },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 0.6,
+            ease: "back.out(1.7)", // nice bounce curve
+            clearProps: "all",
+          },
+        );
+      }
 
       // Step 3: split text animation
       if (heading) {
@@ -52,10 +61,63 @@ const HeroSection = () => {
           yPercent: 100,
           opacity: 0,
           stagger: 0.15,
-          duration: 0.8,
+          duration: 0.6,
           ease: "back.inOut",
         });
       }
+
+      // Step 4 split text animation for description
+      if (desc) {
+        const split = new SplitType(desc, {
+          types: "words",
+          tagName: "span",
+        });
+
+        tl.from(split.words, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.15,
+          duration: 0.4,
+          ease: "back.out(1.7)",
+        });
+      }
+
+      // Step 5: fade in cta button
+      tl.fromTo(
+        ctaBtn,
+        { opacity: 0, autoAlpha: 0 },
+        {
+          opacity: 1,
+          autoAlpha: 1,
+          duration: 0.6,
+          ease: "power3.out", // nice bounce curve
+          clearProps: "all",
+        },
+      );
+
+      // Step 6: fade in logos heading
+      tl.fromTo(
+        logosHeading,
+        { opacity: 0, autoAlpha: 0 },
+        {
+          opacity: 1,
+          autoAlpha: 1,
+          duration: 0.6,
+          ease: "power3.out", // nice bounce curve
+          clearProps: "all",
+        },
+      );
+
+      // Step 7: staggered fade in logos
+      tl.from(logos, {
+        opacity: 0,
+        y: 40, // slide up
+        stagger: 0.15, // one by one
+        duration: 0.6,
+        ease: "power3.out",
+      });
+
+      tl.timeScale(1.3);
     }
   }, [isReady]);
 
@@ -98,25 +160,25 @@ const HeroSection = () => {
             strategy.
           </h1>
 
-          <p className="max-w-[65.3rem] text-[1.8rem] leading-[2.6rem] font-medium text-white md:text-[2.2rem] md:leading-[3.2rem]">
+          <p className="hero-desc max-w-[65.3rem] text-[1.8rem] leading-[2.6rem] font-medium text-white md:text-[2.2rem] md:leading-[3.2rem]">
             Based in Manchester, we craft bespoke websites and branding that are
             as smart as they are stunning.
           </p>
 
-          <div className="">
+          <div className="hero-cta-btn">
             <CommonBtn2 />
           </div>
         </div>
 
         {/* Logos */}
         <div className="flex max-w-[120.3rem] flex-col items-center gap-[2rem] text-center">
-          <h6 className="text-[1.8rem] leading-[2.6rem] font-normal text-white">
+          <h6 className="hero-logos-heading text-[1.8rem] leading-[2.6rem] font-normal text-white">
             Trusted by enterprises all over the world:
           </h6>
 
           <ul className="flex items-center justify-center gap-[4.423rem]">
             {logoPopupsData.map((item, idx) => (
-              <li key={idx}>
+              <li className="hero-logos" key={idx}>
                 <LogoPopup
                   logo={item.logo}
                   popupImage={item.popupImage}
