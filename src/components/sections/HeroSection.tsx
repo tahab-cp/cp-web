@@ -9,6 +9,7 @@ import CommonBtn2 from "../common/CommonBtn2";
 import { useEffect, useRef } from "react";
 import { useLoaderStore } from "@/store/useLoader";
 import gsap from "gsap";
+import SplitType from "split-type";
 
 const HeroSection = () => {
   const isReady = useLoaderStore((state) => state.isReady);
@@ -19,6 +20,8 @@ const HeroSection = () => {
       const badge = heroContentRef.current.querySelectorAll(
         ".hero-badge-animate",
       );
+      const heading =
+        heroContentRef.current.querySelector<HTMLElement>(".hero-heading");
 
       const tl = gsap.timeline();
 
@@ -37,6 +40,22 @@ const HeroSection = () => {
           clearProps: "all",
         },
       );
+
+      // Step 3: split text animation
+      if (heading) {
+        const split = new SplitType(heading, {
+          types: "lines",
+          tagName: "span",
+        });
+
+        tl.from(split.lines, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "back.inOut",
+        });
+      }
     }
   }, [isReady]);
 
@@ -71,7 +90,7 @@ const HeroSection = () => {
             <BookBadge />
           </div>
 
-          <h1 className="text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
+          <h1 className="hero-heading text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
             Grow your digital presence today with real{" "}
             <span className="bg-gradient-01 bg-clip-text text-transparent">
               human-led
