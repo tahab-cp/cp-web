@@ -25,7 +25,7 @@ const CommonBtn3 = () => {
       {
         x: 0,
         opacity: 1,
-        scale: 1,
+        scale: 1.2,
         duration: 0.35,
         ease: "back.out(1.7)",
       },
