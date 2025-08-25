@@ -15,6 +15,7 @@ import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import ContactFormInput from "./ContactFormInput";
 import { useRef, useState } from "react";
 import gsap from "gsap";
+import CommonBtn4 from "./CommonBtn4";
 
 const ContactForm = () => {
   const [open, setOpen] = useState(false);
@@ -55,36 +56,16 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-bg w-full">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between pr-[2rem]">
         <h4 className="text-[4.8rem] font-semibold tracking-[-0.02em]">
           Hello 👋
         </h4>
 
-        <button
-          ref={buttonRef}
+        <CommonBtn4
+          label="Submit Request"
           onClick={handleOpen}
-          className="mt-[1.5rem] inline-flex cursor-pointer items-center"
-        >
-          <span className="border-text-primary bg-text-primary inline-flex h-[5.6rem] min-w-[21.1rem] items-center justify-center rounded-[6rem] border px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-            Submit Request
-          </span>
-          <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-            <Image
-              src={subtractDark}
-              alt="Subtract Light Icon"
-              width={18}
-              height={18}
-            />
-          </i>
-          <i className="border-text-primary bg-text-primary inline-flex size-[5.6rem] items-center justify-center rounded-full border">
-            <Image
-              src={arrowRight}
-              alt="Arrow Right Icon"
-              width={14}
-              height={14}
-            />
-          </i>
-        </button>
+          ref={buttonRef}
+        />
       </div>
 
       <div ref={formRef} className="h-0 overflow-hidden opacity-0">
@@ -133,27 +114,9 @@ const ContactForm = () => {
             <Textarea placeholder="Enter your message" />
           </fieldset>
 
-          <button className="mt-[1.5rem] inline-flex cursor-pointer items-center">
-            <span className="border-text-primary bg-text-primary inline-flex h-[5.6rem] min-w-[21.1rem] items-center justify-center rounded-[6rem] border px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-              Submit Request
-            </span>
-            <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-              <Image
-                src={subtractDark}
-                alt="Subtract Light Icon"
-                width={18}
-                height={18}
-              />
-            </i>
-            <i className="border-text-primary bg-text-primary inline-flex size-[5.6rem] items-center justify-center rounded-full border">
-              <Image
-                src={arrowRight}
-                alt="Arrow Right Icon"
-                width={14}
-                height={14}
-              />
-            </i>
-          </button>
+          <div className="mt-[1.5rem] mb-[1rem]">
+            <CommonBtn4 label="Submit Request" />
+          </div>
         </form>
       </div>
     </div>

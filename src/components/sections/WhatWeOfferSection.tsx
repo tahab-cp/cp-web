@@ -25,6 +25,7 @@ import LineStroke03 from "../decorativeElements/LineStroke03";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CommonBtn3 from "../common/CommonBtn3";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -196,56 +197,24 @@ const WhatWeOfferSection = () => {
               ))}
             </div>
 
-            <div className="flex gap-[2.2rem]">
-              <Link
-                href=""
-                className="web-animate-item inline-flex items-center"
-              >
-                <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#3078FF] bg-[#3078FF] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                  Book a Call
-                </span>
-                <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                  <Image
-                    src={subtractBlue}
-                    alt="Subtract Light Icon"
-                    width={18}
-                    height={18}
-                  />
-                </i>
-                <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#3078FF] bg-[#3078FF]">
-                  <Image
-                    src={arrowRight}
-                    alt="Arrow Right Icon"
-                    width={14}
-                    height={14}
-                  />
-                </i>
-              </Link>
+            <div className="flex gap-[6rem]">
+              <div className="web-animate-item">
+                <CommonBtn3
+                  href="/"
+                  label="Book a Call"
+                  bgColor="#3078FF"
+                  textColor="#fff"
+                />
+              </div>
 
-              <Link
-                href=""
-                className="web-animate-item inline-flex items-center"
-              >
-                <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                  View Case Studies
-                </span>
-                <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                  <Image
-                    src={subtractPink}
-                    alt="Subtract Light Icon"
-                    width={18}
-                    height={18}
-                  />
-                </i>
-                <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
-                  <Image
-                    src={arrowRight}
-                    alt="Arrow Right Icon"
-                    width={14}
-                    height={14}
-                  />
-                </i>
-              </Link>
+              <div className="web-animate-item">
+                <CommonBtn3
+                  href="/"
+                  label="View Case Studies"
+                  bgColor="#FF37B3"
+                  textColor="#fff"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -284,56 +253,24 @@ const WhatWeOfferSection = () => {
               ))}
             </div>
 
-            <div className="flex gap-[2.2rem]">
-              <Link
-                href=""
-                className="design-animate-item inline-flex items-center"
-              >
-                <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#44B276] bg-[#44B276] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                  Book a Call
-                </span>
-                <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                  <Image
-                    src={subtractGreen}
-                    alt="Subtract Light Icon"
-                    width={18}
-                    height={18}
-                  />
-                </i>
-                <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#44B276] bg-[#44B276]">
-                  <Image
-                    src={arrowRight}
-                    alt="Arrow Right Icon"
-                    width={14}
-                    height={14}
-                  />
-                </i>
-              </Link>
+            <div className="flex gap-[6rem]">
+              <div className="design-animate-item">
+                <CommonBtn3
+                  href="/"
+                  label="Book a Call"
+                  bgColor="#44B276"
+                  textColor="#fff"
+                />
+              </div>
 
-              <Link
-                href=""
-                className="design-animate-item inline-flex items-center"
-              >
-                <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                  View Case Studies
-                </span>
-                <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                  <Image
-                    src={subtractPink}
-                    alt="Subtract Light Icon"
-                    width={18}
-                    height={18}
-                  />
-                </i>
-                <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
-                  <Image
-                    src={arrowRight}
-                    alt="Arrow Right Icon"
-                    width={14}
-                    height={14}
-                  />
-                </i>
-              </Link>
+              <div className="design-animate-item">
+                <CommonBtn3
+                  href="/"
+                  label="View Case Studies"
+                  bgColor="#FF37B3"
+                  textColor="#fff"
+                />
+              </div>
             </div>
           </div>
 
@@ -430,56 +367,24 @@ const WhatWeOfferSection = () => {
             ))}
           </div>
 
-          <div className="flex gap-[2.2rem]">
-            <Link
-              href=""
-              className="maintenance-animate-item inline-flex items-center"
-            >
-              <span className="inline-flex h-[5rem] min-w-[18rem] items-center justify-center rounded-[6rem] border border-[#EE8D00] bg-[#EE8D00] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                Book a Call
-              </span>
-              <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                <Image
-                  src={subtractOrange}
-                  alt="Subtract Light Icon"
-                  width={18}
-                  height={18}
-                />
-              </i>
-              <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#EE8D00] bg-[#EE8D00]">
-                <Image
-                  src={arrowRight}
-                  alt="Arrow Right Icon"
-                  width={14}
-                  height={14}
-                />
-              </i>
-            </Link>
+          <div className="flex gap-[6rem]">
+            <div className="maintenance-animate-item">
+              <CommonBtn3
+                href="/"
+                label="Book a Call"
+                bgColor="#EE8D00"
+                textColor="#fff"
+              />
+            </div>
 
-            <Link
-              href=""
-              className="maintenance-animate-item inline-flex items-center"
-            >
-              <span className="inline-flex h-[5rem] min-w-[23.8rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                View Case Studies
-              </span>
-              <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                <Image
-                  src={subtractPink}
-                  alt="Subtract Light Icon"
-                  width={18}
-                  height={18}
-                />
-              </i>
-              <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
-                <Image
-                  src={arrowRight}
-                  alt="Arrow Right Icon"
-                  width={14}
-                  height={14}
-                />
-              </i>
-            </Link>
+            <div className="maintenance-animate-item">
+              <CommonBtn3
+                href="/"
+                label="View Case Studies"
+                bgColor="#FF37B3"
+                textColor="#fff"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -492,30 +397,12 @@ const WhatWeOfferSection = () => {
           Need bold design or reliable code or both? You’re in the right place.
         </p>
 
-        <Link
-          href=""
-          className="offer-cta-animate-item inline-flex items-center"
-        >
-          <span className="inline-flex h-[4.6rem] min-w-[16.6rem] items-center justify-center rounded-[6rem] border border-[#EE8D00] bg-[#EE8D00] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-            Book a Call
-          </span>
-          <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-            <Image
-              src={subtractOrange}
-              alt="Subtract Light Icon"
-              width={18}
-              height={18}
-            />
-          </i>
-          <i className="inline-flex size-[4.6rem] items-center justify-center rounded-full border border-[#EE8D00] bg-[#EE8D00]">
-            <Image
-              src={arrowRight}
-              alt="Arrow Right Icon"
-              width={14}
-              height={14}
-            />
-          </i>
-        </Link>
+        <CommonBtn3
+          href="/"
+          label="Book a Call"
+          bgColor="#EE8D00"
+          textColor="#fff"
+        />
       </div>
     </section>
   );

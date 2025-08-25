@@ -7,6 +7,7 @@ import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import contactArrow from "../../assets/images/icons/contact-arrow.svg";
 import Link from "next/link";
+import CommonBtn3 from "./CommonBtn3";
 
 const CtaSection2 = () => {
   return (
@@ -59,27 +60,12 @@ const CtaSection2 = () => {
               Book a FREE strategy call with Hassan.
             </h4>
 
-            <Link href="" className="inline-flex items-center">
-              <span className="inline-flex h-[5rem] min-w-[16.6rem] items-center justify-center rounded-[6rem] border border-[#FF37B3] bg-[#FF37B3] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
-                Book a Call
-              </span>
-              <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                <Image
-                  src={subtractPink}
-                  alt="Subtract Light Icon"
-                  width={18}
-                  height={18}
-                />
-              </i>
-              <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
-                <Image
-                  src={arrowRight}
-                  alt="Arrow Right Icon"
-                  width={14}
-                  height={14}
-                />
-              </i>
-            </Link>
+            <CommonBtn3
+              href="/"
+              label="Book a Call"
+              bgColor="#FF37B3"
+              textColor="#fff"
+            />
           </div>
         </div>
       </div>

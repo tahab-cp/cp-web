@@ -102,7 +102,7 @@ const AboutSection = () => {
         </h5>
 
         <div className="">
-          <CommonBtn3 />
+          <CommonBtn3 href="/about" label="About CreativePixels" />
         </div>
       </div>
 

@@ -7,7 +7,10 @@ const CommonBtn1 = () => {
   const pathname = usePathname();
 
   return (
-    <Link href="" className="inline-flex items-center">
+    <Link
+      href=""
+      className="inline-flex items-center transition-all duration-200 hover:scale-105"
+    >
       <span className={pathname === "/" ? "common-btn-1" : "common-btn-dark-1"}>
         Book a Call
       </span>

@@ -94,6 +94,11 @@ body {
   color: white;
 }
 
+.common-btn-2:hover {
+  background: linear-gradient(90deg, #ffe400 0%, #ff37b3 100%);
+  color: var(--color-text-primary);
+}
+
 .common-btn-2 .gradient-layer {
   position: absolute;
   width: 100%;
