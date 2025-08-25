@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import offerSectionBg from "../../assets/images/artistic-gradient-bg.png";
 import SectionLabel from "../common/SectionLabel";

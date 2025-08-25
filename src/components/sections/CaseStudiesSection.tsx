@@ -1,3 +1,5 @@
+"use client";
+
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import CtaSection1 from "../common/CtaSection1";
 import SectionDescription from "../common/SectionDescription";

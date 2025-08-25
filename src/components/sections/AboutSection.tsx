@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import AboutBadge from "../common/AboutBadge";
 import { aboutCardData } from "@/constants/aboutSection";

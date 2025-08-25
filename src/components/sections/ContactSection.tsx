@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";
