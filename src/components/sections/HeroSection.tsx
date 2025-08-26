@@ -306,7 +306,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="overflow-hidden">
+          <div className="overflow-hidden p-[.5rem]">
             <div className="hero-cta-btn-animate">
               <CommonBtn2 />
             </div>

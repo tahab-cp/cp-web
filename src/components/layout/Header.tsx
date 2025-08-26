@@ -165,7 +165,7 @@ const Header = () => {
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] rounded-full bg-[#7EE972] outline-[3.5px]" />
             </i>
 
-            <div className="header-cta-btn-animate">
+            <div className="header-cta-btn-animate p-[.5rem]">
               <CommonBtn1 />
             </div>
           </div>

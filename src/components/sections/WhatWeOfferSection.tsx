@@ -430,7 +430,7 @@ const WhatWeOfferSection = () => {
             </div>
 
             <div className="flex gap-[6rem]">
-              <div className="overflow-hidden">
+              <div className="overflow-hidden p-[.5rem]">
                 <div className="design-grid-cta-animate">
                   <CommonBtn3
                     href="/"
@@ -441,7 +441,7 @@ const WhatWeOfferSection = () => {
                 </div>
               </div>
 
-              <div className="overflow-hidden">
+              <div className="overflow-hidden p-[.5rem]">
                 <div className="design-grid-cta-animate">
                   <CommonBtn3
                     href="/"
@@ -554,7 +554,7 @@ const WhatWeOfferSection = () => {
           </div>
 
           <div className="flex gap-[6rem]">
-            <div className="overflow-hidden">
+            <div className="overflow-hidden p-[.5rem]">
               <div className="maintenance-grid-cta-animate">
                 <CommonBtn3
                   href="/"
@@ -565,7 +565,7 @@ const WhatWeOfferSection = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden">
+            <div className="overflow-hidden p-[.5rem]">
               <div className="maintenance-grid-cta-animate">
                 <CommonBtn3
                   href="/"

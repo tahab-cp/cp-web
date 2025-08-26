@@ -41,7 +41,7 @@ const CaseStudiesSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: caseStudiesContentRef.current,
-          start: "top 50%",
+          start: "top 70%",
           toggleActions: "play none none none",
         },
       });
@@ -55,7 +55,7 @@ const CaseStudiesSection = () => {
         delay: 0.2,
         scrollTrigger: {
           trigger: caseStudiesContentRef.current,
-          start: "top 50%",
+          start: "top 70%",
           toggleActions: "play none none none",
         },
       });
@@ -69,7 +69,7 @@ const CaseStudiesSection = () => {
         delay: 0.3,
         scrollTrigger: {
           trigger: caseStudiesContentRef.current,
-          start: "top 50%",
+          start: "top 70%",
           toggleActions: "play none none none",
         },
       });
