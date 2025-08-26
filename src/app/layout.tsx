@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { Onest } from "next/font/google";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 const onest = Onest({

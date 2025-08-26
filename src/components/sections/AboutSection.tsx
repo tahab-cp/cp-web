@@ -10,58 +10,107 @@ import analyst from "../../assets/images/analyst.svg";
 import LineStroke02 from "../decorativeElements/LineStroke02";
 import CommonBtn3 from "../common/CommonBtn3";
 import CLetter from "../decorativeElements/CLetter";
+import { useEffect, useRef } from "react";
+import SplitType from "split-type";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
-import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
   const aboutContentRef = useRef<HTMLDivElement>(null);
-  const aboutCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!aboutContentRef.current) return;
+    if (aboutContentRef.current) {
+      const aboutDescSplit1 = new SplitType(
+        aboutContentRef.current.querySelectorAll(
+          ".desc-part",
+        )[0] as HTMLElement,
+        { types: "lines" },
+      );
+      const aboutDescSplit2 = new SplitType(
+        aboutContentRef.current.querySelectorAll(
+          ".desc-part",
+        )[1] as HTMLElement,
+        { types: "lines" },
+      );
+      const aboutDescSplit3 = new SplitType(
+        aboutContentRef.current.querySelectorAll(
+          ".desc-part",
+        )[2] as HTMLElement,
+        { types: "lines" },
+      );
+      const aboutDescSplit4 = new SplitType(
+        aboutContentRef.current.querySelectorAll(
+          ".desc-part",
+        )[3] as HTMLElement,
+        { types: "lines" },
+      );
+      const aboutDescSplit5 = new SplitType(
+        aboutContentRef.current.querySelectorAll(
+          ".desc-part",
+        )[4] as HTMLElement,
+        { types: "lines" },
+      );
 
-    const paras = aboutContentRef.current.querySelectorAll(".about-para");
-    const allWords: HTMLElement[] = [];
-
-    paras.forEach((p) => {
-      const split = new SplitType(p as HTMLElement, { types: "words" });
-      gsap.set(split.words, { opacity: 0.1 });
-      allWords.push(...(split.words as HTMLElement[]));
-    });
-
-    gsap
-      .timeline({
+      // Animate desc first line
+      gsap.from(aboutDescSplit1.lines, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current,
-          start: "top 80%", // start when section enters viewport
-          end: "bottom 50%", // animation length based on words
-          scrub: true, // follow scroll
+          trigger: aboutContentRef.current, // element that triggers animation
+          start: "top 70%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none", // only play once
         },
-      })
-      .to(allWords, {
-        opacity: 1,
-        stagger: 0.1,
-        ease: "none",
       });
 
-    if (aboutCardRef.current) {
-      const cards = aboutCardRef.current.querySelectorAll(".about-card-item");
-      gsap.set(cards, { opacity: 0, y: 50 });
-
-      gsap.to(cards, {
-        opacity: 1,
-        y: 0,
+      gsap.from(aboutDescSplit2.lines, {
+        y: 100,
+        opacity: 0,
         duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutCardRef.current,
-          start: "top 80%", // when cards section enters viewport
-          toggleActions: "play none none none", // play only once
+          trigger: aboutContentRef.current, // element that triggers animation
+          start: "top 70%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none", // only play once
+        },
+      });
+
+      gsap.from(aboutDescSplit3.lines, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutContentRef.current, // element that triggers animation
+          start: "top 70%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none", // only play once
+        },
+      });
+
+      gsap.from(aboutDescSplit4.lines, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutContentRef.current, // element that triggers animation
+          start: "top 70%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none", // only play once
+        },
+      });
+
+      gsap.from(aboutDescSplit5.lines, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutContentRef.current, // element that triggers animation
+          start: "top 70%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none", // only play once
         },
       });
     }
@@ -87,18 +136,40 @@ const AboutSection = () => {
           <AboutBadge />
         </div>
 
-        <h5 className="about-para mt-[3rem] mb-[2rem] max-w-[99rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
-          <span className="text-[#EE8D00]">Creative Pixels</span> is an
-          independent web design and development agency based in{" "}
-          <span className="text-[#FF37B3]">Manchester</span> — crafting digital
-          experiences since 2014. We care deeply about our clients, build
-          long-term partnerships, bring over a decade of industry expertise, and
-          take pride in <span className="text-[#3078FF]">award-winning</span>,
-          pixel-perfect work.
+        <h5 className="mt-[3rem] mb-[2rem] max-w-[99rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+          <div className="overflow-hidden">
+            <div className="desc-part">
+              <span className="text-[#EE8D00]">Creative Pixels</span> is an
+              independent web design and development
+            </div>
+          </div>{" "}
+          <div className="overflow-hidden">
+            <div className="desc-part">
+              agency based in <span className="text-[#FF37B3]">Manchester</span>{" "}
+              — crafting digital experiences
+            </div>
+          </div>{" "}
+          <div className="overflow-hidden">
+            <div className="desc-part">
+              since 2014. We care deeply about our clients, build long-term
+            </div>
+          </div>
+          <div className="overflow-hidden">
+            <div className="desc-part">
+              partnerships, bring over a decade of industry expertise, and
+            </div>
+          </div>{" "}
+          <div className="overflow-hidden">
+            <div className="desc-part">
+              take pride in{" "}
+              <span className="text-[#3078FF]">award-winning</span>,
+              pixel-perfect work.
+            </div>
+          </div>
         </h5>
 
-        <h5 className="about-para mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
-          We work with clients in 🇬🇧 🇦🇺 🇺🇸
+        <h5 className="mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+          <div>We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
         </h5>
 
         <div className="">
@@ -106,11 +177,8 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div
-        ref={aboutCardRef}
-        className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row"
-      >
-        <div className="about-card-item about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
+      <div className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row">
+        <div className="about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
           {/* Gradient */}
           <div className="absolute top-[-11.9rem] left-[-10.5rem] z-[0] size-[30rem] bg-[#1534B699] blur-[100px]" />
           <div className="absolute right-0 bottom-[-26.656rem] z-[0] size-[30rem] bg-[#DFDFDF99] blur-[100px]" />
@@ -168,7 +236,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 gap-x-[1.5rem] gap-y-[3rem] md:grid-cols-2">
           {aboutCardData.map((item, idx) => (
-            <div className="about-card-item" key={idx}>
+            <div className="" key={idx}>
               <div className="about-card">
                 <Image
                   src={item.icon}
