@@ -52,6 +52,12 @@ const AboutSection = () => {
         )[4] as HTMLElement,
         { types: "lines" },
       );
+      const aboutDescSplit6 = new SplitType(
+        aboutContentRef.current.querySelectorAll(
+          ".desc-part",
+        )[5] as HTMLElement,
+        { types: "lines" },
+      );
 
       // Animate desc first line
       gsap.from(aboutDescSplit1.lines, {
@@ -61,11 +67,12 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 70%", // when top of element hits 80% of viewport
+          start: "top 60%", // when top of element hits 80% of viewport
           toggleActions: "play none none none", // only play once
         },
       });
 
+      // Animate desc second line
       gsap.from(aboutDescSplit2.lines, {
         y: 100,
         opacity: 0,
@@ -73,11 +80,12 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 70%", // when top of element hits 80% of viewport
+          start: "top 60%", // when top of element hits 80% of viewport
           toggleActions: "play none none none", // only play once
         },
       });
 
+      // Animate desc third line
       gsap.from(aboutDescSplit3.lines, {
         y: 100,
         opacity: 0,
@@ -85,11 +93,12 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 70%", // when top of element hits 80% of viewport
+          start: "top 60%", // when top of element hits 80% of viewport
           toggleActions: "play none none none", // only play once
         },
       });
 
+      // Animate desc fourth line
       gsap.from(aboutDescSplit4.lines, {
         y: 100,
         opacity: 0,
@@ -97,11 +106,12 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 70%", // when top of element hits 80% of viewport
+          start: "top 60%", // when top of element hits 80% of viewport
           toggleActions: "play none none none", // only play once
         },
       });
 
+      // Animate desc fifth line
       gsap.from(aboutDescSplit5.lines, {
         y: 100,
         opacity: 0,
@@ -109,7 +119,20 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 70%", // when top of element hits 80% of viewport
+          start: "top 60%", // when top of element hits 80% of viewport
+          toggleActions: "play none none none", // only play once
+        },
+      });
+
+      // Animate desc six line
+      gsap.from(aboutDescSplit6.lines, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutContentRef.current, // element that triggers animation
+          start: "top 60%", // when top of element hits 80% of viewport
           toggleActions: "play none none none", // only play once
         },
       });
@@ -136,7 +159,7 @@ const AboutSection = () => {
           <AboutBadge />
         </div>
 
-        <h5 className="mt-[3rem] mb-[2rem] max-w-[99rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+        <h5 className="mt-[3rem] mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
           <div className="overflow-hidden">
             <div className="desc-part">
               <span className="text-[#EE8D00]">Creative Pixels</span> is an
@@ -168,8 +191,8 @@ const AboutSection = () => {
           </div>
         </h5>
 
-        <h5 className="mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
-          <div>We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
+        <h5 className="mb-[2rem] overflow-hidden text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+          <div className="desc-part">We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
         </h5>
 
         <div className="">
