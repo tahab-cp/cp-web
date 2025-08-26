@@ -15,8 +15,117 @@ const HeroSection = () => {
   const isReady = useLoaderStore((state) => state.isReady);
   const heroContentRef = useRef<HTMLDivElement>(null);
 
+  // useEffect(() => {
+  //   if (isReady && heroContentRef.current) {
+  //     const heroBadge = heroContentRef.current.querySelectorAll(
+  //       ".hero-badge-animate",
+  //     );
+  //     const heroHeadingSplit1 = new SplitType(
+  //       heroContentRef.current.querySelectorAll(
+  //         ".heading-part",
+  //       )[0] as HTMLElement,
+  //       { types: "chars" },
+  //     );
+  //     const heroHeadingSplit2 = new SplitType(
+  //       heroContentRef.current.querySelectorAll(
+  //         ".heading-part",
+  //       )[1] as HTMLElement,
+  //       { types: "chars" },
+  //     );
+  //     const heroDescSplit1 = new SplitType(
+  //       heroContentRef.current.querySelectorAll(".desc-part")[0] as HTMLElement,
+  //       { types: "lines" },
+  //     );
+  //     const heroDescSplit2 = new SplitType(
+  //       heroContentRef.current.querySelectorAll(".desc-part")[1] as HTMLElement,
+  //       { types: "lines" },
+  //     );
+  //     const heroCtaBtn = heroContentRef.current.querySelectorAll(
+  //       ".hero-cta-btn-animate",
+  //     );
+  //     const heroLogoHeading = heroContentRef.current.querySelectorAll(
+  //       ".hero-logo-heading-animate",
+  //     );
+  //     const heroLogo =
+  //       heroContentRef.current.querySelectorAll(".hero-logo-animate");
+
+  //     // make parent visible
+  //     gsap.to(heroContentRef.current, { autoAlpha: 1, duration: 0.1 });
+
+  //     // animate badge
+  //     gsap.from(heroBadge, {
+  //       y: 100,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       ease: "power2.out",
+  //     });
+
+  //     // Animate first line
+  //     gsap.from(heroHeadingSplit1.chars, {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.03,
+  //       ease: "power2.out",
+  //     });
+
+  //     // Animate second line
+  //     gsap.from(heroHeadingSplit2.chars, {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.03,
+  //       ease: "power2.out",
+  //     });
+
+  //     // Animate desc first line
+  //     gsap.from(heroDescSplit1.lines, {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.03,
+  //       ease: "power2.out",
+  //     });
+
+  //     // Animate desc second line
+  //     gsap.from(heroDescSplit2.lines, {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.03,
+  //       ease: "power2.out",
+  //     });
+
+  //     // animate cta btn
+  //     gsap.from(heroCtaBtn, {
+  //       y: 100,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       ease: "power2.out",
+  //     });
+
+  //     // animate hero logo heading
+  //     gsap.from(heroLogoHeading, {
+  //       y: 100,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       ease: "power2.out",
+  //     });
+
+  //     // animate logos (with stagger)
+  //     gsap.from(heroLogo, {
+  //       y: 50,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.1,
+  //       ease: "power2.out",
+  //       clearProps: "all",
+  //     });
+  //   }
+  // }, [isReady]);
+
   useEffect(() => {
-    if (isReady && heroContentRef.current) {
+    if (heroContentRef.current) {
       const heroBadge = heroContentRef.current.querySelectorAll(
         ".hero-badge-animate",
       );
@@ -122,7 +231,7 @@ const HeroSection = () => {
         clearProps: "all",
       });
     }
-  }, [isReady]);
+  }, []);
 
   return (
     <section className="relative h-[79rem] w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem]">

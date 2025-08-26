@@ -19,9 +19,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
   const aboutContentRef = useRef<HTMLDivElement>(null);
+  const aboutGridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (aboutContentRef.current) {
+      const aboutBadge = aboutContentRef.current.querySelectorAll(
+        ".about-badge-animate",
+      );
+
       const aboutDescSplit1 = new SplitType(
         aboutContentRef.current.querySelectorAll(
           ".desc-part",
@@ -59,6 +64,22 @@ const AboutSection = () => {
         { types: "lines" },
       );
 
+      const aboutCtaBtn = aboutContentRef.current.querySelectorAll(
+        ".about-cta-btn-animate",
+      );
+
+      // animate badge
+      gsap.from(aboutBadge, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutContentRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
       // Animate desc first line
       gsap.from(aboutDescSplit1.lines, {
         y: 100,
@@ -66,9 +87,9 @@ const AboutSection = () => {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 60%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none", // only play once
+          trigger: aboutContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
 
@@ -79,9 +100,9 @@ const AboutSection = () => {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 60%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none", // only play once
+          trigger: aboutContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
 
@@ -92,9 +113,9 @@ const AboutSection = () => {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 60%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none", // only play once
+          trigger: aboutContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
 
@@ -105,9 +126,9 @@ const AboutSection = () => {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 60%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none", // only play once
+          trigger: aboutContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
 
@@ -118,9 +139,9 @@ const AboutSection = () => {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 60%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none", // only play once
+          trigger: aboutContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
 
@@ -131,11 +152,61 @@ const AboutSection = () => {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: aboutContentRef.current, // element that triggers animation
-          start: "top 60%", // when top of element hits 80% of viewport
-          toggleActions: "play none none none", // only play once
+          trigger: aboutContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
+
+      // animate cta btn
+      gsap.from(aboutCtaBtn, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutContentRef.current,
+          start: "top 30%",
+          toggleActions: "play none none none",
+        },
+      });
+    }
+
+    if (aboutGridRef.current) {
+      const aboutCard1 = aboutGridRef.current.querySelectorAll(
+        ".about-card-1-animate",
+      );
+      const aboutCard2 = aboutGridRef.current.querySelectorAll(
+        ".about-card-2-animate",
+      );
+
+      // animate card 1
+      gsap.from(aboutCard1, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutGridRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // animate card 2 (Staggered)
+      {
+        aboutCard2.forEach((item) => {
+          gsap.from(item, {
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.15,
+            scrollTrigger: {
+              trigger: item,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          });
+        });
+      }
     }
   }, []);
 
@@ -155,7 +226,7 @@ const AboutSection = () => {
         ref={aboutContentRef}
         className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col items-center text-center xl:block xl:text-left"
       >
-        <div className="">
+        <div className="about-badge-animate">
           <AboutBadge />
         </div>
 
@@ -195,13 +266,16 @@ const AboutSection = () => {
           <div className="desc-part">We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
         </h5>
 
-        <div className="">
+        <div className="about-cta-btn-animate">
           <CommonBtn3 href="/about" label="About CreativePixels" />
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row">
-        <div className="about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
+      <div
+        ref={aboutGridRef}
+        className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row"
+      >
+        <div className="about-card-1-animate about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
           {/* Gradient */}
           <div className="absolute top-[-11.9rem] left-[-10.5rem] z-[0] size-[30rem] bg-[#1534B699] blur-[100px]" />
           <div className="absolute right-0 bottom-[-26.656rem] z-[0] size-[30rem] bg-[#DFDFDF99] blur-[100px]" />
@@ -259,7 +333,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 gap-x-[1.5rem] gap-y-[3rem] md:grid-cols-2">
           {aboutCardData.map((item, idx) => (
-            <div className="" key={idx}>
+            <div className="about-card-2-animate" key={idx}>
               <div className="about-card">
                 <Image
                   src={item.icon}

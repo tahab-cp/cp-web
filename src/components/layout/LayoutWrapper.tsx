@@ -18,13 +18,16 @@ export default function LayoutWrapper({
 
   return (
     <>
-      <Loader onComplete={() => setReady(true)} />
+      {/* <Loader onComplete={() => setReady(true)} />
 
       <div className={!isReady ? "h-screen overflow-hidden" : ""}>
         <Header />
         {children}
         <Footer />
-      </div>
+      </div> */}
+      <Header />
+      {children}
+      <Footer />
     </>
   );
 }

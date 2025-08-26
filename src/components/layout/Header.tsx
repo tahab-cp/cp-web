@@ -19,8 +19,51 @@ const Header = () => {
 
   const headerContentRef = useRef<HTMLDivElement>(null);
 
+  // useEffect(() => {
+  //   if (isReady && headerContentRef.current) {
+  //     const headerLogo = headerContentRef.current.querySelectorAll(
+  //       ".header-logo-animate",
+  //     );
+  //     const headerNav = headerContentRef.current.querySelectorAll(
+  //       ".header-nav-animate",
+  //     );
+  //     const headerCtaBtn = headerContentRef.current.querySelectorAll(
+  //       ".header-cta-btn-animate",
+  //     );
+
+  //     // make parent visible
+  //     gsap.to(headerContentRef.current, { autoAlpha: 1, duration: 0.1 });
+
+  //     // animate logo
+  //     gsap.from(headerLogo, {
+  //       y: 100,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       ease: "power2.out",
+  //     });
+
+  //     // animate nav items (with stagger)
+  //     gsap.from(headerNav, {
+  //       y: 100,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       stagger: 0.1,
+  //       ease: "power2.out",
+  //       clearProps: "all",
+  //     });
+
+  //     // animate cta btn
+  //     gsap.from(headerCtaBtn, {
+  //       y: 100,
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       ease: "power2.out",
+  //     });
+  //   }
+  // }, [isReady]);
+
   useEffect(() => {
-    if (isReady && headerContentRef.current) {
+    if (headerContentRef.current) {
       const headerLogo = headerContentRef.current.querySelectorAll(
         ".header-logo-animate",
       );
@@ -60,7 +103,7 @@ const Header = () => {
         ease: "power2.out",
       });
     }
-  }, [isReady]);
+  }, []);
 
   return (
     <header
