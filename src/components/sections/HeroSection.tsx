@@ -17,121 +17,110 @@ const HeroSection = () => {
 
   useEffect(() => {
     if (isReady && heroContentRef.current) {
-      const badge = heroContentRef.current.querySelectorAll(
+      const heroBadge = heroContentRef.current.querySelectorAll(
         ".hero-badge-animate",
       );
-      const heading =
-        heroContentRef.current.querySelector<HTMLElement>(".hero-heading");
-      const desc =
-        heroContentRef.current.querySelector<HTMLElement>(".hero-desc");
-      const ctaBtn = heroContentRef.current.querySelector(".hero-cta-btn");
-      const logosHeading = heroContentRef.current.querySelector(
-        ".hero-logos-heading",
+      const heroHeadingSplit1 = new SplitType(
+        heroContentRef.current.querySelectorAll(
+          ".heading-part",
+        )[0] as HTMLElement,
+        { types: "chars" },
       );
-      const logos = heroContentRef.current.querySelectorAll(".hero-logos");
-
-      const tl = gsap.timeline();
-
-      // Step 1: fade in whole hero smoothly
-      tl.to(heroContentRef.current, { autoAlpha: 1, duration: 0.3 });
-
-      // Step 2: drop-like stagger animation
-      if (badge) {
-        tl.fromTo(
-          badge,
-          { scale: 0, autoAlpha: 0 },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.6,
-            ease: "back.out(1.7)", // nice bounce curve
-            clearProps: "all",
-          },
-        );
-      }
-
-      // Step 3: split text animation
-      if (heading) {
-        const split = new SplitType(heading, {
-          types: "lines",
-          tagName: "span",
-        });
-
-        tl.from(split.lines, {
-          yPercent: 100,
-          opacity: 0,
-          stagger: 0.15,
-          duration: 0.6,
-          ease: "back.inOut",
-        });
-      }
-
-      // Step 4 split text animation for description
-      if (desc) {
-        const split = new SplitType(desc, {
-          types: "words",
-          tagName: "span",
-        });
-
-        tl.from(split.words, {
-          y: 40,
-          opacity: 0,
-          skewY: 10, // tilt for wave feel
-          rotate: 2, // subtle curve
-          stagger: {
-            each: 0.08, // delay between words
-            from: "start", // animate left ➝ right
-          },
-          duration: 0.8,
-          ease: "power3.out", // smooth flowing ease
-        }).to(
-          split.words,
-          {
-            skewY: 0, // reset skew to normal
-            rotate: 0,
-            duration: 0.6,
-            ease: "power2.out",
-          },
-          "<",
-        ); // "<" syncs start with previous
-      }
-
-      // Step 5: fade in cta button
-      tl.fromTo(
-        ctaBtn,
-        { opacity: 0, autoAlpha: 0 },
-        {
-          opacity: 1,
-          autoAlpha: 1,
-          duration: 0.6,
-          ease: "power3.out", // nice bounce curve
-          clearProps: "all",
-        },
+      const heroHeadingSplit2 = new SplitType(
+        heroContentRef.current.querySelectorAll(
+          ".heading-part",
+        )[1] as HTMLElement,
+        { types: "chars" },
       );
-
-      // Step 6: fade in logos heading
-      tl.fromTo(
-        logosHeading,
-        { opacity: 0, autoAlpha: 0 },
-        {
-          opacity: 1,
-          autoAlpha: 1,
-          duration: 0.6,
-          ease: "power3.out", // nice bounce curve
-          clearProps: "all",
-        },
+      const heroDescSplit1 = new SplitType(
+        heroContentRef.current.querySelectorAll(".desc-part")[0] as HTMLElement,
+        { types: "lines" },
       );
+      const heroDescSplit2 = new SplitType(
+        heroContentRef.current.querySelectorAll(".desc-part")[1] as HTMLElement,
+        { types: "lines" },
+      );
+      const heroCtaBtn = heroContentRef.current.querySelectorAll(
+        ".hero-cta-btn-animate",
+      );
+      const heroLogoHeading = heroContentRef.current.querySelectorAll(
+        ".hero-logo-heading-animate",
+      );
+      const heroLogo =
+        heroContentRef.current.querySelectorAll(".hero-logo-animate");
 
-      // Step 7: staggered fade in logos
-      tl.from(logos, {
+      // make parent visible
+      gsap.to(heroContentRef.current, { autoAlpha: 1, duration: 0.1 });
+
+      // animate badge
+      gsap.from(heroBadge, {
+        y: 100,
         opacity: 0,
-        y: 40, // slide up
-        stagger: 0.15, // one by one
-        duration: 0.6,
-        ease: "power3.out",
+        duration: 0.8,
+        ease: "power2.out",
       });
 
-      tl.timeScale(1.3);
+      // Animate first line
+      gsap.from(heroHeadingSplit1.chars, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.03,
+        ease: "power2.out",
+      });
+
+      // Animate second line
+      gsap.from(heroHeadingSplit2.chars, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.03,
+        ease: "power2.out",
+      });
+
+      // Animate desc first line
+      gsap.from(heroDescSplit1.lines, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.03,
+        ease: "power2.out",
+      });
+
+      // Animate desc second line
+      gsap.from(heroDescSplit2.lines, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.03,
+        ease: "power2.out",
+      });
+
+      // animate cta btn
+      gsap.from(heroCtaBtn, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // animate hero logo heading
+      gsap.from(heroLogoHeading, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // animate logos (with stagger)
+      gsap.from(heroLogo, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+        clearProps: "all",
+      });
     }
   }, [isReady]);
 
@@ -162,37 +151,68 @@ const HeroSection = () => {
       >
         {/* Main content */}
         <div className="flex max-w-[106.5rem] flex-col items-center gap-[2.7rem] text-center">
-          <div className="hero-badge-animate">
-            <BookBadge />
+          <div className="overflow-hidden">
+            <div className="hero-badge-animate">
+              <BookBadge />
+            </div>
           </div>
 
-          <h1 className="hero-heading text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
-            Grow your digital presence today with real{" "}
-            <span className="bg-gradient-01 bg-clip-text text-transparent">
-              human-led
-            </span>{" "}
-            strategy.
+          <h1 className="text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
+            <div className="overflow-hidden">
+              <div className="heading-part">
+                Grow your digital presence today
+              </div>{" "}
+            </div>
+
+            <div className="overflow-hidden">
+              <div className="heading-part">
+                with real <span className="text-[#ee8d00]">human-led</span>{" "}
+                strategy.
+              </div>
+            </div>
+
+            {/* <div className="overflow-hidden">
+              <div className="heading-part">
+                with real{" "}
+                <span className="bg-gradient-01 bg-clip-text text-transparent">
+                  human-led
+                </span>{" "}
+                strategy.
+              </div>
+            </div> */}
           </h1>
 
-          <p className="hero-desc max-w-[65.3rem] text-[1.8rem] leading-[2.6rem] font-medium text-white md:text-[2.2rem] md:leading-[3.2rem]">
-            Based in Manchester, we craft bespoke websites and branding that are
-            as smart as they are stunning.
-          </p>
+          <div className="text-[1.8rem] leading-[2.6rem] font-medium text-white md:text-[2.2rem] md:leading-[3.2rem]">
+            <div className="overflow-hidden">
+              <div className="desc-part">
+                Based in Manchester, we craft bespoke websites and branding
+              </div>
+            </div>{" "}
+            <div className="overflow-hidden">
+              <div className="desc-part">
+                that are as smart as they are stunning.
+              </div>
+            </div>
+          </div>
 
-          <div className="hero-cta-btn">
-            <CommonBtn2 />
+          <div className="overflow-hidden">
+            <div className="hero-cta-btn-animate">
+              <CommonBtn2 />
+            </div>
           </div>
         </div>
 
         {/* Logos */}
         <div className="flex max-w-[120.3rem] flex-col items-center gap-[2rem] text-center">
-          <h6 className="hero-logos-heading text-[1.8rem] leading-[2.6rem] font-normal text-white">
-            Trusted by enterprises all over the world:
-          </h6>
+          <div className="overflow-hidden">
+            <h6 className="hero-logo-heading-animate text-[1.8rem] leading-[2.6rem] font-normal text-white">
+              Trusted by enterprises all over the world:
+            </h6>
+          </div>
 
           <ul className="flex items-center justify-center gap-[4.423rem]">
             {logoPopupsData.map((item, idx) => (
-              <li className="hero-logos" key={idx}>
+              <li className="hero-logo-animate" key={idx}>
                 <LogoPopup
                   logo={item.logo}
                   popupImage={item.popupImage}

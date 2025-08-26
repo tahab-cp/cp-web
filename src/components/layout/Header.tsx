@@ -21,27 +21,44 @@ const Header = () => {
 
   useEffect(() => {
     if (isReady && headerContentRef.current) {
-      const elements =
-        headerContentRef.current.querySelectorAll(".header-animate");
-
-      const tl = gsap.timeline();
-
-      // Step 1: fade in whole header smoothly
-      tl.to(headerContentRef.current, { autoAlpha: 1, duration: 0.1 });
-
-      // Step 2: drop-like stagger animation
-      tl.from(
-        elements,
-        {
-          y: -40, // start higher, feels more "drop"
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "back.out(3)", // 👈 gives a nice curve/drop effect
-          clearProps: "all", // 👈 removes inline styles after animation finishes
-        },
-        "-=0.2",
+      const headerLogo = headerContentRef.current.querySelectorAll(
+        ".header-logo-animate",
       );
+      const headerNav = headerContentRef.current.querySelectorAll(
+        ".header-nav-animate",
+      );
+      const headerCtaBtn = headerContentRef.current.querySelectorAll(
+        ".header-cta-btn-animate",
+      );
+
+      // make parent visible
+      gsap.to(headerContentRef.current, { autoAlpha: 1, duration: 0.1 });
+
+      // animate logo
+      gsap.from(headerLogo, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // animate nav items (with stagger)
+      gsap.from(headerNav, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+        clearProps: "all",
+      });
+
+      // animate cta btn
+      gsap.from(headerCtaBtn, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
     }
   }, [isReady]);
 
@@ -53,34 +70,48 @@ const Header = () => {
         ref={headerContentRef}
         className="relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between opacity-0"
       >
-        <Link href="/" className="header-animate relative z-[999]">
+        <Link href="/" className="relative z-[999] overflow-hidden">
           <Image
             src={logo}
             alt="Brand Logo"
             width={170}
             height={66}
             fetchPriority="high"
+            className="header-logo-animate"
           />
         </Link>
 
         <div className="flex items-center justify-end gap-[9.2rem]">
           <nav className="hidden items-center justify-center gap-[1rem] xl:flex">
-            <div className="header-animate">
-              <NavigationLink href="/">Home</NavigationLink>
+            <div className="overflow-hidden">
+              <div className="header-nav-animate">
+                <NavigationLink href="/">Home</NavigationLink>
+              </div>
             </div>
-            <div className="header-animate">
-              <NavigationLink href="/about">About CP</NavigationLink>
+
+            <div className="overflow-hidden">
+              <div className="header-nav-animate">
+                <NavigationLink href="/about">About CP</NavigationLink>
+              </div>
             </div>
-            <div className="header-animate">
-              <NavigationDropdown />
+
+            <div className="overflow-hidden">
+              <div className="header-nav-animate">
+                <NavigationDropdown />
+              </div>
             </div>
-            <div className="header-animate">
-              <NavigationLink href="/case-studies">Case Studies</NavigationLink>
+
+            <div className="overflow-hidden">
+              <div className="header-nav-animate">
+                <NavigationLink href="/case-studies">
+                  Case Studies
+                </NavigationLink>
+              </div>
             </div>
           </nav>
 
-          <div className="hidden items-center gap-[1rem] xl:flex">
-            <i className="header-animate relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+          <div className="hidden items-center gap-[1rem] overflow-hidden xl:flex">
+            <i className="header-cta-btn-animate relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
                 src={phoneFill}
                 alt="Phone Fill Icon"
@@ -91,7 +122,7 @@ const Header = () => {
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] rounded-full bg-[#7EE972] outline-[3.5px]" />
             </i>
 
-            <div className="header-animate">
+            <div className="header-cta-btn-animate">
               <CommonBtn1 />
             </div>
           </div>
