@@ -182,9 +182,10 @@ const HeroSection = () => {
       gsap.from(heroHeadingSplit2.chars, {
         y: 50,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.03,
+        duration: 0.6,
+        stagger: 0.02,
         ease: "power2.out",
+        delay: 0.2,
       });
 
       // Animate desc first line
@@ -200,9 +201,10 @@ const HeroSection = () => {
       gsap.from(heroDescSplit2.lines, {
         y: 50,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.03,
+        duration: 0.6,
+        stagger: 0.02,
         ease: "power2.out",
+        delay: 0.2,
       });
 
       // animate cta btn

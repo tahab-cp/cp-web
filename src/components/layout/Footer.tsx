@@ -73,7 +73,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="relative z-[3] mx-auto flex max-w-[120.3rem] items-center justify-between rounded-[1.6rem] border-[2px] border-white bg-white/20 px-[1.69rem] pt-[2.3rem] pb-[3rem] backdrop-blur-[30px]">
+      <div className="relative z-[3] mx-auto flex max-w-[120.3rem] items-center justify-between rounded-[1.6rem] border-[2px] border-white bg-white/20 px-[4.5rem] pt-[2.3rem] pb-[3rem] backdrop-blur-[30px]">
         <div className="flex flex-col">
           <Link
             href="tel:01618202667"

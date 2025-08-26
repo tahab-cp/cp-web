@@ -97,8 +97,9 @@ const AboutSection = () => {
       gsap.from(aboutDescSplit2.lines, {
         y: 100,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
         ease: "power2.out",
+        delay: 0.2,
         scrollTrigger: {
           trigger: aboutContentRef.current,
           start: "top 50%",
@@ -110,7 +111,8 @@ const AboutSection = () => {
       gsap.from(aboutDescSplit3.lines, {
         y: 100,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
+        delay: 0.3,
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current,
@@ -123,7 +125,8 @@ const AboutSection = () => {
       gsap.from(aboutDescSplit4.lines, {
         y: 100,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
+        delay: 0.4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current,
@@ -136,7 +139,8 @@ const AboutSection = () => {
       gsap.from(aboutDescSplit5.lines, {
         y: 100,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
+        delay: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: aboutContentRef.current,
@@ -149,8 +153,9 @@ const AboutSection = () => {
       gsap.from(aboutDescSplit6.lines, {
         y: 100,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
         ease: "power2.out",
+        delay: 0.6,
         scrollTrigger: {
           trigger: aboutContentRef.current,
           start: "top 50%",

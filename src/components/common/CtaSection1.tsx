@@ -9,6 +9,7 @@ import subtractPink from "../../assets/images/icons/subtract-pink.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
 import CommonBtn3 from "./CommonBtn3";
+import WaveHand from "./WaveHand";
 
 const CtaSection1 = () => {
   return (
@@ -52,8 +53,8 @@ const CtaSection1 = () => {
               />
             </Link>
 
-            <i className="relative flex size-[6.4rem] items-center justify-center">
-              <Image src={handIcon} alt="Hand Icon" width={64} height={64} />
+            <i className="relative flex items-center justify-center text-[4rem]">
+              <WaveHand />
             </i>
           </div>
         </div>

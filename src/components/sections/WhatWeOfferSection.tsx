@@ -13,19 +13,14 @@ import {
   offerSectionWebData,
 } from "@/constants/offerSection";
 import Link from "next/link";
-import subtractBlue from "../../assets/images/icons/subtract-blue.svg";
-import subtractPink from "../../assets/images/icons/subtract-pink.svg";
-import subtractGreen from "../../assets/images/icons/subtract-green.svg";
-import subtractOrange from "../../assets/images/icons/subtract-orange.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import offerDesignImg01 from "../../assets/images/offer-design-img-01.png";
 import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
 import LineStroke03 from "../decorativeElements/LineStroke03";
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CommonBtn3 from "../common/CommonBtn3";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,88 +28,253 @@ const WhatWeOfferSection = () => {
   const webContentRef = useRef<HTMLDivElement>(null);
   const designContentRef = useRef<HTMLDivElement>(null);
   const maintenanceContentRef = useRef<HTMLDivElement>(null);
-  const offerCtaRef = useRef<HTMLDivElement>(null);
+  const offerCtaContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (webContentRef.current) {
-      const webAnimateItem =
-        webContentRef.current.querySelectorAll(".web-animate-item");
-      gsap.set(webAnimateItem, { opacity: 0, y: 30 });
+      const webBadge =
+        webContentRef.current.querySelectorAll(".web-badge-animate");
+      const webGridImg = webContentRef.current.querySelectorAll(
+        ".web-grid-img-animate",
+      );
+      const webGridHeading = webContentRef.current.querySelectorAll(
+        ".web-grid-heading-animate",
+      );
+      const webGridList = webContentRef.current.querySelectorAll(
+        ".web-grid-list-animate",
+      );
+      const webGridCtaBtn = webContentRef.current.querySelectorAll(
+        ".web-grid-cta-animate",
+      );
 
-      gsap.to(webAnimateItem, {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        stagger: 0.15,
-        ease: "power3.out",
+      // badge
+      gsap.from(webBadge, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: webContentRef.current,
-          start: "top 80%", // when cards section enters viewport
-          toggleActions: "play none none none", // play only once
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      //  Grid Image
+      gsap.from(webGridImg, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: webContentRef.current,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid Heading
+      gsap.from(webGridHeading, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.02,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: webContentRef.current,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid  List
+      gsap.from(webGridList, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: webContentRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid  Cta Button
+      gsap.from(webGridCtaBtn, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: "power2.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: webContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
     }
 
     if (designContentRef.current) {
-      const designAnimateItem = designContentRef.current.querySelectorAll(
-        ".design-animate-item",
+      const designGridImg = designContentRef.current.querySelectorAll(
+        ".design-grid-img-animate",
       );
-      gsap.set(designAnimateItem, { opacity: 0, y: 30 });
+      const designGridHeading = designContentRef.current.querySelectorAll(
+        ".design-grid-heading-animate",
+      );
+      const designGridList = designContentRef.current.querySelectorAll(
+        ".design-grid-list-animate",
+      );
+      const designGridCtaBtn = designContentRef.current.querySelectorAll(
+        ".design-grid-cta-animate",
+      );
 
-      gsap.to(designAnimateItem, {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        stagger: 0.15,
-        ease: "power3.out",
-
+      //  Grid Image
+      gsap.from(designGridImg, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: designContentRef.current,
-          start: "top 80%", // when cards section enters viewport
-          toggleActions: "play none none none", // play only once
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid Heading
+      gsap.from(designGridHeading, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.02,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: designContentRef.current,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid  List
+      gsap.from(designGridList, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: designContentRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid  Cta Button
+      gsap.from(designGridCtaBtn, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: "power2.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: designContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
     }
 
     if (maintenanceContentRef.current) {
-      const maintenanceAnimateItem =
+      const maintenanceGridImg = maintenanceContentRef.current.querySelectorAll(
+        ".maintenance-grid-img-animate",
+      );
+      const maintenanceGridHeading =
         maintenanceContentRef.current.querySelectorAll(
-          ".maintenance-animate-item",
+          ".maintenance-grid-heading-animate",
         );
-      gsap.set(maintenanceAnimateItem, { opacity: 0, y: 30 });
+      const maintenanceGridList =
+        maintenanceContentRef.current.querySelectorAll(
+          ".maintenance-grid-list-animate",
+        );
+      const maintenanceGridCtaBtn =
+        maintenanceContentRef.current.querySelectorAll(
+          ".maintenance-grid-cta-animate",
+        );
 
-      gsap.to(maintenanceAnimateItem, {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        stagger: 0.15,
-        ease: "power3.out",
-
+      //  Grid Image
+      gsap.from(maintenanceGridImg, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: maintenanceContentRef.current,
-          start: "top 80%", // when cards section enters viewport
-          toggleActions: "play none none none", // play only once
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid Heading
+      gsap.from(maintenanceGridHeading, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.02,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: maintenanceContentRef.current,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid  List
+      gsap.from(maintenanceGridList, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: maintenanceContentRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Grid  Cta Button
+      gsap.from(maintenanceGridCtaBtn, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: "power2.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: maintenanceContentRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
         },
       });
     }
 
-    if (offerCtaRef.current) {
-      const offerCtaAnimateItem = offerCtaRef.current.querySelectorAll(
-        ".offer-cta-animate-item",
+    if (offerCtaContentRef.current) {
+      const offerCtaCard = offerCtaContentRef.current.querySelectorAll(
+        ".offer-cta-card-animate",
       );
-      gsap.set(offerCtaAnimateItem, { opacity: 0, y: 30 });
 
-      gsap.to(offerCtaAnimateItem, {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        stagger: 0.15,
-        ease: "power3.out",
-
+      // Offer Cta Card
+      gsap.from(offerCtaCard, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: offerCtaRef.current,
-          start: "top 80%", // when cards section enters viewport
-          toggleActions: "play none none none", // play only once
+          trigger: offerCtaContentRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
       });
     }
@@ -142,13 +302,13 @@ const WhatWeOfferSection = () => {
         ref={webContentRef}
         className="relative z-[2] flex flex-col items-center gap-[7.6rem]"
       >
-        <div className="web-animate-item">
+        <div className="web-badge-animate">
           <SectionLabel text="What We Offer" />
         </div>
 
         <div className="mx-auto flex w-full max-w-[130rem]">
           <div className="flex flex-col gap-[3.3rem]">
-            <h3 className="web-animate-item relative max-w-[33.3rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+            <h3 className="web-grid-img-animate relative max-w-[33.3rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
               <span>Website Development</span>
 
               <div className="absolute right-[-.8rem] bottom-[-.6rem] inline-flex size-[4rem] items-center justify-center">
@@ -161,7 +321,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="web-animate-item h-[39.5rem] w-[65.5rem]">
+            <div className="web-grid-img-animate h-[39.5rem] w-[65.5rem]">
               <Image
                 src={offerWebImg}
                 alt="offer web image"
@@ -176,19 +336,25 @@ const WhatWeOfferSection = () => {
             <div className="flex gap-[10rem]">
               {offerSectionWebData.columns.map((col, idx) => (
                 <div key={idx} className={`flex flex-col gap-[3.1rem]`}>
-                  <h5 className="web-animate-item text-[2.2rem] leading-[3.2rem] font-medium text-[#FFE400]">
-                    {col.title}
-                  </h5>
+                  <div className="overflow-hidden">
+                    <h5 className="web-grid-heading-animate text-[2.2rem] leading-[3.2rem] font-medium text-[#FFE400]">
+                      {col.title}
+                    </h5>
+                  </div>
 
                   <ul className="flex flex-col gap-[1.4rem]">
                     {col.links.map((link, idx) => (
-                      <li className="web-animate-item" key={idx}>
+                      <li key={idx} className="overflow-hidden">
                         <Link
                           href={link.href}
-                          className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200 hover:text-white/70"
+                          className="group flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200"
                         >
                           <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
-                          <span>{link.label}</span>
+                          <span className="web-grid-list-animate relative">
+                            {link.label}
+
+                            <hr className="absolute bottom-0 w-0 border-b border-[#FFE400] transition-all duration-200 group-hover:w-full" />
+                          </span>
                         </Link>
                       </li>
                     ))}
@@ -198,22 +364,26 @@ const WhatWeOfferSection = () => {
             </div>
 
             <div className="flex gap-[6rem]">
-              <div className="web-animate-item">
-                <CommonBtn3
-                  href="/"
-                  label="Book a Call"
-                  bgColor="#3078FF"
-                  textColor="#fff"
-                />
+              <div className="overflow-hidden">
+                <div className="web-grid-cta-animate">
+                  <CommonBtn3
+                    href="/"
+                    label="Book a Call"
+                    bgColor="#3078FF"
+                    textColor="#fff"
+                  />
+                </div>
               </div>
 
-              <div className="web-animate-item">
-                <CommonBtn3
-                  href="/"
-                  label="View Case Studies"
-                  bgColor="#FF37B3"
-                  textColor="#fff"
-                />
+              <div className="overflow-hidden">
+                <div className="web-grid-cta-animate">
+                  <CommonBtn3
+                    href="/"
+                    label="View Case Studies"
+                    bgColor="#FF37B3"
+                    textColor="#fff"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -232,19 +402,25 @@ const WhatWeOfferSection = () => {
                   key={idx}
                   className={`flex flex-col gap-[3.1rem] pt-[3.5rem]`}
                 >
-                  <h5 className="design-animate-item text-[2.2rem] leading-[3.2rem] font-medium text-[#FF37B3]">
-                    {col.title}
-                  </h5>
+                  <div className="overflow-hidden">
+                    <h5 className="design-grid-heading-animate text-[2.2rem] leading-[3.2rem] font-medium text-[#FF37B3]">
+                      {col.title}
+                    </h5>
+                  </div>
 
                   <ul className="flex flex-col gap-[1.4rem]">
                     {col.links.map((link, idx) => (
-                      <li className="design-animate-item" key={idx}>
+                      <li className="overflow-hidden" key={idx}>
                         <Link
                           href={link.href}
-                          className="text-text-primary hover:text-text-primary/70 flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium transition-all duration-200"
+                          className="text-text-primary group hover:text-text-primary/70 flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium transition-all duration-200"
                         >
                           <div className="size-[1rem] rounded-full border-2 border-[#EE8D00]" />{" "}
-                          <span>{link.label}</span>
+                          <span className="design-grid-list-animate relative">
+                            {link.label}
+
+                            <hr className="absolute bottom-0 w-0 border-b border-[#FFE400] transition-all duration-200 group-hover:w-full" />
+                          </span>
                         </Link>
                       </li>
                     ))}
@@ -254,28 +430,32 @@ const WhatWeOfferSection = () => {
             </div>
 
             <div className="flex gap-[6rem]">
-              <div className="design-animate-item">
-                <CommonBtn3
-                  href="/"
-                  label="Book a Call"
-                  bgColor="#44B276"
-                  textColor="#fff"
-                />
+              <div className="overflow-hidden">
+                <div className="design-grid-cta-animate">
+                  <CommonBtn3
+                    href="/"
+                    label="Book a Call"
+                    bgColor="#44B276"
+                    textColor="#fff"
+                  />
+                </div>
               </div>
 
-              <div className="design-animate-item">
-                <CommonBtn3
-                  href="/"
-                  label="View Case Studies"
-                  bgColor="#FF37B3"
-                  textColor="#fff"
-                />
+              <div className="overflow-hidden">
+                <div className="design-grid-cta-animate">
+                  <CommonBtn3
+                    href="/"
+                    label="View Case Studies"
+                    bgColor="#FF37B3"
+                    textColor="#fff"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
           <div className="relative top-[10.8rem] flex flex-col">
-            <h3 className="design-animate-item text-text-primary relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
+            <h3 className="design-grid-img-animate text-text-primary relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
               <span>Design and Branding</span>
 
               <div className="absolute right-[5.3rem] bottom-[-.4rem] inline-flex size-[4rem] items-center justify-center">
@@ -288,7 +468,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="design-animate-item pointer-events-none relative h-[55.18rem] w-[44.248rem] select-none">
+            <div className="design-grid-img-animate pointer-events-none relative h-[55.18rem] w-[44.248rem] select-none">
               <Image
                 src={offerDesignImg01}
                 alt="offer design image"
@@ -315,7 +495,7 @@ const WhatWeOfferSection = () => {
         className="relative z-[1] mx-auto flex w-full max-w-[133rem] pt-[10rem]"
       >
         <div className="flex flex-col">
-          <h3 className="maintenance-animate-item relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+          <h3 className="maintenance-grid-img-animate relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
             <span>Maintenance and Growth</span>
 
             <div className="absolute right-[-1.8rem] bottom-[1.6rem] inline-flex size-[4rem] items-center justify-center">
@@ -328,7 +508,7 @@ const WhatWeOfferSection = () => {
             </div>
           </h3>
 
-          <div className="maintenance-animate-item pointer-events-none relative top-[-5rem] h-[49.819rem] w-[57.12rem] select-none">
+          <div className="maintenance-grid-img-animate pointer-events-none relative top-[-5rem] h-[49.819rem] w-[57.12rem] select-none">
             <Image
               src={offerMaintenanceImg}
               alt="offer maintenance image"
@@ -346,19 +526,25 @@ const WhatWeOfferSection = () => {
                 key={idx}
                 className={`flex flex-col gap-[3.1rem] pt-[2.1rem]`}
               >
-                <h5 className="maintenance-animate-item text-[2.2rem] leading-[3.2rem] font-medium text-[#81F2B4]">
-                  {col.title}
-                </h5>
+                <div className="overflow-hidden">
+                  <h5 className="maintenance-grid-heading-animate text-[2.2rem] leading-[3.2rem] font-medium text-[#81F2B4]">
+                    {col.title}
+                  </h5>
+                </div>
 
                 <ul className="flex flex-col gap-[1.4rem]">
                   {col.links.map((link, idx) => (
-                    <li className="maintenance-animate-item" key={idx}>
+                    <li className="overflow-hidden" key={idx}>
                       <Link
                         href={link.href}
-                        className="flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white transition-all duration-200 hover:text-white/70"
+                        className="group flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium text-white"
                       >
                         <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
-                        <span>{link.label}</span>
+                        <span className="maintenance-grid-list-animate relative">
+                          {link.label}
+
+                          <hr className="absolute bottom-0 w-0 border-b border-[#FFE400] transition-all duration-200 group-hover:w-full" />
+                        </span>
                       </Link>
                     </li>
                   ))}
@@ -368,41 +554,48 @@ const WhatWeOfferSection = () => {
           </div>
 
           <div className="flex gap-[6rem]">
-            <div className="maintenance-animate-item">
-              <CommonBtn3
-                href="/"
-                label="Book a Call"
-                bgColor="#EE8D00"
-                textColor="#fff"
-              />
+            <div className="overflow-hidden">
+              <div className="maintenance-grid-cta-animate">
+                <CommonBtn3
+                  href="/"
+                  label="Book a Call"
+                  bgColor="#EE8D00"
+                  textColor="#fff"
+                />
+              </div>
             </div>
 
-            <div className="maintenance-animate-item">
-              <CommonBtn3
-                href="/"
-                label="View Case Studies"
-                bgColor="#FF37B3"
-                textColor="#fff"
-              />
+            <div className="overflow-hidden">
+              <div className="maintenance-grid-cta-animate">
+                <CommonBtn3
+                  href="/"
+                  label="View Case Studies"
+                  bgColor="#FF37B3"
+                  textColor="#fff"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div
-        ref={offerCtaRef}
-        className="offer-cta-card mx-auto mt-[-9rem] flex h-[12rem] max-w-[120.3rem] items-center justify-center gap-[2.2rem] rounded-[2rem]"
+        ref={offerCtaContentRef}
+        className="offer-cta-card mx-auto mt-[-9rem] flex max-w-[120.3rem] rounded-[2rem]"
       >
-        <p className="offer-cta-animate-item text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
-          Need bold design or reliable code or both? You’re in the right place.
-        </p>
+        <div className="offer-cta-card-animate flex items-center justify-center gap-[2.2rem]">
+          <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
+            Need bold design or reliable code or both? You’re in the right
+            place.
+          </p>
 
-        <CommonBtn3
-          href="/"
-          label="Book a Call"
-          bgColor="#EE8D00"
-          textColor="#fff"
-        />
+          <CommonBtn3
+            href="/"
+            label="Book a Call"
+            bgColor="#EE8D00"
+            textColor="#fff"
+          />
+        </div>
       </div>
     </section>
   );
