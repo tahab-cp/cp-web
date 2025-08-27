@@ -83,7 +83,7 @@ const NavigationDropdown = () => {
                   className={`flex flex-col gap-[3.1rem] pt-[3.5rem] ${idx === 1 && "mr-[4.5rem] ml-[6rem]"}`}
                 >
                   <h5
-                    className={`text-[1.8rem] leading-[2.6rem] font-normal ${activeTab !== null ? `!text-[${colors[activeTab]}]` : "text-white"}`}
+                    className={`text-[1.8rem] leading-[2.6rem] font-normal ${activeTab !== null ? `text-[${colors[activeTab]}]` : "text-white"}`}
                   >
                     {col.title}
                   </h5>

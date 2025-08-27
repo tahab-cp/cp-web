@@ -33,7 +33,7 @@ const ContactForm = () => {
           ease: "power3.inOut",
           scrollTrigger: {
             trigger: formRef.current,
-            start: "top 80%", // adjust as needed
+            start: "top 60%", // adjust as needed
             toggleActions: "play none none reverse",
             // "play none none none" → plays only once
           },
