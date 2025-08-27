@@ -9,6 +9,7 @@ import LineStroke05 from "../decorativeElements/LineStroke05";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionLabel2 from "../common/SectionLabel2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,16 +32,12 @@ const TestimonialSection = () => {
       );
 
       // Badge Animation
-      gsap.from(testimonialLabel, {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: testimonialContentRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
+      gsap.to(testimonialLabel, {
+        rotate: 5, // tilt slightly
+        duration: 0.6,
+        yoyo: true, // go back
+        repeat: -1, // loop forever
+        ease: "power1.inOut",
       });
 
       // Heading Animation
@@ -99,9 +96,9 @@ const TestimonialSection = () => {
 
       <div ref={testimonialContentRef} className="mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-center gap-[2rem] text-center">
-          <div className="overflow-hidden px-[.5rem]">
+          <div className="rotate-[5deg]">
             <div className="testimonial-label-animate">
-              <SectionLabel text="Testimonials" />
+              <SectionLabel2 text="Testimonials" />
             </div>
           </div>
 

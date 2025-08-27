@@ -7,6 +7,8 @@ import { useState } from "react";
 import { serviceTabs } from "@/constants/servicesDropdown";
 import { usePathname } from "next/navigation";
 
+const colors = ["#FED202", "#FF37B3", "#81F2B4"];
+
 const NavigationDropdown = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeDropdown, setActiveDropdown] = useState(false);
@@ -51,12 +53,10 @@ const NavigationDropdown = () => {
               <button
                 key={tab.name}
                 onMouseEnter={() => setActiveTab(idx)}
-                className={`dropdown-tab group inline-flex h-[10rem] w-[20rem] cursor-pointer items-center px-[2rem] py-[1.8rem] ${idx === 0 && activeTab === 0 ? "!bg-[#070707]" : ""} ${idx === 1 && activeTab === 1 ? "!bg-[#FF37B3]" : ""} ${idx === 2 && activeTab === 2 ? "!bg-[#81F2B4]" : ""}`}
+                className={`dropdown-tab group inline-flex h-[10rem] w-[20rem] cursor-pointer items-center px-[2rem] py-[1.8rem] ${idx === 0 && activeTab === 0 ? "!bg-[#FED202]" : ""} ${idx === 1 && activeTab === 1 ? "!bg-[#FF37B3]" : ""} ${idx === 2 && activeTab === 2 ? "!bg-[#81F2B4]" : ""}`}
               >
                 <span
-                  className={`text-left text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] transition-all duration-300 ${
-                    activeTab === idx ? "text-white" : "text-white"
-                  }`}
+                  className={`text-left text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white transition-all duration-300 ${idx === 0 && activeTab === 0 ? "!text-text-primary" : ""}`}
                 >
                   {tab.name}
                 </span>
@@ -82,7 +82,9 @@ const NavigationDropdown = () => {
                   key={col.title}
                   className={`flex flex-col gap-[3.1rem] pt-[3.5rem] ${idx === 1 && "mr-[4.5rem] ml-[6rem]"}`}
                 >
-                  <h5 className="text-[1.8rem] leading-[2.6rem] font-normal text-[#FED202]">
+                  <h5
+                    className={`text-[1.8rem] leading-[2.6rem] font-normal ${activeTab !== null ? `!text-[${colors[activeTab]}]` : "text-white"}`}
+                  >
                     {col.title}
                   </h5>
 
@@ -93,7 +95,9 @@ const NavigationDropdown = () => {
                           href={link.href}
                           className="group flex items-center gap-[1.2rem] text-[1.8rem] leading-[2.6rem] font-normal text-white"
                         >
-                          <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
+                          <div
+                            className={`size-[1rem] rounded-full border-2 ${activeTab !== null ? `border-[${colors[activeTab]}]` : "border-white"}`}
+                          />{" "}
                           <span className="relative">
                             {link.label}
 

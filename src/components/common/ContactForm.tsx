@@ -10,63 +10,93 @@ import {
 import ContactFormInput from "./ContactFormInput";
 import CommonBtn4 from "./CommonBtn4";
 import WaveHand from "./WaveHand";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      gsap.fromTo(
+        formRef.current,
+        { height: 0, opacity: 0 },
+        {
+          height: "auto",
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.inOut",
+          scrollTrigger: {
+            trigger: formRef.current,
+            start: "top 80%", // adjust as needed
+            toggleActions: "play none none reverse",
+            // "play none none none" → plays only once
+          },
+        },
+      );
+    }
+  }, []);
+
   return (
     <div className="contact-form-bg w-full">
       <h4 className="inline-flex items-center gap-[.5rem] text-[4.8rem] font-semibold tracking-[-0.02em]">
         Hello <WaveHand />
       </h4>
 
-      <form action="" className="flex flex-col gap-[1.8rem]">
-        <fieldset className="flex items-center gap-[1.6rem]">
-          <Label htmlFor="name" className="min-w-[25rem]">
-            My name is
-          </Label>
+      <div ref={formRef} className="h-0 overflow-hidden opacity-0">
+        <form action="" className="flex flex-col gap-[1.8rem]">
+          <fieldset className="flex items-center gap-[1.6rem]">
+            <Label htmlFor="name" className="min-w-[25rem]">
+              My name is
+            </Label>
 
-          <ContactFormInput placeholder="Enter your name" type="text" />
-        </fieldset>
+            <ContactFormInput placeholder="Enter your name" type="text" />
+          </fieldset>
 
-        <fieldset className="flex items-center gap-[1.6rem]">
-          <Label htmlFor="service" className="min-w-[38.9rem]">
-            I need a help with
-          </Label>
+          <fieldset className="flex items-center gap-[1.6rem]">
+            <Label htmlFor="service" className="min-w-[38.9rem]">
+              I need a help with
+            </Label>
 
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Select desired service" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
-            </SelectContent>
-          </Select>
-        </fieldset>
+            <Select>
+              <SelectTrigger>
+                <SelectValue placeholder="Select desired service" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="light">Light</SelectItem>
+                <SelectItem value="dark">Dark</SelectItem>
+                <SelectItem value="system">System</SelectItem>
+              </SelectContent>
+            </Select>
+          </fieldset>
 
-        <fieldset className="flex items-center gap-[1.6rem]">
-          <Label htmlFor="email" className="min-w-[35.8rem]">
-            Here is my email
-          </Label>
+          <fieldset className="flex items-center gap-[1.6rem]">
+            <Label htmlFor="email" className="min-w-[35.8rem]">
+              Here is my email
+            </Label>
 
-          <ContactFormInput
-            placeholder="Enter your email address"
-            type="email"
-          />
-        </fieldset>
+            <ContactFormInput
+              placeholder="Enter your email address"
+              type="email"
+            />
+          </fieldset>
 
-        <fieldset className="flex items-center gap-[1.6rem]">
-          <Label htmlFor="message" className="min-w-[29.7rem]">
-            And message
-          </Label>
+          <fieldset className="flex items-center gap-[1.6rem]">
+            <Label htmlFor="message" className="min-w-[29.7rem]">
+              And message
+            </Label>
 
-          <Textarea placeholder="Enter your message" />
-        </fieldset>
+            <Textarea placeholder="Enter your message" />
+          </fieldset>
 
-        <div className="mt-[1.5rem] mb-[1rem]">
-          <CommonBtn4 label="Submit Request" />
-        </div>
-      </form>
+          <div className="mt-[1.5rem] mb-[1rem]">
+            <CommonBtn4 label="Submit Request" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -21,6 +21,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CommonBtn3 from "../common/CommonBtn3";
 import { useEffect, useRef } from "react";
+import SectionLabel2 from "../common/SectionLabel2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,15 +49,12 @@ const WhatWeOfferSection = () => {
       );
 
       // badge
-      gsap.from(webBadge, {
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: webContentRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+      gsap.to(webBadge, {
+        rotate: 5, // tilt slightly
+        duration: 0.6,
+        yoyo: true, // go back
+        repeat: -1, // loop forever
+        ease: "power1.inOut",
       });
 
       //  Grid Image
@@ -302,8 +300,14 @@ const WhatWeOfferSection = () => {
         ref={webContentRef}
         className="relative z-[2] flex flex-col items-center gap-[7.6rem]"
       >
-        <div className="web-badge-animate">
-          <SectionLabel text="What We Offer" />
+        <div className="rotate-[5deg]">
+          <div className="web-badge-animate">
+            <SectionLabel2
+              text="What We Offer"
+              bgColor="bg-[#FFC300]"
+              textColor="text-[#070707]"
+            />
+          </div>
         </div>
 
         <div className="mx-auto flex w-full max-w-[130rem]">

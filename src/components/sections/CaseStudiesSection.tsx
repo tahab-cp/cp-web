@@ -34,9 +34,9 @@ const CaseStudiesSection = () => {
       );
 
       // Badge Animation
-      gsap.to(".case-studies-label-animate", {
+      gsap.to(caseStudiesLabel, {
         rotate: 5, // tilt slightly
-        duration: 0.4,
+        duration: 0.6,
         yoyo: true, // go back
         repeat: -1, // loop forever
         ease: "power1.inOut",
@@ -71,23 +71,26 @@ const CaseStudiesSection = () => {
       });
 
       // Card Animation
-      caseStudiesCards.forEach((card) => {
-        gsap.fromTo(
-          card,
-          { opacity: 0, scale: 0.95 },
-          {
-            opacity: 1,
-            scale: 1,
-            duration: 0.6,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              end: "top 30%",
-              scrub: true,
+      caseStudiesCards.forEach((card, i) => {
+        // Skip the last card (no "next" after it)
+        if (i < caseStudiesCards.length - 1) {
+          gsap.fromTo(
+            card,
+            { opacity: 1, scale: 1 }, // start normal
+            {
+              opacity: 0,
+              scale: 0.95,
+              duration: 0.6,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: caseStudiesCards[i + 1], // animate OUT when next card enters
+                start: "top 80%",
+                end: "top 30%",
+                scrub: true,
+              },
             },
-          },
-        );
+          );
+        }
       });
     }
 

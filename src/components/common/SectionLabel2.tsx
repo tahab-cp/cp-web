@@ -13,7 +13,7 @@ const SectionLabel2 = ({
   text,
   dotColor = "bg-[#FFE400]",
   borderColor = "border-[#070707]",
-  textColor = "text-[#070707]",
+  textColor = "text-white",
   bgColor = "bg-[#F14A58]",
   className = "",
 }: SectionLabel2Props) => {

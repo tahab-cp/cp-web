@@ -22,9 +22,6 @@ const ContactSection = () => {
       const contactCard1 = contactContentRef.current.querySelectorAll(
         ".contact-card-1-animate",
       );
-      const contactCard2 = contactContentRef.current.querySelectorAll(
-        ".contact-card-2-animate",
-      );
 
       // Heading Animation
       gsap.from(contactHeading, {
@@ -47,18 +44,6 @@ const ContactSection = () => {
         scrollTrigger: {
           trigger: contactContentRef.current,
           start: "top 60%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      // Card 2 Animation
-      gsap.from(contactCard2, {
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: contactContentRef.current,
-          start: "top 50%",
           toggleActions: "play none none none",
         },
       });
