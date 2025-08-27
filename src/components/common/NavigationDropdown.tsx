@@ -50,14 +50,12 @@ const NavigationDropdown = () => {
             {serviceTabs.map((tab, idx) => (
               <button
                 key={tab.name}
-                onClick={() => setActiveTab(idx)}
-                className={`dropdown-tab group inline-flex h-[10rem] w-[20rem] cursor-pointer items-center px-[2rem] py-[1.8rem] ${
-                  activeTab === idx ? "!bg-[#ffe500]" : ""
-                }`}
+                onMouseEnter={() => setActiveTab(idx)}
+                className={`dropdown-tab group inline-flex h-[10rem] w-[20rem] cursor-pointer items-center px-[2rem] py-[1.8rem] ${idx === 0 && activeTab === 0 ? "!bg-[#070707]" : ""} ${idx === 1 && activeTab === 1 ? "!bg-[#FF37B3]" : ""} ${idx === 2 && activeTab === 2 ? "!bg-[#81F2B4]" : ""}`}
               >
                 <span
-                  className={`group-hover:text-text-primary text-left text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] transition-all duration-300 ${
-                    activeTab === idx ? "text-text-primary" : "text-white"
+                  className={`text-left text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] transition-all duration-300 ${
+                    activeTab === idx ? "text-white" : "text-white"
                   }`}
                 >
                   {tab.name}
@@ -93,10 +91,15 @@ const NavigationDropdown = () => {
                       <li key={idx}>
                         <Link
                           href={link.href}
-                          className="flex items-center gap-[1.2rem] text-[1.8rem] leading-[2.6rem] font-normal text-white"
+                          className="group flex items-center gap-[1.2rem] text-[1.8rem] leading-[2.6rem] font-normal text-white"
                         >
                           <div className="size-[1rem] rounded-full border-2 border-[#FFE400]" />{" "}
-                          <span>{link.label}</span>
+                          <span className="relative">
+                            {link.label}
+
+                            {/* Gradient underline */}
+                            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
+                          </span>
                         </Link>
                       </li>
                     ))}

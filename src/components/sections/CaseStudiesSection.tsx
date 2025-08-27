@@ -10,6 +10,7 @@ import LineStroke04 from "../decorativeElements/LineStroke04";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionLabel2 from "../common/SectionLabel2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,16 +34,12 @@ const CaseStudiesSection = () => {
       );
 
       // Badge Animation
-      gsap.from(caseStudiesLabel, {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: caseStudiesContentRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
+      gsap.to(".case-studies-label-animate", {
+        rotate: 5, // tilt slightly
+        duration: 0.4,
+        yoyo: true, // go back
+        repeat: -1, // loop forever
+        ease: "power1.inOut",
       });
 
       // Heading Animation
@@ -124,13 +121,9 @@ const CaseStudiesSection = () => {
         className="relative z-[1] mx-auto max-w-[120.3rem]"
       >
         <div className="flex flex-col items-center gap-[2rem] text-center">
-          <div className="overflow-hidden px-[.5rem]">
+          <div className="rotate-[-8deg]">
             <div className="case-studies-label-animate">
-              <SectionLabel
-                text="Case Studies"
-                borderColor="border-text-primary"
-                textColor="text-text-primary"
-              />
+              <SectionLabel2 text="Case Studies" />
             </div>
           </div>
 

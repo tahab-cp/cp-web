@@ -1,18 +1,17 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import subtractDark from "../../assets/images/icons/subtract-dark.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
+import gsap from "gsap";
 
 interface LogoPopupProps {
   logo: StaticImageData;
   popupImage: StaticImageData;
   title: string;
-  description: string;
   href: string;
-
   logoWidth: number;
   logoHeight: number;
 }
@@ -21,12 +20,54 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
   logo,
   popupImage,
   title,
-  description,
   href,
   logoWidth,
   logoHeight,
 }) => {
   const [activePopup, setActivePopup] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left; // mouse X inside card
+      const y = e.clientY - rect.top; // mouse Y inside card
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Rotation values
+      const rotateX = ((y - centerY) / centerY) * 10; // max 10deg
+      const rotateY = ((x - centerX) / centerX) * -10;
+
+      gsap.to(card, {
+        rotateX,
+        rotateY,
+        transformPerspective: 1000,
+        ease: "power2.out",
+        duration: 0.3,
+      });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(card, {
+        rotateX: 0,
+        rotateY: 0,
+        ease: "power3.out",
+        duration: 0.6,
+      });
+    };
+
+    card.addEventListener("mousemove", handleMouseMove);
+    card.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      card.removeEventListener("mousemove", handleMouseMove);
+      card.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   return (
     <div
@@ -37,7 +78,9 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
       {/* Logo button */}
       <button
         onClick={() => setActivePopup(!activePopup)}
-        className={`cursor-pointer transition-all duration-300 ${activePopup ? "opacity-100 grayscale-0" : "opacity-70 grayscale-100"}`}
+        className={`cursor-pointer transition-all duration-300 ${
+          activePopup ? "opacity-100 grayscale-0" : "opacity-70 grayscale-100"
+        }`}
       >
         <Image
           src={logo}
@@ -55,7 +98,10 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
             : "pointer-events-none invisible pb-[0rem] opacity-0"
         }`}
       >
-        <div className="w-[27.5rem] overflow-hidden rounded-[1.6rem] bg-white shadow-[0px_8px_20px_0px_#00000040]">
+        <div
+          ref={cardRef}
+          className="w-[27.5rem] overflow-hidden rounded-[1.6rem] bg-white shadow-[0px_8px_20px_0px_#00000040]"
+        >
           {/* Image */}
           <div className="relative h-[19.4rem] w-full overflow-hidden rounded-[1.6rem]">
             <Image
@@ -68,16 +114,7 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
           </div>
 
           {/* Content */}
-          <div className="flex flex-col gap-[3.4rem] px-[1.7rem] pt-[1.8rem] pb-[2.4rem]">
-            <div className="flex w-full flex-col items-start gap-[.6rem] text-left">
-              <h4 className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em]">
-                {title}
-              </h4>
-              <p className="text-[1.6rem] leading-[2.4rem] font-medium">
-                {description}
-              </p>
-            </div>
-
+          <div className="px-[1.7rem] pt-[1.8rem] pb-[2.4rem]">
             <Link href={href} className="inline-flex items-center">
               <span className="border-text-primary bg-text-primary inline-flex h-[4.4rem] min-w-[17.934rem] items-center justify-center rounded-[4.56rem] border px-[2.28rem] py-[.608rem] text-[1.6rem] font-semibold text-white">
                 View Case Study

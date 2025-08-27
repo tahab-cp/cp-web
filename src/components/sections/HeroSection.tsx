@@ -328,7 +328,6 @@ const HeroSection = () => {
                   logo={item.logo}
                   popupImage={item.popupImage}
                   title={item.title}
-                  description={item.description}
                   href={item.href}
                   logoWidth={item.logoWidth}
                   logoHeight={item.logoHeight}
