@@ -12,6 +12,7 @@ import CommonBtn1 from "../common/CommonBtn1";
 import { useLoaderStore } from "@/store/useLoader";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import CommonBtn3 from "../common/CommonBtn3";
 
 const Header = () => {
   const pathname = usePathname();
@@ -166,7 +167,8 @@ const Header = () => {
             </i>
 
             <div className="header-cta-btn-animate p-[.5rem]">
-              <CommonBtn1 />
+              {/* <CommonBtn1 /> */}
+              <CommonBtn3 href="" label="Book a Call" />
             </div>
           </div>
 
