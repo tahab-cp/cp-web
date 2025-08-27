@@ -48,6 +48,7 @@ const CaseStudiesGrid = ({
           height={440}
           width={555}
           priority
+          className="size-full"
         />
       </Link>
 

@@ -353,7 +353,8 @@ const WhatWeOfferSection = () => {
                           <span className="web-grid-list-animate relative">
                             {link.label}
 
-                            <hr className="absolute bottom-0 w-0 border-b border-[#FFE400] transition-all duration-200 group-hover:w-full" />
+                            {/* Gradient underline */}
+                            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
                           </span>
                         </Link>
                       </li>
@@ -413,13 +414,14 @@ const WhatWeOfferSection = () => {
                       <li className="overflow-hidden" key={idx}>
                         <Link
                           href={link.href}
-                          className="text-text-primary group hover:text-text-primary/70 flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium transition-all duration-200"
+                          className="text-text-primary group flex items-center gap-[1.2rem] text-[2.2rem] leading-[3.2rem] font-medium transition-all duration-200"
                         >
                           <div className="size-[1rem] rounded-full border-2 border-[#EE8D00]" />{" "}
                           <span className="design-grid-list-animate relative">
                             {link.label}
 
-                            <hr className="absolute bottom-0 w-0 border-b border-[#FFE400] transition-all duration-200 group-hover:w-full" />
+                            {/* Gradient underline */}
+                            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
                           </span>
                         </Link>
                       </li>
@@ -543,7 +545,8 @@ const WhatWeOfferSection = () => {
                         <span className="maintenance-grid-list-animate relative">
                           {link.label}
 
-                          <hr className="absolute bottom-0 w-0 border-b border-[#FFE400] transition-all duration-200 group-hover:w-full" />
+                          {/* Gradient underline */}
+                          <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
                         </span>
                       </Link>
                     </li>

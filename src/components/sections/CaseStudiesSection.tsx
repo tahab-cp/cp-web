@@ -28,10 +28,9 @@ const CaseStudiesSection = () => {
       const caseStudiesDesc = caseStudiesContentRef.current.querySelectorAll(
         ".case-studies-desc-animate",
       );
-      const caseStudiesGridCard =
-        caseStudiesContentRef.current.querySelectorAll(
-          ".case-studies-grid-card-animate",
-        );
+      const caseStudiesCards = caseStudiesContentRef.current.querySelectorAll(
+        ".case-studies-card-animate",
+      );
 
       // Badge Animation
       gsap.from(caseStudiesLabel, {
@@ -74,22 +73,24 @@ const CaseStudiesSection = () => {
         },
       });
 
-      // Grid Card Animation
-      {
-        caseStudiesGridCard.forEach((item) => {
-          gsap.from(item, {
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
+      caseStudiesCards.forEach((card) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, scale: 0.95 },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.6,
             ease: "power2.out",
             scrollTrigger: {
-              trigger: item,
+              trigger: card,
               start: "top 80%",
-              toggleActions: "play none none none",
+              end: "top 30%",
+              scrub: true,
             },
-          });
-        });
-      }
+          },
+        );
+      });
     }
 
     if (caseStudiesCtaContentRef.current) {
@@ -146,9 +147,12 @@ const CaseStudiesSection = () => {
           </div>
         </div>
 
-        <div className="mt-[5.1rem] mb-[9rem] flex flex-col gap-[5rem]">
+        <div className="flex min-h-screen flex-col gap-[5rem] pt-[5.1rem] pb-[9rem]">
           {caseStudiesData.map((caseStudy, index) => (
-            <div key={index} className="case-studies-grid-card-animate">
+            <div
+              key={index}
+              className="case-studies-card-animate sticky top-[8rem]"
+            >
               <CaseStudiesGrid
                 {...caseStudy}
                 className={` ${index % 2 === 1 ? "case-studies-grid-reverse" : ""}`}
