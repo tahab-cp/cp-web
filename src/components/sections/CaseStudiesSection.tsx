@@ -70,6 +70,7 @@ const CaseStudiesSection = () => {
         },
       });
 
+      // Card Animation
       caseStudiesCards.forEach((card) => {
         gsap.fromTo(
           card,
