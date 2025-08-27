@@ -133,13 +133,13 @@ const HeroSection = () => {
         heroContentRef.current.querySelectorAll(
           ".heading-part",
         )[0] as HTMLElement,
-        { types: "chars" },
+        { types: "lines" },
       );
       const heroHeadingSplit2 = new SplitType(
         heroContentRef.current.querySelectorAll(
           ".heading-part",
         )[1] as HTMLElement,
-        { types: "chars" },
+        { types: "lines" },
       );
       const heroDescSplit1 = new SplitType(
         heroContentRef.current.querySelectorAll(".desc-part")[0] as HTMLElement,
@@ -170,7 +170,7 @@ const HeroSection = () => {
       });
 
       // Animate first line
-      gsap.from(heroHeadingSplit1.chars, {
+      gsap.from(heroHeadingSplit1.lines, {
         y: 50,
         opacity: 0,
         duration: 0.8,
@@ -179,7 +179,7 @@ const HeroSection = () => {
       });
 
       // Animate second line
-      gsap.from(heroHeadingSplit2.chars, {
+      gsap.from(heroHeadingSplit2.lines, {
         y: 50,
         opacity: 0,
         duration: 0.6,
@@ -277,7 +277,10 @@ const HeroSection = () => {
 
             <div className="overflow-hidden">
               <div className="heading-part">
-                with real <span className="text-[#ee8d00]">human-led</span>{" "}
+                with real{" "}
+                <span className="bg-gradient-01 bg-clip-text text-transparent">
+                  human-led
+                </span>{" "}
                 strategy.
               </div>
             </div>
