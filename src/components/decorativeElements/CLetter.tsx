@@ -26,7 +26,7 @@ const CLetter = (props: React.SVGProps<SVGSVGElement>) => {
           .timeline({
             scrollTrigger: {
               trigger: svgRef.current, // the SVG triggers animation
-              start: "top 80%", // when top of SVG hits 80% of viewport
+              start: "top 60%", // when top of SVG hits 80% of viewport
               toggleActions: "play none none none", // play only once
             },
           })

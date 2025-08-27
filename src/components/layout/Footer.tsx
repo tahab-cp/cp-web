@@ -14,6 +14,8 @@ import monthlyDesignsLogo from "../../assets/images/monthly-designs-logo.svg";
 import cElement from "../../assets/images/c-element.svg";
 import pElement from "../../assets/images/p-element.svg";
 import LineStroke06 from "../decorativeElements/LineStroke06";
+import CLetter from "../decorativeElements/CLetter";
+import PLetter from "../decorativeElements/PLetter";
 
 const socialLinks = [
   {
@@ -52,25 +54,20 @@ const Footer = () => {
       </div>
 
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        <Image
-          src={cElement}
-          alt="C Element"
-          height={83.58}
-          width={177.57}
-          priority
-          className="absolute bottom-[3rem] left-[-7rem] rotate-[45deg]"
-        />
+        <CLetter className="absolute bottom-[-10rem] left-[-7rem] w-[17.7rem]" />
       </div>
 
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        <Image
+        {/* <Image
           src={pElement}
           alt="P Element"
           height={178.21}
           width={96.44}
           priority
           className="absolute top-[43.5rem] right-[-3rem] rotate-[-15deg]"
-        />
+        /> */}
+
+        <PLetter className="absolute top-[43.5rem] right-[-3rem] w-[9.6rem] rotate-[-15deg]" />
       </div>
 
       <div className="relative z-[3] mx-auto flex max-w-[120.3rem] items-center justify-between rounded-[1.6rem] border-[2px] border-white bg-white/20 px-[4.5rem] pt-[2.3rem] pb-[3rem] backdrop-blur-[30px]">

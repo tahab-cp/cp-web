@@ -1,6 +1,6 @@
 import designTabImg from "../assets/images/offer-web-img.png";
 import type { StaticImageData } from "next/image";
-import clickArrowBlack from "../assets/images/icons/click-arrow-black.svg";
+import clickArrowYellow from "../assets/images/icons/click-arrow-yellow-2.svg";
 import clickArrowPink from "../assets/images/icons/click-arrow-pink.svg";
 import clickArrowGreen from "../assets/images/icons/click-arrow-green.svg";
 
@@ -24,7 +24,7 @@ export interface ServiceTab {
 export const serviceTabs: ServiceTab[] = [
   {
     name: "Design & Branding",
-    icon: clickArrowBlack,
+    icon: clickArrowYellow,
     columns: [
       {
         title: "Designing",
