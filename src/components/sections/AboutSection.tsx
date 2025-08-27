@@ -339,7 +339,15 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 gap-x-[1.5rem] gap-y-[3rem] md:grid-cols-2">
           {aboutCardData.map((item, idx) => (
             <div className="about-card-2-animate" key={idx}>
-              <div className="about-card">
+              <div
+                className="about-card transition-colors duration-300"
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = item.hoverColor)
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = "")
+                }
+              >
                 <Image
                   src={item.icon}
                   alt="Pencil Icon"

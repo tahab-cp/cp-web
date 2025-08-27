@@ -249,10 +249,6 @@ body {
   z-index: 0;
 }
 
-.about-card:hover {
-  background: #ffe500;
-}
-
 .about-card::before {
   content: "";
   position: absolute;

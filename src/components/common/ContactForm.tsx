@@ -15,6 +15,7 @@ import WaveHand from "./WaveHand";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CommonBtn3 from "./CommonBtn3";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +96,8 @@ const ContactForm = () => {
           </fieldset>
 
           <div className="mt-[1.5rem] mb-[1rem]">
-            <CommonBtn4 label="Submit Request" />
+            {/* <CommonBtn4 label="Submit Request" /> */}
+            <CommonBtn3 href="" label="Submit Request" />
           </div>
         </form>
       </div>

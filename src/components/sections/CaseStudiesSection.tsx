@@ -29,9 +29,9 @@ const CaseStudiesSection = () => {
       const caseStudiesDesc = caseStudiesContentRef.current.querySelectorAll(
         ".case-studies-desc-animate",
       );
-      const caseStudiesCards = caseStudiesContentRef.current.querySelectorAll(
-        ".case-studies-card-animate",
-      );
+      // const caseStudiesCards = caseStudiesContentRef.current.querySelectorAll(
+      //   ".case-studies-card-animate",
+      // );
 
       // Badge Animation
       gsap.to(caseStudiesLabel, {
@@ -71,27 +71,26 @@ const CaseStudiesSection = () => {
       });
 
       // Card Animation
-      caseStudiesCards.forEach((card, i) => {
-        // Skip the last card (no "next" after it)
-        if (i < caseStudiesCards.length - 1) {
-          gsap.fromTo(
-            card,
-            { opacity: 1, scale: 1 }, // start normal
-            {
-              opacity: 0,
-              scale: 0.95,
-              duration: 0.6,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: caseStudiesCards[i + 1], // animate OUT when next card enters
-                start: "top 80%",
-                end: "top 30%",
-                scrub: true,
-              },
-            },
-          );
-        }
-      });
+      // caseStudiesCards.forEach((card, i) => {
+      //   if (i < caseStudiesCards.length - 1) {
+      //     gsap.fromTo(
+      //       card,
+      //       { opacity: 1, scale: 1 }, // start normal
+      //       {
+      //         opacity: 0,
+      //         scale: 0.95,
+      //         duration: 0.6,
+      //         ease: "power2.out",
+      //         scrollTrigger: {
+      //           trigger: caseStudiesCards[i + 1], // animate OUT when next card enters
+      //           start: "top 80%",
+      //           end: "top 30%",
+      //           scrub: true,
+      //         },
+      //       },
+      //     );
+      //   }
+      // });
     }
 
     if (caseStudiesCtaContentRef.current) {
@@ -125,7 +124,7 @@ const CaseStudiesSection = () => {
         className="relative z-[1] mx-auto max-w-[120.3rem]"
       >
         <div className="flex flex-col items-center gap-[2rem] text-center">
-          <div className="rotate-[-8deg]">
+          <div className="rotate-[-2deg]">
             <div className="case-studies-label-animate">
               <SectionLabel2 text="Case Studies" />
             </div>
@@ -146,10 +145,7 @@ const CaseStudiesSection = () => {
 
         <div className="flex min-h-screen flex-col gap-[5rem] pt-[5.1rem] pb-[9rem]">
           {caseStudiesData.map((caseStudy, index) => (
-            <div
-              key={index}
-              className="case-studies-card-animate sticky top-[8rem]"
-            >
+            <div key={index} className="sticky top-[8rem]">
               <CaseStudiesGrid
                 {...caseStudy}
                 className={` ${index % 2 === 1 ? "case-studies-grid-reverse" : ""}`}

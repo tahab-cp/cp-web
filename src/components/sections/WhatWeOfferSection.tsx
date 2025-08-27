@@ -300,7 +300,7 @@ const WhatWeOfferSection = () => {
         ref={webContentRef}
         className="relative z-[2] flex flex-col items-center gap-[7.6rem]"
       >
-        <div className="rotate-[5deg]">
+        <div className="rotate-[2deg]">
           <div className="web-badge-animate">
             <SectionLabel2
               text="What We Offer"

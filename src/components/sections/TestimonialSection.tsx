@@ -96,7 +96,7 @@ const TestimonialSection = () => {
 
       <div ref={testimonialContentRef} className="mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-center gap-[2rem] text-center">
-          <div className="rotate-[5deg]">
+          <div className="rotate-[2deg]">
             <div className="testimonial-label-animate">
               <SectionLabel2 text="Testimonials" />
             </div>
