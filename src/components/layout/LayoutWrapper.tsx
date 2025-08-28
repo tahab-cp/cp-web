@@ -28,8 +28,8 @@ export default function LayoutWrapper({
       </div> */}
       <Header />
       <StickyHeader />
-      {children}
-      <Footer />
+      {/* {children} */}
+      {/* <Footer /> */}
     </>
   );
 }

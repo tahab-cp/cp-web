@@ -107,7 +107,7 @@ const Header = () => {
     }
 
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -120,20 +120,20 @@ const Header = () => {
 
   return (
     <header
-      className={`absolute left-0 z-[100] flex h-[12.6rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 xl:px-[0rem] ${isVisible ? "-top-full" : "top-0"} ${pathname === "/" ? "" : "header-gradient-bg"}`}
+      className={`absolute left-0 z-[100] flex h-[12.6rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 md:px-[4rem] xl:px-[0rem] ${isVisible ? "-top-full" : "top-0"} ${pathname === "/" ? "" : "header-gradient-bg"}`}
     >
       <div
         ref={headerContentRef}
         className="relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between opacity-0"
       >
-        <Link href="/" className="relative z-[999] overflow-hidden">
+        <Link href="/" className="relative overflow-hidden">
           <Image
             src={logo}
             alt="Brand Logo"
             width={170}
             height={66}
             fetchPriority="high"
-            className="header-logo-animate"
+            className="header-logo-animate w-[14rem] md:w-[17rem]"
           />
         </Link>
 

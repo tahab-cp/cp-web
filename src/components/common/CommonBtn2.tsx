@@ -4,13 +4,20 @@ import avatar from "../../assets/images/consultation-avatar.svg";
 
 const CommonBtn2 = () => {
   return (
-    <Link href="" className="inline-flex items-center">
-      <div className="common-btn-2">
+    <Link href="" className="group inline-flex items-center">
+      <div className="common-btn-2 overflow-hidden">
         {/* Gradient Layer */}
         <div className="gradient-layer" />
 
         {/* Text Layer */}
-        <span>Get Free Consultation</span>
+        <div className="size-full transition-all duration-200 group-hover:-translate-y-full">
+          <span className="flex size-full items-center justify-center">
+            Get Free Consultation
+          </span>
+          <span className="flex size-full items-center justify-center">
+            Get Free Consultation
+          </span>
+        </div>
       </div>
 
       <i className="relative z-[0] mx-[-.3rem]">

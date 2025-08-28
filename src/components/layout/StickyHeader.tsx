@@ -8,6 +8,7 @@ import NavigationLink from "../common/NavigationLink";
 import NavigationDropdown from "../common/NavigationDropdown";
 import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import CommonBtn1 from "../common/CommonBtn1";
+import HamburgerMenu from "./HamburgerMenu";
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,7 +68,7 @@ const StickyHeader = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed top-[3rem] left-0 z-[100] w-full -translate-y-full opacity-0"
+      className="fixed top-0 left-0 z-[100] w-full -translate-y-full pt-[2rem] opacity-0"
     >
       <div className="header-gradient-bg relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full px-[2rem] py-[3rem]">
         <Link href="/" className="relative">
@@ -82,14 +83,14 @@ const StickyHeader = () => {
         </Link>
 
         <div className="flex items-center justify-end gap-[9.2rem]">
-          <nav className="flex items-center justify-center gap-[1rem]">
+          <nav className="hidden items-center justify-center gap-[1rem] xl:flex">
             <NavigationLink href="/">Home</NavigationLink>
             <NavigationLink href="/about">About CP</NavigationLink>
             <NavigationDropdown />
             <NavigationLink href="/case-studies">Case Studies</NavigationLink>
           </nav>
 
-          <div className="flex items-center gap-[1rem] overflow-hidden">
+          <div className="hidden items-center gap-[1rem] overflow-hidden xl:flex">
             <i className="header-cta-btn-animate relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
                 src={phoneFill}
@@ -104,6 +105,11 @@ const StickyHeader = () => {
             <div ref={ctaRef} className="translate-x-12 p-[.5rem] opacity-0">
               <CommonBtn1 />
             </div>
+          </div>
+
+          {/* Hamburger Menu */}
+          <div className="xl:hidden">
+            <HamburgerMenu />
           </div>
         </div>
       </div>

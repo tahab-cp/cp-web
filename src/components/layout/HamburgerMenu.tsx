@@ -2,17 +2,10 @@
 
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import Link from "next/link";
 import Image from "next/image";
-import subtractLight from "../../assets/images/icons/subtract-light.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
-
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Case Studies", href: "/case-studies" },
-];
+import logo from "../../assets/images/logo.svg";
+import HamburgerAccordion from "../common/HamburgerAccordion";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,56 +58,58 @@ const HamburgerMenu = () => {
       </button>
 
       <div
-        className={`hamburger-menu fixed top-0 z-[100] h-screen w-full transition-all duration-300 ${isOpen ? "left-0" : "left-full"}`}
+        className={`hamburger-menu fixed top-0 z-[100] flex h-screen w-full flex-col transition-all duration-300 ${isOpen ? "left-0" : "left-full"}`}
       >
-        <nav className="flex h-full flex-col items-start justify-center gap-[1rem] pl-[2rem] md:pl-[4rem]">
-          {navLinks.map(({ label, href }) => (
-            <Link
-              key={href}
-              onClick={() => setIsOpen(false)}
-              href={href}
-              className="text-[4rem] leading-[6rem] font-bold text-white uppercase md:text-[7rem] md:leading-[9rem]"
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="absolute bottom-[10rem] left-[2rem] flex items-center gap-[1rem] md:left-[4rem]">
-          <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+        <div className="flex h-[12.6rem] items-center px-[2rem] md:px-[4rem]">
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/"
+            className="relative overflow-hidden"
+          >
             <Image
-              src={phoneFill}
-              alt="Phone Fill Icon"
-              width={16}
-              height={16}
+              src={logo}
+              alt="Brand Logo"
+              width={170}
+              height={66}
+              fetchPriority="high"
+              className="w-[14rem] md:w-[17rem]"
             />
-
-            <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] rounded-full bg-[#7EE972] outline-[3.5px]" />
-          </i>
-
-          <Link href="" className="inline-flex items-center justify-center">
-            <span className="inline-flex h-[4.6rem] min-w-[16.6rem] items-center justify-center rounded-[7rem] border border-[#d3d3d3] px-[3rem] py-[1rem] text-[2rem] font-semibold text-white">
-              Book a Call
-            </span>
-
-            <i className="-mx-[.1rem] inline-flex size-[1.5rem] items-center justify-center">
-              <Image
-                src={subtractLight}
-                alt="Subtract Light Icon"
-                width={18}
-                height={18}
-              />
-            </i>
-
-            <i className="inline-flex size-[4.6rem] items-center justify-center rounded-full border border-[#d3d3d3]">
-              <Image
-                src={arrowRight}
-                alt="Arrow Right Icon"
-                width={14}
-                height={14}
-              />
-            </i>
           </Link>
+        </div>
+
+        <div className="flex-1 overflow-x-hidden overflow-y-auto">
+          <nav className="flex flex-col gap-[2rem] py-[2rem] text-white md:py-[4rem]">
+            <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
+              <Link
+                href=""
+                className="text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
+              >
+                Home
+              </Link>
+            </div>
+
+            <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
+              <Link
+                href=""
+                className="text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
+              >
+                About
+              </Link>
+            </div>
+
+            <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
+              <HamburgerAccordion setIsOpen={setIsOpen} />
+            </div>
+
+            <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
+              <Link
+                href=""
+                className="text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
+              >
+                Case Studies
+              </Link>
+            </div>
+          </nav>
         </div>
       </div>
     </>
