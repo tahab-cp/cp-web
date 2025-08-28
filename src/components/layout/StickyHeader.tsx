@@ -68,7 +68,7 @@ const StickyHeader = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 z-[100] w-full -translate-y-full pt-[2rem] opacity-0"
+      className="fixed top-0 left-0 z-[100] w-full -translate-y-full px-[2rem] pt-[2rem] opacity-0 md:px-[4rem] xl:px-[0rem]"
     >
       <div className="header-gradient-bg relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full px-[2rem] py-[3rem]">
         <Link href="/" className="relative">

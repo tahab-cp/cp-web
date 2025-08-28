@@ -28,7 +28,7 @@ export default function LayoutWrapper({
       </div> */}
       <Header />
       <StickyHeader />
-      {/* {children} */}
+      {children}
       {/* <Footer /> */}
     </>
   );

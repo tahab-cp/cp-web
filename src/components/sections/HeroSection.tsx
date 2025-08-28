@@ -236,7 +236,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-[79rem] w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem]">
+    <section className="relative min-h-screen w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] md:h-[79rem] md:min-h-auto">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -261,14 +261,14 @@ const HeroSection = () => {
         className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[5.9rem] pt-[15rem] pb-[4rem] opacity-0"
       >
         {/* Main content */}
-        <div className="flex max-w-[106.5rem] flex-col items-center gap-[2.7rem] text-center">
+        <div className="flex max-w-[106.5rem] flex-col items-center gap-[2rem] px-[2rem] text-center md:gap-[2.7rem] xl:px-[0rem]">
           <div className="overflow-hidden">
             <div className="hero-badge-animate">
               <BookBadge />
             </div>
           </div>
 
-          <h1 className="text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
+          <h1 className="text-[2.2rem] leading-[3rem] font-bold tracking-[-0.03em] text-white md:text-[4rem] md:leading-[5rem] lg:text-[6rem] lg:leading-[7rem] xl:text-[7rem] xl:leading-[8.4rem]">
             <div className="overflow-hidden">
               <div className="heading-part">
                 Grow your digital presence today
@@ -284,19 +284,9 @@ const HeroSection = () => {
                 strategy.
               </div>
             </div>
-
-            {/* <div className="overflow-hidden">
-              <div className="heading-part">
-                with real{" "}
-                <span className="bg-gradient-01 bg-clip-text text-transparent">
-                  human-led
-                </span>{" "}
-                strategy.
-              </div>
-            </div> */}
           </h1>
 
-          <div className="text-[1.8rem] leading-[2.6rem] font-medium text-white md:text-[2.2rem] md:leading-[3.2rem]">
+          <div className="text-[1.1rem] leading-[1.8rem] font-medium text-white md:text-[1.8rem] md:leading-[2.8rem] lg:text-[2.2rem] lg:leading-[3.2rem]">
             <div className="overflow-hidden">
               <div className="desc-part">
                 Based in Manchester, we craft bespoke websites and branding
@@ -317,14 +307,14 @@ const HeroSection = () => {
         </div>
 
         {/* Logos */}
-        <div className="flex max-w-[120.3rem] flex-col items-center gap-[2rem] text-center">
+        <div className="flex max-w-[120.3rem] flex-col items-center gap-[2rem] px-[2rem] text-center xl:px-[0rem]">
           <div className="overflow-hidden">
             <h6 className="hero-logo-heading-animate text-[1.8rem] leading-[2.6rem] font-normal text-white">
               Trusted by enterprises all over the world:
             </h6>
           </div>
 
-          <ul className="flex items-center justify-center gap-[4.423rem]">
+          <ul className="grid grid-cols-2 items-center gap-[4rem] md:grid-cols-4 lg:grid-cols-7">
             {logoPopupsData.map((item, idx) => (
               <li className="hero-logo-animate" key={idx}>
                 <LogoPopup

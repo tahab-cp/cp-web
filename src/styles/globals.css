@@ -25,11 +25,10 @@ body {
   font-weight: 400;
   font-family: var(--font-onest), sans-serif;
   line-height: 1.6;
-  background-color: #000000;
+  background-color: #ffffff;
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  min-height: 3000px;
 }
 
 .swiper {
@@ -77,16 +76,32 @@ body {
 
 .common-btn-2 {
   position: relative;
-  min-width: 26.9rem;
+  min-width: 20rem;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6rem;
-  padding: 0rem 3rem 0rem 3rem;
+  padding: 0rem 2rem 0rem 2rem;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.6remrem;
   color: white;
+}
+
+@media (min-width: 768px) {
+  .common-btn-2 {
+    position: relative;
+    min-width: 26.9rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6rem;
+    padding: 0rem 3rem 0rem 3rem;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+  }
 }
 
 .common-btn-2 .gradient-layer {
