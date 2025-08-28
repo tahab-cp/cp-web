@@ -11,8 +11,8 @@ const HomePage = () => {
   return (
     <main>
       <HeroSection />
-      {/* <AboutSection /> */}
-      {/* <WhatWeOfferSection /> */}
+      <AboutSection />
+      <WhatWeOfferSection />
       {/* <CaseStudiesSection /> */}
       {/* <TestimonialSection /> */}
       {/* <ContactSection /> */}

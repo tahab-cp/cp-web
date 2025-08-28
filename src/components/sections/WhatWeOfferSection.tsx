@@ -279,7 +279,7 @@ const WhatWeOfferSection = () => {
   }, []);
 
   return (
-    <section className="relative pt-[8rem] pb-[10.1rem]">
+    <section className="relative pt-[8rem] pb-[8rem] md:pb-[10.1rem]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -293,12 +293,12 @@ const WhatWeOfferSection = () => {
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke03 className="absolute top-[180.6rem] left-1/2 -translate-x-1/2" />
+        <LineStroke03 className="absolute top-[180.6rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div
         ref={webContentRef}
-        className="relative z-[2] flex flex-col items-center gap-[7.6rem]"
+        className="relative z-[2] flex flex-col items-center gap-[7.6rem] px-[2rem] pb-[6rem] xl:px-[0rem] xl:pb-[0rem]"
       >
         <div className="rotate-[2deg]">
           <div className="web-badge-animate">
@@ -310,12 +310,12 @@ const WhatWeOfferSection = () => {
           </div>
         </div>
 
-        <div className="mx-auto flex w-full max-w-[130rem]">
+        <div className="mx-auto flex w-full max-w-[130rem] flex-col gap-[2rem] lg:flex-row lg:gap-[0rem]">
           <div className="flex flex-col gap-[3.3rem]">
-            <h3 className="web-grid-img-animate relative max-w-[33.3rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+            <h3 className="web-grid-img-animate relative max-w-[33.3rem] text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">
               <span>Website Development</span>
 
-              <div className="absolute right-[-.8rem] bottom-[-.6rem] inline-flex size-[4rem] items-center justify-center">
+              <div className="absolute right-[6rem] bottom-[-.6rem] inline-flex size-[4rem] items-center justify-center md:right-[-.8rem]">
                 <Image
                   src={clickArrowYellow}
                   alt="Click Arrow"
@@ -325,7 +325,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="web-grid-img-animate h-[39.5rem] w-[65.5rem]">
+            <div className="web-grid-img-animate md:h-[39.5rem] md:w-[65.5rem]">
               <Image
                 src={offerWebImg}
                 alt="offer web image"
@@ -336,8 +336,8 @@ const WhatWeOfferSection = () => {
             </div>
           </div>
 
-          <div className="ml-[-10rem] flex flex-col gap-[4.5rem]">
-            <div className="flex gap-[10rem]">
+          <div className="flex flex-col gap-[4.5rem] xl:ml-[-10rem]">
+            <div className="flex flex-col gap-[5rem] md:flex-row lg:flex-col xl:flex-row xl:gap-[10rem]">
               {offerSectionWebData.columns.map((col, idx) => (
                 <div key={idx} className={`flex flex-col gap-[3.1rem]`}>
                   <div className="overflow-hidden">
@@ -357,7 +357,6 @@ const WhatWeOfferSection = () => {
                           <span className="web-grid-list-animate relative">
                             {link.label}
 
-                            {/* Gradient underline */}
                             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
                           </span>
                         </Link>
@@ -368,7 +367,7 @@ const WhatWeOfferSection = () => {
               ))}
             </div>
 
-            <div className="flex gap-[6rem]">
+            <div className="flex flex-col gap-[2rem] xl:flex-row">
               <div className="overflow-hidden">
                 <div className="web-grid-cta-animate">
                   <CommonBtn3
@@ -397,11 +396,11 @@ const WhatWeOfferSection = () => {
 
       <div
         ref={designContentRef}
-        className="relative z-[1] mt-[-6rem] h-[58.3rem] bg-white"
+        className="relative z-[1] bg-white px-[2rem] lg:pb-[8rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:pb-[0rem]"
       >
-        <div className="relative mx-auto flex w-full max-w-[130rem] gap-[12.9rem]">
-          <div className="flex flex-col gap-[4.5rem] pt-[10rem]">
-            <div className="flex gap-[10rem]">
+        <div className="relative mx-auto flex w-full max-w-[130rem] flex-col gap-[5rem] lg:flex-row lg:gap-[12.9rem]">
+          <div className="flex flex-col gap-[4.5rem] pt-[5rem] lg:pt-[10rem]">
+            <div className="flex flex-col gap-[5rem] md:flex-row lg:flex-col xl:flex-row xl:gap-[10rem]">
               {offerSectionDesignData.columns.map((col, idx) => (
                 <div
                   key={idx}
@@ -424,7 +423,6 @@ const WhatWeOfferSection = () => {
                           <span className="design-grid-list-animate relative">
                             {link.label}
 
-                            {/* Gradient underline */}
                             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
                           </span>
                         </Link>
@@ -435,7 +433,7 @@ const WhatWeOfferSection = () => {
               ))}
             </div>
 
-            <div className="flex gap-[6rem]">
+            <div className="flex flex-col gap-[2rem] xl:flex-row">
               <div className="overflow-hidden p-[.5rem]">
                 <div className="design-grid-cta-animate">
                   <CommonBtn3
@@ -460,11 +458,11 @@ const WhatWeOfferSection = () => {
             </div>
           </div>
 
-          <div className="relative top-[10.8rem] flex flex-col">
-            <h3 className="design-grid-img-animate text-text-primary relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
+          <div className="relative flex flex-col lg:top-[10.8rem]">
+            <h3 className="design-grid-img-animate text-text-primary relative max-w-[30.8rem] text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] md:text-[4.8rem] md:leading-[6rem]">
               <span>Design and Branding</span>
 
-              <div className="absolute right-[5.3rem] bottom-[-.4rem] inline-flex size-[4rem] items-center justify-center">
+              <div className="absolute right-[10rem] bottom-[-.4rem] inline-flex size-[4rem] items-center justify-center md:right-[5.3rem]">
                 <Image
                   src={clickArrowPink}
                   alt="Click Arrow"
@@ -474,7 +472,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="design-grid-img-animate pointer-events-none relative h-[55.18rem] w-[44.248rem] select-none">
+            <div className="design-grid-img-animate pointer-events-none relative select-none md:h-[55.18rem] md:w-[44.248rem]">
               <Image
                 src={offerDesignImg01}
                 alt="offer design image"
@@ -489,7 +487,7 @@ const WhatWeOfferSection = () => {
                 height={203.3}
                 width={200.88}
                 priority
-                className="absolute right-[-5.194rem] bottom-[13.405rem]"
+                className="absolute right-[0rem] bottom-[0rem] md:right-[-5.194rem] md:bottom-[13.405rem]"
               />
             </div>
           </div>
@@ -498,13 +496,13 @@ const WhatWeOfferSection = () => {
 
       <div
         ref={maintenanceContentRef}
-        className="relative z-[1] mx-auto flex w-full max-w-[133rem] pt-[10rem]"
+        className="relative z-[1] mx-auto flex w-full max-w-[133rem] flex-col px-[2rem] pt-[6rem] md:pt-[10rem] lg:flex-row xl:px-[0rem]"
       >
         <div className="flex flex-col">
-          <h3 className="maintenance-grid-img-animate relative max-w-[30.8rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+          <h3 className="maintenance-grid-img-animate relative max-w-[30.8rem] text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">
             <span>Maintenance and Growth</span>
 
-            <div className="absolute right-[-1.8rem] bottom-[1.6rem] inline-flex size-[4rem] items-center justify-center">
+            <div className="absolute right-[13rem] bottom-[-.5rem] inline-flex size-[4rem] items-center justify-center md:right-[-1.8rem] md:bottom-[1.6rem]">
               <Image
                 src={clickArrowGreen}
                 alt="Click Arrow"
@@ -514,7 +512,7 @@ const WhatWeOfferSection = () => {
             </div>
           </h3>
 
-          <div className="maintenance-grid-img-animate pointer-events-none relative top-[-5rem] h-[49.819rem] w-[57.12rem] select-none">
+          <div className="maintenance-grid-img-animate pointer-events-none relative select-none md:top-[-5rem] md:h-[49.819rem] md:w-[57.12rem]">
             <Image
               src={offerMaintenanceImg}
               alt="offer maintenance image"
@@ -526,7 +524,7 @@ const WhatWeOfferSection = () => {
         </div>
 
         <div className="flex flex-col gap-[4.5rem]">
-          <div className="flex gap-[10rem]">
+          <div className="flex flex-col gap-[5rem] md:flex-row lg:flex-col xl:flex-row xl:gap-[10rem]">
             {offerSectionMaintenanceData.columns.map((col, idx) => (
               <div
                 key={idx}
@@ -549,7 +547,6 @@ const WhatWeOfferSection = () => {
                         <span className="maintenance-grid-list-animate relative">
                           {link.label}
 
-                          {/* Gradient underline */}
                           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#ffe400] to-[#ff37b3] transition-all duration-200 group-hover:w-full" />
                         </span>
                       </Link>
@@ -560,7 +557,7 @@ const WhatWeOfferSection = () => {
             ))}
           </div>
 
-          <div className="flex gap-[6rem]">
+          <div className="flex flex-col gap-[2rem] xl:flex-row">
             <div className="overflow-hidden p-[.5rem]">
               <div className="maintenance-grid-cta-animate">
                 <CommonBtn3
@@ -586,7 +583,7 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         ref={offerCtaContentRef}
         className="offer-cta-card mx-auto mt-[-9rem] flex max-w-[120.3rem] rounded-[2rem]"
       >
@@ -603,7 +600,7 @@ const WhatWeOfferSection = () => {
             textColor="#fff"
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

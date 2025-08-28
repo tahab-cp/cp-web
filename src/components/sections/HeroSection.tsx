@@ -258,7 +258,7 @@ const HeroSection = () => {
 
       <div
         ref={heroContentRef}
-        className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[5.9rem] pt-[15rem] pb-[4rem] opacity-0"
+        className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[3rem] pt-[15rem] pb-[4rem] opacity-0 md:gap-[5.9rem]"
       >
         {/* Main content */}
         <div className="flex max-w-[106.5rem] flex-col items-center gap-[2rem] px-[2rem] text-center md:gap-[2.7rem] xl:px-[0rem]">
@@ -314,7 +314,7 @@ const HeroSection = () => {
             </h6>
           </div>
 
-          <ul className="grid grid-cols-2 items-center gap-[4rem] md:grid-cols-4 lg:grid-cols-7">
+          <ul className="grid grid-cols-1 items-center gap-[4rem] md:grid-cols-4 lg:grid-cols-7">
             {logoPopupsData.map((item, idx) => (
               <li className="hero-logo-animate" key={idx}>
                 <LogoPopup

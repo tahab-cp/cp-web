@@ -28,7 +28,8 @@ body {
   background-color: #ffffff;
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow: hidden;
+  min-height: 3000px;
 }
 
 .swiper {

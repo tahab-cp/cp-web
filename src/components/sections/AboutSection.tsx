@@ -218,24 +218,24 @@ const AboutSection = () => {
   return (
     <section className="relative py-[10rem]">
       {/* Bg Element */}
-      <div className="absolute inset-0 z-[0] overflow-hidden">
+      <div className="absolute inset-0 z-[0] hidden overflow-hidden md:block">
         <CLetter className="absolute top-[3.1rem] right-[-18.341rem]" />
       </div>
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke02 className="absolute top-[135.1rem] left-1/2 -translate-x-1/2" />
+        <LineStroke02 className="absolute top-[135.1rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div
         ref={aboutContentRef}
-        className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col items-center text-center xl:block xl:text-left"
+        className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col px-[2rem] xl:px-[0rem]"
       >
         <div className="about-badge-animate">
           <AboutBadge />
         </div>
 
-        <h5 className="mt-[3rem] mb-[2rem] text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+        <h5 className="mt-[3rem] mb-[2rem] text-[1.8rem] leading-[2.8rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.4rem] md:leading-[4rem] lg:text-[3rem] lg:leading-[4.4rem] xl:text-[3.4rem] xl:leading-[4.8rem]">
           <div className="overflow-hidden">
             <div className="desc-part">
               <span className="text-[#EE8D00]">Creative Pixels</span> is an
@@ -267,7 +267,7 @@ const AboutSection = () => {
           </div>
         </h5>
 
-        <h5 className="mb-[2rem] overflow-hidden text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[3.6rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
+        <h5 className="mb-[2rem] overflow-hidden text-[1.8rem] leading-[2.8rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.4rem] md:leading-[4rem] lg:text-[3rem] lg:leading-[4.4rem] xl:text-[3.4rem] xl:leading-[4.8rem]">
           <div className="desc-part">We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
         </h5>
 
@@ -278,7 +278,7 @@ const AboutSection = () => {
 
       <div
         ref={aboutGridRef}
-        className="relative z-10 mx-auto mt-[10rem] flex max-w-[135.2rem] flex-col gap-[1.8rem] xl:flex-row"
+        className="relative z-10 mx-auto mt-[5rem] flex flex-col gap-[1.8rem] px-[2rem] md:mt-[10rem] lg:max-w-[75rem] xl:max-w-[135.2rem] xl:flex-row xl:px-[0rem]"
       >
         <div className="about-card-1-animate about-card-gradient relative h-[50rem] w-full overflow-hidden md:h-[84.6rem] md:min-w-[62.9rem]">
           {/* Gradient */}
@@ -298,7 +298,7 @@ const AboutSection = () => {
               height={244.4}
               width={429.04}
               priority
-              className="absolute top-[24.4rem] left-0"
+              className="absolute top-[12rem] left-0 md:top-[24.4rem]"
             />
           </div>
 
@@ -309,7 +309,7 @@ const AboutSection = () => {
               height={209}
               width={219}
               priority
-              className="absolute top-[46.2rem] left-[3.4rem]"
+              className="absolute top-[25rem] left-[3.4rem] md:top-[46.2rem]"
             />
           </div>
 
@@ -320,7 +320,7 @@ const AboutSection = () => {
               height={109}
               width={298}
               priority
-              className="absolute top-[42.9rem] left-[24.011rem]"
+              className="absolute top-[13rem] left-[3rem] md:top-[42.9rem] md:left-[24.011rem]"
             />
           </div>
 
@@ -331,7 +331,7 @@ const AboutSection = () => {
               height={247}
               width={393}
               priority
-              className="absolute top-[56.5rem] left-[21.2rem] rounded-[2rem] backdrop-blur-[10px]"
+              className="absolute top-[32rem] left-[10rem] w-[25rem] rounded-[2rem] backdrop-blur-[10px] md:top-[56.5rem] md:left-[21.2rem] md:w-auto"
             />
           </div>
         </div>
