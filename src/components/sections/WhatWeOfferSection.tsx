@@ -583,24 +583,26 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      {/* <div
-        ref={offerCtaContentRef}
-        className="offer-cta-card mx-auto mt-[-9rem] flex max-w-[120.3rem] rounded-[2rem]"
-      >
-        <div className="offer-cta-card-animate flex items-center justify-center gap-[2.2rem]">
-          <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
-            Need bold design or reliable code or both? You’re in the right
-            place.
-          </p>
+      <div className="px-[2rem] xl:px-[0rem]">
+        <div
+          ref={offerCtaContentRef}
+          className="offer-cta-card mx-auto mt-[4rem] flex max-w-[120.3rem] rounded-[2rem] md:mt-[-9rem]"
+        >
+          <div className="offer-cta-card-animate flex flex-col items-center justify-center gap-[2.2rem] md:flex-row">
+            <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
+              Need bold design or reliable code or both? You’re in the right
+              place.
+            </p>
 
-          <CommonBtn3
-            href="/"
-            label="Book a Call"
-            bgColor="#EE8D00"
-            textColor="#fff"
-          />
+            <CommonBtn3
+              href="/"
+              label="Book a Call"
+              bgColor="#EE8D00"
+              textColor="#fff"
+            />
+          </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

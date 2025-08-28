@@ -35,12 +35,12 @@ const CaseStudiesGrid = ({
 }: CaseStudiesGridProps) => {
   return (
     <div
-      className={`case-studies-grid grid w-full grid-cols-2 items-center gap-[4.3rem] ${className}`}
+      className={`case-studies-grid grid w-full grid-cols-1 items-center gap-[4.3rem] lg:grid-cols-2 ${className}`}
     >
       {/* Left Image */}
       <Link
         href={`/case-studies/${slug}`}
-        className="relative h-[44rem] w-full"
+        className="relative w-full md:h-[44rem]"
       >
         <Image
           src={image}
@@ -79,7 +79,7 @@ const CaseStudiesGrid = ({
         </ul>
 
         {/* Title */}
-        <h3 className="text-text-primary my-[1.8rem] text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em]">
+        <h3 className="text-text-primary my-[1.8rem] text-[3rem] leading-[4rem] font-semibold tracking-[-0.02em] md:text-[3.4rem] md:leading-[4.8rem]">
           {title}
         </h3>
 
@@ -94,7 +94,7 @@ const CaseStudiesGrid = ({
             TECHNOLOGY USED
           </span>
 
-          <ul className="flex items-center gap-[3.3rem] border-y border-[#424242]/50 py-[1.8rem]">
+          <ul className="flex flex-wrap items-center gap-[3.3rem] border-y border-[#424242]/50 py-[1.8rem] md:flex-row">
             {technologies.map((tech, index) => (
               <li key={index}>
                 <Image

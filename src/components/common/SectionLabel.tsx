@@ -17,7 +17,7 @@ const SectionLabel = ({
 }: SectionLabelProps) => {
   return (
     <div
-      className={`inline-flex h-[4rem] min-w-[25rem] items-center justify-center gap-[1rem] rounded-[.8rem] border-[0.5px] border-dashed px-[2rem] py-[1rem] text-[1.4rem] leading-[2.2rem] font-medium md:h-[4.4rem] md:min-w-[18.3rem] md:text-[1.6rem] md:leading-[2.4rem] ${borderColor} ${textColor} ${className}`}
+      className={`inline-flex h-[4rem] min-w-[18.3rem] items-center justify-center gap-[1rem] rounded-[.8rem] border-[0.5px] border-dashed px-[2rem] py-[1rem] text-[1.4rem] leading-[2.2rem] font-medium md:h-[4.4rem] md:text-[1.6rem] md:leading-[2.4rem] ${borderColor} ${textColor} ${className}`}
     >
       {/* Pulsing dot */}
       <span className="relative">

@@ -88,7 +88,7 @@ const CaseStudiesSection = () => {
   }, []);
 
   return (
-    <section className="relative pt-[10rem] pb-[10.8rem]">
+    <section className="relative px-[2rem] pt-[10rem] pb-[10.8rem] xl:px-[0rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
         <LineStroke04 className="absolute bottom-0 left-1/2 -translate-x-1/2" />
@@ -120,10 +120,10 @@ const CaseStudiesSection = () => {
 
         <div className="flex flex-col gap-[5rem] pt-[5.1rem] pb-[9rem]">
           {caseStudiesData.map((caseStudy, index) => (
-            <div key={index} className="sticky top-[15rem]">
+            <div key={index} className="top-[15rem] lg:sticky">
               <CaseStudiesGrid
                 {...caseStudy}
-                className={` ${index % 2 === 1 ? "case-studies-grid-reverse" : ""}`}
+                className={` ${index % 2 === 1 ? "lg:case-studies-grid-reverse" : ""}`}
               />
             </div>
           ))}
