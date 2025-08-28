@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Loader from "../animations/Loader";
 import useLenis from "@/hooks/useLenis";
 import { useLoaderStore } from "@/store/useLoader";
+import StickyHeader from "./StickyHeader";
 
 export default function LayoutWrapper({
   children,
@@ -26,6 +27,7 @@ export default function LayoutWrapper({
         <Footer />
       </div> */}
       <Header />
+      <StickyHeader />
       {children}
       <Footer />
     </>

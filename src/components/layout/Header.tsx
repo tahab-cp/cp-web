@@ -10,13 +10,14 @@ import HamburgerMenu from "./HamburgerMenu";
 import { usePathname } from "next/navigation";
 import CommonBtn1 from "../common/CommonBtn1";
 import { useLoaderStore } from "@/store/useLoader";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import CommonBtn3 from "../common/CommonBtn3";
 
 const Header = () => {
   const pathname = usePathname();
   const isReady = useLoaderStore((state) => state.isReady);
+  const [isVisible, setIsVisible] = useState(false);
 
   const headerContentRef = useRef<HTMLDivElement>(null);
 
@@ -104,11 +105,22 @@ const Header = () => {
         ease: "power2.out",
       });
     }
+
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`absolute top-0 left-0 z-[100] flex h-[12.6rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 xl:px-[0rem] ${pathname === "/" ? "" : "header-gradient-bg"}`}
+      className={`absolute left-0 z-[100] flex h-[12.6rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 xl:px-[0rem] ${isVisible ? "-top-full" : "top-0"} ${pathname === "/" ? "" : "header-gradient-bg"}`}
     >
       <div
         ref={headerContentRef}
@@ -167,8 +179,8 @@ const Header = () => {
             </i>
 
             <div className="header-cta-btn-animate p-[.5rem]">
-              {/* <CommonBtn1 /> */}
-              <CommonBtn3 href="" label="Book a Call" />
+              <CommonBtn1 />
+              {/* <CommonBtn3 href="" label="Book a Call" /> */}
             </div>
           </div>
 

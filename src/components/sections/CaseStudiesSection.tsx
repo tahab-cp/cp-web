@@ -98,7 +98,7 @@ const CaseStudiesSection = () => {
         ref={caseStudiesContentRef}
         className="relative z-[1] mx-auto max-w-[120.3rem]"
       >
-        <div className="sticky top-[2rem] flex flex-col items-center gap-[2rem] text-center">
+        <div className="flex flex-col items-center gap-[2rem] text-center">
           <div className="rotate-[-2deg]">
             <div className="case-studies-label-animate">
               <SectionLabel2 text="Case Studies" />
@@ -120,7 +120,7 @@ const CaseStudiesSection = () => {
 
         <div className="flex flex-col gap-[5rem] pt-[5.1rem] pb-[9rem]">
           {caseStudiesData.map((caseStudy, index) => (
-            <div key={index} className="sticky top-[24rem]">
+            <div key={index} className="sticky top-[15rem]">
               <CaseStudiesGrid
                 {...caseStudy}
                 className={` ${index % 2 === 1 ? "case-studies-grid-reverse" : ""}`}

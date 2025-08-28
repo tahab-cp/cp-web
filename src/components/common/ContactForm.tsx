@@ -35,7 +35,7 @@ const ContactForm = () => {
           scrollTrigger: {
             trigger: formRef.current,
             start: "top 60%", // adjust as needed
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             // "play none none none" → plays only once
           },
         },
