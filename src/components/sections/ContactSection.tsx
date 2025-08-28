@@ -50,19 +50,19 @@ const ContactSection = () => {
     }
   }, []);
   return (
-    <section className="relative py-[10rem]">
+    <section className="relative px-[2rem] py-[10rem] xl:px-[0rem]">
       <div
         ref={contactContentRef}
         className="relative mx-auto flex max-w-[112.3rem] flex-col items-center"
       >
         <div className="overflow-hidden">
-          <div className="contact-heading-animate">
+          <div className="contact-heading-animate text-center">
             <SectionTitle label="Ready to Start Working With Us?" />
           </div>
         </div>
 
         <div className="contact-card-1-animate w-full">
-          <div className="contact-details-bg mt-[4.5rem] mb-[3.7rem] flex w-full items-center justify-between px-[4rem] py-[3.5rem]">
+          <div className="contact-details-bg mt-[4.5rem] mb-[3.7rem] flex w-full flex-col items-center justify-between gap-[4rem] px-[4rem] py-[3.5rem] text-center lg:flex-row lg:gap-[0rem] lg:text-left">
             <div className="flex flex-col">
               <h6 className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] uppercase">
                 GIVE US A CALL

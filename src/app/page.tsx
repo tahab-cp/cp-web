@@ -14,8 +14,8 @@ const HomePage = () => {
       <AboutSection />
       <WhatWeOfferSection />
       <CaseStudiesSection />
-      {/* <TestimonialSection /> */}
-      {/* <ContactSection /> */}
+      <TestimonialSection />
+      <ContactSection />
     </main>
   );
 };

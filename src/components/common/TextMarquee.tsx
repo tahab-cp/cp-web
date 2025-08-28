@@ -12,7 +12,7 @@ const TextMarquee = () => {
         speed={100}
         pauseOnHover={true}
         direction="right"
-        className="overflow-hidden text-[11rem] leading-[13rem] font-semibold tracking-[-0.02em] text-[#FFC300]"
+        className="overflow-hidden text-[6rem] leading-[8rem] font-semibold tracking-[-0.02em] text-[#FFC300] md:text-[11rem] md:leading-[13rem]"
       >
         {texts.map((text, index) => (
           <span key={index} className="mx-[1rem]">
@@ -26,7 +26,7 @@ const TextMarquee = () => {
         speed={100}
         pauseOnHover={true}
         direction="left"
-        className="overflow-hidden text-[11rem] leading-[13rem] font-semibold tracking-[-0.02em] text-[#FF37B3]"
+        className="overflow-hidden text-[6rem] leading-[8rem] font-semibold tracking-[-0.02em] text-[#FF37B3] md:text-[11rem] md:leading-[13rem]"
       >
         {texts.map((text, index) => (
           <span key={index} className="mx-[1rem]">

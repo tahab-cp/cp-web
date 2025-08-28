@@ -88,10 +88,10 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="testimonials-sec relative z-[1] pt-[7.2rem] pb-[9.1rem]">
+    <section className="testimonials-sec relative z-[1] px-[2rem] pt-[7.2rem] pb-[9.1rem] xl:px-[0rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
-        <LineStroke05 className="absolute top-[118.4rem] left-1/2 -translate-x-1/2 opacity-90" />
+        <LineStroke05 className="absolute top-[118.4rem] left-1/2 w-full -translate-x-1/2 opacity-90" />
       </div>
 
       <div ref={testimonialContentRef} className="mx-auto max-w-[120.3rem]">
@@ -121,7 +121,7 @@ const TestimonialSection = () => {
           </div>
         </div>
 
-        <div className="mt-[5rem] grid grid-cols-3 gap-[3.3rem]">
+        <div className="mt-[5rem] grid grid-cols-1 gap-[3.3rem] lg:grid-cols-3">
           <div className="grid gap-[3.3rem]">
             {testimonialsData.slice(0, 3).map((item, idx) => (
               <div className="testimonial-card-animate" key={idx}>

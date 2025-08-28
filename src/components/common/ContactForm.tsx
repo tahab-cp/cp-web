@@ -51,16 +51,16 @@ const ContactForm = () => {
 
       <div ref={formRef} className="h-0 overflow-hidden opacity-0">
         <form action="" className="flex flex-col gap-[1.8rem]">
-          <fieldset className="flex items-center gap-[1.6rem]">
-            <Label htmlFor="name" className="min-w-[25rem]">
+          <fieldset className="flex flex-col items-start gap-[1.6rem] md:flex-row md:items-center">
+            <Label htmlFor="name" className="md:min-w-[25rem]">
               My name is
             </Label>
 
             <ContactFormInput placeholder="Enter your name" type="text" />
           </fieldset>
 
-          <fieldset className="flex items-center gap-[1.6rem]">
-            <Label htmlFor="service" className="min-w-[38.9rem]">
+          <fieldset className="flex flex-col items-start gap-[1.6rem] md:flex-row md:items-center">
+            <Label htmlFor="service" className="md:min-w-[38.9rem]">
               I need a help with
             </Label>
 
@@ -76,8 +76,8 @@ const ContactForm = () => {
             </Select>
           </fieldset>
 
-          <fieldset className="flex items-center gap-[1.6rem]">
-            <Label htmlFor="email" className="min-w-[35.8rem]">
+          <fieldset className="flex flex-col items-start gap-[1.6rem] md:flex-row md:items-center">
+            <Label htmlFor="email" className="md:min-w-[35.8rem]">
               Here is my email
             </Label>
 
@@ -87,8 +87,8 @@ const ContactForm = () => {
             />
           </fieldset>
 
-          <fieldset className="flex items-center gap-[1.6rem]">
-            <Label htmlFor="message" className="min-w-[29.7rem]">
+          <fieldset className="flex flex-col items-start gap-[1.6rem] md:flex-row md:items-center">
+            <Label htmlFor="message" className="md:min-w-[29.7rem]">
               And message
             </Label>
 

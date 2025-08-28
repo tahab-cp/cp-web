@@ -430,7 +430,7 @@ body {
 .contact-form-bg {
   position: relative;
   border-radius: 2rem;
-  padding: 4.3rem 5.3rem 5.2rem 4rem;
+  padding: 2rem;
   background: linear-gradient(
     301.75deg,
     rgba(255, 255, 255, 0.05) 1.41%,
@@ -438,6 +438,21 @@ body {
   );
   backdrop-filter: blur(10px);
   z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .contact-form-bg {
+    position: relative;
+    border-radius: 2rem;
+    padding: 4.3rem 5.3rem 5.2rem 4rem;
+    background: linear-gradient(
+      301.75deg,
+      rgba(255, 255, 255, 0.05) 1.41%,
+      rgba(29, 29, 29, 0.05) 95.05%
+    );
+    backdrop-filter: blur(10px);
+    z-index: 0;
+  }
 }
 
 .contact-form-bg::before {

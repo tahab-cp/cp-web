@@ -11,7 +11,7 @@ import CommonBtn3 from "./CommonBtn3";
 
 const CtaSection2 = () => {
   return (
-    <div className="relative w-full rounded-[5rem] px-[7rem] pt-[8.1rem] pb-[5.1rem] backdrop-blur-[10px]">
+    <div className="relative w-full rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-[0rem] md:px-[7rem] md:pt-[8.1rem] md:pb-[5.1rem]">
       <Image
         src={ctaSectionBg}
         alt="Cta Background"
@@ -24,17 +24,17 @@ const CtaSection2 = () => {
         <Image src={contactArrow} alt="Contact Arrow" width={80} height={80} />
       </i>
 
-      <div className="relative z-[1] flex items-center gap-[3.4rem]">
+      <div className="relative z-[1] flex flex-col items-center gap-[8rem] lg:flex-row lg:gap-[3.4rem]">
         <div className="flex flex-col items-start">
           <SectionLabel text="Contact us Today" />
 
-          <h3 className="mt-[2rem] max-w-[72.1rem] text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em] text-white">
+          <h3 className="mt-[2rem] max-w-[72.1rem] text-[3.2rem] leading-[4rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">
             Book a 15-minute call and see how we can help you.
           </h3>
         </div>
 
-        <div className="relative flex h-[26.1rem] w-[30.8rem] items-center justify-center rounded-[3.2rem] bg-white">
-          <div className="bg-text-primary/30 absolute bottom-[-1.5rem] left-1/2 z-[-1] h-[26.4rem] w-[25.8rem] -translate-x-1/2 rounded-[3.2rem] backdrop-blur-[10px]" />
+        <div className="relative flex h-[26.1rem] w-full items-center justify-center rounded-[3.2rem] bg-white lg:w-[30.8rem]">
+          <div className="bg-text-primary/30 absolute bottom-[-1.5rem] left-1/2 z-[-1] h-[26.4rem] w-full -translate-x-1/2 rounded-[3.2rem] backdrop-blur-[10px] md:w-[25.8rem]" />
 
           <div className="flex flex-col items-center gap-[2rem] text-center">
             <i className="absolute top-[-5.3rem] right-[1.794rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
