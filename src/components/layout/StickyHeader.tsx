@@ -12,8 +12,6 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const headerRef = useRef(null);
-  const ctaRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,49 +26,11 @@ const StickyHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isVisible) {
-      // Animate header in
-      gsap.to(headerRef.current, {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power3.out",
-      });
-
-      // Animate CTA button in (slight delay for nicer effect)
-      gsap.to(ctaRef.current, {
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: "back.out(1.7)",
-        delay: 0.2,
-      });
-    } else {
-      // Animate header out
-      gsap.to(headerRef.current, {
-        y: -100,
-        opacity: 0,
-        duration: 0.4,
-        ease: "power3.in",
-      });
-
-      // Animate CTA out
-      gsap.to(ctaRef.current, {
-        x: 50,
-        opacity: 0,
-        duration: 0.3,
-        ease: "power2.in",
-      });
-    }
-  }, [isVisible]);
-
   return (
     <header
-      ref={headerRef}
-      className="fixed top-0 left-0 z-[100] w-full -translate-y-full px-[2rem] pt-[2rem] opacity-0 md:px-[4rem] xl:px-[0rem]"
+      className={`fixed left-0 z-[100] w-full px-[2rem] pt-[2rem] transition-all duration-300 md:px-[4rem] xl:px-[0rem] ${isVisible ? "top-[0%]" : "top-[-100%]"}`}
     >
-      <div className="header-gradient-bg relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full px-[2rem] py-[3rem]">
+      <div className="bg-text-primary shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full px-[3rem] py-[1rem]">
         <Link href="/" className="relative">
           <Image
             src={logo}
@@ -78,7 +38,7 @@ const StickyHeader = () => {
             width={170}
             height={66}
             fetchPriority="high"
-            className="h-[3.9rem] w-[12.9rem]"
+            className="h-[6.6rem] w-[17rem]"
           />
         </Link>
 
@@ -102,9 +62,7 @@ const StickyHeader = () => {
             </i>
 
             {/* CTA Button */}
-            <div ref={ctaRef} className="translate-x-12 p-[.5rem] opacity-0">
-              <CommonBtn1 />
-            </div>
+            <CommonBtn1 />
           </div>
 
           {/* Hamburger Menu */}
