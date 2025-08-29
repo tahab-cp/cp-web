@@ -29,7 +29,7 @@ export default function LayoutWrapper({
       <Header />
       <StickyHeader />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
