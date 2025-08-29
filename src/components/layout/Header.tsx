@@ -120,7 +120,7 @@ const Header = () => {
 
   return (
     <header
-      className={`absolute left-0 z-[100] flex h-[12.6rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 md:px-[4rem] xl:px-[0rem] ${isVisible ? "-top-full" : "top-0"} ${pathname === "/" ? "" : "header-gradient-bg"}`}
+      className={`absolute left-0 z-[100] flex h-[8rem] w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] transition-all duration-300 md:h-[12.6rem] md:px-[4rem] xl:px-[0rem] ${isVisible ? "-top-full" : "top-0"} ${pathname === "/" ? "" : "header-gradient-bg"}`}
     >
       <div
         ref={headerContentRef}

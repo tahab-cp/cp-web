@@ -17,51 +17,44 @@ const CaseStudiesSlider = () => {
         disableOnInteraction: false,
       }}
       navigation={false}
-      slidesPerView={2}
-      spaceBetween={16}
+      slidesPerView={1}
+      spaceBetween={20}
       grabCursor={true}
       pagination={{
         clickable: true,
       }}
-      // breakpoints={{
-      //   320: {
-      //     slidesPerView: 1,
-      //     spaceBetween: 20,
-      //   },
-      //   768: {
-      //     slidesPerView: 2,
-      //     spaceBetween: 40,
-      //   },
-      //   1024: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 32,
-      //   },
-      // }}
+      breakpoints={{
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+      }}
       className="mySwiper case-studies-slider"
     >
       {caseStudiesData.map((item, idx) => (
         <SwiperSlide key={idx}>
           <Link
             href=""
-            className="case-studies-card flex h-full flex-col items-center pt-[2rem] pr-[2.7rem] pb-[.87rem] pl-[2rem] text-center"
+            className="case-studies-card flex flex-col items-center pt-[2rem] pr-[2.7rem] pb-[.87rem] pl-[2rem] text-center"
           >
-            <div className="relative h-[44rem] w-full">
+            <div className="relative h-[30rem] w-full overflow-hidden rounded-[2rem] md:h-[44rem]">
               <Image
                 src={item.image}
                 alt="Case Study Image"
                 height={440}
                 width={555}
                 priority
+                className="size-full object-cover"
               />
             </div>
 
             <div className="flex h-full flex-col justify-between">
-              <h4 className="mt-[2rem] mb-[4rem] line-clamp-2 max-w-[50rem] text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em]">
+              <h4 className="mt-[2rem] mb-[4rem] line-clamp-2 max-w-[50rem] text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[3.4rem] md:leading-[4.8rem]">
                 {item.title}
               </h4>
 
-              <div className="mb-[2rem] flex w-full items-center justify-between px-[2rem]">
-                <div className="flex items-center gap-[1.1rem]">
+              <div className="mb-[2rem] flex w-full flex-col items-center justify-between gap-[2rem] px-[2rem] xl:flex-row">
+                <div className="flex flex-col items-center gap-[1.1rem] xl:flex-row">
                   <span className="text-text-primary/60 text-[1.6rem] leading-[2.4rem] font-medium uppercase">
                     TECHNOLOGY USED
                   </span>

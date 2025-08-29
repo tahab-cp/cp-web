@@ -6,8 +6,8 @@ import TestimonialsMarquee from "../common/TestimonialsMarquee";
 
 const AboutTestimonialsSection = () => {
   return (
-    <section className="pb-[10.068rem]">
-      <div className="flex flex-col items-center gap-[2rem] text-center">
+    <section className="py-[5rem] xl:py-[10rem]">
+      <div className="flex flex-col items-center gap-[2rem] px-[2rem] text-center xl:px-[0rem]">
         <SectionLabel text="Testimonials" />
 
         <SectionTitle

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="relative py-[10rem]">
+    <section className="relative px-[2rem] py-[10rem] xl:px-[0rem]">
       <Image
         src={whyChooseUsBg}
         alt="Why Choose Us Background"
@@ -17,9 +17,9 @@ const WhyChooseUsSection = () => {
         priority
       />
 
-      <div className="relative z-[1] mx-auto flex max-w-[124.067rem] items-center gap-[3.6rem]">
-        <div className="w-[58.2rem]">
-          <div className="flex flex-col items-start gap-[2.1rem]">
+      <div className="relative z-[1] mx-auto flex max-w-[124.067rem] flex-col items-center gap-[3.6rem] lg:flex-row">
+        <div className="flex flex-col items-center text-center lg:w-[58.2rem] lg:items-start lg:text-left">
+          <div className="flex flex-col items-center gap-[2.1rem] lg:items-start">
             <SectionLabel text="Why Choose Us" />
 
             <SectionTitle
@@ -58,8 +58,8 @@ const WhyChooseUsSection = () => {
           </Link>
         </div>
 
-        <div className="relative h-[53.129rem] w-[62.267rem]">
-          <div className="absolute top-[2.2rem] left-[120.33px] z-[2] flex size-[26.964rem] rotate-[12.19deg] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#FFC300] pl-[2.459rem]">
+        <div className="relative flex flex-col gap-[2rem] md:h-[53.129rem] md:w-[62.267rem]">
+          <div className="top-[2.2rem] left-[120.33px] z-[2] flex size-[26.964rem] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#FFC300] pl-[2.459rem] md:absolute md:rotate-[12.19deg]">
             <h5 className="text-[2.2rem] leading-[3.2rem] font-medium">01</h5>
 
             <h3 className="max-w-[20.539rem] text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em]">
@@ -72,7 +72,7 @@ const WhyChooseUsSection = () => {
             </p>
           </div>
 
-          <div className="absolute bottom-[1.9rem] left-[1.9rem] z-[1] flex size-[26.964rem] rotate-[-9.32deg] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#FF8630] pl-[2.459rem]">
+          <div className="bottom-[1.9rem] left-[1.9rem] z-[1] flex size-[26.964rem] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#FF8630] pl-[2.459rem] md:absolute md:rotate-[-9.32deg]">
             <h5 className="text-[2.2rem] leading-[3.2rem] font-medium">02</h5>
 
             <h3 className="max-w-[20.539rem] text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em]">
@@ -85,7 +85,7 @@ const WhyChooseUsSection = () => {
             </p>
           </div>
 
-          <div className="absolute right-[1.1rem] bottom-[1.2rem] z-[3] flex size-[26.964rem] rotate-[5.82deg] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#F14A58] pl-[2.459rem]">
+          <div className="right-[1.1rem] bottom-[1.2rem] z-[3] flex size-[26.964rem] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#F14A58] pl-[2.459rem] md:absolute md:rotate-[5.82deg]">
             <h5 className="text-[2.2rem] leading-[3.2rem] font-medium">03</h5>
 
             <h3 className="max-w-[17.776rem] text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em]">

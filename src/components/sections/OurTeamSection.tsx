@@ -6,7 +6,7 @@ import TeamCardMarquee from "../common/TeamCardMarquee";
 const OurTeamSection = () => {
   return (
     <section className="pt-[6.4rem] pb-[9.8rem]">
-      <div className="flex flex-col items-center gap-[2rem] text-center">
+      <div className="flex flex-col items-center gap-[2rem] px-[2rem] text-center xl:px-[0rem]">
         <SectionLabel
           text="Our Team"
           textColor="text-text-primary"

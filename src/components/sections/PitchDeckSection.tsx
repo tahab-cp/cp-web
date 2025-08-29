@@ -10,25 +10,28 @@ import Link from "next/link";
 const PitchDeckSection = () => {
   return (
     <section className="relative mx-auto flex max-w-[152rem] justify-end">
-      <div className="flex w-full max-w-[132.1rem] justify-between">
-        <div className="flex w-full max-w-[55.6rem] flex-col items-start py-[8.9rem]">
+      <div className="flex w-full max-w-[132.1rem] flex-col justify-between lg:flex-row">
+        <div className="flex w-full flex-col items-center px-[2rem] py-[6rem] text-center lg:max-w-[55.6rem] lg:items-start lg:py-[8.9rem] lg:text-left xl:px-[0rem]">
           <SectionLabel
             text="Pitch Deck"
             textColor="text-text-primary"
             borderColor="border-text-primary"
           />
 
-          <div className="mt-[1.1rem] max-w-[54.2rem]">
+          <div className="mt-[1.1rem] lg:max-w-[54.2rem]">
             <SectionTitle label="Send yourself or a colleague our Pitch Deck." />
           </div>
 
-          <p className="mt-[2rem] mb-[2.6rem] max-w-[51.2rem] text-[1.8rem] leading-[2.6rem] font-normal text-[#333333]">
+          <p className="mt-[2rem] mb-[2.6rem] text-[1.8rem] leading-[2.6rem] font-normal text-[#333333] lg:max-w-[51.2rem]">
             Want to learn more about us? Our company deck offers an in-depth
             look at our agency, the projects we&apos;ve handled, the solutions
             we provide, and the culture we foster.
           </p>
 
-          <form action="" className="flex gap-[1rem]">
+          <form
+            action=""
+            className="flex w-full flex-col gap-[1rem] md:flex-row"
+          >
             <PitchDeckInput placeholder="Full Name" type="text" />
 
             <PitchDeckInput placeholder="Email Address" type="text" />
@@ -42,12 +45,12 @@ const PitchDeckSection = () => {
           </form>
         </div>
 
-        <div className="flex w-full max-w-[48.7rem] flex-col items-end justify-center gap-[4.3rem] bg-[#EAD9FB] pr-[6rem]">
+        <div className="flex w-full flex-col items-center justify-center gap-[3rem] bg-[#EAD9FB] p-[2rem] pr-[4rem] lg:max-w-[48.7rem] lg:items-end lg:gap-[4.3rem] lg:p-[0rem] lg:pr-[6rem]">
           <h5 className="text-[1.8rem] font-semibold text-[#FF37B3]">
             Trusted by:
           </h5>
 
-          <div className="flex flex-col items-end gap-[6rem]">
+          <div className="flex flex-wrap items-end justify-center gap-[6rem] md:flex-row lg:flex-col">
             {pitchDeckBrandData.map((item, idx) => (
               <Link href={item.link} key={idx}>
                 <Image
@@ -62,7 +65,7 @@ const PitchDeckSection = () => {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute right-[24.3rem] bottom-0 h-[58.2rem] w-[58.3rem] select-none">
+      <div className="pointer-events-none absolute right-[18rem] bottom-0 hidden size-[45rem] select-none lg:block xl:right-[24.3rem] xl:size-[58.2rem]">
         <Image
           src={pitchDeckPhoneElement}
           alt="Pitch Deck Phone Element"
