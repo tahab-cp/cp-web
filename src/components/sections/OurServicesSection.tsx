@@ -23,20 +23,23 @@ import maintanenceGrowthImg from "../../assets/images/maintainance-growth-img.pn
 import bgLine from "../../assets/images/line-stroke-08.svg";
 import bgLine2 from "../../assets/images/line-stroke-02.svg";
 import bgLine3 from "../../assets/images/line-stroke-09.svg";
+import CLetter from "../decorativeElements/CLetter";
 
 const OurServicesSection = () => {
   return (
     <section className="relative overflow-hidden pt-[20.6rem]">
       {/* Bg Element */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        <Image
+        {/* <Image
           src={cElement}
           alt="Background Element"
           width={218.37}
           height={102.78}
           className="absolute top-[21rem] right-[-1rem] rotate-[-30deg]"
           priority
-        />
+        /> */}
+
+        <CLetter className="absolute top-[5rem] right-[-2rem] w-[20rem] rotate-[-80deg]" />
       </div>
 
       {/* Decorative stroke line */}

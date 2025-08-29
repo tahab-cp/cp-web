@@ -8,42 +8,40 @@ const CommonBtn1 = () => {
 
   return (
     <Link href="" className="group inline-flex items-center">
-      <div
-        className={`overflow-hidden whitespace-nowrap ${pathname === "/" ? "common-btn-1" : "common-btn-dark-1"}`}
-      >
-        <span className="flex size-full items-center justify-center transition-all duration-200 group-hover:-translate-y-full">
-          Book a Call
-        </span>
+      <div className={`common-btn-1 overflow-hidden whitespace-nowrap`}>
+        {/* Gradient Layer */}
+        <div className="gradient-layer" />
 
-        <span className="flex size-full items-center justify-center transition-all duration-200 group-hover:-translate-y-full">
-          Book a Call
-        </span>
+        {/* Text Layer */}
+        <div className="size-full transition-all duration-200 group-hover:-translate-y-full">
+          <span className="flex size-full items-center justify-center">
+            Book a Call
+          </span>
+          <span className="flex size-full items-center justify-center">
+            Book a Call
+          </span>
+        </div>
       </div>
 
-      <i className="relative z-[0] mx-[-.4rem]">
+      <i className="relative z-[0] mx-[-.3rem]">
         <svg
-          width="18"
+          width="17"
           height="18"
-          viewBox="0 0 18 18"
+          viewBox="0 0 17 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <mask id="path-1-inside-1_125_45" fill="white">
-            <path d="M2.07324 0C3.45666 2.39049 6.0394 4 9 4C11.9606 4 14.5433 2.39049 15.9268 0H18V18H15.9268C14.5433 15.6095 11.9606 14 9 14C6.0394 14 3.45666 15.6095 2.07324 18H0V0H2.07324Z" />
-          </mask>
           <path
-            d="M2.07324 0L2.93875 -0.500888L2.64991 -1H2.07324V0ZM15.9268 0V-1H15.3501L15.0612 -0.500888L15.9268 0ZM18 0H19V-1H18V0ZM18 18V19H19V18H18ZM15.9268 18L15.0612 18.5009L15.3501 19H15.9268V18ZM2.07324 18V19H2.64991L2.93875 18.5009L2.07324 18ZM0 18H-1V19H0V18ZM0 0V-1H-1V0H0ZM2.07324 0L1.20773 0.500888C2.76225 3.18703 5.66746 5 9 5V4V3C6.41135 3 4.15108 1.59395 2.93875 -0.500888L2.07324 0ZM9 4V5C12.3325 5 15.2378 3.18703 16.7923 0.500888L15.9268 0L15.0612 -0.500888C13.8489 1.59395 11.5886 3 9 3V4ZM15.9268 0V1H18V0V-1H15.9268V0ZM18 0H17V18H18H19V0H18ZM18 18V17H15.9268V18V19H18V18ZM15.9268 18L16.7923 17.4991C15.2378 14.813 12.3325 13 9 13V14V15C11.5886 15 13.8489 16.406 15.0612 18.5009L15.9268 18ZM9 14V13C5.66746 13 2.76225 14.813 1.20773 17.4991L2.07324 18L2.93875 18.5009C4.15108 16.406 6.41135 15 9 15V14ZM2.07324 18V17H0V18V19H2.07324V18ZM0 18H1V0H0H-1V18H0ZM0 0V1H2.07324V0V-1H0V0Z"
-            fill="#D3D3D3"
-            mask="url(#path-1-inside-1_125_45)"
+            d="M0.475586 0C1.85901 2.39049 4.44175 4 7.40234 4C10.3629 4 12.9457 2.39049 14.3291 0H16.4023V18H14.3291C12.9457 15.6095 10.3629 14 7.40234 14C4.44175 14 1.85901 15.6095 0.475586 18H0.402344V0H0.475586Z"
+            fill="#FF37B3"
           />
         </svg>
       </i>
 
-      <div
-        className={`overflow-hidden ${
-          pathname === "/" ? "common-btn-arrow-1" : "common-btn-arrow-dark-1"
-        }`}
-      >
+      <div className={`common-btn-arrow-1 overflow-hidden`}>
+        {/* Gradient Layer */}
+        <div className="gradient-layer" />
+
         <i className="absolute top-0 left-0 flex size-full items-center justify-center transition-all duration-200 group-hover:left-full">
           <svg
             width="14"

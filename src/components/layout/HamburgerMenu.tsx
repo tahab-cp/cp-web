@@ -81,7 +81,8 @@ const HamburgerMenu = () => {
           <nav className="flex flex-col gap-[2rem] py-[2rem] text-white md:py-[4rem]">
             <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
               <Link
-                href=""
+                href="/"
+                onClick={() => setIsOpen(false)}
                 className="text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
               >
                 Home
@@ -90,7 +91,8 @@ const HamburgerMenu = () => {
 
             <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
               <Link
-                href=""
+                href="/about"
+                onClick={() => setIsOpen(false)}
                 className="text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
               >
                 About
@@ -103,7 +105,8 @@ const HamburgerMenu = () => {
 
             <div className="border-b border-white px-[2rem] pb-[2rem] md:px-[4rem]">
               <Link
-                href=""
+                href="/case-studies"
+                onClick={() => setIsOpen(false)}
                 className="text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
               >
                 Case Studies

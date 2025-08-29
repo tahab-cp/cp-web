@@ -16,7 +16,7 @@
   );
 
   /* Box Shadow */
-  --shadow-01: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  --shadow-01: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -42,38 +42,72 @@ body {
 
 /* Common Button 1 */
 
-.common-btn-1,
-.common-btn-dark-1 {
+.common-btn-1 {
   position: relative;
-  min-width: 16.6rem;
-  height: 4.6rem;
-  border: 1px solid #d3d3d3;
-  border-radius: 7rem;
-  padding: 0rem 3rem 0rem 3rem;
-  background: linear-gradient(90deg, #17042c 0%, #3e2712 100%);
+  min-width: 20rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6rem;
+  padding: 0rem 2rem 0rem 2rem;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.6remrem;
   color: white;
-  z-index: 1;
 }
 
-.common-btn-dark-1 {
-  background: linear-gradient(90deg, #0a0215 0%, #06020e 100%) !important;
+@media (min-width: 768px) {
+  .common-btn-1 {
+    position: relative;
+    min-width: 18rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6rem;
+    padding: 0rem 3rem 0rem 3rem;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+  }
 }
 
-.common-btn-arrow-1,
-.common-btn-arrow-dark-1 {
+.common-btn-1 .gradient-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffe400 0%, #ff37b3 100%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px; /* border thickness */
+  border-radius: 6rem;
+}
+
+.common-btn-arrow-1 {
   position: relative;
-  border: 1px solid #d3d3d3;
-  border-radius: 4rem;
-  background: linear-gradient(90deg, #422b12 0%, #523710 100%);
-  width: 4.6rem;
-  height: 4.6rem;
-  z-index: 1;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.common-btn-arrow-dark-1 {
-  background: linear-gradient(90deg, #090210 0%, #0b0213 100%) !important;
+.common-btn-arrow-1 .gradient-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffe400 0%, #ff37b3 100%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px; /* border thickness */
+  border-radius: 100%;
 }
 
 /* Common Button 2 */

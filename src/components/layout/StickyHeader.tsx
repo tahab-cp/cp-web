@@ -30,7 +30,7 @@ const StickyHeader = () => {
     <header
       className={`fixed left-0 z-[100] w-full px-[2rem] pt-[2rem] transition-all duration-300 md:px-[4rem] xl:px-[0rem] ${isVisible ? "top-[0%]" : "top-[-100%]"}`}
     >
-      <div className="bg-text-primary shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full px-[3rem] py-[1rem]">
+      <div className="shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full bg-black/30 px-[3rem] py-[1rem] backdrop-blur-[10px]">
         <Link href="/" className="relative">
           <Image
             src={logo}

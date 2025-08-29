@@ -368,7 +368,7 @@ const WhatWeOfferSection = () => {
             </div>
 
             <div className="flex flex-col gap-[2rem] xl:flex-row">
-              <div className="overflow-hidden">
+              <div className="overflow-hidden p-[.5rem]">
                 <div className="web-grid-cta-animate">
                   <CommonBtn3
                     href="/"
@@ -379,7 +379,7 @@ const WhatWeOfferSection = () => {
                 </div>
               </div>
 
-              <div className="overflow-hidden">
+              <div className="overflow-hidden p-[.5rem]">
                 <div className="web-grid-cta-animate">
                   <CommonBtn3
                     href="/"

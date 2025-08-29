@@ -3,10 +3,7 @@ import ctaSectionBg from "../../assets/images/cta-section-bg.png";
 import flashIcon from "../../assets/images/icons/3d-flash-icon.svg";
 import SectionLabel from "./SectionLabel";
 import avatar from "../../assets/images/consultation-avatar.svg";
-import subtractPink from "../../assets/images/icons/subtract-pink.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import contactArrow from "../../assets/images/icons/contact-arrow.svg";
-import Link from "next/link";
 import CommonBtn3 from "./CommonBtn3";
 
 const CtaSection2 = () => {
@@ -24,8 +21,8 @@ const CtaSection2 = () => {
         <Image src={contactArrow} alt="Contact Arrow" width={80} height={80} />
       </i>
 
-      <div className="relative z-[1] flex flex-col items-center gap-[8rem] lg:flex-row lg:gap-[3.4rem]">
-        <div className="flex flex-col items-start">
+      <div className="relative z-[1] flex flex-col gap-[8rem] lg:flex-row lg:gap-[3.4rem]">
+        <div className="flex flex-col items-start pt-[3rem]">
           <SectionLabel text="Contact us Today" />
 
           <h3 className="mt-[2rem] max-w-[72.1rem] text-[3.2rem] leading-[4rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">
