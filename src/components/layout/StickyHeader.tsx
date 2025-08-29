@@ -38,7 +38,7 @@ const StickyHeader = () => {
             width={170}
             height={66}
             fetchPriority="high"
-            className="h-[6.6rem] w-[17rem]"
+            className="h-[6.6rem] w-[14rem] md:w-[17rem]"
           />
         </Link>
 
