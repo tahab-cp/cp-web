@@ -1,12 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import AboutBadge from "../common/AboutBadge";
 import { aboutCardData } from "@/constants/aboutSection";
-import cpStroke from "../../assets/images/cp-stroke.svg";
-import report from "../../assets/images/report.svg";
-import message from "../../assets/images/message.svg";
-import analyst from "../../assets/images/analyst.svg";
 import LineStroke02 from "../decorativeElements/LineStroke02";
 import CommonBtn3 from "../common/CommonBtn3";
 import CLetter from "../decorativeElements/CLetter";
