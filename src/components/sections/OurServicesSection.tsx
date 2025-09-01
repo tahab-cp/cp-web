@@ -1,8 +1,7 @@
 import Image from "next/image";
 import SectionLabel from "../common/SectionLabel";
 import OurServiesMarquee from "../common/OurServicesMarquee";
-import cElement from "../../assets/images/c-element.svg";
-import ourServicesBg from "../../assets/images/artistic-gradient-bg.png";
+// import ourServicesBg from "../../assets/images/artistic-gradient-bg.png";
 import clickArrowYellow from "../../assets/images/icons/click-arrow-yellow.svg";
 import clickArrowPink from "../../assets/images/icons/click-arrow-pink.svg";
 import clickArrowGreen from "../../assets/images/icons/click-arrow-green.svg";
@@ -65,13 +64,13 @@ const OurServicesSection = () => {
 
       <div className="relative pt-[6.3rem] pb-[7.063rem]">
         <div className="absolute inset-0 z-[0]">
-          <Image
+          {/* <Image
             src={ourServicesBg}
             alt="Our Services Section Background"
             fill
             className="pointer-events-none object-cover"
             priority
-          />
+          /> */}
         </div>
 
         <div className="absolute inset-0 z-[0]">
@@ -264,13 +263,13 @@ const OurServicesSection = () => {
 
       <div className="relative pt-[9rem] pb-[7.882rem]">
         <div className="absolute inset-0 z-[0]">
-          <Image
+          {/* <Image
             src={ourServicesBg}
             alt="Our Services Section Background"
             fill
             className="pointer-events-none object-cover"
             priority
-          />
+          /> */}
         </div>
 
         <div className="absolute inset-0 z-[0]">
