@@ -2,9 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const LineStroke04 = (props: React.SVGProps<SVGSVGElement>) => {
   const pathRef = useRef<SVGPathElement>(null);

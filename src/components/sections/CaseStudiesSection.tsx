@@ -3,16 +3,12 @@
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import CtaSection1 from "../common/CtaSection1";
 import SectionDescription from "../common/SectionDescription";
-import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import { caseStudiesData } from "@/constants/caseStudiesSection";
 import LineStroke04 from "../decorativeElements/LineStroke04";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionLabel2 from "../common/SectionLabel2";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const CaseStudiesSection = () => {
   const caseStudiesContentRef = useRef<HTMLDivElement>(null);

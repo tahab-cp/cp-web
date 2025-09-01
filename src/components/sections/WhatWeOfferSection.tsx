@@ -18,12 +18,9 @@ import offerDesignImg02 from "../../assets/images/offer-design-img-02.png";
 import offerMaintenanceImg from "../../assets/images/offer-maintenance-img.png";
 import LineStroke03 from "../decorativeElements/LineStroke03";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CommonBtn3 from "../common/CommonBtn3";
 import { useEffect, useRef } from "react";
 import SectionLabel2 from "../common/SectionLabel2";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const WhatWeOfferSection = () => {
   const webContentRef = useRef<HTMLDivElement>(null);

@@ -1,8 +1,5 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const PLetter = (props: React.SVGProps<SVGSVGElement>) => {
   const svgRef = useRef<SVGSVGElement>(null);

@@ -30,15 +30,6 @@ const OurServicesSection = () => {
     <section className="relative overflow-hidden pt-[20.6rem]">
       {/* Bg Element */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        {/* <Image
-          src={cElement}
-          alt="Background Element"
-          width={218.37}
-          height={102.78}
-          className="absolute top-[21rem] right-[-1rem] rotate-[-30deg]"
-          priority
-        /> */}
-
         <CLetter className="absolute top-[5rem] right-[-2rem] w-[20rem] rotate-[-80deg]" />
       </div>
 

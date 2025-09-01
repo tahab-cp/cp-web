@@ -8,10 +8,7 @@ import { testimonialsData } from "@/constants/testimonialSection";
 import LineStroke05 from "../decorativeElements/LineStroke05";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionLabel2 from "../common/SectionLabel2";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const TestimonialSection = () => {
   const testimonialContentRef = useRef<HTMLDivElement>(null);

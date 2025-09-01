@@ -6,10 +6,7 @@ import ContactForm from "../common/ContactForm";
 import CtaSection2 from "../common/CtaSection2";
 import TextMarquee from "../common/TextMarquee";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const ContactSection = () => {
   const contactContentRef = useRef<HTMLDivElement>(null);

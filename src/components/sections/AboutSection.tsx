@@ -13,9 +13,6 @@ import CLetter from "../decorativeElements/CLetter";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
   const aboutContentRef = useRef<HTMLDivElement>(null);

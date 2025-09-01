@@ -1,33 +1,22 @@
 "use client";
 
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
 import Header from "./Header";
 import Footer from "./Footer";
-import Loader from "../animations/Loader";
 import useLenis from "@/hooks/useLenis";
-import { useLoaderStore } from "@/store/useLoader";
-import StickyHeader from "./StickyHeader";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function LayoutWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const setReady = useLoaderStore((state) => state.setReady);
-  const isReady = useLoaderStore((state) => state.isReady);
-
   useLenis();
-
   return (
     <>
-      {/* <Loader onComplete={() => setReady(true)} />
-
-      <div className={!isReady ? "h-screen overflow-hidden" : ""}>
-        <Header />
-        {children}
-        <Footer />
-      </div> */}
       <Header />
-      <StickyHeader />
       {children}
       <Footer />
     </>
