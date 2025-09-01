@@ -4,7 +4,7 @@ type TestimonialsCardProps = {
   ratingImage?: StaticImageData; // stars image
   ratingAlt?: string;
   review: string;
-  authorImage: StaticImageData;
+  authorImage: string;
   authorName: string;
   authorRole: string;
 };

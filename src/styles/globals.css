@@ -361,7 +361,7 @@ body {
 
 /* Cta Card 1 */
 
-@utility cta-card-1 {
+@utility cta-card {
   background: url("/images/cta-card-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -786,4 +786,13 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
+}
+
+/*Footer*/
+
+@utility footer {
+    background: url("/images/footer-gradient-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

@@ -4,9 +4,6 @@ import SectionTitle from "../common/SectionTitle";
 import subtractDark from "../../assets/images/icons/subtract-dark.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Image from "next/image";
-import figmaLogo from "../../assets/images/figma-logo.png";
-import wordpressLogo from "../../assets/images/wordpress-logo.png";
-import brainStudioImg from "../../assets/images/brain-studio-case-study.png";
 import SectionDescription from "../common/SectionDescription";
 import playYellowIcon from "../../assets/images/icons/play-yellow-icon.svg";
 import brainStudioCardImg01 from "../../assets/images/brain-studio-card-img-01.png";
@@ -99,7 +96,7 @@ const CaseStudyDetailSection = () => {
             <div className="flex items-center gap-[3rem]">
               <div className="inline-flex items-center justify-center">
                 <Image
-                  src={figmaLogo}
+                  src="/images/figma-logo.png"
                   alt="Figma Logo"
                   width={74}
                   height={22}
@@ -110,7 +107,7 @@ const CaseStudyDetailSection = () => {
 
               <div className="inline-flex items-center justify-center">
                 <Image
-                  src={wordpressLogo}
+                  src="/images/wordpress-logo.png"
                   alt="Wordpress Logo"
                   width={114}
                   height={22}
@@ -124,7 +121,7 @@ const CaseStudyDetailSection = () => {
 
         <div className="relative h-[71.6rem] w-full overflow-hidden rounded-[2rem]">
           <Image
-            src={brainStudioImg}
+            src="/images/brain-studio-case-study.png"
             alt="Case Study Image"
             height={716}
             width={1204}

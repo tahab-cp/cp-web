@@ -1,9 +1,7 @@
 "use client";
 
 import Marquee from "react-fast-marquee";
-import TestimonialsCard from "./TestimonialsCard";
 import ratingStar from "../../assets/images/icons/rating-star.svg";
-import testimonialImg1 from "../../assets/images/testimonial-img.svg";
 import Image from "next/image";
 
 const testimonials = [
@@ -11,7 +9,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-1.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },
@@ -19,7 +17,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-2.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },
@@ -27,7 +25,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-3.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },
@@ -35,7 +33,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-4.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },
@@ -43,7 +41,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-5.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },
@@ -51,7 +49,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-6.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },
@@ -59,39 +57,7 @@ const testimonials = [
     ratingImage: ratingStar,
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: ratingStar,
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: ratingStar,
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: ratingStar,
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: ratingStar,
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: testimonialImg1,
+    authorImage: "/images/testimonials-avatar-6.png",
     authorName: "Kyle Weznick",
     authorRole: "Website & Branding Project",
   },

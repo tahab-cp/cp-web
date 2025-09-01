@@ -1,22 +1,11 @@
 import Image from "next/image";
-import ctaSectionBg from "../../assets/images/cta-section-bg.png";
-import flashIcon from "../../assets/images/icons/3d-flash-icon.svg";
 import SectionLabel from "./SectionLabel";
-import avatar from "../../assets/images/consultation-avatar.svg";
 import contactArrow from "../../assets/images/icons/contact-arrow.svg";
 import CommonBtn3 from "./CommonBtn3";
 
 const CtaSection2 = () => {
   return (
-    <div className="relative w-full rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-[0rem] md:px-[7rem] md:pt-[8.1rem] md:pb-[5.1rem]">
-      <Image
-        src={ctaSectionBg}
-        alt="Cta Background"
-        fill
-        className="rounded-[5rem] object-cover object-center"
-        priority
-      />
-
+    <div className="cta-card relative w-full rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-[0rem] md:px-[7rem] md:pt-[8.1rem] md:pb-[5.1rem]">
       <i className="absolute top-[-4.3rem] right-0 inline-flex size-[8rem] items-center justify-center">
         <Image src={contactArrow} alt="Contact Arrow" width={80} height={80} />
       </i>
@@ -36,7 +25,7 @@ const CtaSection2 = () => {
           <div className="flex flex-col items-center gap-[2rem] text-center">
             <i className="absolute top-[-5.3rem] right-[1.794rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
               <Image
-                src={flashIcon}
+                src="/images/icons/3d-flash-icon.svg"
                 alt="Flash Icon"
                 fill
                 className="object-contain"
@@ -45,12 +34,14 @@ const CtaSection2 = () => {
 
             <i className="absolute top-[-5.3rem] flex size-[9.9rem] items-center justify-center">
               <Image
-                src={avatar}
+                src="/images/cta-card-avatar.png"
                 alt="Avatar"
                 width={99}
                 height={99}
                 priority
               />
+
+              <div className="outline-text-primary absolute top-[5.3px] right-[5.3px] size-[1.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[4px]" />
             </i>
 
             <h4 className="mt-[2.5rem] max-w-[24rem] text-[2.6rem] leading-[3.3rem] font-semibold tracking-[-0.02em]">

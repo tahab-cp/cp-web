@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const LineStroke06 = (props: React.SVGProps<SVGSVGElement>) => {
@@ -24,7 +24,7 @@ const LineStroke06 = (props: React.SVGProps<SVGSVGElement>) => {
         scrollTrigger: {
           trigger: svgRef.current,
           start: "top 50%  bottom", // when SVG enters bottom of viewport
-          end: "bottom 30% top", // until it leaves top of viewport
+          end: "bottom 10% top", // until it leaves top of viewport
           scrub: true, // sync with scroll wheel
         },
       });

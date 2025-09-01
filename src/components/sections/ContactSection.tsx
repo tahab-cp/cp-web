@@ -6,59 +6,79 @@ import ContactForm from "../common/ContactForm";
 import CtaSection2 from "../common/CtaSection2";
 import TextMarquee from "../common/TextMarquee";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 
 const ContactSection = () => {
-  const contactContentRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    if (contactContentRef.current) {
-      const contactHeading = contactContentRef.current.querySelectorAll(
-        ".contact-heading-animate",
-      );
-      const contactCard1 = contactContentRef.current.querySelectorAll(
-        ".contact-card-1-animate",
-      );
+  useGSAP(() => {
+    const contact = contactRef.current;
+    if (!contact) return;
 
-      // Heading Animation
-      gsap.from(contactHeading, {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: contactContentRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
-      });
+    const contactTitle = contact.querySelector(".contact-title");
+    const contactCard1 = contact.querySelector(".contact-card-1");
+    const contactCard2 = contact.querySelector(".contact-card-2");
+    const contactCtaCard = contact.querySelector(".contact-cta-card");
 
-      // Card 1 Animation
-      gsap.from(contactCard1, {
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: contactContentRef.current,
-          start: "top 60%",
-          toggleActions: "play none none none",
-        },
-      });
-    }
+    gsap.from(contactTitle, {
+      opacity: 0,
+      y: 100,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: contactTitle,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    gsap.from(contactCard1, {
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: contactCard1,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    gsap.from(contactCard2, {
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: contactCard2,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    gsap.from(contactCtaCard, {
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: contactCtaCard,
+        start: "top 50%",
+        toggleActions: "play none none none",
+      },
+    });
   }, []);
   return (
-    <section className="relative px-[2rem] py-[10rem] xl:px-[0rem]">
-      <div
-        ref={contactContentRef}
-        className="relative mx-auto flex max-w-[112.3rem] flex-col items-center"
-      >
+    <section
+      ref={contactRef}
+      className="relative px-[2rem] py-[10rem] xl:px-[0rem]"
+    >
+      <div className="relative mx-auto flex max-w-[112.3rem] flex-col items-center">
         <div className="overflow-hidden">
-          <div className="contact-heading-animate text-center">
+          <div className="contact-title text-center">
             <SectionTitle label="Ready to Start Working With Us?" />
           </div>
         </div>
 
-        <div className="contact-card-1-animate w-full">
+        <div className="contact-card-1 w-full">
           <div className="contact-details-bg mt-[4.5rem] mb-[3.7rem] flex w-full flex-col items-center justify-between gap-[4rem] px-[4rem] py-[3.5rem] text-center lg:flex-row lg:gap-[0rem] lg:text-left">
             <div className="flex flex-col">
               <h6 className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] uppercase">
@@ -101,7 +121,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <div className="contact-card-2-animate w-full">
+        <div className="contact-card-2 w-full">
           <ContactForm />
         </div>
       </div>
@@ -111,7 +131,7 @@ const ContactSection = () => {
       </div>
 
       <div className="relative z-[3] mx-auto max-w-[120.3rem]">
-        <div className="">
+        <div className="contact-cta-card">
           <CtaSection2 />
         </div>
       </div>

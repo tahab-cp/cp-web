@@ -6,7 +6,7 @@ import WaveHand from "./WaveHand";
 
 const CtaSection1 = () => {
   return (
-    <div className="cta-card-1 relative w-full overflow-hidden rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-0 md:pt-[7.1rem] md:pr-[11.4rem] md:pb-[7.2rem] md:pl-[8.3rem]">
+    <div className="cta-card relative w-full overflow-hidden rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-0 md:pt-[7.1rem] md:pr-[11.4rem] md:pb-[7.2rem] md:pl-[8.3rem]">
       <div className="relative z-[1] flex flex-col items-center gap-[5.3rem] lg:flex-row">
         <div className="flex flex-col items-start">
           <SectionLabel text="Contact us Today" />

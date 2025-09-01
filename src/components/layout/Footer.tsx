@@ -1,18 +1,9 @@
 import Image from "next/image";
-import footerBg from "../../assets/images/footer-bg.png";
 import Link from "next/link";
-import fbWhiteIcon from "../../assets/images/icons/facebook-white-icon.svg";
-import igWhiteIcon from "../../assets/images/icons/instagram-white-icon.svg";
-import linkedinWhiteIcon from "../../assets/images/icons/linkedin-white-icon.svg";
 import FooterLinkCard from "../common/FooterLinkCard";
 import { footerLinkCardData } from "@/constants/footerLinks";
 import { logoPopupsData } from "@/constants/heroSection";
 import LogoPopup from "../common/LogoPopup";
-import creativeHostingLogo from "../../assets/images/creative-hosting-logo.svg";
-import wpFixedLogo from "../../assets/images/wp-fixed-logo.svg";
-import monthlyDesignsLogo from "../../assets/images/monthly-designs-logo.svg";
-import cElement from "../../assets/images/c-element.svg";
-import pElement from "../../assets/images/p-element.svg";
 import LineStroke06 from "../decorativeElements/LineStroke06";
 import CLetter from "../decorativeElements/CLetter";
 import PLetter from "../decorativeElements/PLetter";
@@ -20,17 +11,17 @@ import FooterAccordion from "../common/FooterAccordion";
 
 const socialLinks = [
   {
-    src: fbWhiteIcon,
+    src: "/images/icons/facebook-white-icon.svg",
     alt: "Facebook Icon",
     href: "",
   },
   {
-    src: igWhiteIcon,
+    src: "/images/icons/instagram-white-icon.svg",
     alt: "Instagram Icon",
     href: "",
   },
   {
-    src: linkedinWhiteIcon,
+    src: "/images/icons/linkedin-white-icon.svg",
     alt: "Linkedin Icon",
     href: "",
   },
@@ -38,20 +29,10 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative w-full px-[2rem] pt-[6.2rem] pb-[2.764rem] xl:px-[0rem]">
+    <footer className="footer relative w-full px-[2rem] pt-[6.2rem] pb-[2.764rem] xl:px-[0rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
         <LineStroke06 className="absolute top-[-19.3rem] left-1/2 w-full -translate-x-1/2" />
-      </div>
-
-      <div className="absolute inset-0 z-[0]">
-        <Image
-          src={footerBg}
-          alt="Footer Background"
-          fill
-          className="pointer-events-none object-cover"
-          priority
-        />
       </div>
 
       <div className="absolute inset-0 z-[0] hidden overflow-hidden xl:block">
@@ -178,7 +159,7 @@ const Footer = () => {
         <ul className="flex items-center justify-end">
           <li>
             <Image
-              src={creativeHostingLogo}
+              src="/images/creative-hosting-logo.png"
               width={73.11}
               height={34.03}
               alt=""
@@ -188,14 +169,14 @@ const Footer = () => {
           <li className="mx-[2rem] h-[3.293rem] w-[0.5px] bg-white" />
 
           <li>
-            <Image src={wpFixedLogo} width={75.48} height={31.7} alt="" />
+            <Image src="/images/wp-fixed-logo.png" width={75.48} height={31.7} alt="" />
           </li>
 
           <li className="mx-[2rem] h-[3.293rem] w-[0.5px] bg-white" />
 
           <li>
             <Image
-              src={monthlyDesignsLogo}
+              src="/images/monthly-designs-logo.png"
               width={137.95}
               height={23.91}
               alt=""
