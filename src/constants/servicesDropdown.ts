@@ -1,6 +1,3 @@
-import designTabImg from "../assets/images/offer-web-img.png";
-import type { StaticImageData } from "next/image";
-
 export interface ServiceLink {
   label: string;
   href: string;
@@ -15,7 +12,7 @@ export interface ServiceTab {
   name: string; // Tab label
   icon: string;
   columns: ServiceColumn[];
-  image: string | StaticImageData;
+  image: string;
 }
 
 export const serviceTabs: ServiceTab[] = [
@@ -44,7 +41,7 @@ export const serviceTabs: ServiceTab[] = [
         ],
       },
     ],
-    image: designTabImg,
+    image: "/images/services-dropdown-tab-img-1.png",
   },
   {
     name: "Website Development",
@@ -71,7 +68,7 @@ export const serviceTabs: ServiceTab[] = [
         ],
       },
     ],
-    image: designTabImg,
+    image: "/images/services-dropdown-tab-img-1.png",
   },
   {
     name: "Maintenance and Growth",
@@ -98,6 +95,6 @@ export const serviceTabs: ServiceTab[] = [
         ],
       },
     ],
-    image: designTabImg,
+    image: "/images/services-dropdown-tab-img-1.png",
   },
 ];

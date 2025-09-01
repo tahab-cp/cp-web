@@ -359,6 +359,15 @@ body {
   }
 }
 
+/* Cta Card 1 */
+
+@utility cta-card-1 {
+  background: url("/images/cta-card-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* Case Studies Grid  */
 
 .case-studies-grid {

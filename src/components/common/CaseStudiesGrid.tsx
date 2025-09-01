@@ -1,21 +1,21 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 type Tag = {
   label: string;
   color?: string; // Tailwind color classes
-  icon?: StaticImageData;
+  icon?: string;
 };
 
 type Technology = {
-  src: StaticImageData;
+  src: string;
   alt: string;
   width: number;
   height: number;
 };
 
 type CaseStudiesGridProps = {
-  image: StaticImageData;
+  image: string;
   title: string;
   description: string;
   tags: Tag[];

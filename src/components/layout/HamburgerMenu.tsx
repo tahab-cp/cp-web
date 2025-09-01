@@ -1,15 +1,19 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { X } from "lucide-react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../assets/images/logo.svg";
 import HamburgerAccordion from "../common/HamburgerAccordion";
 
-const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+// Define prop types
+type HamburgerMenuProps = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, setIsOpen }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
@@ -36,31 +40,10 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`relative z-[999] inline-flex size-[4rem] items-center justify-center rounded-full border transition-all duration-300 perspective-[1000px] ${isOpen ? "border-[#ffffff]" : "border-[#C9C9C9]"}`}
-      >
-        <div
-          className={`transition-transform duration-300 ease-in-out [transform-style:preserve-3d] ${
-            isOpen ? "rotate-y-180" : ""
-          } size-[2.3rem]`}
-        >
-          {/* Front: Hamburger Icon */}
-          <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
-            <Menu className="size-[2.3rem] text-white" />
-          </div>
-
-          {/* Back: Close Icon */}
-          <div className="absolute inset-0 flex rotate-y-180 items-center justify-center [backface-visibility:hidden]">
-            <X className="size-[2.3rem] text-white" />
-          </div>
-        </div>
-      </button>
-
       <div
-        className={`hamburger-menu fixed top-0 z-[100] flex h-screen w-full flex-col transition-all duration-300 ${isOpen ? "left-0" : "left-full"}`}
+        className={`hamburger-menu fixed top-0 z-[100] flex h-screen w-full flex-col transition-all duration-300 ${isOpen ? "left-0" : "left-[200%]"}`}
       >
-        <div className="flex items-center px-[2rem] py-[2rem] md:px-[4rem]">
+        <div className="flex items-center justify-between px-[2rem] py-[3rem] md:px-[4rem]">
           <Link
             onClick={() => setIsOpen(false)}
             href="/"
@@ -75,6 +58,13 @@ const HamburgerMenu = () => {
               className="w-[14rem] md:w-[17rem]"
             />
           </Link>
+
+          <button
+            onClick={() => setIsOpen(false)}
+            className="inline-flex size-[4rem] items-center justify-center rounded-full border border-[#ffffff]"
+          >
+            <X className="size-[2.3rem] text-white" />
+          </button>
         </div>
 
         <div className="flex-1 overflow-x-hidden overflow-y-auto">

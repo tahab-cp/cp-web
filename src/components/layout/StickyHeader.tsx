@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import logo from "../../assets/images/logo.svg";
 import Image from "next/image";
@@ -9,13 +8,15 @@ import NavigationDropdown from "../common/NavigationDropdown";
 import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import CommonBtn1 from "../common/CommonBtn1";
 import HamburgerMenu from "./HamburgerMenu";
+import { Menu, X } from "lucide-react";
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 150) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -28,9 +29,9 @@ const StickyHeader = () => {
 
   return (
     <header
-      className={`fixed left-0 z-[100] w-full transition-all duration-300 ${isVisible ? "top-[0%]" : "top-[-100%]"}`}
+      className={`fixed left-0 z-[999] w-full p-[2rem] transition-all duration-300 ${isVisible ? "top-[0%]" : "top-[-100%]"}`}
     >
-      <div className="shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full bg-black/30 px-[3rem] py-[1rem] backdrop-blur-[10px]">
+      <div className="shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full bg-black/30 px-[2rem] py-[1rem] backdrop-blur-[10px]">
         <Link href="/" className="relative">
           <Image
             src={logo}
@@ -65,11 +66,20 @@ const StickyHeader = () => {
             <CommonBtn1 />
           </div>
 
-          {/* Hamburger Menu */}
           <div className="xl:hidden">
-            <HamburgerMenu />
+            <button
+              onClick={() => setIsOpen(true)}
+              className="inline-flex size-[4rem] items-center justify-center rounded-full border border-white"
+            >
+              <Menu className="size-[2.3rem] text-white" />
+            </button>
           </div>
         </div>
+      </div>
+
+      {/* Hamburger Menu */}
+      <div className="xl:hidden">
+        <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
   );

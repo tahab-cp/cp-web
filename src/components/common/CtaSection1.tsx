@@ -1,27 +1,12 @@
 import Image from "next/image";
-import ctaSectionBg from "../../assets/images/cta-section-bg.png";
-import userAvatar from "../../assets/images/user-avatar.svg";
-import handIcon from "../../assets/images/icons/hand-icon.svg";
-import flashIcon from "../../assets/images/icons/3d-flash-icon.svg";
 import SectionLabel from "./SectionLabel";
-import avatar from "../../assets/images/consultation-avatar.svg";
-import subtractPink from "../../assets/images/icons/subtract-pink.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
 import CommonBtn3 from "./CommonBtn3";
 import WaveHand from "./WaveHand";
 
 const CtaSection1 = () => {
   return (
-    <div className="relative w-full overflow-hidden rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-0 md:pt-[7.1rem] md:pr-[11.4rem] md:pb-[7.2rem] md:pl-[8.3rem]">
-      <Image
-        src={ctaSectionBg}
-        alt="Cta Background"
-        fill
-        className="object-cover object-center"
-        priority
-      />
-
+    <div className="cta-card-1 relative w-full overflow-hidden rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-0 md:pt-[7.1rem] md:pr-[11.4rem] md:pb-[7.2rem] md:pl-[8.3rem]">
       <div className="relative z-[1] flex flex-col items-center gap-[5.3rem] lg:flex-row">
         <div className="flex flex-col items-start">
           <SectionLabel text="Contact us Today" />
@@ -46,7 +31,7 @@ const CtaSection1 = () => {
               {/* Text layer */}
               <span className="relative z-10 text-white">Get in Touch</span>
               <Image
-                src={userAvatar}
+                src="/images/user-avatar.png"
                 alt="User Avatar"
                 width={107.69}
                 height={39.54}
@@ -65,7 +50,7 @@ const CtaSection1 = () => {
           <div className="flex flex-col items-center gap-[2rem] text-center">
             <i className="absolute top-[-3rem] left-[2rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
               <Image
-                src={flashIcon}
+                src="/images/icons/3d-flash-icon.svg"
                 alt="Flash Icon"
                 fill
                 className="object-contain"
@@ -74,12 +59,14 @@ const CtaSection1 = () => {
 
             <i className="relative flex size-[9.9rem] items-center justify-center">
               <Image
-                src={avatar}
+                src="/images/cta-card-avatar.png"
                 alt="Avatar"
                 width={99}
                 height={99}
                 priority
               />
+
+              <div className="outline-text-primary absolute top-[5.3px] right-[5.3px] size-[1.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[4px]" />
             </i>
 
             <h4 className="max-w-[24rem] text-[2.6rem] leading-[3.3rem] font-semibold tracking-[-0.02em]">

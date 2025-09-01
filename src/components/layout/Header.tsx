@@ -7,13 +7,15 @@ import NavigationDropdown from "../common/NavigationDropdown";
 import HamburgerMenu from "./HamburgerMenu";
 import { usePathname } from "next/navigation";
 import CommonBtn1 from "../common/CommonBtn1";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   useGSAP(() => {
     const header = headerRef.current;
@@ -29,34 +31,6 @@ const Header = () => {
       { opacity: 0 },
       { opacity: 1, duration: 1, ease: "power2.out" },
     );
-
-    // Sticky scroll behavior
-    gsap.to(header, {
-      backgroundColor: "#00000080",
-      backdropFilter: "blur(10px)",
-      duration: 0.6,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top top",
-        end: 99999,
-        toggleClass: { targets: header, className: "scrolled" },
-        onEnter: () =>
-          gsap.to(header, {
-            backgroundColor: "#00000080",
-            backdropFilter: "blur(10px)",
-            paddingTop: "1rem",
-            paddingBottom: "1rem",
-          }),
-        onLeaveBack: () =>
-          gsap.to(header, {
-            backgroundColor: "transparent",
-            backdropFilter: "blur(0px)",
-            paddingTop: "3rem",
-            paddingBottom: "3rem",
-          }),
-      },
-    });
 
     gsap.fromTo(
       headerLogo,
@@ -95,7 +69,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 z-[100] flex w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] py-[3rem] opacity-0 md:px-[4rem] xl:px-[0rem] ${pathname === "/" ? "" : "header-gradient-bg"}`}
+      className={`absolute top-0 left-0 z-[100] flex w-full items-center rounded-br-[2rem] rounded-bl-[2rem] px-[2rem] py-[3rem] opacity-0 md:px-[4rem] xl:px-[0rem] ${pathname === "/" ? "" : "header-gradient-bg"}`}
     >
       <div className="relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between">
         <div className="overflow-hidden">
@@ -157,11 +131,20 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Hamburger Menu */}
           <div className="xl:hidden">
-            <HamburgerMenu />
+            <button
+              onClick={() => setIsOpen(true)}
+              className="inline-flex size-[4rem] items-center justify-center rounded-full border border-white"
+            >
+              <Menu className="size-[2.3rem] text-white" />
+            </button>
           </div>
         </div>
+      </div>
+
+      {/* Hamburger Menu */}
+      <div className="xl:hidden">
+        <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
   );
