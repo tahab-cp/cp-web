@@ -22,6 +22,8 @@ const AboutSection = () => {
       type: "lines",
     });
     const aboutCtaBtn = about.querySelector(".about-cta-btn");
+    const aboutCardGradient = about.querySelector(".about-card-gradient");
+    const aboutCard = about.querySelectorAll(".about-card");
 
     gsap.from(aboutLabel, {
       opacity: 0,
@@ -57,6 +59,32 @@ const AboutSection = () => {
         toggleActions: "play none none none",
       },
     });
+
+    gsap.from(aboutCardGradient, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: aboutCardGradient,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    gsap.from(aboutCard, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.5,
+      delay: 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: aboutCard,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
   }, []);
 
   return (
@@ -68,7 +96,7 @@ const AboutSection = () => {
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke02 className="absolute top-[135.1rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke02 className="absolute top-[90rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col px-[2rem] xl:px-[0rem]">
@@ -131,13 +159,7 @@ const AboutSection = () => {
             </button>
 
             <div className="h-[40rem] w-full overflow-hidden rounded-[2rem] bg-amber-300">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="size-full object-cover"
-              >
+              <video loop muted playsInline className="size-full object-cover">
                 <source src="/videos/about-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -147,28 +169,25 @@ const AboutSection = () => {
 
         <div className="grid w-[40%] grid-cols-1 gap-[2rem] md:grid-cols-2">
           {aboutCardData.map((item, idx) => (
-            <div className="" key={idx}>
-              <div
-                className="about-card flex flex-col justify-between gap-[2rem] transition-colors duration-300"
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = item.hoverColor)
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "")
-                }
-              >
-                <Image
-                  src={item.icon}
-                  alt="Pencil Icon"
-                  width={40}
-                  height={40}
-                  className="size-[3rem] md:size-[4rem]"
-                />
+            <div
+              key={idx}
+              className="about-card flex flex-col justify-between gap-[2rem] transition-colors duration-300"
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = item.hoverColor)
+              }
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "")}
+            >
+              <Image
+                src={item.icon}
+                alt="Pencil Icon"
+                width={40}
+                height={40}
+                className="size-[3rem] md:size-[4rem]"
+              />
 
-                <h4 className="text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[2.5rem] md:leading-[3.5rem]">
-                  {item.title}
-                </h4>
-              </div>
+              <h4 className="text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[2.5rem] md:leading-[3.5rem]">
+                {item.title}
+              </h4>
             </div>
           ))}
         </div>

@@ -320,7 +320,14 @@ body {
   }
 }
 
-/* Offer Cta Card  */
+/* Offer Section  */
+
+@utility offer-sec {
+  background: url("/images/offer-bg-gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .offer-cta-card {
   position: relative;

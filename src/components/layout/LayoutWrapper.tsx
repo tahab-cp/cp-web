@@ -18,7 +18,7 @@ export default function LayoutWrapper({
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

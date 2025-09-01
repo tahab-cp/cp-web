@@ -276,18 +276,7 @@ const WhatWeOfferSection = () => {
   }, []);
 
   return (
-    <section className="relative pt-[8rem] pb-[8rem] md:pb-[10.1rem]">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={offerSectionBg}
-          alt="Offer Section Background"
-          fill
-          className="pointer-events-none object-cover"
-          priority
-        />
-      </div>
-
+    <section className="offer-sec relative pt-[8rem] pb-[8rem] md:pb-[10.1rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
         <LineStroke03 className="absolute top-[180.6rem] left-1/2 w-full -translate-x-1/2" />
