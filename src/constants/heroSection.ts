@@ -1,22 +1,7 @@
-import unicefLogo from "../assets/images/unicef-logo.png";
-import unicefPopupImg from "../assets/images/unicef-popup-img.png";
-import alertLogo from "../assets/images/alert-logo.png";
-import alertPopupImg from "../assets/images/alert-popup-img.png";
-import ndifoLogo from "../assets/images/ndifo-logo.png";
-import ndifoPopupImg from "../assets/images/ndifo-popup-img.png";
-import littleLogo from "../assets/images/little-logo.png";
-import littlePopupImg from "../assets/images/little-popup-img.png";
-import newLogo from "../assets/images/new-logo.png";
-import newPopupImg from "../assets/images/new-popup-img.png";
-import ayoaLogo from "../assets/images/ayoa-logo.png";
-import ayoaPopupImg from "../assets/images/ayoa-popup-img.png";
-import anthonyLogo from "../assets/images/anthony-logo.png";
-import anthonyPopupImg from "../assets/images/anthony-popup-img.png";
-
 export const logoPopupsData = [
   {
-    logo: unicefLogo,
-    popupImage: unicefPopupImg,
+    logo: "/images/unicef-logo.png",
+    popupImage: "/images/unicef-popup-img.png",
     title: "Unicef",
     description: "Funding cuts are slashing children's lifelines",
     href: "",
@@ -24,8 +9,8 @@ export const logoPopupsData = [
     logoHeight: 42.73,
   },
   {
-    logo: alertLogo,
-    popupImage: alertPopupImg,
+    logo: "/images/alert-logo.png",
+    popupImage: "/images/alert-popup-img.png",
     title: "Alert Force",
     description: "The Health & Safety Training People",
     href: "",
@@ -33,8 +18,8 @@ export const logoPopupsData = [
     logoHeight: 40.02,
   },
   {
-    logo: ndifoLogo,
-    popupImage: ndifoPopupImg,
+    logo: "/images/ndifo-logo.png",
+    popupImage: "/images/ndifo-popup-img.png",
     title: "Ndifo Safari",
     description: "Experience The Natural & Cultural Wonders Of East Africa",
     href: "",
@@ -42,8 +27,8 @@ export const logoPopupsData = [
     logoHeight: 69.84,
   },
   {
-    logo: littleLogo,
-    popupImage: littlePopupImg,
+    logo: "/images/little-logo.png",
+    popupImage: "/images/little-popup-img.png",
     title: "Little Astronauts",
     description: "Recharge while they explore at Little astronauts!",
     href: "",
@@ -51,8 +36,8 @@ export const logoPopupsData = [
     logoHeight: 41.19,
   },
   {
-    logo: newLogo,
-    popupImage: newPopupImg,
+    logo: "/images/new-logo.png",
+    popupImage: "/images/new-popup-img.png",
     title: "New Compass",
     description: "The next generation of 3D geospatial analysis",
     href: "",
@@ -60,8 +45,8 @@ export const logoPopupsData = [
     logoHeight: 25.74,
   },
   {
-    logo: ayoaLogo,
-    popupImage: ayoaPopupImg,
+    logo: "/images/ayoa-logo.png",
+    popupImage: "/images/ayoa-popup-img.png",
     title: "AYOA",
     description: "#1 AI-powered mind mapping tool",
     href: "",
@@ -69,8 +54,8 @@ export const logoPopupsData = [
     logoHeight: 39.7,
   },
   {
-    logo: anthonyLogo,
-    popupImage: anthonyPopupImg,
+    logo: "/images/anthony-logo.png",
+    popupImage: "/images/anthony-popup-img.png",
     title: "Anthony Walker",
     description: "Funding cuts are slashing children's lifelines",
     href: "",

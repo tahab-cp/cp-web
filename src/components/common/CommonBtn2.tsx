@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import avatar from "../../assets/images/consultation-avatar.svg";
 
 const CommonBtn2 = () => {
   return (
@@ -36,7 +35,13 @@ const CommonBtn2 = () => {
       </i>
 
       <i className="common-btn-avatar-2">
-        <Image src={avatar} alt="Avatar" width={50} height={50} priority />
+        <Image
+          src="/images/cta-btn-img.svg"
+          alt="Avatar"
+          width={50}
+          height={50}
+          priority
+        />
       </i>
     </Link>
   );

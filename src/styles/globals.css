@@ -3,7 +3,7 @@
 
 @theme {
   /* Font family */
-  --font-onest: var(--font-onest), sans-serif;
+  --font-onest: "Onest", sans-serif;
 
   /* ===== Base Text Colors ===== */
   --color-text-primary: #070707;
@@ -26,13 +26,12 @@ html {
 body {
   font-size: 1.6rem;
   font-weight: 400;
-  font-family: var(--font-onest), sans-serif;
+  font-family: var(--font-onest);
   line-height: 1.6;
   background-color: #ffffff;
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
-  min-height: 3000px;
 }
 
 .swiper {
@@ -267,13 +266,16 @@ body {
 
 /* Hero Section */
 
-.hero-sec-overlay {
-  background: linear-gradient(360deg, #000000 -50.99%, rgba(0, 0, 0, 0) 89.36%);
+@utility hero-sec {
+  background: url("/images/hero-bg-gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* About Section  */
 
-.about-card-gradient {
+@utility about-card-gradient {
   background: linear-gradient(
     119.59deg,
     #070707 1.07%,
@@ -283,10 +285,12 @@ body {
   border-radius: 2rem;
 }
 
-.about-card {
+@utility about-card {
   position: relative;
   border-radius: 2rem;
-  padding: 5rem 3rem 5rem 3rem;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 2rem;
   background: linear-gradient(
     301.83deg,
     rgba(255, 255, 255, 0.05) 1.23%,
@@ -295,25 +299,25 @@ body {
   backdrop-filter: blur(10px);
   transition: background 0.3s ease;
   z-index: 0;
-}
 
-.about-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px; /* border thickness */
-  border-radius: inherit;
-  background: linear-gradient(
-    124.3deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(7, 7, 7, 0.3) 100%
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px; /* border thickness */
+    border-radius: inherit;
+    background: linear-gradient(
+      124.3deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(7, 7, 7, 0.3) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
 }
 
 /* Offer Cta Card  */

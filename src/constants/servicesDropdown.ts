@@ -1,8 +1,5 @@
 import designTabImg from "../assets/images/offer-web-img.png";
 import type { StaticImageData } from "next/image";
-import clickArrowYellow from "../assets/images/icons/click-arrow-yellow-2.svg";
-import clickArrowPink from "../assets/images/icons/click-arrow-pink.svg";
-import clickArrowGreen from "../assets/images/icons/click-arrow-green.svg";
 
 export interface ServiceLink {
   label: string;
@@ -24,7 +21,7 @@ export interface ServiceTab {
 export const serviceTabs: ServiceTab[] = [
   {
     name: "Design & Branding",
-    icon: clickArrowYellow,
+    icon: "/images/icons/click-arrow-yellow-2.svg",
     columns: [
       {
         title: "Designing",
@@ -51,7 +48,7 @@ export const serviceTabs: ServiceTab[] = [
   },
   {
     name: "Website Development",
-    icon: clickArrowPink,
+    icon: "/images/icons/click-arrow-pink.svg",
     columns: [
       {
         title: "Web Design",
@@ -78,7 +75,7 @@ export const serviceTabs: ServiceTab[] = [
   },
   {
     name: "Maintenance and Growth",
-    icon: clickArrowGreen,
+    icon: "/images/icons/click-arrow-green.svg",
     columns: [
       {
         title: "Optimization",

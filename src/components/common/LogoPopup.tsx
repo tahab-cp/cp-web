@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import subtractDark from "../../assets/images/icons/subtract-dark.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
@@ -8,8 +8,8 @@ import Link from "next/link";
 import gsap from "gsap";
 
 interface LogoPopupProps {
-  logo: StaticImageData;
-  popupImage: StaticImageData;
+  logo: string;
+  popupImage: string;
   title: string;
   href: string;
   logoWidth: number;
@@ -103,13 +103,12 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
           className="w-[27.5rem] overflow-hidden rounded-[1.6rem] bg-white shadow-[0px_8px_20px_0px_#00000040]"
         >
           {/* Image */}
-          <div className="relative h-[19.4rem] w-full overflow-hidden rounded-[1.6rem]">
+          <div className="relative overflow-hidden rounded-[1.6rem]">
             <Image
               src={popupImage}
               alt={`${title} Popup Image`}
-              fill
-              sizes="(max-width: 768px) 100vw, 275px"
-              className="object-cover"
+              width={275}
+              height={194}
             />
           </div>
 

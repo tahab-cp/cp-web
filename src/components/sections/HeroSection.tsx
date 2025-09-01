@@ -1,171 +1,119 @@
 "use client";
-import Image from "next/image";
-import heroSecGradientBg from "@/assets/images/hero-sec-gradient-bg.png";
 import BookBadge from "../common/BookBadge";
 import LogoPopup from "../common/LogoPopup";
 import { logoPopupsData } from "@/constants/heroSection";
 import LineStroke01 from "../decorativeElements/LineStroke01";
 import CommonBtn2 from "../common/CommonBtn2";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
-import SplitType from "split-type";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
 
 const HeroSection = () => {
-  const heroContentRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    if (heroContentRef.current) {
-      const heroBadge = heroContentRef.current.querySelectorAll(
-        ".hero-badge-animate",
-      );
-      const heroHeadingSplit1 = new SplitType(
-        heroContentRef.current.querySelectorAll(
-          ".heading-part",
-        )[0] as HTMLElement,
-        { types: "lines" },
-      );
-      const heroHeadingSplit2 = new SplitType(
-        heroContentRef.current.querySelectorAll(
-          ".heading-part",
-        )[1] as HTMLElement,
-        { types: "lines" },
-      );
-      const heroDescSplit1 = new SplitType(
-        heroContentRef.current.querySelectorAll(".desc-part")[0] as HTMLElement,
-        { types: "lines" },
-      );
-      const heroDescSplit2 = new SplitType(
-        heroContentRef.current.querySelectorAll(".desc-part")[1] as HTMLElement,
-        { types: "lines" },
-      );
-      const heroCtaBtn = heroContentRef.current.querySelectorAll(
-        ".hero-cta-btn-animate",
-      );
-      const heroLogoHeading = heroContentRef.current.querySelectorAll(
-        ".hero-logo-heading-animate",
-      );
-      const heroLogo =
-        heroContentRef.current.querySelectorAll(".hero-logo-animate");
+  useGSAP(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
 
-      // make parent visible
-      gsap.to(heroContentRef.current, { autoAlpha: 1, duration: 0.1 });
+    const heroLabel = hero.querySelector(".hero-label");
+    const heroTitleSplit = new SplitText(".hero-title", {
+      type: "lines",
+    });
+    const heroDescSplit = new SplitText(".hero-desc", {
+      type: "chars, words",
+    });
+    const heroCtaBtn = hero.querySelector(".hero-cta-btn");
+    const heroLogoTitle = hero.querySelector(".hero-logo-title");
+    const heroLogos = hero.querySelectorAll(".hero-logos");
 
-      // animate badge
-      gsap.from(heroBadge, {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
+    // Timeline for initial load animations
+    const tl = gsap.timeline();
 
-      // Animate first line
-      gsap.from(heroHeadingSplit1.lines, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.03,
-        ease: "power2.out",
-      });
+    // Initial fade-in when site loads
+    gsap.fromTo(
+      hero,
+      { opacity: 0 },
+      { opacity: 1, duration: 1, ease: "power2.out" },
+    );
 
-      // Animate second line
-      gsap.from(heroHeadingSplit2.lines, {
-        y: 50,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.02,
-        ease: "power2.out",
-        delay: 0.2,
-      });
+    tl.from(heroLabel, {
+      opacity: 0,
+      y: 100,
+      duration: 0.6,
+      ease: "power2.out",
+      delay: 0.3,
+    });
 
-      // Animate desc first line
-      gsap.from(heroDescSplit1.lines, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.03,
-        ease: "power2.out",
-      });
+    tl.from(heroTitleSplit.lines, {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.out",
+    });
 
-      // Animate desc second line
-      gsap.from(heroDescSplit2.lines, {
-        y: 50,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.02,
-        ease: "power2.out",
-        delay: 0.2,
-      });
+    tl.from(heroDescSplit.chars, {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.03,
+      ease: "power2.out",
+    });
 
-      // animate cta btn
-      gsap.from(heroCtaBtn, {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
+    tl.from(heroCtaBtn, {
+      opacity: 0,
+      y: 100,
+      duration: 0.6,
+      ease: "power2.out",
+    });
 
-      // animate hero logo heading
-      gsap.from(heroLogoHeading, {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
+    tl.from(heroLogoTitle, {
+      opacity: 0,
+      y: 100,
+      duration: 0.6,
+      ease: "power2.out",
+    });
 
-      // animate logos (with stagger)
-      gsap.from(heroLogo, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        clearProps: "all",
-      });
-    }
+    tl.from(heroLogos, {
+      opacity: 0,
+      y: 100,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+
+    tl.timeScale(1.5);
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] md:h-[79rem] md:min-h-auto">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={heroSecGradientBg}
-          alt="Hero Gradient Background"
-          fill
-          className="pointer-events-none object-cover"
-          priority
-        />
-      </div>
-
+    <section
+      ref={heroRef}
+      className="hero-sec relative min-h-screen w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] opacity-0 md:h-[79rem] md:min-h-auto"
+    >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke01 className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2 opacity-0" />
+        <LineStroke01 className="absolute bottom-[2.058rem] left-1/2 -translate-x-1/2" />
       </div>
 
-      {/* Overlay */}
-      <div className="hero-sec-overlay absolute bottom-0 left-0 h-[28.9rem] w-full" />
-
-      <div
-        ref={heroContentRef}
-        className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[3rem] pt-[15rem] pb-[4rem] opacity-0 md:gap-[5.9rem]"
-      >
+      <div className="relative z-[10] flex h-full w-full flex-col items-center justify-end gap-[3rem] pt-[15rem] pb-[4rem] md:gap-[5.9rem]">
         {/* Main content */}
         <div className="flex max-w-[106.5rem] flex-col items-center gap-[2rem] px-[2rem] text-center md:gap-[2.7rem] xl:px-[0rem]">
           <div className="overflow-hidden">
-            <div className="hero-badge-animate">
+            <div className="hero-label">
               <BookBadge />
             </div>
           </div>
 
           <h1 className="text-[2.2rem] leading-[3rem] font-bold tracking-[-0.03em] text-white md:text-[4rem] md:leading-[5rem] lg:text-[6rem] lg:leading-[7rem] xl:text-[7rem] xl:leading-[8.4rem]">
             <div className="overflow-hidden">
-              <div className="heading-part">
+              <div className="hero-title">
                 Grow your digital presence today
               </div>{" "}
             </div>
 
             <div className="overflow-hidden">
-              <div className="heading-part">
+              <div className="hero-title">
                 with real{" "}
                 <span className="bg-gradient-01 bg-clip-text text-transparent">
                   human-led
@@ -177,19 +125,19 @@ const HeroSection = () => {
 
           <div className="text-[1.1rem] leading-[1.8rem] font-medium text-white md:text-[1.8rem] md:leading-[2.8rem] lg:text-[2.2rem] lg:leading-[3.2rem]">
             <div className="overflow-hidden">
-              <div className="desc-part">
+              <div className="hero-desc">
                 Based in Manchester, we craft bespoke websites and branding
               </div>
             </div>{" "}
             <div className="overflow-hidden">
-              <div className="desc-part">
+              <div className="hero-desc">
                 that are as smart as they are stunning.
               </div>
             </div>
           </div>
 
           <div className="overflow-hidden p-[.5rem]">
-            <div className="hero-cta-btn-animate">
+            <div className="hero-cta-btn">
               <CommonBtn2 />
             </div>
           </div>
@@ -198,14 +146,14 @@ const HeroSection = () => {
         {/* Logos */}
         <div className="flex max-w-[120.3rem] flex-col items-center gap-[2rem] px-[2rem] text-center xl:px-[0rem]">
           <div className="overflow-hidden">
-            <h6 className="hero-logo-heading-animate text-[1.8rem] leading-[2.6rem] font-normal text-white">
+            <h6 className="hero-logo-title text-[1.8rem] leading-[2.6rem] font-normal text-white">
               Trusted by enterprises all over the world:
             </h6>
           </div>
 
           <ul className="grid grid-cols-1 items-center gap-[4rem] md:grid-cols-4 lg:grid-cols-7">
             {logoPopupsData.map((item, idx) => (
-              <li className="hero-logo-animate" key={idx}>
+              <li className="hero-logos" key={idx}>
                 <LogoPopup
                   logo={item.logo}
                   popupImage={item.popupImage}

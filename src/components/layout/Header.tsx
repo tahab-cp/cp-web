@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../assets/images/logo.svg";
 import NavigationLink from "../common/NavigationLink";
 import NavigationDropdown from "../common/NavigationDropdown";
-import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import HamburgerMenu from "./HamburgerMenu";
 import { usePathname } from "next/navigation";
 import CommonBtn1 from "../common/CommonBtn1";
@@ -103,7 +101,7 @@ const Header = () => {
         <div className="overflow-hidden">
           <Link href="/" className="header-logo relative flex">
             <Image
-              src={logo}
+              src="/images/logo.svg"
               alt="Brand Logo"
               width={170}
               height={66}
@@ -145,18 +143,17 @@ const Header = () => {
           <div className="hidden items-center gap-[1rem] overflow-hidden xl:flex">
             <i className="header-cta-btn relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
-                src={phoneFill}
+                src="/images/icons/phone-fill.svg"
                 alt="Phone Fill Icon"
                 width={16}
                 height={16}
               />
 
-              <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] rounded-full bg-[#7EE972] outline-[3.5px]" />
+              <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
             </i>
 
-            <div className="header-cta-btn p-[.5rem]">
+            <div className="header-cta-btn">
               <CommonBtn1 />
-              {/* <CommonBtn3 href="" label="Book a Call" /> */}
             </div>
           </div>
 

@@ -12,10 +12,10 @@ const HomePage = () => {
     <main>
       <HeroSection />
       <AboutSection />
-      <WhatWeOfferSection />
-      <CaseStudiesSection />
-      <TestimonialSection />
-      <ContactSection />
+      {/* <WhatWeOfferSection /> */}
+      {/* <CaseStudiesSection /> */}
+      {/* <TestimonialSection /> */}
+      {/* <ContactSection /> */}
     </main>
   );
 };

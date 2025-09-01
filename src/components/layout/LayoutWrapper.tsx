@@ -13,12 +13,12 @@ export default function LayoutWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  useLenis();
+  // useLenis();
   return (
     <>
       <Header />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

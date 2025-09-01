@@ -60,7 +60,7 @@ const HamburgerMenu = () => {
       <div
         className={`hamburger-menu fixed top-0 z-[100] flex h-screen w-full flex-col transition-all duration-300 ${isOpen ? "left-0" : "left-full"}`}
       >
-        <div className="flex h-[8rem] items-center px-[2rem] md:h-[12.6rem] md:px-[4rem]">
+        <div className="flex items-center px-[2rem] py-[2rem] md:px-[4rem]">
           <Link
             onClick={() => setIsOpen(false)}
             href="/"

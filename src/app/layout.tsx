@@ -6,8 +6,6 @@ import LayoutWrapper from "@/components/layout/LayoutWrapper";
 const onest = Onest({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-onest",
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -15,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "We focus on being a design-driven creative agency through bespoke design and development, specialising in all things design and making businesses stand out.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon/favicon.ico",
   },
 };
 
@@ -25,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={onest.variable}>
+    <html lang="en" className={`${onest.className} antialiased`}>
       <body>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

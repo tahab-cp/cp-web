@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import arrowDown from "../../assets/images/icons/arrow-down.svg";
 import Link from "next/link";
 import { useState } from "react";
 import { serviceTabs } from "@/constants/servicesDropdown";
@@ -34,7 +33,12 @@ const NavigationDropdown = () => {
                 : "-rotate-0 bg-white/15" // default
           }`}
         >
-          <Image src={arrowDown} alt="Dropdown arrow" width={12} height={12} />
+          <Image
+            src="/images/icons/down-arrow.svg"
+            alt="Dropdown arrow"
+            width={12}
+            height={12}
+          />
         </div>
       </Link>
 
