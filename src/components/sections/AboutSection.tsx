@@ -161,7 +161,7 @@ const AboutSection = () => {
             <div className="h-[30rem] md:h-[50rem] xl:h-[40rem] w-full overflow-hidden rounded-[2rem] ">
               <video loop muted playsInline autoPlay className="size-full object-cover">
                 <source src="/videos/about-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+                Your browser does not support the video.
               </video>
             </div>
           </div>
