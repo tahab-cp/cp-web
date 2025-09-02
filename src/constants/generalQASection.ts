@@ -1,8 +1,3 @@
-import timeIcon from "../assets/images/icons/time-icon.svg";
-import processIcon from "../assets/images/icons/process-icon.svg";
-import collaborationIcon from "../assets/images/icons/collaboration-icon.svg";
-import estimateIcon from "../assets/images/icons/estimate-icon.svg";
-
 export const faqData = [
   {
     tab: "general",
@@ -11,37 +6,37 @@ export const faqData = [
     style: "faq-normal-card",
     items: [
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: collaborationIcon,
+        icon: "/images/icons/collaboration-icon.svg",
         question: "How do you usually start a new collaboration?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: estimateIcon,
+        icon: "/images/icons/estimate-icon.svg",
         question: "How long it will take to get an estimate from you?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
@@ -55,37 +50,37 @@ export const faqData = [
     style: "faq-gradient-card",
     items: [
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: collaborationIcon,
+        icon: "/images/icons/collaboration-icon.svg",
         question: "How do you usually start a new collaboration?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: estimateIcon,
+        icon: "/images/icons/estimate-icon.svg",
         question: "How long it will take to get an estimate from you?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
@@ -99,37 +94,37 @@ export const faqData = [
     style: "faq-normal-card",
     items: [
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: collaborationIcon,
+        icon: "/images/icons/collaboration-icon.svg",
         question: "How do you usually start a new collaboration?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: estimateIcon,
+        icon: "/images/icons/estimate-icon.svg",
         question: "How long it will take to get an estimate from you?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
@@ -143,37 +138,37 @@ export const faqData = [
     style: "faq-gradient-card",
     items: [
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: collaborationIcon,
+        icon: "/images/icons/collaboration-icon.svg",
         question: "How do you usually start a new collaboration?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: estimateIcon,
+        icon: "/images/icons/estimate-icon.svg",
         question: "How long it will take to get an estimate from you?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
@@ -187,37 +182,37 @@ export const faqData = [
     style: "faq-normal-card",
     items: [
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: collaborationIcon,
+        icon: "/images/icons/collaboration-icon.svg",
         question: "How do you usually start a new collaboration?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: estimateIcon,
+        icon: "/images/icons/estimate-icon.svg",
         question: "How long it will take to get an estimate from you?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: timeIcon,
+        icon: "/images/icons/time-icon.svg",
         question: "How long does it take to get started?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
       },
       {
-        icon: processIcon,
+        icon: "/images/icons/process-icon.svg",
         question: "What is your typical working process?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis aliquet pulvinar. Nunc viverra faucibus diam.",
