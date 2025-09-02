@@ -20,8 +20,9 @@ const TestimonialSection = () => {
     const testimonialsLabel = testimonials.querySelector(".testimonials-label");
     const testimonialsTitle = testimonials.querySelector(".testimonials-title");
     const testimonialsDesc = testimonials.querySelector(".testimonials-desc");
-    const testimonialsCards =
-      testimonials.querySelectorAll(".testimonials-cards");
+    const testimonialsCards = testimonials.querySelectorAll(
+      ".testimonials-cards",
+    );
 
     gsap.to(testimonialsLabel, {
       rotate: 5,
@@ -74,7 +75,7 @@ const TestimonialSection = () => {
   return (
     <section
       ref={testimonialsRef}
-      className="testimonials-sec relative z-[1] px-[2rem] pt-[7.2rem] pb-[9.1rem] xl:px-[0rem]"
+      className="testimonials-sec relative z-[1] px-[3rem] py-[6rem] lg:py-[8rem] xl:px-[0rem]"
     >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">

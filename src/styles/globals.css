@@ -364,6 +364,16 @@ body {
   }
 }
 
+.about-desc {
+  text-align: center;
+}
+
+@media (min-width: 1280px) {
+  .about-desc {
+    text-align: left;
+  }
+}
+
 /* Offer Section  */
 
 @utility offer-sec {
@@ -406,7 +416,7 @@ body {
 /* Cta Card 1 */
 
 @utility cta-card {
-  background: url("/images/cta-card-bg.png");
+  background: url("/images/cta-card-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

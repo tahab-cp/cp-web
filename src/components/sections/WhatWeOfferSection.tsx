@@ -129,16 +129,13 @@ const WhatWeOfferSection = () => {
   }, []);
 
   return (
-    <section
-      ref={whatWeOfferRef}
-      className="offer-sec relative pt-[8rem] pb-[8rem] md:pb-[10.1rem]"
-    >
+    <section ref={whatWeOfferRef} className="offer-sec relative py-[8rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke03 className="absolute top-[180.6rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke03 className="absolute top-[250rem] left-1/2 w-full -translate-x-1/2 xl:top-[180.6rem]" />
       </div>
 
-      <div className="relative z-[2] flex flex-col items-center gap-[7.6rem] px-[2rem] pb-[6rem] xl:px-[0rem] xl:pb-[0rem]">
+      <div className="relative z-[2] flex flex-col items-center gap-[7.6rem] px-[3rem] pb-[6rem] xl:px-[0rem] xl:pb-[0rem]">
         <div className="rotate-[2deg]">
           <div className="what-we-offer-label">
             <SectionLabel2
@@ -150,11 +147,11 @@ const WhatWeOfferSection = () => {
         </div>
 
         <div className="mx-auto flex w-full max-w-[130rem] flex-col gap-[2rem] lg:flex-row lg:gap-[0rem]">
-          <div className="flex flex-col gap-[3.3rem]">
-            <h3 className="what-we-offer-left-card-title relative max-w-[33.3rem] text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">
+          <div className="flex flex-col items-center gap-[3.3rem] lg:items-start">
+            <h3 className="what-we-offer-left-card-title relative max-w-[33.3rem] text-center text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem] lg:text-left">
               <span>Website Development</span>
 
-              <div className="absolute right-[6rem] bottom-[-.6rem] inline-flex size-[4rem] items-center justify-center md:right-[-.8rem]">
+              <div className="absolute right-[-0.5rem] bottom-[-.6rem] inline-flex size-[4rem] items-center justify-center md:right-[-4rem] lg:right-[-.8rem]">
                 <Image
                   src="/images/icons/click-arrow-yellow.svg"
                   alt="Click Arrow"
@@ -176,7 +173,7 @@ const WhatWeOfferSection = () => {
           </div>
 
           <div className="flex flex-col gap-[4.5rem] xl:ml-[-10rem]">
-            <div className="flex flex-col gap-[5rem] md:flex-row lg:flex-col xl:flex-row xl:gap-[10rem]">
+            <div className="flex flex-col justify-between gap-[5rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row xl:gap-[10rem]">
               {offerSectionWebData.columns.map((col, idx) => (
                 <div key={idx} className={`flex flex-col gap-[3.1rem]`}>
                   <div className="overflow-hidden">
@@ -206,7 +203,7 @@ const WhatWeOfferSection = () => {
               ))}
             </div>
 
-            <div className="flex flex-col gap-[2rem] xl:flex-row">
+            <div className="flex flex-col justify-center gap-[2rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row">
               <div className="what-we-offer-right-card-cta-btn">
                 <CommonBtn3
                   href="/"
@@ -229,14 +226,14 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[1] bg-white px-[2rem] lg:pb-[8rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:pb-[0rem]">
+      <div className="relative z-[1] bg-white px-[3rem] py-[6rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:py-[0rem]">
         <div className="relative mx-auto flex w-full max-w-[130rem] flex-col gap-[5rem] lg:flex-row lg:gap-[12.9rem]">
-          <div className="flex flex-col gap-[4.5rem] pt-[5rem] lg:pt-[10rem]">
-            <div className="flex flex-col gap-[5rem] md:flex-row lg:flex-col xl:flex-row xl:gap-[10rem]">
+          <div className="flex flex-col gap-[4.5rem] xl:pt-[10rem]">
+            <div className="flex flex-col justify-between gap-[5rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row xl:gap-[10rem]">
               {offerSectionDesignData.columns.map((col, idx) => (
                 <div
                   key={idx}
-                  className={`flex flex-col gap-[3.1rem] pt-[3.5rem]`}
+                  className={`flex flex-col gap-[3.1rem] xl:pt-[3.5rem]`}
                 >
                   <div className="overflow-hidden">
                     <h5 className="what-we-offer-right-card-title text-[2.2rem] leading-[3.2rem] font-medium text-[#FF37B3]">
@@ -265,7 +262,7 @@ const WhatWeOfferSection = () => {
               ))}
             </div>
 
-            <div className="flex flex-col gap-[2rem] xl:flex-row">
+            <div className="flex flex-col justify-center gap-[2rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row">
               <div className="what-we-offer-right-card-cta-btn">
                 <CommonBtn3
                   href="/"
@@ -286,11 +283,11 @@ const WhatWeOfferSection = () => {
             </div>
           </div>
 
-          <div className="relative flex flex-col lg:top-[10.8rem]">
-            <h3 className="what-we-offer-left-card-title text-text-primary relative max-w-[30.8rem] text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] md:text-[4.8rem] md:leading-[6rem]">
+          <div className="relative flex flex-col items-center gap-[4rem] lg:items-start lg:gap-[0rem] xl:top-[10.8rem]">
+            <h3 className="what-we-offer-left-card-title text-text-primary relative max-w-[30.8rem] text-center text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] md:text-[4.8rem] md:leading-[6rem] lg:text-left">
               <span>Design and Branding</span>
 
-              <div className="absolute right-[10rem] bottom-[-.4rem] inline-flex size-[4rem] items-center justify-center md:right-[5.3rem]">
+              <div className="absolute right-[2rem] bottom-[-.4rem] inline-flex size-[4rem] items-center justify-center md:right-[0.5rem] lg:right-[5.3rem]">
                 <Image
                   src="/images/icons/click-arrow-pink.svg"
                   alt="Click Arrow"
@@ -300,7 +297,7 @@ const WhatWeOfferSection = () => {
               </div>
             </h3>
 
-            <div className="what-we-offer-left-card-title pointer-events-none relative select-none md:h-[55.18rem] md:w-[44.248rem]">
+            <div className="what-we-offer-left-card-title pointer-events-none relative select-none md:w-[44.248rem] lg:h-[55.18rem]">
               <Image
                 src="/images/offer-design-img-01.png"
                 alt="offer design image"
@@ -322,12 +319,12 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[1] mx-auto flex w-full max-w-[133rem] flex-col px-[2rem] pt-[6rem] md:pt-[10rem] lg:flex-row xl:px-[0rem]">
-        <div className="flex flex-col">
-          <h3 className="what-we-offer-left-card-title relative max-w-[30.8rem] text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">
+      <div className="relative z-[1] mx-auto flex w-full max-w-[133rem] flex-col px-[3rem] pt-[6rem] lg:flex-row xl:px-[0rem] xl:pt-[10rem]">
+        <div className="flex flex-col items-center lg:items-start">
+          <h3 className="what-we-offer-left-card-title relative max-w-[30.8rem] text-center text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem] lg:text-left">
             <span>Maintenance and Growth</span>
 
-            <div className="absolute right-[13rem] bottom-[-.5rem] inline-flex size-[4rem] items-center justify-center md:right-[-1.8rem] md:bottom-[1.6rem]">
+            <div className="absolute right-[4rem] bottom-[-0.5rem] inline-flex size-[4rem] items-center justify-center md:right-[-3rem] md:bottom-[-1rem] lg:right-[-1.8rem] lg:bottom-[1.6rem]">
               <Image
                 src="/images/icons/click-arrow-green.svg"
                 alt="Click Arrow"
@@ -337,7 +334,7 @@ const WhatWeOfferSection = () => {
             </div>
           </h3>
 
-          <div className="what-we-offer-left-card-img pointer-events-none relative select-none md:top-[-5rem] md:h-[49.819rem] md:w-[57.12rem]">
+          <div className="what-we-offer-left-card-img pointer-events-none relative select-none md:top-[-5rem] lg:h-[49.819rem] lg:w-[57.12rem]">
             <Image
               src="/images/offer-maintenance-img.png"
               alt="offer maintenance image"
@@ -349,11 +346,11 @@ const WhatWeOfferSection = () => {
         </div>
 
         <div className="flex flex-col gap-[4.5rem]">
-          <div className="flex flex-col gap-[5rem] md:flex-row lg:flex-col xl:flex-row xl:gap-[10rem]">
+          <div className="flex flex-col justify-between gap-[5rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row xl:gap-[10rem]">
             {offerSectionMaintenanceData.columns.map((col, idx) => (
               <div
                 key={idx}
-                className={`flex flex-col gap-[3.1rem] pt-[2.1rem]`}
+                className={`flex flex-col gap-[3.1rem] xl:pt-[2.1rem]`}
               >
                 <div className="overflow-hidden">
                   <h5 className="what-we-offer-right-card-title text-[2.2rem] leading-[3.2rem] font-medium text-[#81F2B4]">
@@ -382,7 +379,7 @@ const WhatWeOfferSection = () => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-[2rem] xl:flex-row">
+          <div className="flex flex-col justify-center gap-[2rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row">
             <div className="what-we-offer-right-card-cta-btn">
               <CommonBtn3
                 href="/"
@@ -404,20 +401,22 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="what-we-offer-cta-card px-[2rem] xl:px-[0rem]">
+      <div className="what-we-offer-cta-card px-[3rem] xl:px-[0rem]">
         <div className="offer-cta-card mx-auto mt-[4rem] flex max-w-[120.3rem] rounded-[2rem] xl:mt-[-9rem]">
-          <div className="flex flex-col items-center justify-center gap-[2.2rem] md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-[2.2rem] text-center md:flex-row md:text-left">
             <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
               Need bold design or reliable code or both? You’re in the right
               place.
             </p>
 
-            <CommonBtn3
-              href="/"
-              label="Book a Call"
-              bgColor="#EE8D00"
-              textColor="#fff"
-            />
+            <div className="min-w-max">
+              <CommonBtn3
+                href="/"
+                label="Book a Call"
+                bgColor="#EE8D00"
+                textColor="#fff"
+              />
+            </div>
           </div>
         </div>
       </div>

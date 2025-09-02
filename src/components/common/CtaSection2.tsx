@@ -5,13 +5,13 @@ import CommonBtn3 from "./CommonBtn3";
 
 const CtaSection2 = () => {
   return (
-    <div className="cta-card relative w-full rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-[0rem] md:px-[7rem] md:pt-[8.1rem] md:pb-[5.1rem]">
+    <div className="cta-card relative w-full rounded-[5rem] px-[3rem] py-[4rem] backdrop-blur-[10px] md:px-[6rem] lg:py-[8rem]">
       <i className="absolute top-[-4.3rem] right-0 inline-flex size-[8rem] items-center justify-center">
         <Image src={contactArrow} alt="Contact Arrow" width={80} height={80} />
       </i>
 
-      <div className="relative z-[1] flex flex-col gap-[8rem] lg:flex-row lg:gap-[3.4rem]">
-        <div className="flex flex-col items-start pt-[3rem]">
+      <div className="relative z-[1] flex flex-col items-center gap-[8rem] text-center lg:flex-row lg:items-start lg:gap-[3.4rem] lg:text-left">
+        <div className="flex flex-col items-center pt-[3rem] lg:items-start">
           <SectionLabel text="Contact us Today" />
 
           <h3 className="mt-[2rem] max-w-[72.1rem] text-[3.2rem] leading-[4rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem]">

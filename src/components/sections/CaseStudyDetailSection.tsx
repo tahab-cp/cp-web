@@ -6,12 +6,6 @@ import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Image from "next/image";
 import SectionDescription from "../common/SectionDescription";
 import playYellowIcon from "../../assets/images/icons/play-yellow-icon.svg";
-import brainStudioCardImg01 from "../../assets/images/brain-studio-card-img-01.png";
-import brainStudioCardImg02 from "../../assets/images/brain-studio-card-img-02.png";
-import brainStudioCardImg03 from "../../assets/images/brain-studio-card-img-03.png";
-import brainStudioCardImg04 from "../../assets/images/brain-studio-card-img-04.png";
-import brainStudioCardImg05 from "../../assets/images/brain-studio-card-img-05.png";
-import brainStudioCardImg06 from "../../assets/images/brain-studio-card-img-06.png";
 import thinkingIcon from "../../assets/images/icons/thinking-icon.svg";
 import LineStroke12 from "../decorativeElements/LineStroke12";
 
@@ -218,7 +212,7 @@ const CaseStudyDetailSection = () => {
         <div className="grid w-full grid-cols-2 gap-[3.3rem]">
           <div className="h-[43.9rem] w-full overflow-hidden rounded-[2rem]">
             <Image
-              src={brainStudioCardImg01}
+              src="/images/brain-studio-card-img-01.png"
               alt="Case Study Image"
               width={585}
               height={439}
@@ -228,7 +222,7 @@ const CaseStudyDetailSection = () => {
 
           <div className="h-[43.9rem] w-full overflow-hidden rounded-[2rem]">
             <Image
-              src={brainStudioCardImg02}
+              src="/images/brain-studio-card-img-02.png"
               alt="Case Study Image"
               width={585}
               height={439}
@@ -239,7 +233,7 @@ const CaseStudyDetailSection = () => {
 
         <div className="mt-[3.3rem] mb-[8rem] h-[61.2rem] w-full overflow-hidden rounded-[2rem]">
           <Image
-            src={brainStudioCardImg03}
+            src="/images/brain-studio-card-img-03.png"
             alt="Case Study Image"
             width={1203}
             height={612}
@@ -249,7 +243,7 @@ const CaseStudyDetailSection = () => {
 
         <div className="h-[56.5rem] w-full overflow-hidden rounded-[2rem]">
           <Image
-            src={brainStudioCardImg04}
+            src="/images/brain-studio-card-img-04.png"
             alt="Case Study Image"
             width={1203}
             height={565}
@@ -448,7 +442,7 @@ const CaseStudyDetailSection = () => {
 
           <div className="h-[52.4rem] w-full overflow-hidden rounded-[2rem]">
             <Image
-              src={brainStudioCardImg05}
+              src="/images/brain-studio-card-img-05.png"
               alt="Case Study Image"
               width={585}
               height={524}
@@ -459,7 +453,7 @@ const CaseStudyDetailSection = () => {
 
         <div className="mt-[9rem] h-[61.2rem] w-full overflow-hidden rounded-[2rem]">
           <Image
-            src={brainStudioCardImg06}
+            src="/images/brain-studio-card-img-06.png"
             alt="Case Study Image"
             width={1203}
             height={612}

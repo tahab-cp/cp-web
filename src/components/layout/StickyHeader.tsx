@@ -1,14 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import logo from "../../assets/images/logo.svg";
 import Image from "next/image";
 import NavigationLink from "../common/NavigationLink";
 import NavigationDropdown from "../common/NavigationDropdown";
 import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import CommonBtn1 from "../common/CommonBtn1";
 import HamburgerMenu from "./HamburgerMenu";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +33,7 @@ const StickyHeader = () => {
       <div className="shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full bg-black/30 px-[2rem] py-[1rem] backdrop-blur-[10px]">
         <Link href="/" className="relative">
           <Image
-            src={logo}
+            src="/images/logo.svg"
             alt="Brand Logo"
             width={170}
             height={66}

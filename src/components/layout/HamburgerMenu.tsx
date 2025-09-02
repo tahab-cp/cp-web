@@ -4,7 +4,6 @@ import { X } from "lucide-react";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../assets/images/logo.svg";
 import HamburgerAccordion from "../common/HamburgerAccordion";
 
 // Define prop types
@@ -50,7 +49,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, setIsOpen }) => {
             className="relative overflow-hidden"
           >
             <Image
-              src={logo}
+              src="/images/logo.svg"
               alt="Brand Logo"
               width={170}
               height={66}

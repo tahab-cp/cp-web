@@ -53,7 +53,7 @@ const CaseStudiesGrid = ({
       </Link>
 
       {/* Right Content */}
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
         {/* Tags */}
         <ul className="flex flex-wrap gap-[1rem]">
           {tags.map((tag, index) => (
@@ -94,7 +94,7 @@ const CaseStudiesGrid = ({
             TECHNOLOGY USED
           </span>
 
-          <ul className="flex flex-wrap items-center gap-[3.3rem] border-y border-[#424242]/50 py-[1.8rem] md:flex-row">
+          <ul className="flex flex-wrap items-center justify-center gap-[3.3rem] border-y border-[#424242]/50 py-[1.8rem] md:flex-row lg:justify-start">
             {technologies.map((tech, index) => (
               <li key={index}>
                 <Image

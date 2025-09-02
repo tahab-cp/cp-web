@@ -6,9 +6,9 @@ import WaveHand from "./WaveHand";
 
 const CtaSection1 = () => {
   return (
-    <div className="cta-card relative w-full overflow-hidden rounded-[5rem] p-[2rem] backdrop-blur-[10px] md:p-0 md:pt-[7.1rem] md:pr-[11.4rem] md:pb-[7.2rem] md:pl-[8.3rem]">
-      <div className="relative z-[1] flex flex-col items-center gap-[5.3rem] lg:flex-row">
-        <div className="flex flex-col items-start">
+    <div className="cta-card relative w-full overflow-hidden rounded-[5rem] px-[3rem] py-[4rem] backdrop-blur-[10px] md:px-[6rem]">
+      <div className="relative z-[1] flex flex-col items-center justify-between gap-[5.3rem] lg:flex-row">
+        <div className="flex w-full flex-col items-center text-center lg:w-auto lg:items-start lg:text-left">
           <SectionLabel text="Contact us Today" />
 
           <h3 className="mt-[2rem] mb-[3rem] max-w-[50rem] text-[3rem] leading-[4rem] font-semibold tracking-[-0.02em] text-white md:text-[4rem] md:leading-[5rem] xl:max-w-[64.5rem] xl:text-[4.8rem] xl:leading-[6rem]">
@@ -20,7 +20,7 @@ const CtaSection1 = () => {
             real results.
           </p>
 
-          <div className="mt-[4rem] flex flex-col items-start gap-[.531rem] md:flex-row md:items-center">
+          <div className="mt-[4rem] flex flex-col items-center gap-[.531rem] md:flex-row">
             <Link
               href=""
               className="relative inline-flex h-[6.4rem] items-center gap-[1rem] px-[3rem] py-[1.223rem] text-[1.6rem] font-semibold text-white md:text-[2rem]"

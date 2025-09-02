@@ -102,9 +102,9 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={aboutRef} className="relative py-[10rem]">
+    <section ref={aboutRef} className="relative py-[5rem] xl:py-[10rem]">
       {/* Bg Element */}
-      <div className="absolute inset-0 z-[0] hidden overflow-hidden md:block">
+      <div className="absolute inset-0 z-[0] hidden overflow-hidden xl:block">
         <CLetter className="absolute top-[3.1rem] right-[-18.341rem]" />
       </div>
 
@@ -113,8 +113,8 @@ const AboutSection = () => {
         <LineStroke02 className="absolute top-[90rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[120.3rem] flex-col px-[2rem] xl:px-[0rem]">
-        <h5 className="mt-[3rem] mb-[2rem] text-[1.8rem] leading-[2.8rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.4rem] md:leading-[4rem] lg:text-[3rem] lg:leading-[4.4rem] xl:text-[3.4rem] xl:leading-[4.8rem]">
+      <div className="relative z-10 mx-auto flex w-full max-w-[120rem] flex-col items-center px-[3rem] text-center xl:items-start xl:px-[0rem] xl:text-left">
+        <h5 className="mt-[3rem] mb-[1rem] text-[2rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-[#333333] md:mb-[2rem] md:text-[3rem] md:leading-[4.4rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
           <div className="overflow-hidden">
             <div className="about-desc">
               <span className="text-[#EE8D00]">Creative Pixels</span> is an
@@ -146,7 +146,7 @@ const AboutSection = () => {
           </div>
         </h5>
 
-        <h5 className="mb-[2rem] overflow-hidden text-[1.8rem] leading-[2.8rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.4rem] md:leading-[4rem] lg:text-[3rem] lg:leading-[4.4rem] xl:text-[3.4rem] xl:leading-[4.8rem]">
+        <h5 className="mb-[2rem] text-[2rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[3rem] md:leading-[4.4rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
           <div className="about-desc">We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
         </h5>
 
@@ -155,12 +155,12 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-[5rem] flex max-w-[135rem] flex-col gap-[1.8rem] px-[2rem] md:mt-[10rem] xl:flex-row xl:px-[0rem]">
+      <div className="relative z-10 mx-auto mt-[5rem] flex max-w-[135rem] flex-col gap-[1.8rem] px-[3rem] lg:mt-[10rem] xl:flex-row xl:px-[0rem]">
         <div className="about-card-gradient relative overflow-hidden px-[2rem] py-[3rem] xl:w-[60%]">
           <div className="absolute top-[-11.9rem] left-[-10.5rem] z-[0] size-[30rem] bg-[#1534B699] blur-[100px]" />
           <div className="absolute right-0 bottom-[-26.656rem] z-[0] size-[30rem] bg-[#DFDFDF99] blur-[100px]" />
 
-          <div className="relative z-[1] flex flex-col items-start gap-[2rem]">
+          <div className="relative z-[1] flex flex-col items-center gap-[2rem] xl:items-start">
             <button
               onClick={handleTogglePlay}
               className="inline-flex h-[4.4rem] cursor-pointer items-center justify-center gap-[1.2rem] rounded-[.8rem] border-[0.5px] border-dashed border-white px-[2rem] py-[.6rem] text-[1.6rem] leading-[2.4rem] font-medium text-white"
@@ -195,7 +195,7 @@ const AboutSection = () => {
           {aboutCardData.map((item, idx) => (
             <div
               key={idx}
-              className="about-card flex flex-col justify-between gap-[2rem] transition-colors duration-300"
+              className="about-card flex flex-col items-center justify-between gap-[2rem] transition-colors duration-300 xl:items-start"
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = item.hoverColor)
               }
@@ -209,7 +209,7 @@ const AboutSection = () => {
                 className="size-[3rem] md:size-[4rem]"
               />
 
-              <h4 className="text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[2.5rem] md:leading-[3.5rem]">
+              <h4 className="text-center text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[2.5rem] md:leading-[3.5rem] xl:text-left">
                 {item.title}
               </h4>
             </div>

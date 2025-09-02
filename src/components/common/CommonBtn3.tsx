@@ -19,7 +19,7 @@ const CommonBtn3 = ({
     <Link href={href} className="group inline-flex cursor-pointer items-center">
       {/* Text */}
       <div
-        className="relative z-[2] h-[5rem] min-w-[18rem] overflow-hidden rounded-[6rem] px-[2rem] text-[1.6rem] font-semibold md:px-[3rem] md:text-[2rem]"
+        className="relative z-[2] h-[4rem] overflow-hidden rounded-[6rem] px-[2rem] text-[1.6rem] font-semibold md:h-[5rem] md:px-[3rem] md:text-[2rem]"
         style={{ background: bgColor, color: textColor }}
       >
         <span className="flex size-full items-center justify-center transition-all duration-200 group-hover:-translate-y-full">
@@ -51,7 +51,7 @@ const CommonBtn3 = ({
 
         {/* Arrow Icon */}
         <div
-          className="relative size-[5rem] overflow-hidden rounded-full"
+          className="relative size-[4rem] overflow-hidden rounded-full md:size-[5rem]"
           style={{ background: bgColor }}
         >
           <i className="absolute top-0 left-0 flex size-full items-center justify-center transition-all duration-200 group-hover:left-full">

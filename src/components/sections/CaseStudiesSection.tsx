@@ -1,11 +1,9 @@
 "use client";
 
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
-import CtaSection1 from "../common/CtaSection1";
 import SectionDescription from "../common/SectionDescription";
 import SectionTitle from "../common/SectionTitle";
 import { caseStudiesData } from "@/constants/caseStudiesSection";
-import LineStroke04 from "../decorativeElements/LineStroke04";
 import gsap from "gsap";
 import SectionLabel2 from "../common/SectionLabel2";
 import { useRef } from "react";
@@ -19,7 +17,6 @@ const CaseStudiesSection = () => {
     if (!caseStudies) return;
 
     const caseStudiesLabel = caseStudies.querySelector(".case-studies-label");
-    const caseStudiesCards = gsap.utils.toArray<HTMLElement>(".case-card");
 
     // Label wobble
     gsap.to(caseStudiesLabel, {
@@ -34,7 +31,7 @@ const CaseStudiesSection = () => {
   return (
     <section
       ref={caseStudiesRef}
-      className="relative px-[2rem] pt-[10rem] xl:px-[0rem]"
+      className="relative px-[3rem] pt-[10rem] xl:px-[0rem]"
     >
       <div className="relative mx-auto max-w-[120rem]">
         {/* Header */}
@@ -63,7 +60,7 @@ const CaseStudiesSection = () => {
           {caseStudiesData.map((caseStudy, index) => (
             <div
               key={index}
-              className="sticky top-[28rem]" // 👈 adjust this to your header height
+              className="sticky top-[35rem] xl:top-[28rem]" // 👈 adjust this to your header height
               style={{ zIndex: index + 1 }}
             >
               <CaseStudiesGrid
