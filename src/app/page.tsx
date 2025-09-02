@@ -1,5 +1,7 @@
 "use client";
 
+import CtaSection1 from "@/components/common/CtaSection1";
+import LineStroke04 from "@/components/decorativeElements/LineStroke04";
 import AboutSection from "@/components/sections/AboutSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -14,6 +16,16 @@ const HomePage = () => {
       <AboutSection />
       <WhatWeOfferSection />
       <CaseStudiesSection />
+      <section className="relative py-[10rem]">
+        {/* Decorative stroke line */}
+        <div className="absolute inset-0 z-[0]">
+          <LineStroke04 className="absolute bottom-0 left-1/2 -translate-x-1/2" />
+        </div>
+
+        <div className="mx-auto max-w-[120rem]">
+          <CtaSection1 />
+        </div>
+      </section>
       <TestimonialSection />
       <ContactSection />
     </main>
