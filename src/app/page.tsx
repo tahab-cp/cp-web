@@ -16,7 +16,7 @@ const HomePage = () => {
       <AboutSection />
       <WhatWeOfferSection />
       <CaseStudiesSection />
-      <section className="relative py-[10rem]">
+      <section className="relative px-[2rem] py-[10rem] xl:px-[0rem]">
         {/* Decorative stroke line */}
         <div className="absolute inset-0 z-[0]">
           <LineStroke04 className="absolute bottom-0 left-1/2 -translate-x-1/2" />
