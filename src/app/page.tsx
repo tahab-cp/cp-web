@@ -18,8 +18,8 @@ const HomePage = () => {
       <CaseStudiesSection />
       <section className="relative px-[2rem] py-[10rem] xl:px-[0rem]">
         {/* Decorative stroke line */}
-        <div className="absolute inset-0 z-[0] overflow-hidden">
-          <LineStroke04 className="absolute bottom-0 left-1/2 -translate-x-1/2" />
+        <div className="absolute inset-0 z-[0]">
+          <LineStroke04 className="absolute bottom-0 left-1/2 w-full -translate-x-1/2" />
         </div>
 
         <div className="mx-auto max-w-[120rem]">
