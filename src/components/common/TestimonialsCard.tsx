@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 type TestimonialsCardProps = {
-  ratingImage?: StaticImageData; // stars image
+  ratingImage?: string; // stars image
   ratingAlt?: string;
   review: string;
   authorImage: string;
