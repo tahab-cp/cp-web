@@ -1,26 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const CommonBtn1 = () => {
-  const pathname = usePathname();
-
   return (
-    <Link href="" className="group inline-flex items-center">
+    <Link href="" className="common-btn-1-parent inline-flex items-center">
       <div className={`common-btn-1 overflow-hidden whitespace-nowrap`}>
         {/* Gradient Layer */}
         <div className="gradient-layer" />
 
+        {/* Fill Layer (background animation) */}
+        <div className="fill-layer" />
+
         {/* Text Layer */}
-        <div className="size-full transition-all duration-200 group-hover:-translate-y-full">
-          <span className="flex size-full items-center justify-center">
-            Book a Call
-          </span>
-          <span className="flex size-full items-center justify-center">
-            Book a Call
-          </span>
-        </div>
+        <span className="relative z-10">Book a Call</span>
       </div>
 
       <i className="relative z-[0] mx-[-.3rem]">
@@ -42,22 +35,10 @@ const CommonBtn1 = () => {
         {/* Gradient Layer */}
         <div className="gradient-layer" />
 
-        <i className="absolute top-0 left-0 flex size-full items-center justify-center transition-all duration-200 group-hover:left-full">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14 6.36364L14 7.63636L13.3636 7.63636L13.3636 8.27273L12.7273 8.27273L12.7273 8.90909L12.0909 8.90909L12.0909 9.54545L11.4545 9.54545L11.4545 10.1818L10.8182 10.1818L10.8182 10.8182L10.1818 10.8182L10.1818 11.4545L9.54545 11.4545L9.54545 12.0909L8.90909 12.0909L8.90909 12.7273L8.27273 12.7273L8.27273 13.3636L7.63636 13.3636L7.63636 14L7 14L7 13.3636L6.36364 13.3636L6.36364 12.7273L5.72727 12.7273L5.72727 12.0909L6.36364 12.0909L6.36364 11.4545L7 11.4545L7 10.8182L7.63636 10.8182L7.63636 10.1818L8.27273 10.1818L8.27273 9.54545L8.90909 9.54545L8.90909 8.90909L9.54545 8.90909L9.54545 8.27273L-3.61612e-07 8.27273L-2.50347e-07 5.72727L9.54545 5.72727L9.54545 5.09091L8.90909 5.09091L8.90909 4.45455L8.27273 4.45455L8.27273 3.81818L7.63636 3.81818L7.63636 3.18182L7 3.18182L7 2.54545L6.36364 2.54545L6.36364 1.90909L5.72727 1.90909L5.72727 1.27273L6.36364 1.27273L6.36364 0.636363L7 0.636363L7 -3.0598e-07L7.63636 -2.78163e-07L7.63636 0.636363L8.27273 0.636363L8.27273 1.27273L8.90909 1.27273L8.90909 1.90909L9.54545 1.90909L9.54545 2.54545L10.1818 2.54545L10.1818 3.18182L10.8182 3.18182L10.8182 3.81818L11.4545 3.81818L11.4545 4.45455L12.0909 4.45455L12.0909 5.09091L12.7273 5.09091L12.7273 5.72727L13.3636 5.72727L13.3636 6.36364L14 6.36364Z"
-              fill="white"
-            />
-          </svg>
-        </i>
+        {/* Fill Layer (background animation) */}
+        <div className="fill-layer" />
 
-        <i className="absolute top-0 -left-full flex size-full items-center justify-center transition-all duration-200 group-hover:-left-0">
+        <i className="relative z-10">
           <svg
             width="14"
             height="14"

@@ -405,7 +405,7 @@ const WhatWeOfferSection = () => {
       </div>
 
       <div className="what-we-offer-cta-card px-[2rem] xl:px-[0rem]">
-        <div className="offer-cta-card mx-auto mt-[4rem] flex max-w-[120.3rem] rounded-[2rem] md:mt-[-9rem]">
+        <div className="offer-cta-card mx-auto mt-[4rem] flex max-w-[120.3rem] rounded-[2rem] xl:mt-[-9rem]">
           <div className="flex flex-col items-center justify-center gap-[2.2rem] md:flex-row">
             <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
               Need bold design or reliable code or both? You’re in the right

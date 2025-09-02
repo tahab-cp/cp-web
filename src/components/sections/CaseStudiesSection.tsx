@@ -22,7 +22,9 @@ const CaseStudiesSection = () => {
     const caseStudiesCtaCard = caseStudies.querySelector(
       ".case-studies-cta-card",
     );
+    const caseStudiesCards = gsap.utils.toArray<HTMLElement>(".case-card");
 
+    // Label wobble
     gsap.to(caseStudiesLabel, {
       rotate: 5,
       duration: 0.6,
@@ -31,6 +33,7 @@ const CaseStudiesSection = () => {
       ease: "power1.inOut",
     });
 
+    // CTA fade-in
     gsap.from(caseStudiesCtaCard, {
       opacity: 0,
       duration: 0.8,
@@ -41,12 +44,35 @@ const CaseStudiesSection = () => {
         toggleActions: "play none none none",
       },
     });
+
+    // Stack effect
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".case-studies-wrapper",
+        start: "top top",
+        end: "+=" + 500 * caseStudiesCards.length, // control scroll distance
+        scrub: true,
+        pin: true,
+      },
+    });
+
+    caseStudiesCards.forEach((card, i) => {
+      if (i === 0) return; // skip first card since it's already visible
+      tl.to(
+        card,
+        {
+          opacity: 1,
+          duration: 0.5,
+        },
+        i,
+      ); // each card fades in one by one
+    });
   }, []);
 
   return (
     <section
       ref={caseStudiesRef}
-      className="relative px-[2rem] pt-[10rem] pb-[10.8rem] xl:px-[0rem]"
+      className="relative px-[2rem] pb-[10.8rem] xl:px-[0rem]"
     >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
@@ -54,8 +80,10 @@ const CaseStudiesSection = () => {
       </div>
 
       <div className="relative z-[1] mx-auto max-w-[120.3rem]">
-        <div className="">
-          <div className="flex flex-col items-center gap-[2rem] text-center">
+        {/* Wrapper */}
+        <div className="case-studies-wrapper">
+          {/* Header */}
+          <div className="flex flex-col items-center gap-[2rem] pt-[5rem] pb-[3rem] text-center">
             <div className="rotate-[-2deg]">
               <div className="case-studies-label">
                 <SectionLabel2 text="Case Studies" />
@@ -75,12 +103,21 @@ const CaseStudiesSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[5rem] pt-[5.1rem] pb-[9rem]">
+          {/* Cards */}
+          <div className="relative h-[160vh] md:h-[150vh] lg:h-[100vh] xl:h-[80vh]">
             {caseStudiesData.map((caseStudy, index) => (
-              <div key={index} className="stack-card">
+              <div
+                key={index}
+                className={`case-card absolute inset-0 ${
+                  index === 0 ? "opacity-100" : "opacity-0"
+                }`}
+                style={{ zIndex: index + 1 }}
+              >
                 <CaseStudiesGrid
                   {...caseStudy}
-                  className={` ${index % 2 === 1 ? "lg:case-studies-grid-reverse" : ""}`}
+                  className={`${
+                    index % 2 === 1 ? "lg:case-studies-grid-reverse" : ""
+                  }`}
                 />
               </div>
             ))}

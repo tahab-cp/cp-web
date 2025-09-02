@@ -5,13 +5,27 @@ import { aboutCardData } from "@/constants/aboutSection";
 import LineStroke02 from "../decorativeElements/LineStroke02";
 import CommonBtn3 from "../common/CommonBtn3";
 import CLetter from "../decorativeElements/CLetter";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 
 const AboutSection = () => {
   const aboutRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const handleTogglePlay = () => {
+    if (!videoRef.current) return;
+
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+
+    setIsPlaying(!isPlaying);
+  };
 
   useGSAP(() => {
     const about = aboutRef.current;
@@ -141,13 +155,16 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-[5rem] flex max-w-[135rem] flex-col xl:flex-row gap-[1.8rem] px-[2rem] md:mt-[10rem] xl:px-[0rem]">
-        <div className="about-card-gradient relative xl:w-[60%] overflow-hidden px-[2rem] py-[3rem]">
+      <div className="relative z-10 mx-auto mt-[5rem] flex max-w-[135rem] flex-col gap-[1.8rem] px-[2rem] md:mt-[10rem] xl:flex-row xl:px-[0rem]">
+        <div className="about-card-gradient relative overflow-hidden px-[2rem] py-[3rem] xl:w-[60%]">
           <div className="absolute top-[-11.9rem] left-[-10.5rem] z-[0] size-[30rem] bg-[#1534B699] blur-[100px]" />
           <div className="absolute right-0 bottom-[-26.656rem] z-[0] size-[30rem] bg-[#DFDFDF99] blur-[100px]" />
 
           <div className="relative z-[1] flex flex-col items-start gap-[2rem]">
-            <button className="inline-flex h-[4.4rem] cursor-pointer items-center justify-center gap-[1.2rem] rounded-[.8rem] border-[0.5px] border-dashed border-white px-[2rem] py-[.6rem] text-[1.6rem] leading-[2.4rem] font-medium text-white">
+            <button
+              onClick={handleTogglePlay}
+              className="inline-flex h-[4.4rem] cursor-pointer items-center justify-center gap-[1.2rem] rounded-[.8rem] border-[0.5px] border-dashed border-white px-[2rem] py-[.6rem] text-[1.6rem] leading-[2.4rem] font-medium text-white"
+            >
               <Image
                 src="/images/about-play-btn-img.svg"
                 alt="Avatar"
@@ -158,8 +175,15 @@ const AboutSection = () => {
               <span>Hear From Founder</span>
             </button>
 
-            <div className="h-[30rem] md:h-[50rem] xl:h-[40rem] w-full overflow-hidden rounded-[2rem] ">
-              <video loop muted playsInline autoPlay className="size-full object-cover">
+            <div className="h-[30rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] xl:h-[40rem]">
+              <video
+                ref={videoRef}
+                loop
+                muted
+                playsInline
+                autoPlay
+                className="size-full object-cover"
+              >
                 <source src="/videos/about-video.mp4" type="video/mp4" />
                 Your browser does not support the video.
               </video>
@@ -167,7 +191,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="grid xl:w-[40%] grid-cols-1 gap-[2rem] md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-[2rem] md:grid-cols-2 xl:w-[40%]">
           {aboutCardData.map((item, idx) => (
             <div
               key={idx}
