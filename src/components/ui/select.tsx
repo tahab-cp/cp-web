@@ -5,7 +5,6 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import arrowDownDark from "../../assets/images/icons/arrow-down-dark.svg";
 
 function Select({
   ...props
@@ -47,7 +46,7 @@ function SelectTrigger({
       <SelectPrimitive.Icon asChild>
         <i className="inline-flex size-[1.6rem] items-center justify-center">
           <Image
-            src={arrowDownDark}
+            src="/images/icons/arrow-down-dark.svg"
             alt="Arrow Down Icon"
             width={16}
             height={16}

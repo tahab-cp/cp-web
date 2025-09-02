@@ -1,13 +1,17 @@
 import Image from "next/image";
 import SectionLabel from "./SectionLabel";
-import contactArrow from "../../assets/images/icons/contact-arrow.svg";
 import CommonBtn3 from "./CommonBtn3";
 
 const CtaSection2 = () => {
   return (
     <div className="cta-card relative w-full rounded-[5rem] px-[3rem] py-[4rem] backdrop-blur-[10px] md:px-[6rem] lg:py-[8rem]">
       <i className="absolute top-[-4.3rem] right-0 inline-flex size-[8rem] items-center justify-center">
-        <Image src={contactArrow} alt="Contact Arrow" width={80} height={80} />
+        <Image
+          src="/images/icons/contact-arrow.svg"
+          alt="Contact Arrow"
+          width={80}
+          height={80}
+        />
       </i>
 
       <div className="relative z-[1] flex flex-col items-center gap-[8rem] text-center lg:flex-row lg:items-start lg:gap-[3.4rem] lg:text-left">

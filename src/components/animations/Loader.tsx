@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
-import cpLogoIcon from "../../assets/images/cp-logo-icon.png";
 
 const Loader = ({ onComplete }: { onComplete: () => void }) => {
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -55,7 +54,7 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
         className="flex items-center justify-center gap-[1rem]"
       >
         <Image
-          src={cpLogoIcon}
+          src="/images/cp-logo-icon.png"
           width={66}
           height={66}
           alt="Logo icon"

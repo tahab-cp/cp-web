@@ -1,10 +1,6 @@
 import Image from "next/image";
 import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
-import phoneYellowIcon from "../../assets/images/icons/phone-yellow-icon.svg";
-import locationPinkIcon from "../../assets/images/icons/location-pink-icon.svg";
-import breifcaseRedIcon from "../../assets/images/icons/breifcase-red-icon.svg";
-import arrowRightDark from "../../assets/images/icons/arrow-right-dark.svg";
 import Link from "next/link";
 import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";
@@ -55,7 +51,7 @@ const ContactUsSection = () => {
             <h3 className="flex items-center gap-[1rem] text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em] text-[#FFC300]">
               <div className="relative size-[1.8rem]">
                 <Image
-                  src={phoneYellowIcon}
+                  src="/images/icons/phone-yellow-icon.svg"
                   alt="Phone Icon"
                   width={18}
                   height={18}
@@ -75,7 +71,7 @@ const ContactUsSection = () => {
                 </div>
 
                 <Image
-                  src={arrowRightDark}
+                  src="/images/icons/arrow-right-dark.svg"
                   alt="Arrow Right Icon"
                   width={14.14}
                   height={14.14}
@@ -93,7 +89,7 @@ const ContactUsSection = () => {
                 </div>
 
                 <Image
-                  src={arrowRightDark}
+                  src="/images/icons/arrow-right-dark.svg"
                   alt="Arrow Right Icon"
                   width={14.14}
                   height={14.14}
@@ -108,7 +104,7 @@ const ContactUsSection = () => {
             <h3 className="flex items-center gap-[1rem] text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em] text-[#FF37B3]">
               <div className="relative h-[2.041rem] w-[1.6rem]">
                 <Image
-                  src={locationPinkIcon}
+                  src="/images/icons/location-pink-icon.svg"
                   alt="Phone Icon"
                   width={16}
                   height={20.41}
@@ -125,7 +121,7 @@ const ContactUsSection = () => {
                 </p>
 
                 <Image
-                  src={arrowRightDark}
+                  src="/images/icons/arrow-right-dark.svg"
                   alt="Arrow Right Icon"
                   width={14.14}
                   height={14.14}
@@ -140,7 +136,7 @@ const ContactUsSection = () => {
             <h3 className="flex items-center gap-[1rem] text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em] text-[#F14A58]">
               <div className="relative h-[2rem] w-[2.4rem]">
                 <Image
-                  src={breifcaseRedIcon}
+                  src="/images/icons/breifcase-red-icon.svg"
                   alt="Phone Icon"
                   width={24}
                   height={20}

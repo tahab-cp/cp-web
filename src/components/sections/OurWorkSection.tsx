@@ -4,8 +4,6 @@ import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import Image from "next/image";
-import subtractDark from "../../assets/images/icons/subtract-dark.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 
 const OurWorkSection = () => {
   return (
@@ -123,7 +121,7 @@ const OurWorkSection = () => {
           </span>
           <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
             <Image
-              src={subtractDark}
+              src="/images/icons/subtract-dark.svg"
               alt="Subtract Light Icon"
               width={18}
               height={18}
@@ -131,7 +129,7 @@ const OurWorkSection = () => {
           </i>
           <i className="inline-flex size-[5.6rem] rotate-90 items-center justify-center rounded-full border border-[#141414] bg-[#141414]">
             <Image
-              src={arrowRight}
+              src="/images/icons/arrow-right.svg"
               alt="Arrow Right Icon"
               width={18}
               height={18}

@@ -1,12 +1,3 @@
-import teamImg01 from "../assets/images/team-img-01.png";
-import teamImg02 from "../assets/images/team-img-02.png";
-import teamImg03 from "../assets/images/team-img-03.png";
-import teamImg04 from "../assets/images/team-img-04.png";
-import teamImg05 from "../assets/images/team-img-05.png";
-import teamImg06 from "../assets/images/team-img-06.png";
-import teamAvatar01 from "../assets/images/team-avatar-01.svg";
-import linkedinBlueIcon from "../assets/images/icons/linkedin-blue-icon.svg";
-
 export const teamData = [
   {
     image: {
@@ -17,12 +8,12 @@ export const teamData = [
     name: "Hassan Iqbal",
     role: "Managing Director",
     hover: {
-      avatar: teamAvatar01,
+      avatar: "/images/team-avatar-01.svg",
       name: "Ubaid Ur Rehman",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
-        icon: linkedinBlueIcon,
+        icon: "/images/icons/linkedin-blue-icon.svg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit velit vitae nisl",
@@ -37,12 +28,12 @@ export const teamData = [
     name: "Hassan Iqbal",
     role: "Managing Director",
     hover: {
-      avatar: teamAvatar01,
+      avatar: "/images/team-avatar-01.svg",
       name: "Ubaid Ur Rehman",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
-        icon: linkedinBlueIcon,
+        icon: "/images/icons/linkedin-blue-icon.svg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit velit vitae nisl",
@@ -57,12 +48,12 @@ export const teamData = [
     name: "Afzal Ahmed",
     role: "Senior User Interface Designer",
     hover: {
-      avatar: teamAvatar01,
+      avatar: "/images/team-avatar-01.svg",
       name: "Ubaid Ur Rehman",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
-        icon: linkedinBlueIcon,
+        icon: "/images/icons/linkedin-blue-icon.svg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit velit vitae nisl",
@@ -77,12 +68,12 @@ export const teamData = [
     name: "Ubaid Ur Rehman",
     role: "Senior User Interface Designer",
     hover: {
-      avatar: teamAvatar01,
+      avatar: "/images/team-avatar-01.svg",
       name: "Ubaid Ur Rehman",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
-        icon: linkedinBlueIcon,
+        icon: "/images/icons/linkedin-blue-icon.svg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit velit vitae nisl",
@@ -97,12 +88,12 @@ export const teamData = [
     name: "Sana Mir",
     role: "Frontend Developer",
     hover: {
-      avatar: teamAvatar01,
+      avatar: "/images/team-avatar-01.svg",
       name: "Ubaid Ur Rehman",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
-        icon: linkedinBlueIcon,
+        icon: "/images/icons/linkedin-blue-icon.svg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit velit vitae nisl",
@@ -117,12 +108,12 @@ export const teamData = [
     name: "Imran M.",
     role: "Backend Developer",
     hover: {
-      avatar: teamAvatar01,
+      avatar: "/images/team-avatar-01.svg",
       name: "Ubaid Ur Rehman",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
-        icon: linkedinBlueIcon,
+        icon: "/images/icons/linkedin-blue-icon.svg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit velit vitae nisl",

@@ -2,8 +2,6 @@ import { whoWeAreCardData } from "@/constants/whoWeAreSection";
 import SectionDescription from "../common/SectionDescription";
 import SectionLabel from "../common/SectionLabel";
 import Image from "next/image";
-import subtractPink from "../../assets/images/icons/subtract-pink.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
 import LineStroke13 from "../decorativeElements/LineStroke13";
 
@@ -96,7 +94,7 @@ const WhoWeAreSection = () => {
             </span>
             <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
               <Image
-                src={subtractPink}
+                src="/images/icons/subtract-pink.svg"
                 alt="Subtract Light Icon"
                 width={18}
                 height={18}
@@ -104,7 +102,7 @@ const WhoWeAreSection = () => {
             </i>
             <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
               <Image
-                src={arrowRight}
+                src="/images/icons/arrow-right.svg"
                 alt="Arrow Right Icon"
                 width={14}
                 height={14}

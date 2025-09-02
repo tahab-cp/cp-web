@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import subtractDark from "../../assets/images/icons/subtract-dark.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
 import gsap from "gsap";
 
@@ -121,7 +119,7 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
 
               <i className="-mx-[.3rem] inline-flex size-[1.368rem] items-center justify-center">
                 <Image
-                  src={subtractDark}
+                  src="/images/icons/subtract-dark.svg"
                   alt="Subtract Light Icon"
                   width={13.68}
                   height={13.68}
@@ -130,7 +128,7 @@ const LogoPopup: React.FC<LogoPopupProps> = ({
 
               <i className="border-text-primary bg-text-primary inline-flex size-[4.4rem] items-center justify-center rounded-full border">
                 <Image
-                  src={arrowRight}
+                  src="/images/icons/arrow-right.svg"
                   alt="Arrow Right Icon"
                   width={13.68}
                   height={13.68}

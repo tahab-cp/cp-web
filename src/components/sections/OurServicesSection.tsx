@@ -1,25 +1,12 @@
 import Image from "next/image";
 import SectionLabel from "../common/SectionLabel";
 import OurServiesMarquee from "../common/OurServicesMarquee";
-// import ourServicesBg from "../../assets/images/artistic-gradient-bg.png";
-import clickArrowYellow from "../../assets/images/icons/click-arrow-yellow.svg";
-import clickArrowPink from "../../assets/images/icons/click-arrow-pink.svg";
-import clickArrowGreen from "../../assets/images/icons/click-arrow-green.svg";
-import designBrandingImg from "../../assets/images/design-branding-img.png";
 import Link from "next/link";
 import {
   offerSectionDesignData,
   offerSectionMaintenanceData,
   offerSectionWebData,
 } from "@/constants/offerSection";
-import subtractPink from "../../assets/images/icons/subtract-pink.svg";
-import subtractYellow from "../../assets/images/icons/subtract-yellow.svg";
-import subtractSeaGreen from "../../assets/images/icons/subtract-seagreen.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
-import arrowRightDark from "../../assets/images/icons/arrow-right-dark.svg";
-import websiteDevelopmentImg from "../../assets/images/website-development-img.png";
-import maintanenceGrowthImg from "../../assets/images/maintainance-growth-img.png";
-
 import CLetter from "../decorativeElements/CLetter";
 
 const OurServicesSection = () => {
@@ -88,7 +75,7 @@ const OurServicesSection = () => {
               Design and Branding{" "}
               <div className="absolute top-[-1.2rem] right-[-3.3rem] inline-flex size-[4rem] items-center justify-center">
                 <Image
-                  src={clickArrowPink}
+                  src="/images/icons/click-arrow-pink.svg"
                   alt="Click Arrow"
                   width={40}
                   height={40}
@@ -107,7 +94,7 @@ const OurServicesSection = () => {
           <div className="flex gap-[4.8rem]">
             <div className="relative h-[46.137rem] w-[57.4rem]">
               <Image
-                src={designBrandingImg}
+                src="/images/design-branding-img.png"
                 alt="Design Branding Image"
                 width={574}
                 height={461.37}
@@ -149,7 +136,7 @@ const OurServicesSection = () => {
                 </span>
                 <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
                   <Image
-                    src={subtractPink}
+                    src="/images/icons/subtract-pink.svg"
                     alt="Subtract Light Icon"
                     width={18}
                     height={18}
@@ -157,7 +144,7 @@ const OurServicesSection = () => {
                 </i>
                 <i className="inline-flex size-[5.6rem] items-center justify-center rounded-full border border-[#FF37B3] bg-[#FF37B3]">
                   <Image
-                    src={arrowRight}
+                    src="/images/icons/arrow-right.svg"
                     alt="Arrow Right Icon"
                     width={14}
                     height={14}
@@ -178,7 +165,7 @@ const OurServicesSection = () => {
               Website Development
               <div className="absolute bottom-full left-1/2 inline-flex size-[4rem] -translate-x-1/2 items-center justify-center">
                 <Image
-                  src={clickArrowYellow}
+                  src="/images/icons/click-arrow-yellow.svg"
                   alt="Click Arrow"
                   width={40}
                   height={40}
@@ -197,7 +184,7 @@ const OurServicesSection = () => {
           <div className="mt-[1rem] flex gap-[4.7rem]">
             <div className="relative h-[51.7rem] w-[59.5rem]">
               <Image
-                src={websiteDevelopmentImg}
+                src="/images/website-development-img.png"
                 alt="Website Development Image"
                 width={595}
                 height={517}
@@ -239,7 +226,7 @@ const OurServicesSection = () => {
                 </span>
                 <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
                   <Image
-                    src={subtractYellow}
+                    src="/images/icons/subtract-yellow.svg"
                     alt="Subtract Light Icon"
                     width={18}
                     height={18}
@@ -247,7 +234,7 @@ const OurServicesSection = () => {
                 </i>
                 <i className="inline-flex size-[5.6rem] items-center justify-center rounded-full border border-[#FFE400] bg-[#FFE400]">
                   <Image
-                    src={arrowRightDark}
+                    src="/images/icons/arrow-right-dark.svg"
                     alt="Arrow Right Icon"
                     width={14}
                     height={14}
@@ -287,7 +274,7 @@ const OurServicesSection = () => {
               Maintenance and Growth
               <div className="absolute top-[-2rem] right-[-2.6rem] inline-flex size-[4rem] items-center justify-center">
                 <Image
-                  src={clickArrowGreen}
+                  src="/images/icons/click-arrow-green.svg"
                   alt="Click Arrow"
                   width={40}
                   height={40}
@@ -306,7 +293,7 @@ const OurServicesSection = () => {
           <div className="mt-[3.6rem] flex gap-[4.6rem]">
             <div className="relative h-[48.318rem] w-[45.4rem]">
               <Image
-                src={maintanenceGrowthImg}
+                src="/images/maintainance-growth-img.png"
                 alt="Maintanence Growth Image"
                 width={454}
                 height={483.18}
@@ -348,7 +335,7 @@ const OurServicesSection = () => {
                 </span>
                 <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
                   <Image
-                    src={subtractSeaGreen}
+                    src="/images/icons/subtract-seagreen.svg"
                     alt="Subtract Light Icon"
                     width={18}
                     height={18}
@@ -356,7 +343,7 @@ const OurServicesSection = () => {
                 </i>
                 <i className="inline-flex size-[5.6rem] items-center justify-center rounded-full border border-[#81F2B4] bg-[#81F2B4]">
                   <Image
-                    src={arrowRightDark}
+                    src="/images/icons/arrow-right-dark.svg"
                     alt="Arrow Right Icon"
                     width={14}
                     height={14}

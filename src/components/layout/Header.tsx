@@ -10,7 +10,7 @@ import CommonBtn1 from "../common/CommonBtn1";
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const pathname = usePathname();

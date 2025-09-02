@@ -2,7 +2,6 @@
 
 import { caseStudiesData } from "@/constants/caseStudiesSection";
 import Image from "next/image";
-import contactArrow from "../../assets/images/icons/contact-arrow.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -76,7 +75,7 @@ const CaseStudiesSlider = () => {
 
                 <i className="inline-flex size-[4.9rem] rotate-45 items-center justify-center">
                   <Image
-                    src={contactArrow}
+                    src="/images/icons/contact-arrow.svg"
                     alt="Contact Arrow"
                     width={49}
                     height={49}

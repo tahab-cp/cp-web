@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import NavigationLink from "../common/NavigationLink";
 import NavigationDropdown from "../common/NavigationDropdown";
-import phoneFill from "../../assets/images/icons/phone-fill.svg";
 import CommonBtn1 from "../common/CommonBtn1";
 import HamburgerMenu from "./HamburgerMenu";
 import { Menu } from "lucide-react";
@@ -53,7 +52,7 @@ const StickyHeader = () => {
           <div className="hidden items-center gap-[1rem] overflow-hidden xl:flex">
             <i className="header-cta-btn-animate relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
-                src={phoneFill}
+                src="/images/icons/phone-fill.svg"
                 alt="Phone Fill Icon"
                 width={16}
                 height={16}

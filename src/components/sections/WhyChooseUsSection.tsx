@@ -1,8 +1,6 @@
 import Image from "next/image";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
-import subtractDark from "../../assets/images/icons/subtract-dark.svg";
-import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import Link from "next/link";
 
 const WhyChooseUsSection = () => {
@@ -40,7 +38,7 @@ const WhyChooseUsSection = () => {
             </span>
             <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
               <Image
-                src={subtractDark}
+                src="/images/icons/subtract-dark.svg"
                 alt="Subtract Light Icon"
                 width={18}
                 height={18}
@@ -48,7 +46,7 @@ const WhyChooseUsSection = () => {
             </i>
             <i className="inline-flex size-[5.6rem] items-center justify-center rounded-full border border-[#141414] bg-[#141414]">
               <Image
-                src={arrowRight}
+                src="/images/icons/arrow-right.svg"
                 alt="Arrow Right Icon"
                 width={14}
                 height={14}

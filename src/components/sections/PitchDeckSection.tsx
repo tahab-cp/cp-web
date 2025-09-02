@@ -2,9 +2,7 @@ import Image from "next/image";
 import PitchDeckInput from "../common/PitchDeckInput";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
-import mailIcon from "../../assets/images/icons/filled-mail-icon.svg";
 import { pitchDeckBrandData } from "@/constants/pitchDeckSection";
-import pitchDeckPhoneElement from "../../assets/images/pitch-deck-phone-element.png";
 import Link from "next/link";
 
 const PitchDeckSection = () => {
@@ -40,7 +38,12 @@ const PitchDeckSection = () => {
               type="submit"
               className="inline-flex h-[6.2rem] min-w-[6.2rem] cursor-pointer items-center justify-center rounded-[1.6rem] bg-black/15"
             >
-              <Image src={mailIcon} alt="Mail Icon" width={24} height={16} />
+              <Image
+                src="/images/icons/filled-mail-icon.svg"
+                alt="Mail Icon"
+                width={24}
+                height={16}
+              />
             </button>
           </form>
         </div>
@@ -67,7 +70,7 @@ const PitchDeckSection = () => {
 
       <div className="pointer-events-none absolute right-[18rem] bottom-0 hidden size-[45rem] select-none lg:block xl:right-[24.3rem] xl:size-[58.2rem]">
         <Image
-          src={pitchDeckPhoneElement}
+          src="/images/pitch-deck-phone-element.png"
           alt="Pitch Deck Phone Element"
           height={582}
           width={583}

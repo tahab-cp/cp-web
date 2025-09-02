@@ -21,7 +21,7 @@ const HeroSection = () => {
       type: "lines",
     });
     const heroDescSplit = new SplitText(".hero-desc", {
-      type: "chars, words",
+      type: "lines",
     });
     const heroCtaBtn = hero.querySelector(".hero-cta-btn");
     const heroLogoTitle = hero.querySelector(".hero-logo-title");
@@ -53,11 +53,11 @@ const HeroSection = () => {
       ease: "power2.out",
     });
 
-    tl.from(heroDescSplit.chars, {
+    tl.from(heroDescSplit.lines, {
       y: 50,
       opacity: 0,
       duration: 0.6,
-      stagger: 0.03,
+      stagger: 0.3,
       ease: "power2.out",
     });
 
