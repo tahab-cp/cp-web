@@ -10,7 +10,7 @@ import linkedinBlueIcon from "../assets/images/icons/linkedin-blue-icon.svg";
 export const teamData = [
   {
     image: {
-      src: teamImg01,
+      src: "/images/team-img-01.avif",
       width: 309,
       height: 376,
     },
@@ -30,7 +30,7 @@ export const teamData = [
   },
   {
     image: {
-      src: teamImg02,
+      src: "/images/team-img-02.avif",
       width: 309,
       height: 401,
     },
@@ -50,7 +50,7 @@ export const teamData = [
   },
   {
     image: {
-      src: teamImg03,
+      src: "/images/team-img-03.avif",
       width: 309,
       height: 360,
     },
@@ -70,7 +70,7 @@ export const teamData = [
   },
   {
     image: {
-      src: teamImg04,
+      src: "/images/team-img-04.avif",
       width: 309,
       height: 357,
     },
@@ -90,7 +90,7 @@ export const teamData = [
   },
   {
     image: {
-      src: teamImg05,
+      src: "/images/team-img-05.avif",
       width: 309,
       height: 356,
     },
@@ -110,7 +110,7 @@ export const teamData = [
   },
   {
     image: {
-      src: teamImg06,
+      src: "/images/team-img-06.avif",
       width: 309,
       height: 356,
     },

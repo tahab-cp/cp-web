@@ -1,5 +1,4 @@
 import Image from "next/image";
-import whyChooseUsBg from "../../assets/images/why-choose-us-section-bg.png";
 import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import subtractDark from "../../assets/images/icons/subtract-dark.svg";
@@ -10,7 +9,7 @@ const WhyChooseUsSection = () => {
   return (
     <section className="relative px-[2rem] py-[10rem] xl:px-[0rem]">
       <Image
-        src={whyChooseUsBg}
+        src="/images/why-choose-us-gradient-bg.webp"
         alt="Why Choose Us Background"
         fill
         className="object-cover object-center"

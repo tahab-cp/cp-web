@@ -19,9 +19,7 @@ import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import arrowRightDark from "../../assets/images/icons/arrow-right-dark.svg";
 import websiteDevelopmentImg from "../../assets/images/website-development-img.png";
 import maintanenceGrowthImg from "../../assets/images/maintainance-growth-img.png";
-import bgLine from "../../assets/images/line-stroke-08.svg";
-import bgLine2 from "../../assets/images/line-stroke-02.svg";
-import bgLine3 from "../../assets/images/line-stroke-09.svg";
+
 import CLetter from "../decorativeElements/CLetter";
 
 const OurServicesSection = () => {
@@ -33,7 +31,7 @@ const OurServicesSection = () => {
       </div>
 
       {/* Decorative stroke line */}
-      <div className="absolute inset-0 z-[0]">
+      {/* <div className="absolute inset-0 z-[0]">
         <Image
           src={bgLine}
           alt="Background line"
@@ -42,7 +40,7 @@ const OurServicesSection = () => {
           className="absolute top-[15.4rem] left-1/2 -translate-x-1/2 opacity-10"
           priority
         />
-      </div>
+      </div> */}
 
       <div className="relative z-[1] mx-auto flex max-w-[120.3rem] flex-col items-start gap-[2rem]">
         <SectionLabel
@@ -73,7 +71,7 @@ const OurServicesSection = () => {
           /> */}
         </div>
 
-        <div className="absolute inset-0 z-[0]">
+        {/* <div className="absolute inset-0 z-[0]">
           <Image
             src={bgLine2}
             alt="Background line"
@@ -82,7 +80,7 @@ const OurServicesSection = () => {
             className="absolute top-[59rem] left-1/2 -translate-x-1/2"
             priority
           />
-        </div>
+        </div> */}
 
         <div className="relative z-[1] mx-auto flex max-w-[121.6rem] flex-col gap-[4.9rem]">
           <div className="flex flex-col gap-[2rem]">
@@ -272,7 +270,7 @@ const OurServicesSection = () => {
           /> */}
         </div>
 
-        <div className="absolute inset-0 z-[0]">
+        {/* <div className="absolute inset-0 z-[0]">
           <Image
             src={bgLine3}
             alt="Background line"
@@ -281,7 +279,7 @@ const OurServicesSection = () => {
             className="absolute -top-[23.7rem] right-[-89.294rem]"
             priority
           />
-        </div>
+        </div> */}
 
         <div className="relative z-[1] mx-auto max-w-[120.3rem]">
           <div className="flex flex-col gap-[2rem]">

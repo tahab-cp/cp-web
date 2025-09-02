@@ -17,6 +17,9 @@
 
   /* Box Shadow */
   --shadow-01: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+  /* Breakpoints */
+  --container-1xl: 43rem;
 }
 
 html {
@@ -225,8 +228,8 @@ body {
 /* Header Gradient BG */
 
 .header-gradient-bg {
-  background: url("../assets/images/header-gradient-bg.png") no-repeat center
-    center / cover;
+  background: url("/images/header-bg-gradeint.webp") no-repeat center center /
+    cover;
 }
 
 /* Hamburger Menu */
@@ -308,7 +311,7 @@ body {
 /* Hero Section */
 
 @utility hero-sec {
-  background: url("/images/hero-bg-gradient.png");
+  background: url("/images/hero-bg-gradient.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -364,7 +367,7 @@ body {
 /* Offer Section  */
 
 @utility offer-sec {
-  background: url("/images/offer-bg-gradient.png");
+  background: url("/images/offer-bg-gradient.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -832,7 +835,7 @@ body {
 /*Footer*/
 
 @utility footer {
-  background: url("/images/footer-gradient-bg.png");
+  background: url("/images/footer-gradient-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

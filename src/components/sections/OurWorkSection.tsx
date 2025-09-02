@@ -6,15 +6,12 @@ import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import Image from "next/image";
 import subtractDark from "../../assets/images/icons/subtract-dark.svg";
 import arrowRight from "../../assets/images/icons/arrow-right.svg";
-import bgLine from "../../assets/images/line-stroke-08.svg";
-import bgLine2 from "../../assets/images/line-stroke-10.svg";
-import bgLine3 from "../../assets/images/line-stroke-11.svg";
 
 const OurWorkSection = () => {
   return (
     <section className="pt-[20.6rem]">
       {/* Decorative stroke line */}
-      <div className="absolute inset-0 z-[0]">
+      {/* <div className="absolute inset-0 z-[0]">
         <Image
           src={bgLine}
           alt="Background line"
@@ -45,7 +42,7 @@ const OurWorkSection = () => {
           className="absolute top-[281.6rem] left-1/2 -translate-x-1/2 opacity-50"
           priority
         />
-      </div>
+      </div> */}
 
       <div className="relative z-[1] mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-start gap-[2rem]">
