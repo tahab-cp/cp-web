@@ -90,7 +90,7 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="hero-sec relative h-[70rem] w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] opacity-0 md:h-[79rem]"
+      className="hero-sec relative h-[70rem] w-full overflow-hidden rounded-br-[5rem] rounded-bl-[5rem] opacity-0 lg:h-[79rem]"
     >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">

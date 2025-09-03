@@ -71,7 +71,7 @@ const ContactSection = () => {
       ref={contactRef}
       className="relative px-[2rem] py-[5rem] xl:px-[0rem] xl:py-[10rem]"
     >
-      <div className="relative mx-auto flex max-w-[112.3rem] flex-col items-center">
+      <div className="relative z-[3] mx-auto flex max-w-[112.3rem] flex-col items-center">
         <div className="overflow-hidden">
           <div className="contact-title text-center">
             <SectionTitle label="Ready to Start Working With Us?" />
@@ -126,7 +126,7 @@ const ContactSection = () => {
         </div>
       </div>
 
-      <div className="relative mt-[4rem] mb-[6.7rem]">
+      <div className="relative z-[3] mt-[4rem] mb-[6.7rem]">
         <TextMarquee />
       </div>
 
