@@ -463,13 +463,12 @@ body {
   order: 1;
 }
 
-.case-studies-marquee .rfm-marquee {
-  align-items: stretch !important;
-  padding: 2rem 0rem;
-}
-
-.case-studies-marquee .rfm-initial-child-container {
-  align-items: stretch !important;
+.case-studies-slider .swiper-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: auto !important;
+  padding: 2rem !important;
 }
 
 /* Testimonials Section */

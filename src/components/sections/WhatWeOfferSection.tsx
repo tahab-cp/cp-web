@@ -129,7 +129,10 @@ const WhatWeOfferSection = () => {
   }, []);
 
   return (
-    <section ref={whatWeOfferRef} className="offer-sec relative py-[8rem]">
+    <section
+      ref={whatWeOfferRef}
+      className="offer-sec relative py-[5rem] xl:py-[8rem]"
+    >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
         <LineStroke03 className="absolute top-[250rem] left-1/2 w-full -translate-x-1/2 xl:top-[180.6rem]" />
@@ -217,7 +220,7 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[1] bg-white px-[3rem] py-[6rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:py-[0rem]">
+      <div className="relative z-[1] bg-white px-[3rem] py-[5rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:py-[0rem]">
         <div className="relative mx-auto flex w-full max-w-[130rem] flex-col gap-[5rem] lg:flex-row lg:gap-[12.9rem]">
           <div className="flex flex-col gap-[4.5rem] xl:pt-[10rem]">
             <div className="flex flex-col justify-between gap-[5rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row xl:gap-[10rem]">
@@ -301,7 +304,7 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[1] mx-auto flex w-full max-w-[133rem] flex-col px-[3rem] pt-[6rem] lg:flex-row xl:px-[0rem] xl:pt-[10rem]">
+      <div className="relative z-[1] mx-auto flex w-full max-w-[133rem] flex-col px-[3rem] pt-[5rem] lg:flex-row xl:px-[0rem] xl:pt-[10rem]">
         <div className="flex flex-col items-center lg:items-start">
           <h3 className="what-we-offer-left-card-title relative max-w-[30.8rem] text-center text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem] lg:text-left">
             <span>Maintenance and Growth</span>

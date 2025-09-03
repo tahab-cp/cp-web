@@ -69,7 +69,7 @@ const ContactSection = () => {
   return (
     <section
       ref={contactRef}
-      className="relative px-[2rem] py-[10rem] xl:px-[0rem]"
+      className="relative px-[2rem] py-[5rem] xl:px-[0rem] xl:py-[10rem]"
     >
       <div className="relative mx-auto flex max-w-[112.3rem] flex-col items-center">
         <div className="overflow-hidden">

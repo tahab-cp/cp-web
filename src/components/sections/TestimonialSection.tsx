@@ -9,6 +9,7 @@ import gsap from "gsap";
 import SectionLabel2 from "../common/SectionLabel2";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import TestimonialsMarquee from "../common/TestimonialsMarquee";
 
 const TestimonialSection = () => {
   const testimonialsRef = useRef<HTMLElement>(null);
@@ -75,14 +76,14 @@ const TestimonialSection = () => {
   return (
     <section
       ref={testimonialsRef}
-      className="testimonials-sec relative z-[1] px-[3rem] py-[6rem] lg:py-[8rem] xl:px-[0rem]"
+      className="testimonials-sec relative z-[1] py-[5rem] xl:py-[8rem]"
     >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
         <LineStroke05 className="absolute top-[118.4rem] left-1/2 w-full -translate-x-1/2 opacity-90" />
       </div>
 
-      <div className="mx-auto max-w-[120.3rem]">
+      <div className="mx-auto max-w-[120.3rem] px-[3rem] xl:px-[0rem]">
         <div className="flex flex-col items-center gap-[2rem] text-center">
           <div className="rotate-[2deg]">
             <div className="testimonials-label">
@@ -109,7 +110,7 @@ const TestimonialSection = () => {
           </div>
         </div>
 
-        <div className="mt-[5rem] grid grid-cols-1 gap-[3.3rem] lg:grid-cols-3">
+        <div className="mt-[5rem] hidden grid-cols-1 gap-[3.3rem] lg:grid-cols-3 xl:grid">
           <div className="grid gap-[3.3rem]">
             {testimonialsData.slice(0, 3).map((item, idx) => (
               <div className="testimonials-cards" key={idx}>
@@ -134,6 +135,10 @@ const TestimonialSection = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="mt-20 block xl:hidden">
+        <TestimonialsMarquee />
       </div>
     </section>
   );

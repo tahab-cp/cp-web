@@ -51,7 +51,7 @@ const AboutSection = () => {
     });
 
     gsap.from(aboutDescSplit.lines, {
-      y: 100,
+      y: 50,
       opacity: 0,
       duration: 0.6,
       stagger: 0.05, // animate one by one

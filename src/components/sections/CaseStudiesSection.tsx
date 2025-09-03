@@ -30,7 +30,7 @@ const CaseStudiesSection = () => {
   }, []);
 
   return (
-    <section ref={caseStudiesRef} className="relative pt-[10rem]">
+    <section ref={caseStudiesRef} className="relative pt-[5rem] xl:pt-[10rem]">
       <div className="relative mx-auto max-w-[120rem] px-[3rem] xl:px-[0rem]">
         {/* Header */}
         <div className="top-[6rem] flex flex-col items-center gap-[2rem] text-center xl:sticky">
@@ -73,7 +73,7 @@ const CaseStudiesSection = () => {
       </div>
 
       {/* Responsive Cards */}
-      <div className="mt-20 block xl:hidden">
+      <div className="mt-20 block w-full overflow-hidden xl:hidden">
         <CaseStudiesMarquee />
       </div>
     </section>
