@@ -8,6 +8,7 @@ import gsap from "gsap";
 import SectionLabel2 from "../common/SectionLabel2";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import CaseStudiesMarquee from "../common/CaseStudiesMarquee";
 
 const CaseStudiesSection = () => {
   const caseStudiesRef = useRef<HTMLElement>(null);
@@ -29,11 +30,8 @@ const CaseStudiesSection = () => {
   }, []);
 
   return (
-    <section
-      ref={caseStudiesRef}
-      className="relative px-[3rem] pt-[10rem] xl:px-[0rem]"
-    >
-      <div className="relative mx-auto max-w-[120rem]">
+    <section ref={caseStudiesRef} className="relative pt-[10rem]">
+      <div className="relative mx-auto max-w-[120rem] px-[3rem] xl:px-[0rem]">
         {/* Header */}
         <div className="top-[6rem] flex flex-col items-center gap-[2rem] text-center xl:sticky">
           <div className="rotate-[-2deg]">
@@ -72,6 +70,11 @@ const CaseStudiesSection = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Responsive Cards */}
+      <div className="mt-20 block xl:hidden">
+        <CaseStudiesMarquee />
       </div>
     </section>
   );
