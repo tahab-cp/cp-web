@@ -860,3 +860,12 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* Why Choose Us Section */
+
+.why-choose-us-sec {
+  background: url("/images/why-choose-us-gradient-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
