@@ -73,7 +73,7 @@ const CaseStudiesSection = () => {
       </div>
 
       {/* Responsive Cards */}
-      <div className="mt-20 block w-full overflow-hidden xl:hidden">
+      <div className="mt-10 block w-full overflow-hidden lg:mt-20 xl:hidden">
         <CaseStudiesMarquee />
       </div>
     </section>

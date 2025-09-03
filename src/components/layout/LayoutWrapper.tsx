@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import useLenis from "@/hooks/useLenis";
 import StickyHeader from "./StickyHeader";
+import BackToTopBtn from "../common/BackToTopBtn";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -16,11 +17,13 @@ export default function LayoutWrapper({
 }) {
   useLenis();
   return (
-    <>
+    <div className="relative">
       <Header />
       <StickyHeader />
       {children}
       <Footer />
-    </>
+
+      <BackToTopBtn />
+    </div>
   );
 }

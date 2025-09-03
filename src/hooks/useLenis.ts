@@ -14,6 +14,9 @@ export default function useLenis() {
       wheelMultiplier: 1.0,
     });
 
+    // 👇 make it globally accessible
+    window.lenis = lenis;
+
     // connect Lenis to GSAP's ticker
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000); // GSAP uses seconds, Lenis wants ms
