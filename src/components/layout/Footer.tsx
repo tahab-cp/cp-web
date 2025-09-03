@@ -8,6 +8,7 @@ import LineStroke06 from "../decorativeElements/LineStroke06";
 import CLetter from "../decorativeElements/CLetter";
 import PLetter from "../decorativeElements/PLetter";
 import FooterAccordion from "../common/FooterAccordion";
+import ClientLogoSlider from "../common/ClientLogoSlider";
 
 const socialLinks = [
   {
@@ -29,7 +30,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="footer relative w-full px-[2rem] pt-[6.2rem] pb-[2.764rem] xl:px-[0rem]">
+    <footer className="footer relative w-full overflow-hidden px-[2rem] pt-[6.2rem] pb-[2.764rem] xl:overflow-visible xl:px-[0rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
         <LineStroke06 className="absolute top-[-19.3rem] left-1/2 w-full -translate-x-1/2" />
@@ -136,7 +137,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <ul className="relative z-3 mx-auto mt-[5.7rem] mb-[4.6rem] grid max-w-[120.3rem] grid-cols-1 items-center justify-items-center gap-[4rem] rounded-[1.6rem] bg-white/15 px-[2.4rem] py-[2rem] md:grid-cols-3 xl:grid-cols-7">
+      <ul className="relative z-3 mx-auto mt-[5.7rem] mb-[4.6rem] hidden max-w-[120.3rem] grid-cols-1 items-center justify-items-center gap-[4rem] rounded-[1.6rem] bg-white/15 px-[2.4rem] py-[2rem] md:grid-cols-3 xl:grid xl:grid-cols-7">
         {logoPopupsData.map((item, idx) => (
           <li key={idx}>
             <LogoPopup
@@ -150,6 +151,11 @@ const Footer = () => {
           </li>
         ))}
       </ul>
+
+      {/* Mobile Logos */}
+      <div className="relative z-[3] my-[4rem] block w-full xl:hidden">
+        <ClientLogoSlider />
+      </div>
 
       <div className="relative z-3 mx-auto flex max-w-[120.3rem] flex-col items-center justify-between gap-[2rem] text-center lg:flex-row lg:gap-[0rem] lg:text-left">
         <p className="text-[1.8rem] leading-[2.6rem] font-normal text-white/70">
@@ -169,7 +175,12 @@ const Footer = () => {
           <li className="mx-[2rem] h-[3.293rem] w-[0.5px] bg-white" />
 
           <li>
-            <Image src="/images/wp-fixed-logo.png" width={75.48} height={31.7} alt="" />
+            <Image
+              src="/images/wp-fixed-logo.png"
+              width={75.48}
+              height={31.7}
+              alt=""
+            />
           </li>
 
           <li className="mx-[2rem] h-[3.293rem] w-[0.5px] bg-white" />

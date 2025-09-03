@@ -212,15 +212,6 @@ const WhatWeOfferSection = () => {
                   textColor="#fff"
                 />
               </div>
-
-              <div className="what-we-offer-right-card-cta-btn">
-                <CommonBtn3
-                  href="/"
-                  label="View Case Studies"
-                  bgColor="#FF37B3"
-                  textColor="#fff"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -268,15 +259,6 @@ const WhatWeOfferSection = () => {
                   href="/"
                   label="Book a Call"
                   bgColor="#44B276"
-                  textColor="#fff"
-                />
-              </div>
-
-              <div className="what-we-offer-right-card-cta-btn">
-                <CommonBtn3
-                  href="/"
-                  label="View Case Studies"
-                  bgColor="#FF37B3"
                   textColor="#fff"
                 />
               </div>
@@ -385,15 +367,6 @@ const WhatWeOfferSection = () => {
                 href="/"
                 label="Book a Call"
                 bgColor="#EE8D00"
-                textColor="#fff"
-              />
-            </div>
-
-            <div className="what-we-offer-right-card-cta-btn">
-              <CommonBtn3
-                href="/"
-                label="View Case Studies"
-                bgColor="#FF37B3"
                 textColor="#fff"
               />
             </div>

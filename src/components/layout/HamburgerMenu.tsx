@@ -58,12 +58,32 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, setIsOpen }) => {
             />
           </Link>
 
-          <button
-            onClick={() => setIsOpen(false)}
-            className="inline-flex size-[4rem] items-center justify-center rounded-full border border-[#ffffff]"
-          >
-            <X className="size-[2.3rem] text-white" />
-          </button>
+          <div className="flex items-center gap-[2rem]">
+            {/* Contact Cta for Responsive */}
+            <Link
+              onClick={() => setIsOpen(false)}
+              href="/contact"
+              className="xl:hidden"
+            >
+              <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+                <Image
+                  src="/images/icons/phone-fill.svg"
+                  alt="Phone Fill Icon"
+                  width={16}
+                  height={16}
+                />
+
+                <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
+              </i>
+            </Link>
+
+            <button
+              onClick={() => setIsOpen(false)}
+              className="inline-flex size-[4rem] items-center justify-center rounded-full border border-[#ffffff]"
+            >
+              <X className="size-[2.3rem] text-white" />
+            </button>
+          </div>
         </div>
 
         <div className="flex-1 overflow-x-hidden overflow-y-auto">

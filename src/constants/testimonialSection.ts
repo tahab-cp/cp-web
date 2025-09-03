@@ -1,6 +1,6 @@
 export const testimonialsData = [
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
     authorImage: "/images/testimonials-avatar-1.png",
@@ -8,7 +8,7 @@ export const testimonialsData = [
     authorRole: "Website & Branding Project",
   },
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review:
       "They elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
     authorImage: "/images/testimonials-avatar-4.png",
@@ -16,14 +16,14 @@ export const testimonialsData = [
     authorRole: "Website & Branding Project",
   },
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review: "We’ve seen a clear boost in sales and engagement since launch.",
     authorImage: "/images/testimonials-avatar-5.png",
     authorName: "Jamal Roberts",
     authorRole: "Website & Branding Project",
   },
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch. Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success.",
     authorImage: "/images/testimonials-avatar-2.png",
@@ -31,7 +31,7 @@ export const testimonialsData = [
     authorRole: "E-commerce Platform Redesign",
   },
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
     authorImage: "/images/testimonials-avatar-6.png",
@@ -39,7 +39,7 @@ export const testimonialsData = [
     authorRole: "Website & Branding Project",
   },
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
     authorImage: "/images/testimonials-avatar-3.png",
@@ -47,7 +47,7 @@ export const testimonialsData = [
     authorRole: "Website & Branding Project",
   },
   {
-    ratingImage: "/icons/rating-star.svg",
+    ratingImage: "images/icons/rating-star.svg",
     review:
       "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch. Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success.",
     authorImage: "/images/testimonials-avatar-1.png",

@@ -51,7 +51,7 @@ const AboutSection = () => {
     });
 
     gsap.from(aboutDescSplit.lines, {
-      y: 50,
+      y: 100,
       opacity: 0,
       duration: 0.6,
       stagger: 0.05, // animate one by one
@@ -113,41 +113,22 @@ const AboutSection = () => {
         <LineStroke02 className="absolute top-[90rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[120rem] flex-col items-center px-[3rem] text-center xl:items-start xl:px-[0rem] xl:text-left">
-        <h5 className="mt-[3rem] mb-[1rem] text-[2rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-[#333333] md:mb-[2rem] md:text-[3rem] md:leading-[4.4rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
-          <div className="overflow-hidden">
-            <div className="about-desc">
-              <span className="text-[#EE8D00]">Creative Pixels</span> is an
-              independent web design and development
-            </div>
-          </div>{" "}
-          <div className="overflow-hidden">
-            <div className="about-desc">
-              agency based in <span className="text-[#FF37B3]">Manchester</span>{" "}
-              — crafting digital experiences
-            </div>
-          </div>{" "}
-          <div className="overflow-hidden">
-            <div className="about-desc">
-              since 2014. We care deeply about our clients, build long-term
-            </div>
+      <div className="relative z-10 mx-auto flex w-full max-w-[120rem] flex-col items-center px-[3rem] xl:items-start xl:px-[0rem]">
+        <h5 className="mb-[2rem] max-w-[99rem] overflow-hidden text-center text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[3.4rem] md:leading-[4.8rem] xl:text-left">
+          <div className="about-desc">
+            <span className="text-[#EE8D00]">Creative Pixels</span> is an
+            independent web design and development agency based in{" "}
+            <span className="text-[#FF37B3]">Manchester</span> — crafting
+            digital experiences since 2014. We care deeply about our clients,
+            build long-term partnerships, bring over a decade of industry
+            expertise, and take pride in{" "}
+            <span className="text-[#3078FF]">award-winning</span>, pixel-perfect
+            work.
           </div>
-          <div className="overflow-hidden">
-            <div className="about-desc">
-              partnerships, bring over a decade of industry expertise, and
-            </div>
-          </div>{" "}
-          <div className="overflow-hidden">
-            <div className="about-desc">
-              take pride in{" "}
-              <span className="text-[#3078FF]">award-winning</span>,
-              pixel-perfect work.
-            </div>
-          </div>
-        </h5>
 
-        <h5 className="mb-[2rem] text-[2rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[3rem] md:leading-[4.4rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
-          <div className="about-desc">We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
+          <div className="about-desc mt-[2rem]">
+            We work with clients in 🇬🇧 🇦🇺 🇺🇸
+          </div>
         </h5>
 
         <div className="about-cta-btn">

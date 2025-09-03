@@ -85,7 +85,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex items-center justify-end gap-[9.2rem]">
+        <div className="flex items-center justify-end gap-[2rem] xl:gap-[9.2rem]">
           <nav className="hidden items-center justify-center gap-[1rem] xl:flex">
             <div className="overflow-hidden">
               <div className="header-nav-links">
@@ -131,6 +131,21 @@ const Header = () => {
             </div>
           </div>
 
+          {/* Contact Cta for Responsive */}
+          <Link href="/contact" className="xl:hidden">
+            <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+              <Image
+                src="/images/icons/phone-fill.svg"
+                alt="Phone Fill Icon"
+                width={16}
+                height={16}
+              />
+
+              <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
+            </i>
+          </Link>
+
+          {/* Hamburger Button */}
           <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(true)}

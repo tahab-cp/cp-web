@@ -27,7 +27,7 @@ const StickyHeader = () => {
 
   return (
     <header
-      className={`fixed left-0 z-[999] w-full p-[2rem] transition-all duration-300 ${isVisible ? "top-[0%]" : "top-[-100%]"}`}
+      className={`fixed left-0 z-[999] w-full p-[1rem] transition-all duration-300 md:p-[2rem] ${isVisible ? "top-[0%]" : "top-[-100%]"}`}
     >
       <div className="shadow-01 relative mx-auto flex w-full max-w-[120.329rem] items-center justify-between rounded-full bg-black/30 px-[2rem] py-[1rem] backdrop-blur-[10px]">
         <Link href="/" className="relative">
@@ -41,7 +41,7 @@ const StickyHeader = () => {
           />
         </Link>
 
-        <div className="flex items-center justify-end gap-[9.2rem]">
+        <div className="flex items-center justify-end gap-[2rem] xl:gap-[9.2rem]">
           <nav className="hidden items-center justify-center gap-[1rem] xl:flex">
             <NavigationLink href="/">Home</NavigationLink>
             <NavigationLink href="/about">About CP</NavigationLink>
@@ -64,6 +64,21 @@ const StickyHeader = () => {
             <CommonBtn1 />
           </div>
 
+          {/* Contact Cta for Responsive */}
+          <Link href="/contact" className="xl:hidden">
+            <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+              <Image
+                src="/images/icons/phone-fill.svg"
+                alt="Phone Fill Icon"
+                width={16}
+                height={16}
+              />
+
+              <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
+            </i>
+          </Link>
+
+          {/* Hamburger Button */}
           <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(true)}

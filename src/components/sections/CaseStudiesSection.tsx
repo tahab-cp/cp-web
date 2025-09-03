@@ -35,7 +35,7 @@ const CaseStudiesSection = () => {
     >
       <div className="relative mx-auto max-w-[120rem]">
         {/* Header */}
-        <div className="sticky top-[6rem] flex flex-col items-center gap-[2rem] text-center">
+        <div className="top-[6rem] flex flex-col items-center gap-[2rem] text-center xl:sticky">
           <div className="rotate-[-2deg]">
             <div className="case-studies-label">
               <SectionLabel2 text="Case Studies" />
@@ -56,7 +56,7 @@ const CaseStudiesSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="mt-20 flex flex-col gap-[4rem]">
+        <div className="mt-20 hidden flex-col gap-[4rem] xl:flex">
           {caseStudiesData.map((caseStudy, index) => (
             <div
               key={index}
