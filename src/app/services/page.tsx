@@ -6,10 +6,10 @@ const ServicesPage = () => {
   return (
     <main>
       <OurServicesSection />
-      {/* <div className="pt-[6.3rem]">
+      <div className="pt-[6.3rem]">
         <AboutCaseStudiesSection />
-      </div> */}
-      {/* <ContactSection /> */}
+      </div>
+      <ContactSection />
     </main>
   );
 };

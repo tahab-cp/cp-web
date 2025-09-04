@@ -18,7 +18,7 @@ const OurServiesMarquee = () => {
           <Link
             key={idx}
             href={item.href}
-            className="group relative mx-[.735rem] inline-block h-[32.6rem] w-[47rem] overflow-hidden rounded-[2rem]"
+            className="group relative mx-[.735rem] inline-block h-[32.6rem] w-[30rem] overflow-hidden rounded-[2rem] md:w-[47rem]"
           >
             <Image
               src={item.src}

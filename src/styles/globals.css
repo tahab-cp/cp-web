@@ -869,3 +869,12 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* Our Services Section  */
+
+.our-services-sec {
+  background: url("/images/our-services-gradient-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
