@@ -18,7 +18,7 @@ const OurServiesMarquee = () => {
           <Link
             key={idx}
             href={item.href}
-            className="group relative mx-[.735rem] inline-block h-[32.6rem] w-[30rem] overflow-hidden rounded-[2rem] md:w-[47rem]"
+            className="group relative mx-[.735rem] inline-block h-[22rem] w-[30rem] overflow-hidden rounded-[2rem] md:h-[32.6rem] md:w-[47rem]"
           >
             <Image
               src={item.src}
@@ -26,7 +26,7 @@ const OurServiesMarquee = () => {
               width={470}
               height={326}
               priority
-              className="transition-all duration-300 group-hover:scale-[1.05]"
+              className="size-full transition-all duration-300 group-hover:scale-[1.05]"
             />
           </Link>
         ))}

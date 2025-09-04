@@ -37,11 +37,11 @@ const Footer = () => {
       </div>
 
       <div className="pointer-events-none absolute inset-0 z-[0] overflow-hidden select-none">
-        <CLetter className="absolute bottom-[-10rem] left-[-2rem] w-[10rem] md:left-[-7rem] md:w-[17.7rem]" />
+        <CLetter className="absolute bottom-[-20rem] left-[-2rem] w-[10rem] md:left-[-7rem] md:w-[17.7rem] lg:bottom-[-8rem] xl:bottom-[-10rem]" />
       </div>
 
       <div className="pointer-events-none absolute inset-0 z-[0] overflow-hidden select-none">
-        <PLetter className="absolute top-[43.5rem] right-[1rem] w-[4rem] rotate-[-15deg] md:right-[-3rem] md:w-[9.6rem]" />
+        <PLetter className="absolute top-[5rem] right-[1rem] w-[4rem] rotate-[-15deg] md:right-[-3rem] md:w-[9.6rem] xl:top-[43.5rem]" />
       </div>
 
       <div className="overflow-hidden">
@@ -178,7 +178,7 @@ const Footer = () => {
         </div>
 
         <div className="relative z-[3] mx-auto flex max-w-[120rem] flex-col items-center justify-between gap-[2rem] text-center lg:flex-row lg:gap-[0rem] lg:text-left">
-          <p className="text-[1.8rem] leading-[2.6rem] font-normal text-white/70">
+          <p className="max-w-[32rem] text-[1.8rem] leading-[2.6rem] font-normal text-white/70 md:max-w-fit">
             Copyright © 2025 Creativepixels Inc. All rights reserved.
           </p>
 

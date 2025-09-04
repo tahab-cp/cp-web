@@ -70,13 +70,13 @@ const OurServicesSection = () => {
         </h2>
       </div>
 
-      <div className="mt-[4.3rem] mb-[8rem]">
+      <div className="mt-[4.3rem] mb-[5rem] xl:mb-[8rem]">
         <OurServiesMarquee />
       </div>
 
       <div className="our-services-sec relative px-[3rem] py-[5rem] xl:px-[0rem] xl:pt-[6.3rem] xl:pb-[7.063rem]">
         <div className="absolute inset-0 z-[0]">
-          <LineStroke17 className="absolute top-[59rem] left-1/2 w-full -translate-x-1/2" />
+          <LineStroke17 className="absolute top-[40rem] left-1/2 w-full -translate-x-1/2 md:top-[59rem]" />
         </div>
 
         <div className="relative z-[1] mx-auto flex max-w-[120rem] flex-col gap-[4.9rem] 2xl:max-w-[121.6rem]">
@@ -102,7 +102,7 @@ const OurServicesSection = () => {
           </div>
 
           <div className="flex flex-col gap-[2rem] xl:flex-row xl:gap-[4.8rem]">
-            <div className="relative h-[25rem] w-full overflow-hidden rounded-[2rem] md:h-[45rem] lg:h-[60rem] xl:h-[45rem] xl:w-[57.4rem]">
+            <div className="relative w-full overflow-hidden rounded-[2rem] xl:h-[45rem] xl:w-[57.4rem]">
               <Image
                 src="/images/design-branding-img.png"
                 alt="Design Branding Image"
@@ -179,7 +179,7 @@ const OurServicesSection = () => {
           </div>
 
           <div className="mt-[4rem] flex flex-col items-center gap-[2rem] md:gap-[4.7rem] xl:mt-[1rem] xl:flex-row xl:items-start">
-            <div className="relative h-[35rem] w-full md:h-[60rem] lg:h-[80rem] xl:h-[51.7rem] xl:w-[59.5rem]">
+            <div className="relative w-full md:h-[60rem] lg:h-[80rem] xl:h-[51.7rem] xl:w-[59.5rem]">
               <Image
                 src="/images/website-development-img.png"
                 alt="Website Development Image"
@@ -234,14 +234,14 @@ const OurServicesSection = () => {
         </div>
       </div>
 
-      {/* <div className="our-services-sec relative pt-[9rem] pb-[7.882rem]">
+      <div className="our-services-sec relative px-[3rem] py-[5rem] xl:px-[0rem] xl:pt-[9rem] xl:pb-[7.882rem]">
         <div className="absolute inset-0 z-[0]">
-          <LineStroke18 className="absolute -top-[23.7rem] right-[-89.294rem]" />
+          <LineStroke18 className="absolute -top-[23.7rem] right-[-89.294rem] w-full" />
         </div>
 
         <div className="relative z-[1] mx-auto max-w-[120.3rem]">
-          <div className="flex flex-col gap-[2rem]">
-            <h3 className="relative max-w-[80.7rem] text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em] text-white">
+          <div className="flex flex-col items-center gap-[2rem] text-center xl:items-start xl:text-left">
+            <h3 className="relative max-w-[80.7rem] text-[4rem] leading-[5rem] font-semibold tracking-[-0.03em] text-white md:text-[7rem] md:leading-[8.4rem] md:font-bold">
               Maintenance and Growth
               <div className="absolute top-[-2rem] right-[-2.6rem] inline-flex size-[4rem] items-center justify-center">
                 <Image
@@ -253,7 +253,7 @@ const OurServicesSection = () => {
               </div>
             </h3>
 
-            <p className="max-w-[82.4rem] text-[2.2rem] leading-[3.2rem] font-medium text-white">
+            <p className="max-w-[82.4rem] text-[1.8rem] leading-[2.8rem] font-medium text-white md:text-[2.2rem] md:leading-[3.2rem]">
               At Creative Pixels, our strength lies in our team. We have a
               large, diverse group of designers and developers who are
               passionate about creating digital solutions that combine
@@ -261,19 +261,20 @@ const OurServicesSection = () => {
             </p>
           </div>
 
-          <div className="mt-[3.6rem] flex gap-[4.6rem]">
-            <div className="relative h-[48.318rem] w-[45.4rem]">
+          <div className="mt-[3.6rem] flex flex-col gap-[2rem] md:gap-[4.6rem] xl:flex-row">
+            <div className="relative xl:h-[48.318rem] xl:w-[45.4rem]">
               <Image
                 src="/images/maintainance-growth-img.png"
                 alt="Maintanence Growth Image"
                 width={454}
                 height={483.18}
                 priority
+                className="size-full"
               />
             </div>
 
-            <div className="flex flex-col gap-[4.463rem]">
-              <div className="flex gap-[5rem]">
+            <div className="flex flex-col items-center gap-[4.463rem] xl:items-start">
+              <div className="flex w-full flex-col justify-between md:flex-row lg:w-auto lg:justify-start lg:gap-[10rem] xl:gap-[5rem]">
                 {offerSectionMaintenanceData.columns.map((col, idx) => (
                   <div
                     key={idx}
@@ -312,7 +313,7 @@ const OurServicesSection = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
