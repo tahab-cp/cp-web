@@ -49,7 +49,7 @@ const OurStatsSection = () => {
         <LineStroke14 className="absolute top-[14.2rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
-      <div className="relative z-[3] mx-auto flex max-w-[130rem] flex-col items-center gap-[4.4rem]">
+      <div className="relative z-[3] mx-auto flex max-w-[120rem] flex-col items-center gap-[4.4rem] 2xl:max-w-[130rem]">
         <div className="rotate-[2deg]">
           <div className="our-stats-label">
             <SectionLabel2 text="Our Stats" bgColor="bg-[#FF8630]" />

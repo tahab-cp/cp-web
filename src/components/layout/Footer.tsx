@@ -36,16 +36,16 @@ const Footer = () => {
         <LineStroke06 className="absolute top-[-19.3rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
-      <div className="absolute inset-0 z-[0] hidden overflow-hidden xl:block">
-        <CLetter className="absolute bottom-[-10rem] left-[-7rem] w-[17.7rem]" />
+      <div className="pointer-events-none absolute inset-0 z-[0] overflow-hidden select-none">
+        <CLetter className="absolute bottom-[-10rem] left-[-2rem] w-[10rem] md:left-[-7rem] md:w-[17.7rem]" />
       </div>
 
-      <div className="absolute inset-0 z-[0] hidden overflow-hidden xl:block">
-        <PLetter className="absolute top-[43.5rem] right-[-3rem] w-[9.6rem] rotate-[-15deg]" />
+      <div className="pointer-events-none absolute inset-0 z-[0] overflow-hidden select-none">
+        <PLetter className="absolute top-[43.5rem] right-[1rem] w-[4rem] rotate-[-15deg] md:right-[-3rem] md:w-[9.6rem]" />
       </div>
 
       <div className="overflow-hidden">
-        <div className="relative z-[3] mx-auto flex max-w-[120.3rem] flex-col items-center justify-between gap-[4rem] rounded-[1.6rem] border-[2px] border-white bg-white/20 px-[4.5rem] pt-[2.3rem] pb-[3rem] backdrop-blur-[30px] lg:flex-row lg:gap-[0rem]">
+        <div className="relative z-[3] mx-auto flex max-w-[120rem] flex-col items-center justify-between gap-[4rem] rounded-[1.6rem] border-[2px] border-white bg-white/20 px-[4.5rem] pt-[2.3rem] pb-[3rem] backdrop-blur-[30px] lg:flex-row lg:gap-[0rem]">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <Link
               href="tel:01618202667"
@@ -157,7 +157,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <ul className="relative z-3 mx-auto mt-[5.7rem] mb-[4.6rem] hidden max-w-[120.3rem] grid-cols-1 items-center justify-items-center gap-[4rem] rounded-[1.6rem] bg-white/15 px-[2.4rem] py-[2rem] md:grid-cols-3 xl:grid xl:grid-cols-7">
+        <ul className="relative z-[3] mx-auto mt-[5.7rem] mb-[4.6rem] hidden max-w-[120rem] grid-cols-1 items-center justify-items-center gap-[4rem] rounded-[1.6rem] bg-white/15 px-[2.4rem] py-[2rem] md:grid-cols-3 xl:grid xl:grid-cols-7">
           {logoPopupsData.map((item, idx) => (
             <li key={idx}>
               <LogoPopup
@@ -177,7 +177,7 @@ const Footer = () => {
           <ClientLogoSlider />
         </div>
 
-        <div className="relative z-3 mx-auto flex max-w-[120.3rem] flex-col items-center justify-between gap-[2rem] text-center lg:flex-row lg:gap-[0rem] lg:text-left">
+        <div className="relative z-[3] mx-auto flex max-w-[120rem] flex-col items-center justify-between gap-[2rem] text-center lg:flex-row lg:gap-[0rem] lg:text-left">
           <p className="text-[1.8rem] leading-[2.6rem] font-normal text-white/70">
             Copyright © 2025 Creativepixels Inc. All rights reserved.
           </p>

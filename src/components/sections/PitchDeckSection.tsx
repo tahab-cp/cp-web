@@ -116,7 +116,7 @@ const PitchDeckSection = () => {
       ref={pitchDeckRef}
       className="relative mx-auto flex max-w-[152rem] justify-end overflow-hidden"
     >
-      <div className="flex w-full max-w-[132.1rem] flex-col justify-between lg:flex-row">
+      <div className="flex w-full max-w-[128rem] flex-col justify-between lg:flex-row 2xl:max-w-[132.1rem]">
         <div className="flex w-full flex-col items-center px-[3rem] py-[5rem] text-center lg:max-w-[55.6rem] lg:items-start lg:py-[8.9rem] lg:text-left xl:px-[0rem]">
           <div className="rotate-[-2deg]">
             <div className="pitch-deck-label">

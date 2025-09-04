@@ -97,7 +97,7 @@ const WhyChooseUsSection = () => {
       ref={whyChooseUsRef}
       className="why-choose-us-sec relative px-[3rem] py-[5rem] xl:px-[0rem] xl:py-[10rem]"
     >
-      <div className="mx-auto flex max-w-[124rem] flex-col items-center gap-[3.6rem] xl:flex-row">
+      <div className="mx-auto flex max-w-[120rem] flex-col items-center gap-[3.6rem] xl:flex-row 2xl:max-w-[124rem]">
         <div className="flex flex-col items-center text-center xl:w-[58rem] xl:items-start xl:text-left">
           <div className="flex flex-col gap-[2.1rem]">
             <div className="rotate-[2deg]">

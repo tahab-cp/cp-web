@@ -156,7 +156,7 @@ const AboutSection = () => {
               <span>Hear From Founder</span>
             </button>
 
-            <div className="h-[30rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] xl:h-[40rem]">
+            <div className="h-[20rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] xl:h-[40rem]">
               <video
                 ref={videoRef}
                 loop

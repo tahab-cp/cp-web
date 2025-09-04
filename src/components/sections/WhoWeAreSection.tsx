@@ -112,7 +112,7 @@ const WhoWeAreSection = () => {
         <LineStroke13 className="absolute top-[14.8rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
-      <div className="relative z-[3] mx-auto max-w-[141.6rem]">
+      <div className="relative z-[3] mx-auto max-w-[120rem] 2xl:max-w-[141.6rem]">
         <div className="flex flex-col items-center gap-[2.1rem] text-center">
           <div className="rotate-[-2deg]">
             <div className="who-we-are-label">

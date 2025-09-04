@@ -149,7 +149,7 @@ const WhatWeOfferSection = () => {
           </div>
         </div>
 
-        <div className="mx-auto flex w-full max-w-[130rem] flex-col gap-[2rem] lg:flex-row lg:gap-[0rem]">
+        <div className="mx-auto flex w-full max-w-[120rem] flex-col gap-[2rem] lg:flex-row lg:gap-[0rem] 2xl:max-w-[130rem]">
           <div className="flex flex-col items-center gap-[3.3rem] lg:items-start">
             <h3 className="what-we-offer-left-card-title relative max-w-[33.3rem] text-center text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem] lg:text-left">
               <span>Website Development</span>
@@ -221,7 +221,7 @@ const WhatWeOfferSection = () => {
       </div>
 
       <div className="relative z-[2] bg-white px-[3rem] py-[5rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:py-[0rem]">
-        <div className="relative mx-auto flex w-full max-w-[130rem] flex-col-reverse gap-[5rem] lg:flex-row lg:gap-[12.9rem]">
+        <div className="relative mx-auto flex w-full max-w-[120rem] flex-col-reverse gap-[5rem] lg:flex-row lg:gap-[12.9rem] 2xl:max-w-[130rem]">
           <div className="flex flex-col gap-[4.5rem] xl:pt-[10rem]">
             <div className="flex flex-col justify-between gap-[5rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row xl:gap-[10rem]">
               {offerSectionDesignData.columns.map((col, idx) => (
@@ -304,7 +304,7 @@ const WhatWeOfferSection = () => {
         </div>
       </div>
 
-      <div className="relative z-[2] mx-auto flex w-full max-w-[133rem] flex-col px-[3rem] pt-[5rem] lg:flex-row xl:px-[0rem] xl:pt-[10rem]">
+      <div className="relative z-[2] mx-auto flex w-full max-w-[120rem] flex-col px-[3rem] pt-[5rem] lg:flex-row xl:px-[0rem] xl:pt-[10rem] 2xl:max-w-[133rem]">
         <div className="flex flex-col items-center lg:items-start">
           <h3 className="what-we-offer-left-card-title relative max-w-[30.8rem] text-center text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.02em] text-white md:text-[4.8rem] md:leading-[6rem] lg:text-left">
             <span>Maintenance and Growth</span>
@@ -378,7 +378,7 @@ const WhatWeOfferSection = () => {
       </div>
 
       <div className="what-we-offer-cta-card px-[3rem] xl:px-[0rem]">
-        <div className="offer-cta-card mx-auto mt-[4rem] flex max-w-[120.3rem] rounded-[2rem] xl:mt-[-9rem]">
+        <div className="offer-cta-card mx-auto mt-[4rem] flex max-w-[120rem] rounded-[2rem] xl:mt-[-9rem]">
           <div className="flex flex-col items-center justify-center gap-[2.2rem] text-center md:flex-row md:text-left">
             <p className="text-[2.6rem] leading-[3.2rem] font-semibold tracking-[-0.02em] text-white">
               Need bold design or reliable code or both? You’re in the right
