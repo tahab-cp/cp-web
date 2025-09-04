@@ -4,51 +4,32 @@ import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import Image from "next/image";
+import LineStroke19 from "../decorativeElements/LineStroke19";
+import LineStroke20 from "../decorativeElements/LineStroke20";
+import LineStroke21 from "../decorativeElements/LineStroke21";
+import SectionLabel2 from "../common/SectionLabel2";
 
 const OurWorkSection = () => {
   return (
     <section className="pt-[20.6rem]">
       {/* Decorative stroke line */}
-      {/* <div className="absolute inset-0 z-[0]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1440}
-          height={531.42}
-          className="absolute top-[15.4rem] left-1/2 -translate-x-1/2 opacity-10"
-          priority
-        />
+      <div className="absolute inset-0 z-[0]">
+        <LineStroke19 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="absolute inset-0 z-[0]">
-        <Image
-          src={bgLine2}
-          alt="Background line"
-          width={2129.71}
-          height={785.39}
-          className="absolute top-[92.9rem] left-1/2 -translate-x-1/2 opacity-50"
-          priority
-        />
+        <LineStroke20 className="absolute top-[92.9rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="absolute inset-0 z-[0]">
-        <Image
-          src={bgLine3}
-          alt="Background line"
-          width={1799}
-          height={461}
-          className="absolute top-[281.6rem] left-1/2 -translate-x-1/2 opacity-50"
-          priority
-        />
-      </div> */}
+        <LineStroke21 className="absolute top-[281.6rem] left-1/2 w-full -translate-x-1/2" />
+      </div>
 
       <div className="relative z-[1] mx-auto max-w-[120.3rem]">
         <div className="flex flex-col items-start gap-[2rem]">
-          <SectionLabel
-            text="Our Work"
-            textColor="text-text-primary"
-            borderColor="border-text-primary"
-          />
+          <div className="rotate-[2deg]">
+            <SectionLabel2 text="Our Work" />
+          </div>
 
           <div className="flex items-center justify-between">
             <div className="max-w-[72.1rem]">
