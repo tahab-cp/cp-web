@@ -17,7 +17,7 @@ const CaseStudiesSlider = () => {
       }}
       navigation={false}
       slidesPerView={1}
-      spaceBetween={20}
+      spaceBetween={10}
       grabCursor={true}
       pagination={{
         clickable: true,
@@ -25,7 +25,7 @@ const CaseStudiesSlider = () => {
       breakpoints={{
         1024: {
           slidesPerView: 2,
-          spaceBetween: 16,
+          spaceBetween: 10,
         },
       }}
       className="mySwiper case-studies-slider"
@@ -34,9 +34,9 @@ const CaseStudiesSlider = () => {
         <SwiperSlide key={idx}>
           <Link
             href=""
-            className="case-studies-card flex flex-col items-center pt-[2rem] pr-[2.7rem] pb-[.87rem] pl-[2rem] text-center"
+            className="case-studies-card flex flex-col items-center p-[2rem] text-center"
           >
-            <div className="relative h-[30rem] w-full overflow-hidden rounded-[2rem] md:h-[44rem]">
+            <div className="relative h-[22rem] w-full overflow-hidden rounded-[2rem] md:h-[40rem] lg:h-[30rem] xl:h-[40rem]">
               <Image
                 src={item.image}
                 alt="Case Study Image"
@@ -48,7 +48,7 @@ const CaseStudiesSlider = () => {
             </div>
 
             <div className="flex h-full flex-col justify-between">
-              <h4 className="mt-[2rem] mb-[4rem] line-clamp-2 max-w-[50rem] text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[3.4rem] md:leading-[4.8rem]">
+              <h4 className="mt-[2rem] mb-[4rem] line-clamp-2 max-w-[50rem] text-[2rem] leading-[2.8rem] font-semibold tracking-[-0.02em] md:text-[3.4rem] md:leading-[4.8rem]">
                 {item.title}
               </h4>
 

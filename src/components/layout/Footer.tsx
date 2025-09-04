@@ -125,9 +125,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="relative z-[3] mx-auto mt-[5.7rem] flex max-w-[118.4rem] flex-col gap-[1rem] xl:hidden">
+      <div className="relative z-[3] mx-auto mt-[5.7rem] flex max-w-[118.4rem] flex-col gap-[2rem] xl:hidden">
         {footerLinkCardData.map((item, idx) => (
-          <div key={idx} className="border-b border-white pb-[1rem]">
+          <div key={idx} className="border-b border-white pb-[2rem]">
             <FooterAccordion
               title={item.title}
               value={item.title}

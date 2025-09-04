@@ -62,8 +62,8 @@ const AboutTestimonialsSection = () => {
   }, []);
 
   return (
-    <section ref={aboutTestimonialsRef} className="py-[5rem] xl:py-[10rem]">
-      <div className="flex flex-col items-center gap-[2rem] px-[2rem] text-center xl:px-[0rem]">
+    <section ref={aboutTestimonialsRef} className="py-[5rem] lg:py-[10rem]">
+      <div className="flex flex-col items-center gap-[2rem] px-[3rem] text-center xl:px-[0rem]">
         <div className="rotate-[-2deg]">
           <div className="about-testimonials-label">
             <SectionLabel2 text="Testimonials" bgColor="bg-[#F14A58]" />

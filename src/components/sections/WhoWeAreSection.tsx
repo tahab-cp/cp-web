@@ -105,7 +105,7 @@ const WhoWeAreSection = () => {
   return (
     <section
       ref={whoWeAreRef}
-      className="relative px-[2rem] pt-[20.6rem] pb-[9rem] xl:px-[0rem]"
+      className="relative px-[3rem] pt-[20rem] pb-[5rem] xl:px-[0rem] xl:pb-[9rem]"
     >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
@@ -120,7 +120,7 @@ const WhoWeAreSection = () => {
             </div>
           </div>
 
-          <h1 className="text-text-primary max-w-[100rem] overflow-hidden text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em]">
+          <h1 className="text-text-primary max-w-[100rem] overflow-hidden text-[3rem] leading-[4rem] font-bold tracking-[-0.03em] md:text-[5rem] md:leading-[6rem] lg:text-[7rem] lg:leading-[8.4rem]">
             <div className="who-we-are-title">
               About Creative Pixels Creative Agency based in Manchester
             </div>
@@ -133,11 +133,11 @@ const WhoWeAreSection = () => {
           </div>
         </div>
 
-        <div className="mt-[8rem] mb-[10.5rem] flex flex-col gap-[1.2rem] lg:flex-row">
+        <div className="my-[5rem] flex flex-col gap-[1.2rem] xl:mt-[8rem] xl:mb-[10.5rem] xl:flex-row">
           {whoWeAreCardData.slice(0, 1).map((item, idx) => (
             <div
               key={idx}
-              className="who-we-are-cards relative h-[25rem] overflow-hidden rounded-[2rem] md:h-[45rem] lg:h-[58.8rem] lg:w-[69.2rem]"
+              className="who-we-are-cards relative h-[23rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] lg:h-[70rem] xl:h-[58.8rem] xl:w-[69.2rem]"
             >
               <Image
                 src={item.src}
@@ -149,11 +149,11 @@ const WhoWeAreSection = () => {
             </div>
           ))}
 
-          <div className="flex flex-row gap-[1.2rem] lg:flex-col">
+          <div className="flex flex-row gap-[1.2rem] xl:flex-col">
             {whoWeAreCardData.slice(1, 3).map((item, idx) => (
               <div
                 key={idx}
-                className="who-we-are-cards relative h-[18rem] w-1/2 overflow-hidden rounded-[2rem] md:h-[28.8rem] lg:w-[35.6rem]"
+                className="who-we-are-cards relative h-[15rem] w-1/2 overflow-hidden rounded-[2rem] md:h-[30rem] lg:h-[40rem] xl:h-[28.8rem] xl:w-[35.6rem]"
               >
                 <Image
                   src={item.src}
@@ -169,7 +169,7 @@ const WhoWeAreSection = () => {
           {whoWeAreCardData.slice(3, 4).map((item, idx) => (
             <div
               key={idx}
-              className="who-we-are-cards relative h-[25rem] overflow-hidden rounded-[2rem] md:h-[45rem] lg:h-[58.8rem] lg:w-[34.4rem]"
+              className="who-we-are-cards relative h-[23rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] lg:h-[70rem] xl:h-[58.8rem] xl:w-[34.4rem]"
             >
               <Image
                 src={item.src}
@@ -183,7 +183,7 @@ const WhoWeAreSection = () => {
         </div>
 
         <div className="flex flex-col items-center gap-[4rem] text-center">
-          <h5 className="max-w-[103.2rem] overflow-hidden text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em] text-[#333333]">
+          <h5 className="max-w-[103.2rem] overflow-hidden text-[2rem] leading-[3.5rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[2.8rem] md:leading-[4rem] lg:text-[3.4rem] lg:leading-[4.8rem]">
             <div className="who-we-are-desc">
               At Creative Pixels, we don&apos;t just build websites—we create
               digital experiences that drive growth and make a lasting impact.

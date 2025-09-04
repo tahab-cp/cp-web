@@ -7,6 +7,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
+import WhyChooseUsCardSlider from "../common/WhyChooseUsCardSlider";
 
 const WhyChooseUsSection = () => {
   const whyChooseUsRef = useRef<HTMLElement>(null);
@@ -94,11 +95,11 @@ const WhyChooseUsSection = () => {
   return (
     <section
       ref={whyChooseUsRef}
-      className="why-choose-us-sec relative px-[2rem] py-[10rem] xl:px-[0rem]"
+      className="why-choose-us-sec relative px-[3rem] py-[5rem] xl:px-[0rem] xl:py-[10rem]"
     >
-      <div className="mx-auto flex max-w-[124rem] flex-col items-center gap-[3.6rem] lg:flex-row">
-        <div className="flex flex-col items-center text-center lg:w-[58rem] lg:items-start lg:text-left">
-          <div className="flex flex-col items-center gap-[2.1rem] lg:items-start">
+      <div className="mx-auto flex max-w-[124rem] flex-col items-center gap-[3.6rem] xl:flex-row">
+        <div className="flex flex-col items-center text-center xl:w-[58rem] xl:items-start xl:text-left">
+          <div className="flex flex-col gap-[2.1rem]">
             <div className="rotate-[2deg]">
               <div className="who-we-are-label">
                 <SectionLabel2
@@ -133,7 +134,7 @@ const WhyChooseUsSection = () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col gap-[2rem] md:h-[53rem] md:w-[62rem]">
+        <div className="relative hidden flex-col gap-[2rem] md:flex md:h-[53rem] md:w-[62rem]">
           <div className="why-choose-us-card top-[2.2rem] left-[120.33px] z-[2] flex size-[26.964rem] flex-col justify-center gap-[1.6rem] rounded-[1.557rem] bg-[#FFC300] pl-[2.459rem] md:absolute md:rotate-[12.19deg]">
             <h5 className="text-[2.2rem] leading-[3.2rem] font-medium">01</h5>
 
@@ -172,6 +173,10 @@ const WhyChooseUsSection = () => {
               committed to your success.
             </p>
           </div>
+        </div>
+
+        <div className="block w-full md:hidden">
+          <WhyChooseUsCardSlider />
         </div>
       </div>
     </section>

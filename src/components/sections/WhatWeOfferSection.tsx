@@ -135,7 +135,7 @@ const WhatWeOfferSection = () => {
     >
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
-        <LineStroke03 className="absolute top-[180.6rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke03 className="absolute top-[345rem] left-1/2 w-full -translate-x-1/2 md:top-[320rem] lg:top-[235rem] xl:top-[180.6rem]" />
       </div>
 
       <div className="relative z-[2] flex flex-col items-center gap-[7.6rem] px-[3rem] pb-[6rem] xl:px-[0rem] xl:pb-[0rem]">
@@ -221,7 +221,7 @@ const WhatWeOfferSection = () => {
       </div>
 
       <div className="relative z-[2] bg-white px-[3rem] py-[5rem] xl:mt-[-6rem] xl:h-[58.3rem] xl:px-[0rem] xl:py-[0rem]">
-        <div className="relative mx-auto flex w-full max-w-[130rem] flex-col gap-[5rem] lg:flex-row lg:gap-[12.9rem]">
+        <div className="relative mx-auto flex w-full max-w-[130rem] flex-col-reverse gap-[5rem] lg:flex-row lg:gap-[12.9rem]">
           <div className="flex flex-col gap-[4.5rem] xl:pt-[10rem]">
             <div className="flex flex-col justify-between gap-[5rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row xl:gap-[10rem]">
               {offerSectionDesignData.columns.map((col, idx) => (

@@ -56,8 +56,11 @@ const OurTeamSection = () => {
   }, []);
 
   return (
-    <section ref={ourTeamRef} className="pt-[6.4rem] pb-[9.8rem]">
-      <div className="flex flex-col items-center gap-[2rem] px-[2rem] text-center xl:px-[0rem]">
+    <section
+      ref={ourTeamRef}
+      className="py-[5rem] xl:pt-[6.4rem] xl:pb-[9.8rem]"
+    >
+      <div className="flex flex-col items-center gap-[2rem] px-[3rem] text-center xl:px-[0rem]">
         <div className="rotate-[2deg]">
           <div className="our-team-label">
             <SectionLabel2

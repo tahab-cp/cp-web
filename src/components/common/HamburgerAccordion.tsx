@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { serviceTabs } from "@/constants/servicesDropdown";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import type { FC } from "react";
 
@@ -16,9 +17,22 @@ const HamburgerAccordion: FC<HamburgerAccordionProps> = ({ setIsOpen }) => {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
-        <AccordionTrigger className="flex w-full items-center justify-between text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]">
+        {/* <AccordionTrigger className="flex w-full items-center justify-between text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]">
           Services
-        </AccordionTrigger>
+        </AccordionTrigger> */}
+        <div className="flex items-center justify-between">
+          {/* Left side: text as a link */}
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/services"
+            className="flex w-full items-center justify-between text-[3rem] leading-[4rem] font-semibold uppercase md:text-[4rem] md:leading-[5rem]"
+          >
+            Services
+          </Link>
+
+          {/* Right side: arrow trigger */}
+          <AccordionTrigger className="flex size-[4rem] items-center justify-center rounded-[.5rem] bg-white/20"></AccordionTrigger>
+        </div>
         <AccordionContent>
           {serviceTabs.map((item) =>
             item.columns.map((item2, idx) => (

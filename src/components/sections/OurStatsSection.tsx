@@ -5,6 +5,7 @@ import LineStroke14 from "../decorativeElements/LineStroke14";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SectionLabel2 from "../common/SectionLabel2";
+import OurStatsSlider from "../common/OurStatsSlider";
 
 const OurStatsSection = () => {
   const ourStatsRef = useRef<HTMLElement>(null);
@@ -14,7 +15,7 @@ const OurStatsSection = () => {
     if (!ourStats) return;
 
     const ourStatsLabel = ourStats.querySelector(".our-stats-label");
-    const ourStatsCard = ourStats.querySelectorAll(".our-stats-card");
+    const ourStatsCard = ourStats.querySelectorAll(".our-stats-card-animate");
 
     // Label wobble
     gsap.to(ourStatsLabel, {
@@ -42,7 +43,7 @@ const OurStatsSection = () => {
   return (
     <section
       ref={ourStatsRef}
-      className="relative px-[2rem] pt-[8.5rem] pb-[5rem] xl:px-[0rem] xl:pb-[9.732rem]"
+      className="relative px-[3rem] py-[5rem] xl:px-[0rem] xl:pt-[8.5rem] xl:pb-[9.732rem]"
     >
       <div className="absolute inset-0 z-[0]">
         <LineStroke14 className="absolute top-[14.2rem] left-1/2 w-full -translate-x-1/2" />
@@ -55,8 +56,8 @@ const OurStatsSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-[2rem] md:grid-cols-2 xl:grid-cols-4">
-          <div className="our-stats-card">
+        <div className="hidden grid-cols-4 gap-[2rem] lg:grid">
+          <div className="our-stats-card our-stats-card-animate">
             <h4 className="text-[7.6rem] leading-[9rem] font-semibold tracking-[-0.02em] text-white">
               200+
             </h4>
@@ -66,7 +67,7 @@ const OurStatsSection = () => {
             </h6>
           </div>
 
-          <div className="our-stats-card xl:top-[8rem]">
+          <div className="our-stats-card our-stats-card-animate top-[8rem]">
             <h4 className="text-[7.6rem] leading-[9rem] font-semibold tracking-[-0.02em] text-white">
               15+
             </h4>
@@ -76,7 +77,7 @@ const OurStatsSection = () => {
             </h6>
           </div>
 
-          <div className="our-stats-card">
+          <div className="our-stats-card our-stats-card-animate">
             <h4 className="text-[7.6rem] leading-[9rem] font-semibold tracking-[-0.02em] text-white">
               150+
             </h4>
@@ -86,7 +87,7 @@ const OurStatsSection = () => {
             </h6>
           </div>
 
-          <div className="our-stats-card xl:top-[8rem]">
+          <div className="our-stats-card our-stats-card-animate top-[8rem]">
             <h4 className="text-[7.6rem] leading-[9rem] font-semibold tracking-[-0.02em] text-white">
               20+
             </h4>
@@ -95,6 +96,10 @@ const OurStatsSection = () => {
               Skillful Team Members
             </h6>
           </div>
+        </div>
+
+        <div className="block w-full lg:hidden">
+          <OurStatsSlider />
         </div>
       </div>
     </section>

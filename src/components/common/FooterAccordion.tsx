@@ -16,7 +16,7 @@ const FooterAccordion = ({ title, links, value }: FooterAccordionProps) => {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={value}>
-        <AccordionTrigger className="flex w-full items-center justify-between text-[2.4rem] leading-[3rem] font-semibold text-white">
+        <AccordionTrigger className="flex w-full items-center justify-between text-[2rem] leading-[3rem] font-semibold text-white">
           {title}
         </AccordionTrigger>
         <AccordionContent>
