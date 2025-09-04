@@ -144,7 +144,7 @@ const WhoWeAreSection = () => {
                 alt={item.alt}
                 width={692}
                 height={588}
-                className="size-full object-cover object-center"
+                className="size-full object-center"
               />
             </div>
           ))}
