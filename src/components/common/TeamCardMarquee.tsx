@@ -4,8 +4,11 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import Link from "next/link";
 import { teamData } from "@/constants/ourTeamSection";
+import { useState } from "react";
 
 const TeamCardMarquee = () => {
+  const [active, setActive] = useState<number | null>(null);
+
   return (
     <>
       <Marquee
@@ -18,7 +21,9 @@ const TeamCardMarquee = () => {
         {teamData.map((item, idx) => (
           <div
             key={idx}
-            className="our-team-card group relative mx-[.9rem] h-[40rem] w-[30.9rem] overflow-hidden rounded-[1.6rem]"
+            onMouseEnter={() => setActive(idx)}
+            onMouseLeave={() => setActive(null)}
+            className="our-team-card relative mx-[.9rem] h-[40rem] w-[30.9rem] overflow-hidden rounded-[1.6rem]"
           >
             <div className="absolute bottom-0 left-0 z-[1]">
               <Image
@@ -39,7 +44,11 @@ const TeamCardMarquee = () => {
               </h6>
             </div>
 
-            <div className="absolute inset-0 z-[3] opacity-0 transition-all duration-500 group-hover:opacity-100">
+            <div
+              className={`absolute inset-0 z-[3] transition-all duration-500 ${
+                active === idx ? "opacity-100" : "opacity-0"
+              }`}
+            >
               <div className="our-team-card size-full opacity-95" />
 
               <div className="absolute inset-0 flex flex-col justify-between px-[2.5rem] pt-[3.3rem] pb-[2.6rem]">

@@ -5,11 +5,11 @@ export const teamData = [
       width: 309,
       height: 376,
     },
-    name: "Hassan Iqbal",
+    name: "Hassan",
     role: "Managing Director",
     hover: {
       avatar: "/images/team-avatar-01.svg",
-      name: "Ubaid Ur Rehman",
+      name: "Ubaid",
       role: "Senior User Interface Designer",
       linkedin: {
         href: "https://linkedin.com",
