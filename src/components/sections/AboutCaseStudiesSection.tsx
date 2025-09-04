@@ -73,7 +73,7 @@ const AboutCaseStudiesSection = () => {
           <div className="about-case-studies-label">
             <SectionLabel2
               text="Case Studies"
-              bgColor="bg-[#81f2b4]"
+              bgColor="bg-[#3078FF]"
               textColor="text-text-primary"
             />
           </div>

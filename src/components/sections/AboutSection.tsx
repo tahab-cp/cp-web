@@ -136,8 +136,8 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-[5rem] flex max-w-[135rem] flex-col gap-[1.8rem] px-[3rem] lg:mt-[10rem] xl:flex-row xl:px-[0rem]">
-        <div className="about-card-gradient relative overflow-hidden px-[2rem] py-[3rem] xl:w-[60%]">
+      <div className="relative z-10 mx-auto mt-[5rem] flex max-w-[120rem] flex-col gap-[1.8rem] px-[3rem] lg:mt-[10rem] xl:flex-row xl:px-[0rem] 2xl:max-w-[135rem]">
+        <div className="about-card-gradient relative overflow-hidden px-[2rem] py-[3rem] xl:w-[55%] 2xl:w-[60%]">
           <div className="absolute top-[-11.9rem] left-[-10.5rem] z-[0] size-[30rem] bg-[#1534B699] blur-[100px]" />
           <div className="absolute right-0 bottom-[-26.656rem] z-[0] size-[30rem] bg-[#DFDFDF99] blur-[100px]" />
 
@@ -172,7 +172,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-[2rem] md:grid-cols-2 xl:w-[40%]">
+        <div className="grid grid-cols-1 gap-[2rem] md:grid-cols-2 xl:w-[45%] 2xl:w-[40%]">
           {aboutCardData.map((item, idx) => (
             <div
               key={idx}

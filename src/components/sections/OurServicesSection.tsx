@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import SectionLabel from "../common/SectionLabel";
 import OurServiesMarquee from "../common/OurServicesMarquee";
 import Link from "next/link";
 import {
@@ -8,35 +9,58 @@ import {
   offerSectionWebData,
 } from "@/constants/offerSection";
 import CLetter from "../decorativeElements/CLetter";
+import SectionLabel2 from "../common/SectionLabel2";
+import LineStroke16 from "../decorativeElements/LineStroke16";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const OurServicesSection = () => {
+  const ourServicesRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    const ourServices = ourServicesRef.current;
+    if (!ourServices) return;
+
+    const ourServicesLabel = ourServices.querySelector(".our-services-label");
+
+    // Label wobble
+    gsap.to(ourServicesLabel, {
+      rotate: 5,
+      duration: 0.6,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
+  }, []);
+
   return (
-    <section className="relative overflow-hidden pt-[20.6rem]">
+    <section
+      ref={ourServicesRef}
+      className="relative overflow-hidden pt-[20.6rem]"
+    >
       {/* Bg Element */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        <CLetter className="absolute top-[5rem] right-[-2rem] w-[20rem] rotate-[-80deg]" />
+        <CLetter className="absolute top-[-10rem] right-[-2rem] w-[10rem] rotate-[-80deg] md:top-[5rem] md:w-[20rem]" />
       </div>
 
       {/* Decorative stroke line */}
-      {/* <div className="absolute inset-0 z-[0]">
-        <Image
-          src={bgLine}
-          alt="Background line"
-          width={1440}
-          height={531.42}
-          className="absolute top-[15.4rem] left-1/2 -translate-x-1/2 opacity-10"
-          priority
-        />
-      </div> */}
+      <div className="absolute inset-0 z-[0]">
+        <LineStroke16 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
+      </div>
 
-      <div className="relative z-[1] mx-auto flex max-w-[120.3rem] flex-col items-start gap-[2rem]">
-        <SectionLabel
-          text="Our Services"
-          textColor="text-text-primary"
-          borderColor="border-text-primary"
-        />
+      <div className="relative z-[1] mx-auto flex max-w-[120.3rem] flex-col items-center gap-[2rem] px-[3rem] text-center xl:items-start xl:px-[0rem] xl:text-left">
+        <div className="rotate-[-2deg]">
+          <div className="our-services-label">
+            <SectionLabel2
+              text="Our Services"
+              bgColor="bg-[#EE8D00]"
+              textColor="text-white"
+            />
+          </div>
+        </div>
 
-        <h2 className="text-[7rem] leading-[8.4rem] font-bold tracking-[-0.03em]">
+        <h2 className="text-[3.5rem] leading-[5rem] font-semibold tracking-[-0.03em] md:text-[7rem] md:leading-[8.4rem] md:font-bold">
           Our <span className="text-[#EE8D00]">design</span>,{" "}
           <span className="text-[#FF37B3]">web</span> and{" "}
           <span className="text-[#3078FF]">support services.</span>
