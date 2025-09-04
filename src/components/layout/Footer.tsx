@@ -30,7 +30,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="footer relative w-full overflow-hidden px-[2rem] pt-[5rem] pb-[2.764rem] xl:overflow-visible xl:px-[0rem] xl:pt-[6.2rem]">
+    <footer className="footer relative w-full px-[2rem] pt-[5rem] pb-[2.764rem] xl:px-[0rem] xl:pt-[6.2rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[1]">
         <LineStroke06 className="absolute top-[-19.3rem] left-1/2 w-full -translate-x-1/2" />
@@ -153,7 +153,7 @@ const Footer = () => {
       </ul>
 
       {/* Mobile Logos */}
-      <div className="relative z-[3] my-[4rem] block w-full xl:hidden">
+      <div className="relative z-[3] my-[4rem] block w-full overflow-hidden xl:hidden">
         <ClientLogoSlider />
       </div>
 
