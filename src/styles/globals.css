@@ -729,7 +729,7 @@ body {
   margin-inline: auto;
   position: relative;
   border-radius: 2rem;
-  padding: 9rem 4.9rem 9rem 6rem;
+  padding: 2rem;
   background: linear-gradient(
     301.75deg,
     rgba(255, 255, 255, 0.05) 1.41%,
@@ -737,6 +737,23 @@ body {
   );
   backdrop-filter: blur(10px);
   z-index: 0;
+}
+
+@media (min-width: 640px) {
+  .faq-gradient-card {
+    max-width: 132.2rem;
+    margin-inline: auto;
+    position: relative;
+    border-radius: 2rem;
+    padding: 6rem;
+    background: linear-gradient(
+      301.75deg,
+      rgba(255, 255, 255, 0.05) 1.41%,
+      rgba(157, 157, 157, 0.05) 95.05%
+    );
+    backdrop-filter: blur(10px);
+    z-index: 0;
+  }
 }
 
 .faq-gradient-card::before {

@@ -6,7 +6,7 @@ const FaqTab = () => {
   return (
     <Tabs defaultValue="general" className="gap-[8rem]">
       {/* Tab buttons */}
-      <TabsList className="mx-auto flex w-full max-w-[121.3rem] gap-[1rem]">
+      <TabsList className="mx-auto flex w-full max-w-[121.3rem] flex-wrap justify-center gap-[1rem] text-center xl:justify-start xl:text-left">
         {faqData.map((faq) => (
           <TabsTrigger
             key={faq.tab}
@@ -22,13 +22,16 @@ const FaqTab = () => {
       {faqData.map((faq) => (
         <TabsContent key={faq.tab} value={faq.tab}>
           <div className={`${faq.style} flex flex-col gap-[5rem]`}>
-            <h3 className="text-[4.8rem] leading-[6rem] font-semibold tracking-[-0.02em]">
+            <h3 className="text-center text-[3.2rem] leading-[5rem] font-semibold tracking-[-0.02em] md:text-[4.8rem] md:leading-[6rem] xl:text-left">
               {faq.title}
             </h3>
 
-            <div className="grid grid-cols-2 gap-x-[4.3rem] gap-y-[5rem]">
+            <div className="grid grid-cols-1 gap-[4rem] lg:grid-cols-2">
               {faq.items.map((item, i) => (
-                <div key={i} className="flex gap-[2.2rem]">
+                <div
+                  key={i}
+                  className="flex flex-col items-center gap-[2.2rem] text-center xl:flex-row xl:items-start xl:text-left"
+                >
                   <div className="inline-flex h-[5.6rem] min-w-[5.6rem] items-center justify-center rounded-[.8rem] border border-[#9c9c9c]">
                     <Image
                       src={item.icon}

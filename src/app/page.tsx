@@ -1,6 +1,7 @@
 "use client";
 
 import CtaSection1 from "@/components/common/CtaSection1";
+import TestBtn from "@/components/common/TestBtn";
 import LineStroke04 from "@/components/decorativeElements/LineStroke04";
 import AboutSection from "@/components/sections/AboutSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
@@ -13,6 +14,7 @@ const HomePage = () => {
   return (
     <main>
       <HeroSection />
+      {/* <TestBtn /> */}
       <AboutSection />
       <WhatWeOfferSection />
       <CaseStudiesSection />

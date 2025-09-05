@@ -4,7 +4,10 @@ import Link from "next/link";
 
 const CommonBtn1 = () => {
   return (
-    <Link href="" className="common-btn-1-parent inline-flex items-center">
+    <Link
+      href="/contact"
+      className="common-btn-1-parent inline-flex items-center"
+    >
       <div className={`common-btn-1 overflow-hidden whitespace-nowrap`}>
         {/* Gradient Layer */}
         <div className="gradient-layer" />

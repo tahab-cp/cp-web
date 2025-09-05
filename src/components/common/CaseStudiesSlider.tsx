@@ -33,7 +33,7 @@ const CaseStudiesSlider = () => {
       {caseStudiesData.map((item, idx) => (
         <SwiperSlide key={idx}>
           <Link
-            href=""
+            href={`/case-studies/${item.slug}`}
             className="case-studies-card flex flex-col items-center p-[2rem] text-center"
           >
             <div className="relative h-[22rem] w-full overflow-hidden rounded-[2rem] md:h-[40rem] lg:h-[30rem] xl:h-[40rem]">
