@@ -1,6 +1,5 @@
 import { caseStudiesData } from "@/constants/caseStudiesSection";
 import SectionDescription from "../common/SectionDescription";
-import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import Image from "next/image";
@@ -8,10 +7,12 @@ import LineStroke19 from "../decorativeElements/LineStroke19";
 import LineStroke20 from "../decorativeElements/LineStroke20";
 import LineStroke21 from "../decorativeElements/LineStroke21";
 import SectionLabel2 from "../common/SectionLabel2";
+import OurWorkCardSlider from "../common/OurWorkCardSlider";
+import CaseStudiesSlider from "../common/CaseStudiesSlider";
 
 const OurWorkSection = () => {
   return (
-    <section className="pt-[20.6rem]">
+    <section className="pt-[18rem] md:pt-[20.6rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
         <LineStroke19 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
@@ -25,24 +26,24 @@ const OurWorkSection = () => {
         <LineStroke21 className="absolute top-[281.6rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
-      <div className="relative z-[1] mx-auto max-w-[120.3rem]">
-        <div className="flex flex-col items-start gap-[2rem]">
+      <div className="relative z-[1] mx-auto max-w-[120.3rem] px-[3rem] xl:px-[0rem]">
+        <div className="flex flex-col items-center gap-[2rem] text-center xl:items-start xl:text-left">
           <div className="rotate-[2deg]">
             <SectionLabel2 text="Our Work" />
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="max-w-[72.1rem]">
+          <div className="flex flex-col items-center justify-between gap-[2rem] xl:flex-row xl:gap-[0rem]">
+            <div className="max-w-[65rem] xl:max-w-[72.1rem]">
               <SectionTitle label="We design and build to make an impact." />
             </div>
 
-            <div className="max-w-[37.9rem]">
+            <div className="max-w-[70rem] xl:max-w-[37.9rem]">
               <SectionDescription label="We help the world's leading brands create standout ads and campaigns at speed—from concept to execution to results." />
             </div>
           </div>
         </div>
 
-        <div className="mt-[6.8rem] grid grid-cols-3 gap-[3.3rem]">
+        <div className="mt-[6.8rem] hidden grid-cols-3 gap-[3.3rem] xl:grid">
           <div className="rounded-[3rem] bg-[#FFC300]">
             <h3 className="inline-flex items-start pt-[3.4rem] pb-[.7rem] pl-[5rem] text-[11rem] leading-[13rem] font-bold tracking-[-0.02em]">
               95 <span className="text-[5rem] leading-[8rem]">%</span>
@@ -79,14 +80,18 @@ const OurWorkSection = () => {
             </p>
           </div>
         </div>
+
+        <div className="mt-[4rem] block w-full xl:hidden">
+          <OurWorkCardSlider />
+        </div>
       </div>
 
-      <div className="relative z-[1] mx-auto mt-[10rem] max-w-[120.3rem]">
+      <div className="relative z-[1] mx-auto mt-[5rem] max-w-[120.3rem] px-[3rem] xl:mt-[10rem] xl:px-[0rem]">
         <div className="mx-auto max-w-[82.6rem] text-center">
           <SectionTitle label="Trusted by business across the UK, US and Australia." />
         </div>
 
-        <div className="mt-[4rem] flex flex-col gap-[5rem]">
+        <div className="mt-[4rem] hidden flex-col gap-[5rem] xl:flex">
           {caseStudiesData.map((caseStudy, index) => (
             <CaseStudiesGrid
               key={index}
@@ -96,7 +101,11 @@ const OurWorkSection = () => {
           ))}
         </div>
 
-        <button className="mt-[5rem] inline-flex w-full cursor-pointer items-center">
+        <div className="block w-full overflow-hidden xl:hidden">
+          <CaseStudiesSlider />
+        </div>
+
+        <button className="mt-[5rem] hidden w-full cursor-pointer items-center xl:inline-flex">
           <span className="inline-flex h-[5.6rem] w-full items-center justify-center rounded-[6rem] border border-[#141414] bg-[#141414] px-[3rem] py-[1rem] text-[1.8rem] font-semibold text-white md:text-[2rem]">
             Load More
           </span>

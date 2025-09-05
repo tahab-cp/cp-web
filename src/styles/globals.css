@@ -763,7 +763,7 @@ body {
 .case-study-detail-gradient-card {
   position: relative;
   border-radius: 2rem;
-  padding: 3rem 1.2rem 3rem 3rem;
+  padding: 2rem;
   background: linear-gradient(
     301.83deg,
     rgba(255, 255, 255, 0.05) 1.23%,
@@ -827,7 +827,7 @@ body {
 .case-study-detail-gradient-card-02 {
   position: relative;
   border-radius: 2rem;
-  padding: 6rem 3.5rem 3rem 4.5rem;
+  padding: 3rem;
   background: linear-gradient(155.35deg, #f5f5f7 1.83%, #ffffff 100%);
   backdrop-filter: blur(10px);
   z-index: 0;
