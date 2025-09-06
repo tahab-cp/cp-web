@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) =>
+    const fileLoaderRule = config.module.rules.find((rule: any) =>
       rule.test?.test?.(".svg"),
     );
 
@@ -27,12 +27,6 @@ const nextConfig: NextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
 
     return config;
-  },
-
-  eslint: {
-    // Warning: This allows production builds to successfully complete
-    // even if your project has ESLint errors.
-    ignoreDuringBuilds: true,
   },
 };
 
