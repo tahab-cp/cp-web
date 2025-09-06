@@ -2,6 +2,27 @@
 @import "tw-animate-css";
 
 @theme {
+  /*Colors utilized for the content or paragraph text*/
+  --color-black: #070707;
+
+  /*Secondary colors*/
+  --color-cadmium-orange: #ee8d00;
+  --color-hot-pink: #ff37b3;
+  --color-azure-blue: #3078ff;
+  --color-medium-sea-green: #44b276;
+
+  /*Gradient Color*/
+  --gradient-sunset-gold: linear-gradient(
+    90.16deg,
+    #ffd900 0.15%,
+    #ee7621 99.88%
+  );
+  --gradient-sunset-candy: linear-gradient(
+    90.16deg,
+    #ffd900 0.15%,
+    #ff37b3 99.88%
+  );
+
   /* Font family */
   --font-onest: "Onest", sans-serif;
 

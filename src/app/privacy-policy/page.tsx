@@ -1,6 +1,7 @@
 import SectionLabel2 from "@/components/common/SectionLabel2";
 import SectionTitle from "@/components/common/SectionTitle";
 import Image from "next/image";
+import AdvertiseIcon from "../../../public/images/about-play-btn-img.svg";
 
 const PrivacyPolicyPage = () => {
   return (
@@ -37,12 +38,7 @@ const PrivacyPolicyPage = () => {
             <div className="grid grid-cols-2">
               <div className="flex items-center gap-[2.2rem]">
                 <div className="inline-flex size-[5.6rem] items-center justify-center rounded-[.8rem] border border-[#9c9c9c]">
-                  <Image
-                    src="/images/icons/advertise-icon.svg"
-                    width={26}
-                    height={22}
-                    alt="Icon"
-                  />
+                  <AdvertiseIcon />
                 </div>
 
                 <div className="flex flex-col gap-[1rem]">
