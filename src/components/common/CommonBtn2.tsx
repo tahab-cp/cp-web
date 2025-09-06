@@ -1,9 +1,30 @@
+import { getCalApi } from "@calcom/embed-react";
 import Image from "next/image";
-import Link from "next/link";
+import { useEffect } from "react";
 
 const CommonBtn2 = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        theme: "dark",
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#292929" },
+          dark: { "cal-brand": "#FF37B3" },
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
-    <Link href="" className="common-btn-2-parent inline-flex items-center">
+    <button
+      data-cal-namespace="15min"
+      data-cal-link="hassan-iqbal-mznzu9/15min"
+      data-cal-config='{"layout":"month_view","theme":"dark"}'
+      className="common-btn-2-parent inline-flex cursor-pointer items-center"
+    >
       <div className="common-btn-2 overflow-hidden">
         {/* Gradient Layer */}
         <div className="gradient-layer" />
@@ -39,7 +60,7 @@ const CommonBtn2 = () => {
           priority
         />
       </i>
-    </Link>
+    </button>
   );
 };
 

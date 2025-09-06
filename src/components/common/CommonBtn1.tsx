@@ -1,12 +1,31 @@
 "use client";
 
+import { getCalApi } from "@calcom/embed-react";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const CommonBtn1 = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        theme: "dark",
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#292929" },
+          dark: { "cal-brand": "#FF37B3" },
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
-    <Link
-      href="/contact"
-      className="common-btn-1-parent inline-flex items-center"
+    <button
+      data-cal-namespace="15min"
+      data-cal-link="hassan-iqbal-mznzu9/15min"
+      data-cal-config='{"layout":"month_view","theme":"dark"}'
+      className="common-btn-1-parent inline-flex cursor-pointer items-center"
     >
       <div className={`common-btn-1 overflow-hidden whitespace-nowrap`}>
         {/* Gradient Layer */}
@@ -56,7 +75,7 @@ const CommonBtn1 = () => {
           </svg>
         </i>
       </div>
-    </Link>
+    </button>
   );
 };
 
