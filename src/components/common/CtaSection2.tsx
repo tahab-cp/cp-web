@@ -53,7 +53,7 @@ const CtaSection2 = () => {
             </h4>
 
             <CommonBtn3
-              href="/"
+              href="/contact"
               label="Book a Call"
               bgColor="#FF37B3"
               textColor="#fff"

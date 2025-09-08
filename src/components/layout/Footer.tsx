@@ -14,17 +14,17 @@ const socialLinks = [
   {
     src: "/images/icons/facebook-white-icon.svg",
     alt: "Facebook Icon",
-    href: "",
+    href: "https://www.facebook.com/CPAgencyUK",
   },
   {
     src: "/images/icons/instagram-white-icon.svg",
     alt: "Instagram Icon",
-    href: "",
+    href: "https://www.instagram.com/cpagencyuk/",
   },
   {
     src: "/images/icons/linkedin-white-icon.svg",
     alt: "Linkedin Icon",
-    href: "",
+    href: "https://www.linkedin.com/company/creativepixels/",
   },
 ];
 

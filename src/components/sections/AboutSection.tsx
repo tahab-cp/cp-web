@@ -9,11 +9,13 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { Volume2, VolumeOff } from "lucide-react";
 
 const AboutSection = () => {
   const aboutRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
 
   const handleTogglePlay = () => {
     if (!videoRef.current) return;
@@ -25,6 +27,13 @@ const AboutSection = () => {
     }
 
     setIsPlaying(!isPlaying);
+  };
+
+  const handleToggleMute = () => {
+    if (!videoRef.current) return;
+
+    videoRef.current.muted = !isMuted;
+    setIsMuted(!isMuted);
   };
 
   useGSAP(() => {
@@ -156,13 +165,30 @@ const AboutSection = () => {
               <span>Hear From Founder</span>
             </button>
 
-            <div className="h-[20rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] xl:h-[40rem]">
+            <div className="relative h-[20rem] w-full overflow-hidden rounded-[2rem] md:h-[50rem] xl:h-[40rem]">
+              <button
+                onClick={handleToggleMute}
+                className="absolute top-[1rem] right-[1rem] z-[10] flex size-[3rem] items-center justify-center rounded-[1rem] bg-black/80 text-white"
+              >
+                <span>
+                  {isMuted ? (
+                    <VolumeOff className="size-[1.6rem]" />
+                  ) : (
+                    <Volume2 className="size-[1.6rem]" />
+                  )}
+                </span>
+              </button>
+
               <video
+                onClick={() => {
+                  handleToggleMute();
+                }}
                 ref={videoRef}
-                loop
                 muted
-                playsInline
                 autoPlay
+                loop
+                playsInline
+                preload="auto"
                 className="size-full object-cover"
               >
                 <source src="/videos/about-video.mp4" type="video/mp4" />

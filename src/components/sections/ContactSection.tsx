@@ -83,7 +83,7 @@ const ContactSection = () => {
               </h6>
 
               <Link
-                href=""
+                href="tel:01618202667"
                 className="text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em] text-[#FFC300]"
               >
                 0161 820 2667
@@ -96,7 +96,7 @@ const ContactSection = () => {
               </h6>
 
               <Link
-                href=""
+                href="mailto:hello@cp.agency"
                 className="text-[3.4rem] leading-[4.8rem] font-semibold tracking-[-0.02em] text-[#FF37B3]"
               >
                 hello@cp.agency

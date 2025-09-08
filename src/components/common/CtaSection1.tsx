@@ -22,7 +22,7 @@ const CtaSection1 = () => {
 
           <div className="mt-[4rem] flex flex-col items-center gap-[.531rem] md:flex-row">
             <Link
-              href=""
+              href="/contact"
               className="relative inline-flex h-[6.4rem] items-center gap-[1rem] px-[3rem] py-[1.223rem] text-[1.6rem] font-semibold text-white md:text-[2rem]"
             >
               {/* Border layer */}
@@ -74,7 +74,7 @@ const CtaSection1 = () => {
             </h4>
 
             <CommonBtn3
-              href="/"
+              href="/contact"
               label="Book a Call"
               bgColor="#FF37B3"
               textColor="#fff"

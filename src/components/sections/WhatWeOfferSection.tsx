@@ -209,7 +209,7 @@ const WhatWeOfferSection = () => {
             <div className="flex flex-col justify-center gap-[2rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row">
               <div className="what-we-offer-right-card-cta-btn">
                 <CommonBtn3
-                  href="/"
+                  href="/contact"
                   label="Book a Call"
                   bgColor="#3078FF"
                   textColor="#fff"
@@ -259,7 +259,7 @@ const WhatWeOfferSection = () => {
             <div className="flex flex-col justify-center gap-[2rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row">
               <div className="what-we-offer-right-card-cta-btn">
                 <CommonBtn3
-                  href="/"
+                  href="/contact"
                   label="Book a Call"
                   bgColor="#44B276"
                   textColor="#fff"
@@ -367,7 +367,7 @@ const WhatWeOfferSection = () => {
           <div className="flex flex-col justify-center gap-[2rem] md:flex-row lg:flex-col lg:justify-start xl:flex-row">
             <div className="what-we-offer-right-card-cta-btn">
               <CommonBtn3
-                href="/"
+                href="/contact"
                 label="Book a Call"
                 bgColor="#EE8D00"
                 textColor="#fff"
@@ -387,7 +387,7 @@ const WhatWeOfferSection = () => {
 
             <div className="min-w-max">
               <CommonBtn3
-                href="/"
+                href="/contact"
                 label="Book a Call"
                 bgColor="#EE8D00"
                 textColor="#fff"
