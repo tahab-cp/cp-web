@@ -138,7 +138,7 @@ const WhatWeOfferSection = () => {
         <LineStroke03 className="absolute top-[345rem] left-1/2 w-full -translate-x-1/2 md:top-[320rem] lg:top-[235rem] xl:top-[180.6rem]" />
       </div>
 
-      <div className="relative z-[2] flex flex-col items-center gap-[7.6rem] px-[3rem] pb-[6rem] xl:px-[0rem] xl:pb-[0rem]">
+      <div className="relative z-[2] flex flex-col items-center gap-[4rem] px-[3rem] pb-[6rem] md:gap-[7.6rem] xl:px-[0rem] xl:pb-[0rem]">
         <div className="rotate-[2deg]">
           <div className="what-we-offer-label">
             <SectionLabel2
