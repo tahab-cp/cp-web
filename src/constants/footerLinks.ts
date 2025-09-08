@@ -61,6 +61,7 @@ export const footerLinkCardData = [
       { label: "About CP", href: "/about" },
       { label: "Our Services", href: "/services" },
       { label: "Case Studies", href: "/case-studies" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
   {
@@ -68,7 +69,6 @@ export const footerLinkCardData = [
     links: [
       { label: "Sitemap", href: "/services" },
       { label: "Book Call", href: "/contact" },
-      { label: "Contact Us", href: "/contact" },
       { label: "FAQs", href: "/faq" },
     ],
   },

@@ -11,6 +11,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Menu } from "lucide-react";
+import ContactPopoverBtn from "../common/ContactPopoverBtn";
 
 const Header = () => {
   const pathname = usePathname();
@@ -115,7 +116,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden items-center gap-[1rem] overflow-hidden xl:flex">
-            <i className="header-cta-btn relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+            {/* <i className="header-cta-btn relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
                 src="/images/icons/phone-fill.svg"
                 alt="Phone Fill Icon"
@@ -124,7 +125,8 @@ const Header = () => {
               />
 
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
-            </i>
+            </i> */}
+            <ContactPopoverBtn />
 
             <div className="header-cta-btn">
               <CommonBtn1 />
@@ -132,7 +134,7 @@ const Header = () => {
           </div>
 
           {/* Contact Cta for Responsive */}
-          <Link href="/contact" className="xl:hidden">
+          {/* <Link href="/contact" className="xl:hidden">
             <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
                 src="/images/icons/phone-fill.svg"
@@ -143,7 +145,10 @@ const Header = () => {
 
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
             </i>
-          </Link>
+          </Link> */}
+          <div className="xl:hidden">
+            <ContactPopoverBtn />
+          </div>
 
           {/* Hamburger Button */}
           <div className="xl:hidden">

@@ -7,6 +7,7 @@ import NavigationDropdown from "../common/NavigationDropdown";
 import CommonBtn1 from "../common/CommonBtn1";
 import HamburgerMenu from "./HamburgerMenu";
 import { Menu } from "lucide-react";
+import ContactPopoverBtn from "../common/ContactPopoverBtn";
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +51,7 @@ const StickyHeader = () => {
           </nav>
 
           <div className="hidden items-center gap-[1rem] overflow-hidden xl:flex">
-            <i className="header-cta-btn-animate relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
+            {/* <i className="header-cta-btn-animate relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
                 src="/images/icons/phone-fill.svg"
                 alt="Phone Fill Icon"
@@ -58,14 +59,15 @@ const StickyHeader = () => {
                 height={16}
               />
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] rounded-full bg-[#7EE972] outline-[3.5px]" />
-            </i>
+            </i> */}
+            <ContactPopoverBtn />
 
             {/* CTA Button */}
             <CommonBtn1 />
           </div>
 
           {/* Contact Cta for Responsive */}
-          <Link href="/contact" className="xl:hidden">
+          {/* <Link href="/contact" className="xl:hidden">
             <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
               <Image
                 src="/images/icons/phone-fill.svg"
@@ -76,7 +78,10 @@ const StickyHeader = () => {
 
               <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
             </i>
-          </Link>
+          </Link> */}
+          <div className="xl:hidden">
+            <ContactPopoverBtn />
+          </div>
 
           {/* Hamburger Button */}
           <div className="xl:hidden">
