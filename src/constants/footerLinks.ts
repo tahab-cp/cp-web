@@ -61,7 +61,6 @@ export const footerLinkCardData = [
       { label: "About CP", href: "#" },
       { label: "Our Services", href: "#" },
       { label: "Case Studies", href: "#" },
-      { label: "Insights", href: "#" },
     ],
   },
   {
@@ -69,14 +68,15 @@ export const footerLinkCardData = [
     links: [
       { label: "Sitemap", href: "#" },
       { label: "Book Call", href: "#" },
-      { label: "FAQs", href: "#" },
+      { label: "Contact Us", href: "/contact" },
+      { label: "FAQs", href: "/faq" },
     ],
   },
   {
     title: "Legal",
     links: [
       { label: "Partnership", href: "#" },
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms & Conditions", href: "#" },
     ],
   },

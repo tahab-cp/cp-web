@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer className="footer relative w-full px-[2rem] pt-[5rem] pb-[2.764rem] xl:px-[0rem] xl:pt-[6.2rem]">
       {/* Decorative stroke line */}
-      <div className="absolute inset-0 z-[1]">
+      <div className="pointer-events-none absolute inset-0 z-[1] select-none">
         <LineStroke06 className="absolute top-[-19.3rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 

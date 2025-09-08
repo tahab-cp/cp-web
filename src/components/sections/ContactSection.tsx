@@ -67,11 +67,8 @@ const ContactSection = () => {
     });
   }, []);
   return (
-    <section
-      ref={contactRef}
-      className="relative px-[2rem] py-[5rem] xl:px-[0rem] xl:py-[10rem]"
-    >
-      <div className="relative z-[3] mx-auto flex max-w-[112.3rem] flex-col items-center">
+    <section ref={contactRef} className="relative py-[5rem] xl:py-[10rem]">
+      <div className="relative z-[3] mx-auto flex max-w-[112.3rem] flex-col items-center px-[3rem] xl:px-[0rem]">
         <div className="overflow-hidden">
           <div className="contact-title text-center">
             <SectionTitle label="Ready to Start Working With Us?" />
@@ -130,7 +127,7 @@ const ContactSection = () => {
         <TextMarquee />
       </div>
 
-      <div className="relative z-[3] mx-auto max-w-[120.3rem]">
+      <div className="relative z-[3] mx-auto max-w-[120.3rem] px-[3rem] xl:px-[0rem]">
         <div className="contact-cta-card">
           <CtaSection2 />
         </div>
