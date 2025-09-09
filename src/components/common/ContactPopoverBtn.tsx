@@ -35,7 +35,7 @@ const ContactPopoverBtn = () => {
           <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
         </i>
       </PopoverTrigger>
-      <PopoverContent className="w-[20rem]">
+      <PopoverContent className="w-[20rem] pt-[1rem]">
         <div className="relative rounded-[2rem] bg-gradient-to-r from-[#ffe400] to-[#ff37b3] p-[2px]">
           <div className="flex flex-col overflow-hidden rounded-[2rem] bg-[#070707]">
             <Link
