@@ -5,6 +5,7 @@ import SectionTitle from "../common/SectionTitle";
 import SectionLabel2 from "../common/SectionLabel2";
 import CaseStudiesMarquee from "../common/CaseStudiesMarquee";
 import { caseStudiesCardData } from "@/constants/globals";
+import CaseStudiesSlider from "../common/CaseStudiesSlider";
 
 const CaseStudiesSection = () => {
   return (
@@ -51,7 +52,8 @@ const CaseStudiesSection = () => {
 
       {/* Responsive Cards */}
       <div className="mt-10 block w-full overflow-hidden lg:mt-20 xl:hidden">
-        <CaseStudiesMarquee />
+        {/* <CaseStudiesMarquee /> */}
+        <CaseStudiesSlider />
       </div>
     </section>
   );
