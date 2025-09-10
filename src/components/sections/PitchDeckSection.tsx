@@ -6,6 +6,7 @@ import SectionTitle from "../common/SectionTitle";
 import Link from "next/link";
 import SectionLabel2 from "../common/SectionLabel2";
 import { pitchDeckLogoData } from "@/constants/aboutPage";
+import FilledMailIcon from "@/assets/icons/filled-mail-icon.svg";
 
 const PitchDeckSection = () => {
   return (
@@ -44,12 +45,7 @@ const PitchDeckSection = () => {
               type="submit"
               className="inline-flex h-[5rem] min-w-[6.2rem] cursor-pointer items-center justify-center rounded-[1.6rem] bg-black/15 md:h-[6.2rem]"
             >
-              <Image
-                src="/images/icons/filled-mail-icon.svg"
-                alt="Mail Icon"
-                width={24}
-                height={16}
-              />
+              <FilledMailIcon />
             </button>
           </form>
         </div>
