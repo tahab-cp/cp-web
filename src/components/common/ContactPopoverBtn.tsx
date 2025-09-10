@@ -1,6 +1,6 @@
 import Link from "next/link";
-import PhoneFillIcon from "../../../public/images/icons/phone-fill.svg";
-import MeetIcon from "../../../public/images/icons/meet-icon.svg";
+import PhoneFillIcon from "@/assets/icons/phone-fill.svg";
+import MeetIcon from "@/assets/icons/meet-icon.svg";
 import { getCalApi } from "@calcom/embed-react";
 
 import {

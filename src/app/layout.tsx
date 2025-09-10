@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import "../styles/globals.css";
 import { Onest } from "next/font/google";
-import LayoutWrapper from "@/components/layout/LayoutWrapper";
+import { Metadata } from "next";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -9,7 +8,10 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
-  title: "CreativePixels | Creative Design Agency Manchester",
+  title: {
+    default: "CreativePixels | Creative Design Agency Manchester",
+    template: "CreativePixels | %s",
+  },
   description:
     "We focus on being a design-driven creative agency through bespoke design and development, specialising in all things design and making businesses stand out.",
   icons: {
@@ -23,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${onest.className} antialiased`}>
-      <body>
-        <LayoutWrapper>{children}</LayoutWrapper>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${onest.className} antialiased`}>
+        <main>{children}</main>
       </body>
     </html>
   );

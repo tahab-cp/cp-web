@@ -1,13 +1,13 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { faqTabData } from "@/constants/faqPage";
 import Image from "next/image";
-import { faqData } from "@/constants/generalQASection";
 
 const FaqTab = () => {
   return (
     <Tabs defaultValue="general" className="gap-[8rem]">
       {/* Tab buttons */}
       <TabsList className="mx-auto flex w-full max-w-[121.3rem] flex-wrap justify-center gap-[1rem] text-center xl:justify-start xl:text-left">
-        {faqData.map((faq) => (
+        {faqTabData.map((faq) => (
           <TabsTrigger
             key={faq.tab}
             value={faq.tab}
@@ -19,7 +19,7 @@ const FaqTab = () => {
       </TabsList>
 
       {/* Tab content */}
-      {faqData.map((faq) => (
+      {faqTabData.map((faq) => (
         <TabsContent key={faq.tab} value={faq.tab}>
           <div className={`${faq.style} flex flex-col gap-[5rem]`}>
             <h3 className="text-center text-[3.2rem] leading-[5rem] font-semibold tracking-[-0.02em] md:text-[4.8rem] md:leading-[6rem] xl:text-left">
@@ -33,14 +33,7 @@ const FaqTab = () => {
                   className="flex flex-col items-center gap-[2.2rem] text-center xl:flex-row xl:items-start xl:text-left"
                 >
                   <div className="inline-flex h-[5.6rem] min-w-[5.6rem] items-center justify-center rounded-[.8rem] border border-[#9c9c9c]">
-                    <Image
-                      src={item.icon}
-                      alt="Icon"
-                      width={24}
-                      height={24}
-                      className="h-[2.4rem] w-[2.4rem]"
-                      priority
-                    />
+                    <item.icon />
                   </div>
 
                   <div className="flex flex-col gap-[.5rem]">

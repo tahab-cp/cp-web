@@ -1,11 +1,12 @@
 "use client";
 
-import { caseStudiesData } from "@/constants/caseStudiesSection";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay } from "swiper/modules";
 import Link from "next/link";
+import { caseStudiesCardData } from "@/constants/globals";
+import ContactArrowIcon from "@/assets/icons/contact-arrow.svg";
 
 const CaseStudiesSlider = () => {
   return (
@@ -30,7 +31,7 @@ const CaseStudiesSlider = () => {
       }}
       className="mySwiper case-studies-slider"
     >
-      {caseStudiesData.map((item, idx) => (
+      {caseStudiesCardData.map((item, idx) => (
         <SwiperSlide key={idx}>
           <Link
             href={`/case-studies/${item.slug}`}
@@ -74,12 +75,7 @@ const CaseStudiesSlider = () => {
                 </div>
 
                 <i className="inline-flex size-[4.9rem] rotate-45 items-center justify-center">
-                  <Image
-                    src="/images/icons/contact-arrow.svg"
-                    alt="Contact Arrow"
-                    width={49}
-                    height={49}
-                  />
+                  <ContactArrowIcon />
                 </i>
               </div>
             </div>

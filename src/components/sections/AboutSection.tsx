@@ -1,18 +1,13 @@
 "use client";
-
 import Image from "next/image";
-import { aboutCardData } from "@/constants/aboutSection";
-import LineStroke02 from "../decorativeElements/LineStroke02";
+import LineStroke02 from "@/assets/decorative-elements/line-stroke-02.svg";
 import CommonBtn3 from "../common/CommonBtn3";
-import CLetter from "../decorativeElements/CLetter";
+import CLetter from "@/assets/decorative-elements/c-letter.svg";
 import { useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { SplitText } from "gsap/all";
 import { Volume2, VolumeOff } from "lucide-react";
+import { aboutCardData } from "@/constants/homePage";
 
 const AboutSection = () => {
-  const aboutRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -36,85 +31,11 @@ const AboutSection = () => {
     setIsMuted(!isMuted);
   };
 
-  useGSAP(() => {
-    const about = aboutRef.current;
-    if (!about) return;
-
-    const aboutLabel = about.querySelector(".about-label");
-    const aboutDescSplit = new SplitText(".about-desc", {
-      type: "lines",
-    });
-    const aboutCtaBtn = about.querySelector(".about-cta-btn");
-    const aboutCardGradient = about.querySelector(".about-card-gradient");
-    const aboutCard = about.querySelectorAll(".about-card");
-
-    gsap.from(aboutLabel, {
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: aboutLabel,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    gsap.from(aboutDescSplit.lines, {
-      y: 50,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.05, // animate one by one
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".about-desc", // parent element
-        start: "top 70%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    gsap.from(aboutCtaBtn, {
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: aboutCtaBtn,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    gsap.from(aboutCardGradient, {
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: aboutCardGradient,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    gsap.from(aboutCard, {
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      stagger: 0.5,
-      delay: 0.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: aboutCard,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-  }, []);
-
   return (
-    <section ref={aboutRef} className="relative py-[5rem] xl:py-[10rem]">
+    <section className="relative py-[5rem] xl:py-[10rem]">
       {/* Bg Element */}
       <div className="absolute inset-0 z-[0] hidden overflow-hidden xl:block">
-        <CLetter className="absolute top-[3.1rem] right-[-18.341rem]" />
+        <CLetter className="absolute top-[3.1rem] right-[-18.341rem] h-[60.3rem] w-[56rem]" />
       </div>
 
       {/* Decorative stroke line */}
@@ -124,7 +45,7 @@ const AboutSection = () => {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[120rem] flex-col items-center px-[3rem] xl:items-start xl:px-[0rem]">
         <h5 className="mb-[2rem] max-w-[99rem] overflow-hidden text-center text-[2rem] leading-[3rem] font-semibold tracking-[-0.02em] text-[#333333] md:text-[3.4rem] md:leading-[4.8rem] xl:text-left">
-          <div className="about-desc">
+          <div className="">
             <span className="text-[#EE8D00]">Creative Pixels</span> is an
             independent web design and development agency based in{" "}
             <span className="text-[#FF37B3]">Manchester</span> — crafting
@@ -135,12 +56,10 @@ const AboutSection = () => {
             work.
           </div>
 
-          <div className="about-desc mt-[2rem]">
-            We work with clients in 🇬🇧 🇦🇺 🇺🇸
-          </div>
+          <div className="mt-[2rem]">We work with clients in 🇬🇧 🇦🇺 🇺🇸</div>
         </h5>
 
-        <div className="about-cta-btn">
+        <div className="">
           <CommonBtn3 href="/about" label="About CreativePixels" />
         </div>
       </div>
@@ -208,13 +127,7 @@ const AboutSection = () => {
               }
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "")}
             >
-              <Image
-                src={item.icon}
-                alt="Pencil Icon"
-                width={40}
-                height={40}
-                className="size-[3rem] md:size-[4rem]"
-              />
+              <item.icon />
 
               <h4 className="text-center text-[2.8rem] leading-[3.8rem] font-semibold tracking-[-0.02em] md:text-[2.5rem] md:leading-[3.5rem] xl:text-left">
                 {item.title}

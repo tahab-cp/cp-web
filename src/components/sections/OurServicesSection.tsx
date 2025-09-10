@@ -1,60 +1,38 @@
 "use client";
-
 import Image from "next/image";
 import OurServiesMarquee from "../common/OurServicesMarquee";
 import Link from "next/link";
-import {
-  offerSectionDesignData,
-  offerSectionMaintenanceData,
-  offerSectionWebData,
-} from "@/constants/offerSection";
-import CLetter from "../decorativeElements/CLetter";
+import CLetter from "@/assets/decorative-elements/c-letter.svg";
 import SectionLabel2 from "../common/SectionLabel2";
-import LineStroke16 from "../decorativeElements/LineStroke16";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import LineStroke17 from "../decorativeElements/LineStroke17";
+import LineStroke10 from "@/assets/decorative-elements/line-stroke-10.svg";
+import LineStroke11 from "@/assets/decorative-elements/line-stroke-11.svg";
 import CommonBtn3 from "../common/CommonBtn3";
-import LineStroke18 from "../decorativeElements/LineStroke18";
+import LineStroke12 from "@/assets/decorative-elements/line-stroke-12.svg";
+import {
+  offerServicesDesignData,
+  offerServicesMaintenanceData,
+  offerServicesWebData,
+} from "@/constants/globals";
+import ClickArrowPinkIcon from "@/assets/icons/click-arrow-pink.svg";
+import ClickArrowYellowIcon from "@/assets/icons/click-arrow-yellow.svg";
+import ClickArrowGreenIcon from "@/assets/icons/click-arrow-green.svg";
 
 const OurServicesSection = () => {
-  const ourServicesRef = useRef<HTMLElement>(null);
-
-  useGSAP(() => {
-    const ourServices = ourServicesRef.current;
-    if (!ourServices) return;
-
-    const ourServicesLabel = ourServices.querySelector(".our-services-label");
-
-    // Label wobble
-    gsap.to(ourServicesLabel, {
-      rotate: 5,
-      duration: 0.6,
-      yoyo: true,
-      repeat: -1,
-      ease: "power1.inOut",
-    });
-  }, []);
-
   return (
-    <section
-      ref={ourServicesRef}
-      className="relative overflow-hidden pt-[20.6rem]"
-    >
+    <section className="relative overflow-hidden pt-[20.6rem]">
       {/* Bg Element */}
       <div className="absolute inset-0 z-[0] overflow-hidden">
-        <CLetter className="absolute top-[-10rem] right-[-2rem] w-[10rem] rotate-[-80deg] md:top-[5rem] md:w-[20rem]" />
+        <CLetter className="absolute top-[16rem] right-[-1rem] hidden w-[20rem] rotate-[-80deg] lg:block" />
       </div>
 
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
-        <LineStroke16 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke10 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="relative z-[1] mx-auto flex max-w-[120rem] flex-col items-center gap-[2rem] px-[3rem] text-center xl:items-start xl:px-[0rem] xl:text-left">
         <div className="rotate-[-2deg]">
-          <div className="our-services-label">
+          <div className="">
             <SectionLabel2
               text="Our Services"
               bgColor="bg-[#EE8D00]"
@@ -76,7 +54,7 @@ const OurServicesSection = () => {
 
       <div className="our-services-sec relative px-[3rem] py-[5rem] xl:px-[0rem] xl:pt-[6.3rem] xl:pb-[7.063rem]">
         <div className="absolute inset-0 z-[0]">
-          <LineStroke17 className="absolute top-[40rem] left-1/2 w-full -translate-x-1/2 md:top-[59rem]" />
+          <LineStroke11 className="absolute top-[40rem] left-1/2 w-full -translate-x-1/2 md:top-[59rem]" />
         </div>
 
         <div className="relative z-[1] mx-auto flex max-w-[120rem] flex-col gap-[4.9rem] 2xl:max-w-[121.6rem]">
@@ -84,12 +62,7 @@ const OurServicesSection = () => {
             <h3 className="relative max-w-[66.4rem] text-[4rem] leading-[5rem] font-semibold tracking-[-0.03em] text-white md:text-[7rem] md:leading-[8.4rem] md:font-bold">
               Design and Branding{" "}
               <div className="absolute top-[-1.2rem] right-[1rem] inline-flex size-[4rem] items-center justify-center md:right-[-3.3rem]">
-                <Image
-                  src="/images/icons/click-arrow-pink.svg"
-                  alt="Click Arrow"
-                  width={40}
-                  height={40}
-                />
+                <ClickArrowPinkIcon />
               </div>
             </h3>
 
@@ -115,7 +88,7 @@ const OurServicesSection = () => {
 
             <div className="flex flex-col items-center gap-[4.463rem] xl:items-start">
               <div className="flex w-full flex-col justify-between md:flex-row lg:w-auto lg:gap-[20rem] xl:gap-[10rem]">
-                {offerSectionDesignData.columns.map((col, idx) => (
+                {offerServicesDesignData.columns.map((col, idx) => (
                   <div
                     key={idx}
                     className={`flex flex-col gap-[3.1rem] pt-[4rem]`}
@@ -161,12 +134,7 @@ const OurServicesSection = () => {
             <h3 className="relative max-w-[70.2rem] text-[4rem] leading-[5rem] font-semibold tracking-[-0.03em] md:text-[7rem] md:leading-[8.4rem] md:font-bold">
               Website Development
               <div className="absolute bottom-full left-1/2 inline-flex size-[4rem] -translate-x-1/2 items-center justify-center">
-                <Image
-                  src="/images/icons/click-arrow-yellow.svg"
-                  alt="Click Arrow"
-                  width={40}
-                  height={40}
-                />
+                <ClickArrowYellowIcon />
               </div>
             </h3>
 
@@ -192,7 +160,7 @@ const OurServicesSection = () => {
 
             <div className="flex w-full flex-col items-center gap-[4.463rem] lg:w-auto xl:items-start">
               <div className="flex w-full flex-col justify-between md:flex-row lg:justify-start lg:gap-[20rem] xl:gap-[10rem]">
-                {offerSectionWebData.columns.map((col, idx) => (
+                {offerServicesWebData.columns.map((col, idx) => (
                   <div
                     key={idx}
                     className={`flex flex-col gap-[3.1rem] pt-[4rem]`}
@@ -236,7 +204,7 @@ const OurServicesSection = () => {
 
       <div className="our-services-sec relative px-[3rem] py-[5rem] xl:px-[0rem] xl:pt-[9rem] xl:pb-[7.882rem]">
         <div className="absolute inset-0 z-[0]">
-          <LineStroke18 className="absolute -top-[23.7rem] right-[-89.294rem] w-full" />
+          <LineStroke12 className="absolute -top-[23.7rem] right-[-89.294rem] w-full" />
         </div>
 
         <div className="relative z-[1] mx-auto max-w-[120.3rem]">
@@ -244,12 +212,7 @@ const OurServicesSection = () => {
             <h3 className="relative max-w-[80.7rem] text-[4rem] leading-[5rem] font-semibold tracking-[-0.03em] text-white md:text-[7rem] md:leading-[8.4rem] md:font-bold">
               Maintenance and Growth
               <div className="absolute top-[-2rem] right-[-2.6rem] inline-flex size-[4rem] items-center justify-center">
-                <Image
-                  src="/images/icons/click-arrow-green.svg"
-                  alt="Click Arrow"
-                  width={40}
-                  height={40}
-                />
+                <ClickArrowGreenIcon />
               </div>
             </h3>
 
@@ -275,7 +238,7 @@ const OurServicesSection = () => {
 
             <div className="flex flex-col items-center gap-[4.463rem] xl:items-start">
               <div className="flex w-full flex-col justify-between md:flex-row lg:w-auto lg:justify-start lg:gap-[10rem] xl:gap-[5rem]">
-                {offerSectionMaintenanceData.columns.map((col, idx) => (
+                {offerServicesMaintenanceData.columns.map((col, idx) => (
                   <div
                     key={idx}
                     className={`flex flex-col gap-[3.1rem] pt-[2.4rem]`}

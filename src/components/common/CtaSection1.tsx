@@ -3,6 +3,7 @@ import SectionLabel from "./SectionLabel";
 import Link from "next/link";
 import CommonBtn3 from "./CommonBtn3";
 import WaveHand from "./WaveHand";
+import FlashIcon from "@/assets/icons/3d-flash-icon.svg";
 
 const CtaSection1 = () => {
   return (
@@ -49,12 +50,7 @@ const CtaSection1 = () => {
 
           <div className="flex flex-col items-center gap-[2rem] text-center">
             <i className="absolute top-[-3rem] left-[2rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
-              <Image
-                src="/images/icons/3d-flash-icon.svg"
-                alt="Flash Icon"
-                fill
-                className="object-contain"
-              />
+              <FlashIcon />
             </i>
 
             <i className="relative flex size-[9.9rem] items-center justify-center">
@@ -73,12 +69,7 @@ const CtaSection1 = () => {
               Book a FREE strategy call with Hassan.
             </h4>
 
-            <CommonBtn3
-              href="/contact"
-              label="Book a Call"
-              bgColor="#FF37B3"
-              textColor="#fff"
-            />
+            <CommonBtn3 href="/contact" label="Book a Call" bgColor="#FF37B3" />
           </div>
         </div>
       </div>

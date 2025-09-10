@@ -1,32 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import FooterLinkCard from "../common/FooterLinkCard";
-import { footerLinkCardData } from "@/constants/footerLinks";
-import { logoPopupsData } from "@/constants/heroSection";
 import LogoPopup from "../common/LogoPopup";
-import LineStroke06 from "../decorativeElements/LineStroke06";
-import CLetter from "../decorativeElements/CLetter";
-import PLetter from "../decorativeElements/PLetter";
+import LineStroke06 from "@/assets/decorative-elements/line-stroke-06.svg";
+import CLetter from "@/assets/decorative-elements/c-letter.svg";
+import PLetter from "@/assets/decorative-elements/p-letter.svg";
 import FooterAccordion from "../common/FooterAccordion";
 import ClientLogoSlider from "../common/ClientLogoSlider";
-
-const socialLinks = [
-  {
-    src: "/images/icons/facebook-white-icon.svg",
-    alt: "Facebook Icon",
-    href: "https://www.facebook.com/CPAgencyUK",
-  },
-  {
-    src: "/images/icons/instagram-white-icon.svg",
-    alt: "Instagram Icon",
-    href: "https://www.instagram.com/cpagencyuk/",
-  },
-  {
-    src: "/images/icons/linkedin-white-icon.svg",
-    alt: "Linkedin Icon",
-    href: "https://www.linkedin.com/company/creativepixels/",
-  },
-];
+import {
+  footerLinksCardData,
+  logoPopupsData,
+  socialLinks,
+} from "@/constants/globals";
 
 const Footer = () => {
   return (
@@ -37,11 +22,11 @@ const Footer = () => {
       </div>
 
       <div className="pointer-events-none absolute inset-0 z-[0] overflow-hidden select-none">
-        <CLetter className="absolute bottom-[-20rem] left-[-2rem] w-[10rem] md:left-[-7rem] md:w-[17.7rem] lg:bottom-[-8rem] xl:bottom-[-10rem]" />
+        <CLetter className="absolute bottom-[3rem] left-[-3rem] w-[8.4rem]" />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 z-[0] overflow-hidden select-none">
-        <PLetter className="absolute top-[5rem] right-[1rem] w-[4rem] rotate-[-15deg] md:right-[-3rem] md:w-[9.6rem] xl:top-[43.5rem]" />
+      <div className="pointer-events-none absolute inset-0 z-[0] hidden overflow-hidden select-none xl:block">
+        <PLetter className="absolute top-[43.5rem] right-[-3rem]" />
       </div>
 
       <div className="overflow-hidden">
@@ -67,20 +52,14 @@ const Footer = () => {
               hello@cp.agency
             </Link>
 
-            <div className="flex items-center justify-end gap-[.768rem]">
+            <div className="flex items-center justify-end gap-[.7rem]">
               {socialLinks.map((item, idx) => (
                 <Link
                   key={idx}
                   href={item.href}
-                  className="inline-flex size-[4.5rem] items-center justify-center rounded-[1.6rem] bg-white/15 md:size-[5.319rem]"
+                  className="inline-flex size-[4.5rem] items-center justify-center rounded-[1.6rem] bg-white/15 md:size-[5rem]"
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={31.91}
-                    height={31.91}
-                    className="size-[2.5rem] md:size-[3.191rem]"
-                  />
+                  <item.icon />
                 </Link>
               ))}
             </div>
@@ -89,7 +68,7 @@ const Footer = () => {
 
         <div className="relative z-[3] mx-auto mt-[5.7rem] hidden max-w-[118.4rem] justify-between xl:flex">
           <div className="flex flex-col gap-[8.7rem]">
-            {footerLinkCardData
+            {footerLinksCardData
               .filter(
                 (item) => item.title === "Design" || item.title === "Links",
               )
@@ -103,7 +82,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-[8.7rem]">
-            {footerLinkCardData
+            {footerLinksCardData
               .filter(
                 (item) => item.title === "Branding" || item.title === "Others",
               )
@@ -117,7 +96,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-[8.7rem]">
-            {footerLinkCardData
+            {footerLinksCardData
               .filter((item) => item.title === "Website Development")
               .map((item, idx) => (
                 <FooterLinkCard
@@ -129,7 +108,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-[8.7rem]">
-            {footerLinkCardData
+            {footerLinksCardData
               .filter(
                 (item) =>
                   item.title === "Maintenance & Growth" ||
@@ -146,7 +125,7 @@ const Footer = () => {
         </div>
 
         <div className="relative z-[3] mx-auto mt-[5.7rem] flex max-w-[118.4rem] flex-col gap-[2rem] xl:hidden">
-          {footerLinkCardData.map((item, idx) => (
+          {footerLinksCardData.map((item, idx) => (
             <div key={idx} className="border-b border-white pb-[2rem]">
               <FooterAccordion
                 title={item.title}

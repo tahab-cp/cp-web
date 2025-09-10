@@ -1,8 +1,7 @@
 import Image from "next/image";
+import RatingStar from "@/assets/icons/rating-star.svg";
 
 type TestimonialsCardProps = {
-  ratingImage?: string; // stars image
-  ratingAlt?: string;
   review: string;
   authorImage: string;
   authorName: string;
@@ -10,8 +9,6 @@ type TestimonialsCardProps = {
 };
 
 const TestimonialsCard = ({
-  ratingImage,
-  ratingAlt = "Rating Stars",
   review,
   authorImage,
   authorName,
@@ -19,17 +16,9 @@ const TestimonialsCard = ({
 }: TestimonialsCardProps) => {
   return (
     <div className="testimonials-card flex flex-col items-center text-center lg:items-start lg:text-left">
-      {/* Rating Stars */}
-      {ratingImage && (
-        <div className="relative h-[2.042rem] w-[11.379rem]">
-          <Image
-            src={ratingImage}
-            alt={ratingAlt}
-            fill
-            className="object-contain"
-          />
-        </div>
-      )}
+      <div className="relative h-[2.042rem] w-[11.379rem]">
+        <RatingStar />
+      </div>
 
       {/* Review Text */}
       <p className="mt-[1.958rem] mb-[4.042rem] text-[1.8rem] leading-[2.6rem] font-normal text-white/50">

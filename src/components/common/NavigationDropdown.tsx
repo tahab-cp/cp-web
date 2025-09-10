@@ -1,10 +1,10 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { serviceTabs } from "@/constants/servicesDropdown";
 import { usePathname } from "next/navigation";
+import { offerServicesDropdownData } from "@/constants/globals";
+import DownArrowIcon from "@/assets/icons/down-arrow.svg";
 
 const colors = ["#FED202", "#FF37B3", "#81F2B4"];
 
@@ -33,12 +33,7 @@ const NavigationDropdown = () => {
                 : "-rotate-0 bg-white/15" // default
           }`}
         >
-          <Image
-            src="/images/icons/down-arrow.svg"
-            alt="Dropdown arrow"
-            width={12}
-            height={12}
-          />
+          <DownArrowIcon />
         </div>
       </Link>
 
@@ -53,7 +48,7 @@ const NavigationDropdown = () => {
         <div className="dropdown-menu flex w-full py-[3rem] pr-[4.659rem] pl-[3.4rem]">
           {/* Tab list */}
           <div className="flex flex-col gap-[4.5rem] border-r border-white/80 pt-[1.7rem] pr-[3.2rem]">
-            {serviceTabs.map((tab, idx) => (
+            {offerServicesDropdownData.map((tab, idx) => (
               <button
                 key={tab.name}
                 onMouseEnter={() => setActiveTab(idx)}
@@ -66,12 +61,7 @@ const NavigationDropdown = () => {
                 </span>
 
                 <div className="absolute right-[-.4rem] bottom-[-.4rem] inline-flex size-[2.4rem] items-center justify-center">
-                  <Image
-                    src={tab.icon}
-                    alt="Click Arrow"
-                    width={24}
-                    height={24}
-                  />
+                  <tab.icon />
                 </div>
               </button>
             ))}
@@ -81,7 +71,7 @@ const NavigationDropdown = () => {
           <div className="flex flex-col">
             <div className="flex pb-[3.5rem] pl-[6rem]">
               {/* Columns */}
-              {serviceTabs[activeTab].columns.map((col, idx) => (
+              {offerServicesDropdownData[activeTab].columns.map((col, idx) => (
                 <div
                   key={col.title}
                   className={`flex flex-col gap-[3.1rem] pt-[3.5rem] ${idx === 1 && "mr-[4.5rem] ml-[6rem]"}`}
@@ -117,7 +107,7 @@ const NavigationDropdown = () => {
 
               <div className="flex items-center justify-center">
                 <Image
-                  src={serviceTabs[activeTab].image}
+                  src={offerServicesDropdownData[activeTab].image}
                   alt="Showcase Image"
                   width={299.41}
                   height={337.12}

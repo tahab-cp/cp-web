@@ -1,29 +1,29 @@
-import { caseStudiesData } from "@/constants/caseStudiesSection";
 import SectionDescription from "../common/SectionDescription";
 import SectionTitle from "../common/SectionTitle";
 import CaseStudiesGrid from "../common/CaseStudiesGrid";
 import Image from "next/image";
-import LineStroke19 from "../decorativeElements/LineStroke19";
-import LineStroke20 from "../decorativeElements/LineStroke20";
-import LineStroke21 from "../decorativeElements/LineStroke21";
+import LineStroke15 from "@/assets/decorative-elements/line-stroke-15.svg";
+import LineStroke16 from "@/assets/decorative-elements/line-stroke-16.svg";
+import LineStroke17 from "@/assets/decorative-elements/line-stroke-17.svg";
 import SectionLabel2 from "../common/SectionLabel2";
 import OurWorkCardSlider from "../common/OurWorkCardSlider";
 import CaseStudiesSlider from "../common/CaseStudiesSlider";
+import { caseStudiesCardData } from "@/constants/globals";
 
 const OurWorkSection = () => {
   return (
     <section className="pt-[18rem] md:pt-[20.6rem]">
       {/* Decorative stroke line */}
       <div className="absolute inset-0 z-[0]">
-        <LineStroke19 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke15 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="absolute inset-0 z-[0]">
-        <LineStroke20 className="absolute top-[92.9rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke16 className="absolute top-[92.9rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="absolute inset-0 z-[0]">
-        <LineStroke21 className="absolute top-[281.6rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke17 className="absolute top-[281.6rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="relative z-[1] mx-auto max-w-[120.3rem] px-[3rem] xl:px-[0rem]">
@@ -92,7 +92,7 @@ const OurWorkSection = () => {
         </div>
 
         <div className="mt-[4rem] hidden flex-col gap-[5rem] xl:flex">
-          {caseStudiesData.map((caseStudy, index) => (
+          {caseStudiesCardData.map((caseStudy, index) => (
             <CaseStudiesGrid
               key={index}
               {...caseStudy}

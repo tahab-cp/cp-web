@@ -1,15 +1,15 @@
-import AdvertiseIcon from "../../public/images/icons/advertise-icon.svg";
-import AnalyticsIcon from "../../public/images/icons/analytics-icon.svg";
-import ContactUserIcon from "../../public/images/icons/contact-user-icon.svg";
-import TransferIcon from "../../public/images/icons/transfer-icon.svg";
-import HeatMapIcon from "../../public/images/icons/heat-map-icon.svg";
-import PaymentIcon from "../../public/images/icons/payment-icon.svg";
-import InteractionIcon from "../../public/images/icons/interaction-icon.svg";
-import HostingIcon from "../../public/images/icons/hosting-icon.svg";
-import SurveyIcon from "../../public/images/icons/survey-icon.svg";
-import ChatIcon from "../../public/images/icons/chat-icon.svg";
-import LocationArrowIcon from "../../public/images/icons/location-arrow-icon.svg";
-import MailIcon from "../../public/images/icons/mail-icon.svg";
+import AdvertiseIcon from "@/assets/icons/advertise-icon.svg";
+import AnalyticsIcon from "@/assets/icons/analytics-icon.svg";
+import ContactUserIcon from "@/assets/icons/contact-user-icon.svg";
+import TransferIcon from "@/assets/icons/transfer-icon.svg";
+import HeatMapIcon from "@/assets/icons/heat-map-icon.svg";
+import PaymentIcon from "@/assets/icons/payment-icon.svg";
+import InteractionIcon from "@/assets/icons/interaction-icon.svg";
+import HostingIcon from "@/assets/icons/hosting-icon.svg";
+import SurveyIcon from "@/assets/icons/survey-icon.svg";
+import ChatIcon from "@/assets/icons/chat-icon.svg";
+import LocationArrowIcon from "@/assets/icons/location-arrow-icon.svg";
+import MailIcon from "@/assets/icons/mail-icon.svg";
 
 type PersonalPolicy = {
   icon: React.ElementType;

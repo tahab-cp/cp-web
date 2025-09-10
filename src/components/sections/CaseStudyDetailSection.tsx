@@ -1,24 +1,45 @@
 import Link from "next/link";
-import SectionLabel from "../common/SectionLabel";
 import SectionTitle from "../common/SectionTitle";
 import Image from "next/image";
 import SectionDescription from "../common/SectionDescription";
-import LineStroke12 from "../decorativeElements/LineStroke12";
 import SectionLabel2 from "../common/SectionLabel2";
 import CommonBtn3 from "../common/CommonBtn3";
-import LineStroke22 from "../decorativeElements/LineStroke22";
-import LineStroke23 from "../decorativeElements/LineStroke23";
-import LineStroke24 from "../decorativeElements/LineStroke24";
+import PlayYellowIcon from "@/assets/icons/play-yellow-icon.svg";
+import ThinkingIcon from "@/assets/icons/thinking-icon.svg";
+import SubtractDarkIcon from "@/assets/icons/subtract-dark.svg";
+import LineStroke19 from "@/assets/decorative-elements/line-stroke-19.svg";
+import LineStroke20 from "@/assets/decorative-elements/line-stroke-20.svg";
+import LineStroke21 from "@/assets/decorative-elements/line-stroke-21.svg";
+import LineStroke22 from "@/assets/decorative-elements/line-stroke-22.svg";
+import LineStroke23 from "@/assets/decorative-elements/line-stroke-23.svg";
 
 const CaseStudyDetailSection = () => {
   return (
     <section className="relative px-[3rem] pt-[15rem] pb-[5rem] md:pt-[20.6rem] xl:px-[0rem] xl:pb-[9.8rem]">
       <div className="absolute inset-0 z-[0]">
-        <LineStroke22 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke19 className="absolute top-[15.4rem] left-1/2 w-full -translate-x-1/2" />
       </div>
 
       <div className="absolute inset-0 z-[0]">
-        <LineStroke23 className="absolute top-[552rem] left-1/2 w-full -translate-x-1/2" />
+        <LineStroke20 className="absolute top-[552rem] left-1/2 w-full -translate-x-1/2" />
+      </div>
+
+      <div className="absolute inset-0 z-[0]">
+        <LineStroke22 className="absolute top-[355rem] left-1/2 w-full -translate-x-1/2" />
+      </div>
+
+      <div className="absolute inset-0 z-[0] hidden overflow-hidden xl:block">
+        <LineStroke23 className="absolute top-[5.5rem] right-[-8.8rem]" />
+
+        <div className="shadow-02 absolute top-[15rem] right-[10rem] size-[17rem] rotate-[15deg] overflow-hidden rounded-full">
+          <Image
+            src="/images/case-study-badge-img.png"
+            width={170}
+            height={170}
+            alt="Case Study Badge"
+            className="size-full object-cover object-center"
+          />
+        </div>
       </div>
 
       <div className="relative z-[1] mx-auto max-w-[120.3rem]">
@@ -175,21 +196,10 @@ const CaseStudyDetailSection = () => {
                 What Howard Says
               </span>
               <i className="-mx-[.4rem] inline-flex size-[1.8rem] items-center justify-center">
-                <Image
-                  src="/images/icons/subtract-dark.svg"
-                  alt="Subtract Light Icon"
-                  width={18}
-                  height={18}
-                />
+                <SubtractDarkIcon />
               </i>
               <i className="inline-flex size-[5rem] items-center justify-center rounded-full border border-[#141414] bg-[#141414]">
-                <Image
-                  src="/images/icons/play-yellow-icon.svg"
-                  alt="Arrow Right Icon"
-                  width={19}
-                  height={14}
-                  className="h-[1.4rem] w-[1.9rem]"
-                />
+                <PlayYellowIcon />
               </i>
             </Link>
           </div>
@@ -230,7 +240,7 @@ const CaseStudyDetailSection = () => {
           />
         </div>
 
-        <div className="h-[25rem] w-full overflow-hidden rounded-[2rem] md:h-[40rem] lg:h-[56.5rem]">
+        <div className="h-[25rem] w-full overflow-hidden rounded-[2rem] backdrop-blur-[10px] md:h-[40rem] lg:h-[56.5rem]">
           <Image
             src="/images/brain-studio-card-img-04.png"
             alt="Case Study Image"
@@ -244,19 +254,12 @@ const CaseStudyDetailSection = () => {
         <div className="my-[5rem] flex flex-col gap-[3.3rem] lg:my-[8rem] xl:flex-row">
           <div className="relative flex h-[30rem] items-center justify-center overflow-hidden rounded-[1.2rem] bg-[#FFC300] px-[4rem] py-[3rem] text-center xl:block xl:h-[53.3rem] xl:min-w-[37.9rem] xl:text-left">
             <div className="absolute inset-0 z-[0]">
-              <LineStroke24 className="absolute top-[10rem] left-1/2 w-full -translate-x-1/2 xl:top-[32.3rem]" />
+              <LineStroke21 className="absolute top-[10rem] left-1/2 w-full -translate-x-1/2 xl:top-[32.3rem]" />
             </div>
 
             <div className="relative z-[1]">
               <div className="inline-flex items-center justify-center">
-                <Image
-                  src="/images/icons/thinking-icon.svg"
-                  alt="Thinking Icon"
-                  width={80}
-                  height={80}
-                  className="size-[6rem] md:size-[8rem]"
-                  priority
-                />
+                <ThinkingIcon />
               </div>
 
               <h3 className="mt-[2rem] text-[3rem] leading-[4rem] font-semibold tracking-[-0.02em] md:text-[4.8rem] md:leading-[6rem] xl:mt-[4.65rem]">

@@ -1,13 +1,13 @@
 "use client";
-
 import Image from "next/image";
-import { logoPopupsData } from "@/constants/heroSection";
 import { useState } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { logoPopupsData } from "@/constants/globals";
+import RightArrowIcon from "@/assets/icons/right-arrow-icon.svg";
 
 const ClientLogoSlider = () => {
   const [activePopup, setActivePopup] = useState<number | null>(null);
@@ -93,28 +93,50 @@ const ClientLogoSlider = () => {
 
                   {/* Content */}
                   <div className="px-[1.7rem] pt-[1.8rem] pb-[2.4rem]">
-                    <Link href={item.href} className="inline-flex items-center">
-                      <span className="border-text-primary bg-text-primary inline-flex h-[4.4rem] min-w-[17.934rem] items-center justify-center rounded-[4.56rem] border px-[2.28rem] py-[.608rem] text-[1.6rem] font-semibold text-white">
-                        View Case Study
-                      </span>
+                    <Link
+                      href={item.href}
+                      className="group inline-flex cursor-pointer items-center"
+                    >
+                      {/* Text */}
+                      <div className="bg-text-primary relative z-[2] h-[4.4rem] overflow-hidden rounded-full px-[2.4rem] text-[1.6rem] font-semibold text-white">
+                        <span className="flex size-full items-center justify-center transition-all duration-200 group-hover:-translate-y-full">
+                          View Case Study
+                        </span>
 
-                      <i className="-mx-[.3rem] inline-flex size-[1.368rem] items-center justify-center">
-                        <Image
-                          src="/images/icons/subtract-dark.svg"
-                          alt="Subtract Light Icon"
-                          width={13.68}
-                          height={13.68}
-                        />
-                      </i>
+                        <span className="flex size-full items-center justify-center transition-all duration-200 group-hover:-translate-y-full">
+                          View Case Study
+                        </span>
+                      </div>
 
-                      <i className="border-text-primary bg-text-primary inline-flex size-[4.4rem] items-center justify-center rounded-full border">
-                        <Image
-                          src="/images/icons/arrow-right.svg"
-                          alt="Arrow Right Icon"
-                          width={13.68}
-                          height={13.68}
-                        />
-                      </i>
+                      {/* Wrapper (animated arrow) */}
+                      <div className="relative flex items-center justify-center">
+                        {/* Subtract Icon */}
+                        <i className="mx-[-.5rem]">
+                          <svg
+                            width="19"
+                            height="18"
+                            viewBox="0 0 19 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2.47559 0C3.85901 2.39049 6.44175 4 9.40234 4C12.3629 4 14.9457 2.39049 16.3291 0H18.4023V18H16.3291C14.9457 15.6095 12.3629 14 9.40234 14C6.44175 14 3.85901 15.6095 2.47559 18H0.402344V0H2.47559Z"
+                              fill="#070707"
+                            />
+                          </svg>
+                        </i>
+
+                        {/* Arrow Icon */}
+                        <div className="bg-text-primary relative size-[4.4rem] overflow-hidden rounded-full">
+                          <i className="absolute top-0 left-0 flex size-full items-center justify-center transition-all duration-200 group-hover:left-full">
+                            <RightArrowIcon className="fill-white" />
+                          </i>
+
+                          <i className="absolute top-0 -left-full flex size-full items-center justify-center transition-all duration-200 group-hover:-left-0">
+                            <RightArrowIcon className="fill-white" />
+                          </i>
+                        </div>
+                      </div>
                     </Link>
                   </div>
                 </div>

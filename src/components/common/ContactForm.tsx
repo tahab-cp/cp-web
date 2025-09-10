@@ -10,46 +10,17 @@ import {
   SelectValue,
 } from "../ui/select";
 import ContactFormInput from "./ContactFormInput";
-import CommonBtn4 from "./CommonBtn4";
 import WaveHand from "./WaveHand";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CommonBtn3 from "./CommonBtn3";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ContactForm = () => {
-  const formRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (formRef.current) {
-      gsap.fromTo(
-        formRef.current,
-        { height: 0, opacity: 0 },
-        {
-          height: "auto",
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.inOut",
-          scrollTrigger: {
-            trigger: formRef.current,
-            start: "top 60%", // adjust as needed
-            toggleActions: "play none none none",
-            // "play none none none" → plays only once
-          },
-        },
-      );
-    }
-  }, []);
-
   return (
     <div className="contact-form-bg w-full">
       <h4 className="inline-flex items-center gap-[.5rem] text-[4.8rem] font-semibold tracking-[-0.02em]">
         Hello <WaveHand />
       </h4>
 
-      <div ref={formRef} className="h-0 overflow-hidden opacity-0">
+      <div className="overflow-hidden">
         <form action="" className="flex flex-col gap-[1.8rem]">
           <fieldset className="flex flex-col items-start gap-[1.6rem] md:flex-row md:items-center">
             <Label htmlFor="name" className="md:min-w-[25rem]">

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { FC, SVGProps } from "react";
 
 type Tag = {
   label: string;
   color?: string; // Tailwind color classes
-  icon?: string;
+  icon?: FC<SVGProps<SVGElement>>;
 };
 
 type Technology = {
@@ -65,12 +66,7 @@ const CaseStudiesGrid = ({
             >
               {tag.icon && (
                 <i className="relative inline-flex size-[2rem] items-center justify-center">
-                  <Image
-                    src={tag.icon}
-                    alt={`${tag.label} Icon`}
-                    fill
-                    className="object-contain"
-                  />
+                  <tag.icon />
                 </i>
               )}
               <span>{tag.label}</span>

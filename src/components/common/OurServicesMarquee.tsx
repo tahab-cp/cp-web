@@ -1,6 +1,6 @@
 "use client";
 
-import { ourServicesCardData } from "@/constants/ourServiceSection";
+import { ourServicesCardData } from "@/constants/servicesPage";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";

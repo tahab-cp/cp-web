@@ -38,6 +38,7 @@
 
   /* Box Shadow */
   --shadow-01: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  --shadow-02: 4px 8px 8px 0px #32323233;
 
   /* Breakpoints */
   --container-2xl: 138rem;

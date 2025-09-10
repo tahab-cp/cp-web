@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HamburgerAccordion from "../common/HamburgerAccordion";
+import ContactPopoverBtn from "../common/ContactPopoverBtn";
 
 // Define prop types
 type HamburgerMenuProps = {
@@ -60,22 +61,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, setIsOpen }) => {
 
           <div className="flex items-center gap-[2rem]">
             {/* Contact Cta for Responsive */}
-            <Link
-              onClick={() => setIsOpen(false)}
-              href="/contact"
-              className="xl:hidden"
-            >
-              <i className="relative inline-flex size-[4.6rem] items-center justify-center rounded-full bg-[#32284A]">
-                <Image
-                  src="/images/icons/phone-fill.svg"
-                  alt="Phone Fill Icon"
-                  width={16}
-                  height={16}
-                />
-
-                <div className="outline-text-primary absolute top-[.2rem] right-[.2rem] size-[.8rem] animate-pulse rounded-full bg-[#7EE972] outline-[3.5px]" />
-              </i>
-            </Link>
+            <ContactPopoverBtn />
 
             <button
               onClick={() => setIsOpen(false)}

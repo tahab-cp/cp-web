@@ -3,8 +3,8 @@
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import Link from "next/link";
-import { teamData } from "@/constants/ourTeamSection";
 import { useState } from "react";
+import { teamCardData } from "@/constants/aboutPage";
 
 const TeamCardMarquee = () => {
   const [active, setActive] = useState<number | null>(null);
@@ -18,7 +18,7 @@ const TeamCardMarquee = () => {
         direction="left"
         className="overflow-hidden"
       >
-        {teamData.map((item, idx) => (
+        {teamCardData.map((item, idx) => (
           <div
             key={idx}
             onMouseEnter={() => setActive(idx)}
@@ -79,13 +79,7 @@ const TeamCardMarquee = () => {
                     href={item.hover.linkedin.href}
                     className="relative h-[2.1rem] w-[2rem]"
                   >
-                    <Image
-                      src={item.hover.linkedin.icon}
-                      alt="Linkedin Blue Icon"
-                      width={20}
-                      height={21}
-                      priority
-                    />
+                    <item.hover.linkedin.icon />
                   </Link>
 
                   <p className="text-[1.6rem] leading-[2.4rem] font-medium text-white">

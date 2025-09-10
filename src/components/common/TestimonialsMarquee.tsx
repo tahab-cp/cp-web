@@ -2,65 +2,8 @@
 
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
-
-const testimonials = [
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-1.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-2.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-3.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-4.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-5.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-6.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-  {
-    ratingImage: "/images/icons/rating-star.svg",
-    review:
-      "Creative Pixels didn’t just build a website — they elevated our entire brand. The team was sharp, creative, & truly invested in our success. We’ve seen a clear boost in sales and engagement since launch.",
-    authorImage: "/images/testimonials-avatar-6.png",
-    authorName: "Kyle Weznick",
-    authorRole: "Website & Branding Project",
-  },
-];
+import { aboutTestimonialsCardData } from "@/constants/aboutPage";
+import RatingStar from "@/assets/icons/rating-star.svg";
 
 const TestimonialsMarquee = () => {
   return (
@@ -72,16 +15,11 @@ const TestimonialsMarquee = () => {
         direction="right"
         className="overflow-hidden"
       >
-        {testimonials.map((item, idx) => (
+        {aboutTestimonialsCardData.map((item, idx) => (
           <div key={idx} className="testimonials-card mx-[1.65rem] w-[27.6rem]">
             {/* Rating Stars */}
             <div className="relative h-[2.042rem] w-[11.379rem]">
-              <Image
-                src={item.ratingImage}
-                alt="Rating Stars"
-                fill
-                className="object-contain"
-              />
+              <RatingStar />
             </div>
 
             {/* Review Text */}

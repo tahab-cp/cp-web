@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { caseStudiesData } from "@/constants/caseStudiesSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { caseStudiesCardData } from "@/constants/globals";
 
 const CaseStudiesMarquee = () => {
   return (
@@ -27,7 +27,7 @@ const CaseStudiesMarquee = () => {
           },
         }}
       >
-        {caseStudiesData.map((caseStudy, index) => (
+        {caseStudiesCardData.map((caseStudy, index) => (
           <SwiperSlide key={index}>
             <div
               className={`case-studies-grid h-full w-full !p-[2rem] md:w-[50rem] xl:!p-[3rem]`}
@@ -59,12 +59,7 @@ const CaseStudiesMarquee = () => {
                       >
                         {tag.icon && (
                           <i className="relative inline-flex size-[2rem] items-center justify-center">
-                            <Image
-                              src={tag.icon}
-                              alt={`${tag.label} Icon`}
-                              fill
-                              className="object-contain"
-                            />
+                            <tag.icon />
                           </i>
                         )}
                         <span>{tag.label}</span>

@@ -1,6 +1,7 @@
 import { getCalApi } from "@calcom/embed-react";
 import Image from "next/image";
 import { useEffect } from "react";
+import CtaBtnAvatarIcon from "@/assets/icons/cta-btn-avatar-icon.svg";
 
 const CommonBtn2 = () => {
   useEffect(() => {
@@ -51,14 +52,8 @@ const CommonBtn2 = () => {
         </svg>
       </i>
 
-      <i className="common-btn-avatar-2">
-        <Image
-          src="/images/cta-btn-img.svg"
-          alt="Avatar"
-          width={50}
-          height={50}
-          priority
-        />
+      <i className="relative z-[10]">
+        <CtaBtnAvatarIcon />
       </i>
     </button>
   );

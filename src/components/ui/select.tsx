@@ -5,6 +5,8 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import ArrowDownDarkIcon from "@/assets/icons/arrow-down-dark.svg";
+import { Arrow } from "@radix-ui/react-popover";
 
 function Select({
   ...props
@@ -45,12 +47,7 @@ function SelectTrigger({
       {children}
       <SelectPrimitive.Icon asChild>
         <i className="inline-flex size-[1.6rem] items-center justify-center">
-          <Image
-            src="/images/icons/arrow-down-dark.svg"
-            alt="Arrow Down Icon"
-            width={16}
-            height={16}
-          />
+          <ArrowDownDarkIcon />
         </i>
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>

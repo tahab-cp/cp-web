@@ -1,17 +1,14 @@
 import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 import CommonBtn3 from "./CommonBtn3";
+import FlashIcon from "@/assets/icons/3d-flash-icon.svg";
+import ContactArrowIcon from "@/assets/icons/contact-arrow.svg";
 
 const CtaSection2 = () => {
   return (
     <div className="cta-card relative w-full rounded-[5rem] px-[3rem] py-[4rem] backdrop-blur-[10px] md:px-[6rem] lg:py-[8rem]">
-      <i className="absolute top-[-4.3rem] right-0 inline-flex size-[8rem] items-center justify-center">
-        <Image
-          src="/images/icons/contact-arrow.svg"
-          alt="Contact Arrow"
-          width={80}
-          height={80}
-        />
+      <i className="absolute top-[-4.3rem] right-0 inline-flex items-center justify-center">
+        <ContactArrowIcon />
       </i>
 
       <div className="relative z-[1] flex flex-col items-center gap-[8rem] text-center lg:flex-row lg:items-start lg:gap-[3.4rem] lg:text-left">
@@ -28,12 +25,7 @@ const CtaSection2 = () => {
 
           <div className="flex flex-col items-center gap-[2rem] text-center">
             <i className="absolute top-[-5.3rem] right-[1.794rem] inline-flex h-[9.827rem] w-[5.653rem] rotate-[16.79deg] items-center justify-center">
-              <Image
-                src="/images/icons/3d-flash-icon.svg"
-                alt="Flash Icon"
-                fill
-                className="object-contain"
-              />
+              <FlashIcon />
             </i>
 
             <i className="absolute top-[-5.3rem] flex size-[9.9rem] items-center justify-center">
@@ -52,12 +44,7 @@ const CtaSection2 = () => {
               Book a FREE strategy call with Hassan.
             </h4>
 
-            <CommonBtn3
-              href="/contact"
-              label="Book a Call"
-              bgColor="#FF37B3"
-              textColor="#fff"
-            />
+            <CommonBtn3 href="/contact" label="Book a Call" bgColor="#FF37B3" />
           </div>
         </div>
       </div>
